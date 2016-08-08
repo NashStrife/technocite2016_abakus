@@ -1,0 +1,70 @@
+@import "compass";
+@import "grids";
+@import "variables";
+nav{
+    @include span(4 of 24);
+    background: $mainBackgroundColor;
+    height: 100%;
+    position: fixed;
+    top: 100px;
+    li{
+     
+    }
+    a{
+        display: block;
+        height: 50px;
+        margin-left: 15px;
+        padding-left: 40px;
+        padding-top:15px;
+        text-align: left;
+        text-decoration: none;
+        color: $primaryColor;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #factures{
+        background: url(../images/facture.svg) no-repeat;
+        @include navButton();
+    }
+    #devis{
+        background: url(../images/devis.svg) no-repeat;
+        @include navButton();       
+    }
+    #setting{
+        background: url(../images/setting.svg) no-repeat;
+        @include navButton();  
+       a{
+           padding-top: 25px;
+       }           
+    }
+}
+section{
+    @include span(13.5 of 24 narrow);
+    position: fixed;
+    font-size: 12px;
+    top: 100px;
+    margin-left: span(4 of 24 wider);
+    img{
+        display: inline-block;
+    }
+}   
+
+.blue2{
+    background: $primaryColor;
+    width: 100%;
+    height: 20px;
+}
+.search{
+    padding: 10px 20px;
+    background: $mainBackgroundColor;
+    margin-left: 0;
+    *{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+}
+.searchArea{
+    width: 200px;
+    
+}

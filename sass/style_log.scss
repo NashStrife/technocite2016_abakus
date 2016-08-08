@@ -1,0 +1,112 @@
+@import "compass";
+@import "grids";
+@import "variables";
+html {
+    @include box-sizing(border-box);
+}
+
+*,
+*:before,
+*:after {
+    @include box-sizing(inherit);
+}
+
+.container {
+    @include container(420px);
+}
+
+body {
+    background: $primaryColor;
+    font-family: "century gothic", arial, sans-serif;
+}
+
+.logo {
+    text-align: center;
+    margin: auto;
+    img {
+        width: 300px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+.category {
+    text-align: center;
+    a {
+        width: 300px;
+        height: 90px;
+        background: $descriptionColor;
+        color: $primaryColor;
+        text-transform: uppercase;
+        display: block;
+        text-decoration: none;
+        font-size: 2em;
+        padding: 30px 0;
+        margin-bottom: 70px;
+        margin-left: 50px;
+        &.active {
+            background: $focusColor;
+            color: $primaryColor;
+        }
+    }
+}
+
+.formulaire {
+    text-align: center;
+    color: $textColor;
+    input {
+        height: 30px;
+        width: 300px;
+        border: none;
+        margin-bottom: 25px;
+    }
+    a {
+        background: $focusColor;
+        color: $primaryColor;
+        text-decoration: none;
+        width: 300px;
+        text-transform: uppercase;
+        display: block;
+        margin-left: 50px;
+        height: 40px;
+        padding: 14px 0;
+    }
+}
+
+@media screen and(min-width:480px) {
+    .container {
+        @include container(940px);
+    }
+    .category {
+        @include container;
+        text-align: center;
+    }
+    .category a {
+        @include span(6 of 12);
+        margin-left: 0;
+        &.active {
+            background: $focusColor;
+            color: $primaryColor;
+        }
+        &:last-child {
+            @include last;
+        }
+    }
+    .logo {
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+    .formulaire {
+        @include span(6 of 12);
+        @include pre(3 of 12);
+        input {
+            margin-bottom: 20px;
+            padding: 9px 0;
+            padding-left: 7px;
+            background: $textColor;
+        }
+        a {
+            margin-left: 80px;
+        }
+    }
+}

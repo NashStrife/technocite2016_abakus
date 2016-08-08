@@ -1,0 +1,11 @@
+$focusColor: #e5af28;
+$mainBackgroundColor: #95a0ac;
+$navColor: #cad0d6;
+$descriptionColor: #7c8894;
+$primaryColor: #2a4158;
+$textColor:#e3e4e6;
+$footer:#16202c;
+@mixin navButton{
+        margin-top: 20px;
+        margin-left: 15px
+}

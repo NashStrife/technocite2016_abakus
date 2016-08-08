@@ -1,0 +1,85 @@
+/* line 4, ../sass/style_factures_list.scss */
+nav {
+  width: 15.96639%;
+  float: left;
+  margin-right: 0.84034%;
+  background: #95a0ac;
+  height: 100%;
+  position: fixed;
+  top: 100px;
+}
+/* line 13, ../sass/style_factures_list.scss */
+nav a {
+  display: block;
+  height: 50px;
+  margin-left: 15px;
+  padding-left: 40px;
+  padding-top: 15px;
+  text-align: left;
+  text-decoration: none;
+  color: #2a4158;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 25, ../sass/style_factures_list.scss */
+nav #factures {
+  background: url(../images/facture.svg) no-repeat;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+/* line 29, ../sass/style_factures_list.scss */
+nav #devis {
+  background: url(../images/devis.svg) no-repeat;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+/* line 33, ../sass/style_factures_list.scss */
+nav #setting {
+  background: url(../images/setting.svg) no-repeat;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+/* line 36, ../sass/style_factures_list.scss */
+nav #setting a {
+  padding-top: 25px;
+}
+
+/* line 41, ../sass/style_factures_list.scss */
+section {
+  width: 55.88235%;
+  float: left;
+  margin-right: 0.84034%;
+  position: fixed;
+  font-size: 12px;
+  top: 100px;
+  margin-left: 17.64706%;
+}
+/* line 47, ../sass/style_factures_list.scss */
+section img {
+  display: inline-block;
+}
+
+/* line 52, ../sass/style_factures_list.scss */
+.blue2 {
+  background: #2a4158;
+  width: 100%;
+  height: 20px;
+}
+
+/* line 57, ../sass/style_factures_list.scss */
+.search {
+  padding: 10px 20px;
+  background: #95a0ac;
+  margin-left: 0;
+}
+/* line 61, ../sass/style_factures_list.scss */
+.search * {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* line 67, ../sass/style_factures_list.scss */
+.searchArea {
+  width: 200px;
+}

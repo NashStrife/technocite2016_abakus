@@ -1,0 +1,156 @@
+@import "compass";
+@import "grids";
+@import "variables";
+html {
+    @include box-sizing(border-box);
+}
+
+*,
+*:before,
+*:after {
+    @include box-sizing(inherit);
+}
+
+.container {
+    @include container(420px);
+}
+
+body {
+    background: $primaryColor;
+    font-family: "century gothic", arial, sans-serif;
+}
+
+.blue {
+    height: 50px;
+    width: 100%;
+    background: $primaryColor;
+}
+
+.logo {
+    width: 100%;
+    background: $focusColor;
+}
+
+#off {
+    float: right;
+}
+
+.navigation {
+        @media screen and (max-width: 480px) {
+        @include gallery(2 of 4)
+        }
+    height: 140px;
+    background: $mainBackgroundColor;
+    margin-top: 40px;
+    &:hover {
+        background: $focusColor;
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $primaryColor;
+        text-align: center;
+    }
+    h2 {
+        margin-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        border-bottom: 1px solid $primaryColor;
+    }
+    img {
+        height: 70px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+}
+.foot {
+        background: $footer;
+        color: #fff;
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        position: absolute;
+        bottom: 0;
+        p {
+            padding-top: 15px;
+            opacity: 0.6;
+        }
+    }
+
+@media screen and (min-width: 480px) {
+    .container {
+        @include container(940px);
+    }
+    body {
+        background: $primaryColor;
+        font-family: "century gothic", arial, sans-serif;
+    }
+    .blue {
+        background: $primaryColor;
+        height: 40px;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+    }
+    .logo {
+        width: 100%;
+        background: $focusColor;
+        padding: 10px 0;
+        position: fixed;
+        top: 40px;
+    }
+    #off {
+        float: right;
+    }
+    .navigation {
+        display: inline-block;
+        height: 230px;
+        background: $mainBackgroundColor;
+        margin-top: 130px;
+        @include span(3 of 12);
+        &:hover {
+            background: $focusColor;
+        }
+        &:last-child {
+            @include last;
+        }
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $primaryColor;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: bold;
+            border-bottom: 2px solid $primaryColor;
+        }
+        img {
+            margin: auto;
+            display: block;
+            height: 100px;
+            color: $primaryColor;
+            padding-bottom: 20px;
+        }
+    }
+    .foot {
+        background: $footer;
+        color: #fff;
+        height: 70px;
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        position: fixed;
+        bottom: 0;
+        p {
+            padding-top: 25px;
+            opacity: 0.6;
+        }
+    }
+}
