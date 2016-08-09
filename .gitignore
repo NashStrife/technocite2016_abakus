@@ -1,2 +1,7 @@
 .DS_Store
 public/.sass-cache/*
+.vscode
+node_modules
+build
+.env
+npm-debug.log
