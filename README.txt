@@ -44,10 +44,18 @@ Then npm install -g node-gyp
 
 ===========================================================================================================
 
+CRYPTING :
+==========
+req.body.hash	=> get from db
+req.body.pwd	=> get from form
+
+===========================================================================================================
+
 IMAGE UPLOAD :
 ==============
 
 THE TEXT FIELDS MUST BE SENT BEFORE THE IMAGE FIELDS !!!!
+image=req.body.file 
 Destination folder : req.body.folder [ex: "public/images/uploads"]
 File name : req.body.filename	[ex: "image01" don't add any extention !] 
 
