@@ -1,0 +1,100 @@
+@import "compass";
+@import "grids";
+@import "variables";
+
+$noteColor:#485867;
+
+.listItem {
+	margin-top: 17px;
+	background-color: hotpink;
+	// @include span(10 of 12);
+	width: 572px;
+	display: inline-block;
+	float: left;
+	margin-left: 198px;
+	margin-right: 17px;
+	height: 66px;
+	.blocItem {
+		height: 50%;
+		list-style-type: none;
+		font-size: 12px;
+		background-color: $mainBackgroundColor;
+
+		.blocDate {
+			width: 105px;
+		}
+		.blocCompany {
+			width: 178px;
+		}
+		.blocInvoiceNumber {
+			width: 204px;
+		}
+		.itemDatas {
+			// @include span(4 of 12);
+			padding:5px;
+			margin-left: 20px;
+			margin-top:5px;
+			display: inline-block;
+			background-color: $primaryColor;
+			color: $textColor;
+			font-weight: bold;
+			text-align: center;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	.listNote {
+		height: 50%;
+		padding: 15px;
+		padding-top: 10px;
+		padding-left: 20px;
+		background-color: $noteColor;
+		color: $textColor;
+		font-size: 12px;
+		p {
+			overflow: hidden;
+			width: 100%;
+			line-height: 20px;
+			height: 20px;
+		}
+	}
+	.reveal {
+		display: block;
+		background-color: $noteColor;
+		color: $textColor;
+		width: 100%;
+		height: 19px;
+		text-align: center;
+		border: none;
+		border-top: 1px solid $primaryColor;
+
+		transition: 0.5s;
+		&:hover {
+			background-color: $textColor;
+			color: $primaryColor;
+		}
+	}
+}
+
+.moreInfos {
+	margin-top: 17px;
+	background-color: $focusColor;
+	color: $primaryColor;
+	font-weight: bold;
+	font-size: 16px;
+	 // @include span(2 of 12);
+	 display: inline-block;
+	 width: 152px;
+	margin-right: 0px;
+	height: 86px;
+	line-height: 86px;
+	text-align: center;
+
+	text-decoration: none;
+	transition: 0.5s;
+	&:hover {
+		background-color: $textColor;
+
+	}
+}

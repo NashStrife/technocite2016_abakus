@@ -1,0 +1,115 @@
+/* line 4, ../sass/style_UI.scss */
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/style_UI.scss */
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* line 10, ../sass/style_UI.scss */
+.container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 13, ../sass/style_UI.scss */
+body {
+  background: #2a4158;
+  font-family: "century gothic",arial, sans-serif;
+}
+
+/* line 17, ../sass/style_UI.scss */
+.blue {
+  background: #2a4158;
+  height: 40px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+/* line 25, ../sass/style_UI.scss */
+.logo {
+  width: 100%;
+  background: #e5af28;
+  padding: 10px 0;
+  position: fixed;
+  top: 40px;
+}
+
+/* line 33, ../sass/style_UI.scss */
+#off {
+  float: right;
+}
+
+/* line 36, ../sass/style_UI.scss */
+.navigation {
+  display: inline-block;
+  height: 230px;
+  background: #95a0ac;
+  margin-top: 130px;
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 43, ../sass/style_UI.scss */
+.navigation:hover {
+  background: #e5af28;
+}
+/* line 46, ../sass/style_UI.scss */
+.navigation:last-child {
+  margin-right: 0;
+}
+/* line 50, ../sass/style_UI.scss */
+.navigation a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #2a4158;
+  text-align: center;
+}
+/* line 57, ../sass/style_UI.scss */
+.navigation h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid #2a4158;
+}
+/* line 66, ../sass/style_UI.scss */
+.navigation img {
+  margin: auto;
+  display: block;
+  color: #2a4158;
+  padding-bottom: 20px;
+}
+
+/* line 73, ../sass/style_UI.scss */
+.foot {
+  background: #16202c;
+  color: #fff;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  position: fixed;
+  bottom: 0;
+}
+/* line 82, ../sass/style_UI.scss */
+.foot p {
+  padding-top: 25px;
+  opacity: 0.6;
+}

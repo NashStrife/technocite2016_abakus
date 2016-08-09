@@ -1,0 +1,100 @@
+/* line 4, ../sass/style_index.scss */
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/style_index.scss */
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* line 11, ../sass/style_index.scss */
+body {
+  background: #2a4158;
+  font-family: "century gothic",arial, sans-serif;
+  text-align: center;
+}
+
+/* line 16, ../sass/style_index.scss */
+.logo {
+  margin: auto;
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+
+/* line 24, ../sass/style_index.scss */
+.client {
+  width: 48.27586%;
+  float: left;
+  margin-right: 3.44828%;
+  text-align: center;
+  position: relative;
+}
+/* line 28, ../sass/style_index.scss */
+.client.active {
+  background: #e5af28;
+  color: white;
+}
+
+/* line 34, ../sass/style_index.scss */
+p {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 80px;
+  color: #e3e4e6;
+  left: calc(100% - (80px /3) );
+  top: calc(50% - 40px);
+  z-index: 100;
+  background: #2a4158;
+}
+
+/* line 47, ../sass/style_index.scss */
+.container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 50, ../sass/style_index.scss */
+.container > div {
+  width: 48.27586%;
+  float: left;
+  margin-right: 3.44828%;
+  padding: 10px;
+  position: relative;
+}
+/* line 54, ../sass/style_index.scss */
+.container > div img {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+/* line 58, ../sass/style_index.scss */
+.container > div.pro {
+  float: right;
+  margin-right: 0;
+  background: #95a0ac;
+  color: #2a4158;
+}
+/* line 65, ../sass/style_index.scss */
+.container a {
+  text-decoration: none;
+  color: #2a4158;
+}
+/* line 69, ../sass/style_index.scss */
+.container h2 {
+  font-size: 1.6em;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}

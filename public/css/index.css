@@ -1,0 +1,75 @@
+body{
+    background-color: #2a4158; 
+    font-family: "century gothic", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    margin: auto;
+    height: 86px;
+    margin-top: 60px;
+    text-align: center;
+}
+h2{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #2A4158;
+    text-align: center;
+}
+.container{
+    margin-top: 20px;
+    padding-top: 80px;
+    max-width: 940px;
+    height: 313px;
+    text-align: center;
+    margin: auto;
+}
+.client{
+    width: 48%;
+    height: 313px;
+    background: #e5B028;
+   float: left;
+    font-weight:  bold;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+}
+.client a{
+    text-decoration: none;
+    color: white;
+}
+.client p{
+    position: absolute;
+    top: 30%;
+    right: -68px;
+    text-align: center;
+    background: #2a4158;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    z-index: 10;
+}
+.pro{
+    width: 48%;
+    height: 313px;    
+    background: rgba(255, 255, 255, 0.5);
+    float: right;
+    color: white;
+    font-weight: bold;    
+    opacity: 0.5;
+    text-align: center;
+    
+}
+.pro a{
+    text-decoration: none;
+    color: white;
+}
+#arrow{
+    margin-top: 50px;
+}
+/*url(../images/background-resize.jpg) no-repeat  ;*/

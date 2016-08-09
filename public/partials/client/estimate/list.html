@@ -1,0 +1,26 @@
+<navbarclient></navbarclient>
+<search-bar></search-bar>
+
+<div ng-controller="profile">
+
+	<ul style="margin-top:165px;">    <!-- Liste des devis -->
+	            <li ng-repeat="item in listEstimates | filter: filter">
+	                <div class="listItem">
+	                    <div class="blocItem">
+	                        <span class="itemDatas blocDate">{{item.date}}</span>
+	                        <span class="itemDatas blocCompany">{{item.company}}</span>
+	                        <span class="itemDatas blocInvoiceNumber">{{item.invoiceNumber}}</span>
+	                    </div>
+	                    <div class="listNote">
+	                    <p>{{item.note}}</p>
+	                    </div>
+	                    <button class="reveal">v</button>
+	                </div>
+
+	                <a href="#/client/estimate/detail" class="moreInfos">
+	                    Plus d'infos
+	                </a>
+	            </li>
+	</ul> <!-- Fin de liste des devis -->
+</div>
+

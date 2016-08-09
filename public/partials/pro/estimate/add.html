@@ -1,0 +1,116 @@
+<navbarpro></navbarpro>
+<search-bar></search-bar>
+
+<h1 style="background-color:#d6eaf8;">Création de nouveau devis</h1>
+<form action="">
+		<fieldset>
+			<legend>Vos références</legend>
+			<label for="invoice-number">N° de facture</label><br/>
+			<input name="Numero de facture" id="invoice-number" placeholder="20136473-023"><br/>
+			<label for="invoice-date">Date de la facture</label><br/>
+			<input name="Date de la facture" id="invoice-date" placeholder="05-07-2016">
+		</fieldset>
+		<fieldset>
+			<legend>Références client</legend>
+			<label for="client">Client</label><br/>
+			<input name="Client" id="client" placeholder=""><br/>
+			<label for="po">PO</label><br/>
+			<select name="PO" id="po">
+				<option value="client 1">client 1</option>
+				<option value="client 2">client 2</option>
+				<option value="client 3">client 3</option>
+			</select><br/>
+			<label for="estimate">Devis n°</label><br/>
+			<select name="Devis" id="estimate">
+				<option value="client 1">client 1</option>
+				<option value="client 2">client 2</option>
+				<option value="client 3">client 3</option>
+			</select><br/>
+		</fieldset>
+		<fieldset>
+			<legend>Objet</legend>
+			<label for="project-name">Nom du projet</label><br/>
+			<input name="Nom du projet" id="project-name" placeholder=""><br/>
+			<label for="starting-date ">Date de début</label><br/>
+			<input name="Date de début" id="starting-date " placeholder=""><br/>
+			<label for="ending-date">Date de fin</label><br/>
+			<input name="Date de fin" id="ending-date" placeholder=""><br/>
+		</fieldset>
+		<fieldset>
+			<legend>Détail</legend>
+			<label for="article">Article</label><br/>
+			<select name="Article" id="article">
+				<option value="article 1">article 1</option>
+				<option value="article 2">article 2</option>
+				<option value="article 3">article 3</option>
+			</select><br/>
+			<label for="description">Description</label><br/>
+			<input name="Description" id="description" placeholder=""><br/>
+			<label for="quantity">Quantité</label><br/>
+			<input name="Quantité" id="quantity" placeholder=""><br/>
+			<label for="p-u">P/U</label><br/>
+			<input name="P/U" id="p-u" placeholder=""><br/>
+			<label for="amount">Montant</label><br/>
+			<input name="Montant" id="amount" placeholder="">
+			<hr>
+			<label for="total xvat">Total hors Taxes</label><br/>
+			<input name="Total hors Taxes" id="total xvat" placeholder=""><br/>
+			<label for="rebate">Ristourne</label><br/>
+			<input name="Ristourne" id="rebate" placeholder="">
+			<select name="percent" id="rebate">
+				<option value="option 1">%</option>
+				<option value="option 2">%</option>
+				<option value="option 3">%</option>
+			</select><br/>	
+			<label for="sous-total">Sous-Total hors taxes</label><br/>
+			<input name="Sous-Total hors taxes" id="sous-total" placeholder=""><br/>
+			<label for="tva-21">TVA 21%</label><br/>
+			<input name="TVA 21%" id="tva-21" placeholder=""><br/>
+			<hr>
+			<label for="total-ttc">Total TTC</label><br/>
+			<input name="Total TTC" id="total-ttc" placeholder=""><br/>
+			<label for="deposit">Acompte</label><br/>
+			<input name="Acompte" id="deposit" placeholder=""><br/>
+			<hr>
+			<label for="sum">A payer</label><br/>
+			<input name="A payer" id="sum" placeholder=""><br/>
+		</fieldset>
+		<fieldset>
+			<legend>Informations et règles de paiement</legend>
+			<label for="financial commitment">Echéance</label><br/>
+			<select name="Echéance" id="financial commitment">
+				<option value="option 1">option 1</option>
+				<option value="option 2">option 2</option>
+				<option value="option 3">option 3</option>
+			</select><br/>
+			<label for="primary-payment-method">Mode de paiement principal</label><br/>
+			<select name="Mode de paiement principal" id="primary-payment-method">
+				<option value="option 1">option 1</option>
+				<option value="option 2">option 2</option>
+				<option value="option 3">option 3</option>
+			</select><br/>
+			<label for="secondary-payment-method">Mode de paiement secondaire</label><br/>
+			<select name="Mode de paiement secondaire" id="secondary-payment-method">
+				<option value="option 1">option 1</option>
+				<option value="option 2">option 2</option>
+				<option value="option 3">option 3</option>
+			</select><br/>
+		</fieldset>
+		<input type="submit" value="Valider"></input>
+<!-- 		<label for="civil">Civilité</label><br/>
+			<select name="Civilité" id="civil">
+				<option value="Monsieur">Monsieur</option>
+				<option value="Madame">Madame</option>
+				<option value="Mademoiselle">Mademoiselle</option>
+			</select><br/>
+			<label for="name">Nom</label><br/>
+			<input type="text" id="name"><br/>
+			<label for="firstName">Prénom</label><br/>
+			<input type="text" id="firstName"><br/>
+			<label for="phone">Téléphone</label><br/>
+			<input type="text" id="phone"><br/>
+			<label for="email">Email</label><br/>
+			<input type="text" id="email"><br/>
+			<label for="phone2">Téléphone secondaire</label><br/>
+			<input type="text" id="phone2"><br/> -->
+</form>
