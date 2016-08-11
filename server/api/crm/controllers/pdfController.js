@@ -66,7 +66,7 @@ exports.createPdf = function(req, res, next) {
                         logger.log(err);    
                         return;
                 }
-                    res.json({error_code:0,err_desc:null});
+                    res.json({error_code:0,data:destination_path});
                     logger.log('PDF Created !');
                     logger.log(destination_path);
             });
