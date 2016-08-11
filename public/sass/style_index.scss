@@ -2,74 +2,116 @@
 @import "grids";
 @import "variables";
 html {
-  @include box-sizing(border-box);
-}
-*, *:before, *:after {
-  @include box-sizing(inherit);
+    @include box-sizing(border-box);
 }
 
-body{
+*,
+*:before,
+*:after {
+    @include box-sizing(inherit);
+}
+
+.container {
+    @include container(420px);
+    h2 {
+        font-size: 24px;
+        color: $primaryColor;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    > div {
+        background: $mainBackgroundColor;
+        width: 300px;
+        height: 200px;
+        text-align: center;
+        margin-bottom:30px;
+        margin-left: 60px;
+        > p {
+            display: none;
+        }
+    }
+}
+
+body {
     background: $primaryColor;
-    font-family: "century gothic",arial, sans-serif;
+    font-family: "century gothic", arial, sans-serif;
     text-align: center;
-}
-.logo{
-    margin: auto;
-    margin-bottom: 80px;
-    margin-top:50px;
-   
-    
 }
 
-.client{
-    @include span(3 of 6);
-    text-align: center;
-    position: relative;
-    &.active{
+.logo img {
+    width: 300px;
+    margin: 60px 0px;
+}
+
+.client {
+    &.active {
         background: $focusColor;
         color: white;
     }
-    
-}
-p{
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 80px;
-    color: $textColor;
-    left: calc(100% - (80px /3) );
-    top: calc(50% - 40px);
-    z-index: 100;
-    background: $primaryColor;
-}
-.container {
-    @include container(940px);
-    
-> div{
-    @include span(3 of 6);    
-    padding: 10px;
-    position: relative;
-    img{
-        margin-bottom: 50px;
-        margin-top: 20px;
-    }
-    &.pro{
-    @include last;
-    
-    background:$mainBackgroundColor;
-    color: $primaryColor;
-}
-}
-a{
-        text-decoration: none;
-         color: $primaryColor;
-}  
-h2{
-    font-size: 1.6em;
-    margin-top: 50px;
-    margin-bottom:30px;
 
-}     
+}
+
+.pro {
+    height: 260px;
+
+}
+
+@media screen and (min-width: 480px) {
+    .logo {
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        img {
+            width: 420px;
+        }
+    }
+    .client {
+        @include span(3 of 6);
+        text-align: center;
+        position: relative;
+    }
+    p {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 80px;
+        color: $textColor;
+        left: calc(100% - (80px /3));
+        top: calc(50% - 40px);
+        z-index: 100;
+        background: $primaryColor;
+    }
+    .container {
+        @include container(940px);
+        > div {
+            @include span(3 of 6);
+            padding: 10px;
+            position: relative;
+            margin-left: 0;
+            height: 200px;
+
+            img {
+                margin-bottom: 50px;
+                margin-top: 0px;
+            }
+            &.pro {
+                @include last;
+                background: $mainBackgroundColor;
+                color: $primaryColor;
+            }
+        > p {
+            display: unset;
+        }
+        }
+        a {
+            text-decoration: none;
+            color: $primaryColor;
+        }
+        h2 {
+            margin-top:0px;
+            font-size: 24px;
+        }
+    }
 }
