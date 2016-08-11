@@ -26,6 +26,7 @@ app.use(function(req, res, next) { //allow cross origin requests
 
 // if we use a static route
 app.use(express.static('public'));
+app.use(express.static('node_modules'));
 app.use(bodyParser());
 app.use(bodyParser.json());
 

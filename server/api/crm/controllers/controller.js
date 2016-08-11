@@ -23,20 +23,19 @@ exports.postCustomer = function(req, res, next) {
     // we create a new model with the data to add to the db
     let customer = new model.Customer(req.body);
 
-    bcrypt.hash(customer.contactPerson.pwd, saltRounds, function(err, hash) { 
+    bcrypt.hash(customer.contactPerson.pwd, saltRounds, function(err, hash) {
         logger.log(customer.contactPerson.pwd);
         logger.log(hash);
         customer.contactPerson.pwd = hash;
         // and add it to the db
         customer.save(function(err, data) {
-            let message = {
-                message: 'Document saved'
-            };
             if (err) {
-                message.message = err.message;
+                res.json({error_code:1,err_desc:err});
+                logger.log(err);    
+                return;
             }
-            logger.log(message);
-            res.json(message);
+            res.json({error_code:0,message: 'Document saved'});
+            logger.log('Document saved');
         });
     });
 };
@@ -47,14 +46,13 @@ exports.updateCustomer = function(req, res, next) {
     // update the data corresponding to the id with the new one in the request
     model.Customer.findByIdAndUpdate(req.params.id, req.body, 
         function(err, doc) {
-            let message = {
-                message: 'Document upated'
-            };
             if (err) {
-                message.message = err.message;
+                res.json({error_code:1,err_desc:err});
+                logger.log(err);    
+                return;
             }
-            logger.log(message);
-            res.json(message);
+            res.json({error_code:0,message: 'Document upated'});
+            logger.log('Document upated');
         }
     );
 };
@@ -65,14 +63,13 @@ exports.deleteById = function(req, res, next) {
     // get id from the parameters sent in the url
     model.Customer.findByIdAndRemove(req.params.id,
         function(err, doc) {
-            let message = {
-                message: 'Document removed'
-            };
             if (err) {
-                message.message = err.message;
+                res.json({error_code:1,err_desc:err});
+                logger.log(err);    
+                return;
             }
-            logger.log(message);
-            res.json(message);
+            res.json({error_code:0,message: 'Document removed'});
+            logger.log('Document removed');
         }
     );
 }
@@ -86,11 +83,11 @@ exports.dynamicSearch = function(req, res, next) {
     .then(function(docs){
         // the result is not empty we have a corresponding result
         if(docs.length) {
+            res.json({error_code:0,data: docs});
             logger.log(docs);
-            res.json(docs);
         } else {
-            logger.log({message:`No result for the query ${JSON.stringify(query)}`});
-            res.json({message:`No result for the query ${JSON.stringify(query)}`});
+            logger.log(`No result for the query ${JSON.stringify(query)}`);
+            res.json({error_code:1,message:`No result for the query ${JSON.stringify(query)}`});
         }
     });
 };
@@ -112,14 +109,13 @@ exports.updateAdmin = function(req, res, next) {
     // update the data corresponding to the id with the new one in the request
     model.findByIdAndUpdate(req.params.id, req.body, 
         function(err, doc) {
-            let message = {
-                message: 'Document upated'
-            };
             if (err) {
-                message.message = err.message;
+                res.json({error_code:1,err_desc:err});
+                logger.log(err);    
+                return;
             }
-            logger.log(message);
-            res.json(message);
+            res.json({error_code:0,message: 'Document upated'});
+            logger.log('Document upated');
         }
     );
 };

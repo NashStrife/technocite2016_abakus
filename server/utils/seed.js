@@ -238,6 +238,12 @@ let params = [{
 }]
 
 
+companies.map(function(company){
+    logger.log("--- SEED : Crypting Pwd");
+    company.contactPerson.pwd = bcrypt.hashSync(company.contactPerson.pwd, saltRounds);
+    // logger.log(customer.contactPerson.pwd);
+});
+
 customers.map(function(customer){
     logger.log("--- SEED : Crypting Pwd");
     customer.contactPerson.pwd = bcrypt.hashSync(customer.contactPerson.pwd, saltRounds);

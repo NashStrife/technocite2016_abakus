@@ -1,6 +1,7 @@
 var abakusControllers = angular.module('abakusControllers', []);
 
-abakusControllers.controller('profile', ['$scope', '$http', function($scope,$http) {
+abakusControllers.controller('profile', ['$scope', '$http', function($scope,$http ) {
+	
 
 	$scope.listClients = [
 
