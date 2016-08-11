@@ -1,123 +1,49 @@
 <!DOCTYPE html>
-<html lang="en"  ng-app="abakusApp">
+<html lang="en" ng-app="abakusApp">
 <head>
 	<meta charset="UTF-8">
-	<title ng-bind="'Abakus &mdash; ' + title">Abakus</title>
+	<title>Abakus</title>
 	<script type="text/javascript" src="lib/angular.min.js"></script>
 	<script type="text/javascript" src="lib/angular-route.min.js"></script>
-	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 
-	<link rel="stylesheet" href="stylesheets/reset.css">
-    <link rel="stylesheet" href="stylesheets/style_UI.css">
-    <link rel="stylesheet" href="stylesheets/style_factures_list.css">
-    <link rel="stylesheet" href="stylesheets/client_invoice_list.css">
-
-    <!-- nav components -->
-	<!-- <script type="text/javascript" src="components/side-nav.component.js"></script> -->
+	<link rel="stylesheet" href="stylesheets/reset.css">	
+	<link rel="stylesheet" href="stylesheets/style_index.css">
+	<link rel="stylesheet" href="stylesheets/style_log.css">
 
 </head>
 <body>
-
-	<!-- <div class="container">
-		<nav style="background-color:#eee;">
-			<h3>Coté Client</h3>
-			<ul>
-				<li><a href="#/client/home">Dashboard Client</a></li>
-				<li><a href="#/client/estimate/detail">Page d'un Devis</a></li>
-				<li><a href="#/client/estimate/list">Liste des Devis</a></li>
-				<li><a href="#/client/invoice/detail">Page d'une Facture</a></li>
-				<li><a href="#/client/invoice/list">Liste des Factures</a></li>
-				<li><a href="#/client/profile/infos">Voir mon profil</a></li>
-				<li><a href="#/client/profile/edit">Modifier mon profil</a></li>
-			</ul>
-			<h3>Coté Pro</h3>
-			<ul>
-				<li><a href="#/pro/home">Dashboard Pro</a></li>
-				<li><a href="#/pro/create-new-file">Créer un nouveau devis / facture</a></li>
-				<li><a href="#/pro/clients/add">Ajouter un nouveau Client</a></li>
-				<li><a href="#/pro/clients/detail">Page d'un Client</a></li>
-				<li><a href="#/pro/clients/list">Liste des Clients</a></li>
-				<li><a href="#/pro/estimate/add">Créer un Devis</a></li>
-				<li><a href="#/pro/estimate/detail">Page d'un Devis</a></li>
-				<li><a href="#/pro/estimate/list">List des Devis</a></li>
-				<li><a href="#/pro/invoice/add">Créer une Facture</a></li>
-				<li><a href="#/pro/invoice/detail">Page d'une Facture</a></li>
-				<li><a href="#/pro/invoice/list">List des Factures</a></li>
-				<li><a href="#/pro/profile/edit-method-of-payement">Modifier mes méthodes de payement</a></li>
-				<li><a href="#/pro/profile/edit-profile">Modifier mes coordonnées</a></li>
-				<li><a href="#/pro/profile/edit-template">Modifier mes templates de Factures</a></li>
-				<li><a href="#/pro/profile/edit-terms">Modifier mes termes et conditions</a></li>
-				<li><a href="#/pro/profile/infos">Mon compte</a></li>
-			</ul>
-		</nav>
-			<div class="logo">
-				<img src="images/logo.svg" alt="Abakus" width="420px" height="auto">
-			</div>
-			<section>
-				<div ng-view></div>			
-			</section>
-	</div>
-	<footer style="background-color:#eee;text-align:center;">
-		<h3>footer</h3>
-	</footer> -->
-
 	<header>
-		<div class="blue"></div>
 		<div class="logo">
-	        <div class="container">
-	            <a href="#/client/home"><img src="images/logobleu.svg" alt="logo_bleu" width="157"></a>
-	            <a href="log.html"><img src="images/off.svg" alt="off" width="30" id="off"></a>
-	        </div>
-		</div> <!-- Fin de logo -->
+			<img src="images/logo_jaune.svg" alt="logo" width="420px">
+		</div> <!-- Fin de logo -->	
 	</header>
-
-    <div class="container">
 	
+	<div class="container">
+		<div class="client active">
+			<h2>Je souhaite consulter mes factures</h2>
+			<a href="dashboard.html#/client/home"><img src="images/fleche-blanche.png" alt="white arrow" id="arrow"></a><br/>
+			
+		<p>OU</p>
+		</div>
+		
+		<div class="pro">
+			<h2>Je souhaite éditer des factures</h2>
+			<a href="dashboard.html#/pro/home"><img src="images/fleche-blanche.png" alt="blue arrow" id="arrow"></a><br/>
 
-	<!-- <navbarclient></navbarclient> -->
-        <!-- <nav>
-            <ul>
-                <li class="h1Border">
-                    <h1 id="factures"><a href="#">{{title}}</a></h1>
-                </li>
-                <li id="factures"><a href="#/client/invoice/list">Factures</a></li>
-                <li id="devis"><a href="#/client/estimate/list">Devis</a></li>
-                <li id="setting"><a href="#/client/profile/infos">Mon compte</a></li>
-            </ul>
-        </nav> -->
-	
+		</div>
 
-	<!-- <search-bar></search-bar> -->
-
-        <!-- <section >
-	        <div class="blue2"></div> 
-	        <div class="search">          
-	            <input type="text" class="searchArea" ng-model='filter' placeholder="Recherche: Entreprise,Date,N° facture">
-	            <button>
-	            	<img src="images/recherche.jpg" alt="search">
-	            </button>
-	            Ordonner par
-	            <label class="labelArrow">
-	                <select name="" id="">
-	                    <option value="">Entreprise</option>
-	                    <option value="">Date</option>
-	                    <option value="">Numéro de facture</option>
-	                </select>
-	            </label>
-	            <label for="croissant"><input type="radio" name="order" id="croissant" value="Croissant" checked>Croissant</label>
-	            <label for="decroissant"><input type="radio" name="order" id="decroissant" value="Décroissant">  Décroissant</label>
-	        </div> Fin de search
-        </section> -->
-        	<div ng-view></div>
-	</div> <!-- Fin de container -->
-
-	<footer>
-        <div class="foot">
-            <p>©Technocité2016</p>
-        </div>
-    </footer>
-
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/controllers.js"></script>
+		<!-- <div class="category">
+			<a href="#" class="client">Client</a>
+			<a href="#" class="pro active">Pro</a>
+		</div> -->
+		<div class="formulaire">
+			<form action="">
+				<input type="text" placeholder="Email"><br/>
+				<input type="text" placeholder="Mot de passe"><br/>
+				<a href="#">Se Connecter</a>
+			</form>
+		</div> <!--fin du formulaire-->
+	</div> <!-- Fin de container -->	
 </body>
+
 </html>
