@@ -1,3 +1,5 @@
+<linkhomeclient></linkhomeclient>
+
 <!-- <h1 style="background-color:#d5f5e3;">Liste de mes factures</h1> -->
 
 
@@ -10,6 +12,7 @@
 <search-bar></search-bar>
 
 <div ng-controller="profile">
+	<div class="container">
 	<ul style="margin-top:165px;">    <!-- Liste des factures -->
 	            <li ng-repeat="item in listItems | filter: filter">
 	                <div class="listItem">
@@ -29,4 +32,5 @@
 	                </a>
 	            </li>
 	</ul> <!-- Fin de liste des factures -->
+	</div>
 </div>

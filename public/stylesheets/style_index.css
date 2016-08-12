@@ -20,7 +20,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
@@ -73,17 +73,21 @@ body {
 
 @media screen and (min-width: 480px) {
   /* line 60, ../sass/style_index.scss */
-  .logo {
+  .logoHeader {
+    background-color: #e5af28;
     margin: auto;
+    padding-bottom: 5px;
     margin-bottom: 50px;
     margin-top: 50px;
+    text-align: left;
+    z-index: 150;
   }
-  /* line 64, ../sass/style_index.scss */
-  .logo img {
-    width: 420px;
+  /* line 68, ../sass/style_index.scss */
+  .logoHeader img {
+    margin-top: 5px;
   }
 
-  /* line 68, ../sass/style_index.scss */
+  /* line 72, ../sass/style_index.scss */
   .client {
     width: 48.27586%;
     float: left;
@@ -92,8 +96,8 @@ body {
     position: relative;
   }
 
-  /* line 73, ../sass/style_index.scss */
-  p {
+  /* line 77, ../sass/style_index.scss */
+  .or {
     position: absolute;
     width: 80px;
     height: 80px;
@@ -107,19 +111,19 @@ body {
     background: #2a4158;
   }
 
-  /* line 86, ../sass/style_index.scss */
+  /* line 90, ../sass/style_index.scss */
   .container {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
   .container:after {
     content: " ";
     display: block;
     clear: both;
   }
-  /* line 88, ../sass/style_index.scss */
+  /* line 92, ../sass/style_index.scss */
   .container > div {
     width: 48.27586%;
     float: left;
@@ -129,28 +133,28 @@ body {
     margin-left: 0;
     height: 200px;
   }
-  /* line 95, ../sass/style_index.scss */
+  /* line 99, ../sass/style_index.scss */
   .container > div img {
     margin-bottom: 50px;
     margin-top: 0px;
   }
-  /* line 99, ../sass/style_index.scss */
+  /* line 103, ../sass/style_index.scss */
   .container > div.pro {
     float: right;
     margin-right: 0;
     background: #95a0ac;
     color: #2a4158;
   }
-  /* line 104, ../sass/style_index.scss */
+  /* line 108, ../sass/style_index.scss */
   .container > div > p {
     display: unset;
   }
-  /* line 108, ../sass/style_index.scss */
+  /* line 112, ../sass/style_index.scss */
   .container a {
     text-decoration: none;
     color: #2a4158;
   }
-  /* line 112, ../sass/style_index.scss */
+  /* line 116, ../sass/style_index.scss */
   .container h2 {
     margin-top: 0px;
     font-size: 24px;
