@@ -76,3 +76,4 @@ abakusControllers.controller('profile', ['$scope', '$http', function($scope,$htt
 	]
 
 }]);
+

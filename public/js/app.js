@@ -38,6 +38,13 @@ var app = angular.module('abakusApp', [
 	    transclude: true,      // (4)
 	    templateUrl: "components/searchBar.html"    // (5)
 	  }})
+	.directive('moreclient', function() { // (1)
+	  return {
+	    restrict: "E",         // (2)
+	    replace: false,         // (3)
+	    transclude: true,      // (4)
+	    templateUrl: "components/moreClient.html"    // (5)
+	  }})
 ;
 
 // angular.module("abakusApp", ["abakusControllers"])
@@ -126,7 +133,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/clients/list', {
 		title:"clients",
 		templateUrl : 'partials/pro/clients/list.html',
-		controller : ''
+		controller : 'addClient'
 	}).
 
 	when('/pro/estimate/add', {

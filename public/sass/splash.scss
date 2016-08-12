@@ -5,16 +5,28 @@
 @import "grids";
 @import "_variables";
 
-html {box-sizing: border-box;
-	font-family: "century Gothic", arial, sans-serif;}
-	*, *:before, *:after {box-sizing: inherit;}
-
-	button {position: relative;
-			z-index: 100;
+html {	box-sizing: border-box;
+		font-family: "century Gothic", arial, sans-serif;}
+*, *:before, *:after {box-sizing: inherit;}
+	#moreClient {
+		position: fixed;
+		margin-top: -72px;
+		margin-left: 198px;
+		z-index: 999;
+		background-color: $focusColor;
+		color: $primaryColor;
+		border: none;
+		height: 22px;
+		width: 100px;
+		&::first-letter{
+			font-size: 22px;
+			font-weight: bold;
+		}
 	}
 	.overlay {
 		display: flex;
 		position: fixed;
+		z-index: 1000;
 		top: 0;
 		bottom: 0; 
 		left: 0; 

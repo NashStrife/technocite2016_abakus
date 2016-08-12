@@ -33,6 +33,10 @@ nav{
         background: url(../images/devis.svg) no-repeat;
         @include navButton();       
     }
+    #myClients{
+        background: url(../images/client_icon.svg) no-repeat;
+        @include navButton();
+    }
     #setting{
         background: url(../images/setting.svg) no-repeat;
         @include navButton();  
