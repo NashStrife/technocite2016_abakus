@@ -57,7 +57,7 @@ exports.uploadImage = function(req, res, next) {
                 return;
         }
 
-        res.json({error_code:0,err_desc:null});
+        res.json({error_code:0,message:'Image uploaded !'});
         logger.log('Image uploaded !');
     });
 };

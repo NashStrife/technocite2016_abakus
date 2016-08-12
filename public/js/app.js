@@ -3,6 +3,20 @@ var app = angular.module('abakusApp', [
 	'abakusControllers',
 	'addClientModule'
 	])
+	.directive('linkhomeclient', function() { // (1)
+	  return {
+	    restrict: "E",         // (2)
+	    replace: true,         // (3)
+	    transclude: true,      // (4)
+	    templateUrl: "components/linkhomeclient.html"    // (5)
+	  }})
+	.directive('linkhomepro', function() { // (1)
+	  return {
+	    restrict: "E",         // (2)
+	    replace: true,         // (3)
+	    transclude: true,      // (4)
+	    templateUrl: "components/linkhomepro.html"    // (5)
+	  }})
 	.directive('navbarclient', function() { // (1)
 	  return {
 	    restrict: "E",         // (2)
