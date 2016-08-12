@@ -1,6 +1,7 @@
 var app = angular.module('abakusApp', [
 	'ngRoute',
-	'abakusControllers'
+	'abakusControllers',
+	'addClientModule'
 	])
 	.directive('navbarclient', function() { // (1)
 	  return {
@@ -101,7 +102,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/clients/add', {
 		title:"clients",
 		templateUrl : 'partials/pro/clients/add.html',
-		controller : ''
+		controller : 'addClient'
 	}).
 	when('/pro/clients/detail', {
 		title:"clients",
