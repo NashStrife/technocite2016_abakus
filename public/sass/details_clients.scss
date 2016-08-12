@@ -1,0 +1,211 @@
+@import "compass";
+@import "grids";
+@import "variables";
+.contner{
+	
+}
+
+.contner {
+
+	width: 713px;
+	height: 600px;
+	z-index: 1;
+	float: right;
+	margin-top: 117px;
+}
+
+.add {
+
+	width: 109px;
+	height: 33px;
+	background-color: $focusColor;
+
+
+	p {
+
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: bold;
+		vertical-align: middle;
+		color: #2a4158;
+
+	}
+
+	p:first-child {
+
+		font-size: 40px;
+		margin-top: -10px;
+		margin-left: 10px;
+	}
+
+	p:last-child {
+		margin-top: -32px;
+		margin-left: 6px;
+
+	}
+
+}
+
+.contenu {
+
+  background-color: #cad0d6;
+  width: 100%;
+  height: 400px;
+  margin-top: 19px;
+
+}
+
+.photo {
+
+  background-color: #e5b028;
+  width: 92px;
+  height: 92px;
+  margin-top: 15px;
+  margin-left: 22px;
+  
+  display: inline-block;
+
+}
+
+.nom {
+
+  font-size: 18px;  
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 10px;
+  display: inline-block;
+  color: $primaryColor;
+  width: 330px;
+
+  	p {
+  		
+  		margin: 0px;
+  	} 
+
+  	p:last-child {
+
+  		font-size: 14px;
+  		margin-top: 12px;
+
+  	}
+
+}
+
+
+.telephone {
+
+  font-size: 12px; 
+  font-weight: bold; 
+  margin-top: 10px;
+  margin-left: 0px;  
+  display: inline-block;
+  color: $primaryColor;
+  width: 220px;
+  
+  p {
+  		
+  		margin: 11px;
+  	} 
+
+}
+
+.barre1, .barre2 {
+
+	height: 1px;
+	width: 668px;
+	margin: 0 auto;
+	background-color: $primaryColor;
+	margin-top: 12px;
+}
+
+.facturation, .livraison {
+
+	margin-top: -15px;
+	margin-left: 21px;
+
+	p {
+
+		font-size: 18px;
+		font-weight: bold;
+		color: $primaryColor;
+
+	}
+
+}
+
+.nomfactliv {
+
+	margin-left: 21px;
+	display: inline-block;
+	width: 229px;
+	margin-top: 0px;
+	float: left;
+
+	p {
+  		
+  		margin: 0px;
+  		font-size: 14px;		
+		color: $primaryColor;
+		font-weight: bold;
+		text-transform: uppercase;
+
+
+  	} 
+}
+
+.colone2 {
+
+	margin-left: 9px;
+	display: inline-block;
+	width: 229px;
+
+
+	p {
+  		
+  		margin: 0px;
+  		font-size: 12px;		
+		color: $primaryColor;
+		font-weight: bold;
+
+  	} 
+}
+
+.colone3, .colone3livraison {
+
+	margin-left: 15px;
+	display: inline-block;
+	width: 200px;
+	float: left;
+
+
+	p {
+  		
+  		margin: 0px;
+  		font-size: 12px;
+		
+		color: $primaryColor;
+		font-weight: bold;
+
+  	}
+
+}
+
+.colone3livraison {	
+
+	p {
+  		
+  		padding-bottom: -5px;
+  		text-align: top;
+
+  	}
+
+}
+
+
+
+
+
+
+
+
+
