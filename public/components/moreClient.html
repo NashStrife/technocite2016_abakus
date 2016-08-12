@@ -1,4 +1,4 @@
-<button ng-click="gotoAnchor(true)" id="moreClient">+ CLIENT</button>
+<button ng-click="splash(true)" id="moreClient">+ CLIENT</button>
 	<div class="overlay" id="splash" ng-if="showForm">
         
 	<form action="" class="newClient">		
@@ -669,8 +669,8 @@
 		</fieldset>
 		<button type="reset" id="cancel">ANNULER</button>
 		<button type="button" id="prev">PRECEDENT</button>
-		<button type="button" id="next">SUIVANT</button>
+		<button type="button" id="next" ng-click="next()">SUIVANT</button>
 		<button type="submit" id="submit">VALIDER</button>
-        <img src="../images/close.svg" alt="close" ng-click="gotoAnchor(false)">
+        <img src="../images/close.svg" alt="close" ng-click="splash(false)">
 	</form>
 	</div>

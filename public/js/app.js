@@ -70,7 +70,7 @@ var app = angular.module('abakusApp', [
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
-	when('/login', {
+	when('/', {
 		title:"login",
 		templateUrl : 'partials/login.html',
 		controller : ''

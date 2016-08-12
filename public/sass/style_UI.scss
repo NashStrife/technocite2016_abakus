@@ -38,7 +38,6 @@ body{
     display: inline-block;
     height: 230px;
     background: $mainBackgroundColor;
-    margin-top: 130px;
     @include span(3 of 12);
     &:hover{
         background: $focusColor;
@@ -79,8 +78,9 @@ body{
     margin-top: 40px;
     position: fixed;
     bottom: 0;
-    p{
-        padding-top: 25px;
+    padding-top: 25px;
+    .copyright {
         opacity: 0.6;
     }
+    
 }
