@@ -5,9 +5,6 @@ services.factory('Crm',['$resource', function($resource) {
 	let resource = $resource("/api/crm");
 
 	let list = {
-
-		category : '',	// ???
-
 		getList : function(callback) {
 			resource.query(callback);
 		},
