@@ -80,7 +80,7 @@ body {
 
 /* line 46, ../sass/style_log.scss */
 .formulaire {
-  visibility: hidden;
+  visibility: visible;
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;

@@ -8,7 +8,10 @@
 	<div class="client active">
 		<h2>Je souhaite consulter mes factures</h2>
 		<a href="index.html#/client/home"><img src="images/fleche-blanche.png" alt="white arrow" id="arrow"></a><br/>
-		
+
+		<button ng-click="splash(true)" id="moreClient">+ CLIENT</button>
+		<!-- <div class="overlay" id="splash" ng-if="showForm"></div> -->
+
 	<div class="or">OU</div>
 	</div>
 	
@@ -26,7 +29,7 @@
 		<form action="">
 			<input type="text" placeholder="Email"><br/>
 			<input type="text" placeholder="Mot de passe"><br/>
-			<a href="#">Se Connecter</a>
+			<a href="index.html#/{{side}}/home"">Se Connecter</a>
 		</form>
 	</div> <!--fin du formulaire-->
 </div> <!-- Fin de container -->

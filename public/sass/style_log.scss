@@ -44,11 +44,11 @@ body{
     margin-bottom: 80px;
 }
 .formulaire{
-    visibility: hidden;
+    visibility: visible;
     @include span(6 of 12);
     @include pre(3 of 12);
     text-align: center;
-        color: $textColor;
+    color: $textColor;
     
     input{
         width: 100%;
