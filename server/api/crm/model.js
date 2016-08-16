@@ -425,16 +425,20 @@ let companyModel = function() {
 
     let Param = mongoose.Schema({
         rules : [{
-            type : String
+            type : String,
+            required : true
         }],
         refunds : [{
-            type : String
+            type : String,
+            required : true
         }],
         countries : [{
-            type : String
+            type : String,
+            required : true
         }],
         vatRate : [{
             type : Number,
+            required : true,
             validate : numberValidator
         }]
     });
