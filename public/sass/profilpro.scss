@@ -1,0 +1,141 @@
+@import "compass";
+@import "grids";
+@import "variables";
+
+.warpper {
+
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+
+	}
+
+.contener {
+
+	width: 742px;
+  height: 600px;
+  z-index: 1;
+  float: right;
+  margin-top: 117px;
+  background-color: lightgrey;
+}
+
+.coordonnee {
+
+	height: 46px;
+	width: 231px;
+	background-color: $focusColor;
+	float: left;
+
+	img {
+
+		width: 28px; 
+		height: 28px;
+		float: left;
+		margin-top: 7px;
+		margin-left: 7px;
+	}
+
+	p {
+	
+		font-weight: bold;
+		font-size: 14px;
+		margin-top: 13px;
+		color: $primaryColor;
+		float: left;
+		margin-left: 7px;
+
+	}
+}
+
+.coordonneeCont {
+
+	background-color: $mainBackgroundColor;
+	width: 100%;
+	height: 212px;
+	float: left;
+	display: block;
+
+	img {
+
+		width: 90px;
+		height: 90px;
+		float: left;
+		margin-top: 14px;
+		margin-left: 22px;
+	}
+}
+
+	 .nomentreprise { 
+	
+		font-weight: bold;
+		font-size: 18px;
+		margin-top: 13px;
+		color: $primaryColor;
+		float: left;
+		
+		margin-left: 17px;
+
+	}
+
+	.info {
+
+		display: block;
+		width: 315px;			
+		float: left;
+
+		p:first-child {
+	
+		font-weight: bold;
+		font-size: 18px;
+		margin-top: 13px;
+		color: $primaryColor;
+		float: left;
+		margin-left: 17px;
+
+	}
+		
+
+		p {
+
+		font-weight: bold;
+		font-size: 12px;
+		margin-top: 40px;
+		color: $primaryColor;
+		text-align: justify;
+		line-height: 15px;
+		margin-left: 17px;
+		}
+
+	}
+	
+
+	.tva {
+
+		display: inline-block;
+		
+		
+		float: left;
+		
+
+		p {
+
+		font-weight: bold;
+		font-size: 12px;
+		margin-top: 40px;
+		color: $primaryColor;
+		text-align: justify;
+		line-height: 15px;
+		
+
+			
+			 
+
+		}
+	}
+
+	
+
+
+
+
