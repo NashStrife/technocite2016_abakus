@@ -12,22 +12,21 @@ html {
 /* line 11, ../sass/splash.scss */
 #moreClient {
   position: fixed;
-  margin-top: -72px;
-  margin-left: 198px;
   z-index: 999;
   background-color: #e5af28;
   color: #2a4158;
   border: none;
   height: 22px;
   width: 100px;
+  cursor: pointer;
 }
-/* line 21, ../sass/splash.scss */
+/* line 20, ../sass/splash.scss */
 #moreClient::first-letter {
   font-size: 22px;
   font-weight: bold;
 }
 
-/* line 26, ../sass/splash.scss */
+/* line 25, ../sass/splash.scss */
 .overlay {
   display: flex;
   position: fixed;
@@ -39,7 +38,7 @@ html {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 37, ../sass/splash.scss */
+/* line 36, ../sass/splash.scss */
 .newClient {
   color: #2a4158;
   position: relative;
@@ -50,7 +49,7 @@ html {
   align-self: center;
   text-align: center;
 }
-/* line 46, ../sass/splash.scss */
+/* line 45, ../sass/splash.scss */
 .newClient img {
   position: absolute;
   top: -25px;
@@ -59,11 +58,11 @@ html {
   height: 25px;
   cursor: pointer;
 }
-/* line 54, ../sass/splash.scss */
+/* line 53, ../sass/splash.scss */
 .newClient input {
   color: #2a4158;
 }
-/* line 57, ../sass/splash.scss */
+/* line 56, ../sass/splash.scss */
 .newClient .intro {
   height: 30px;
   width: 220px;
@@ -72,6 +71,7 @@ html {
   margin: auto;
   text-align: center;
   line-height: 30px;
+  cursor: pointer;
 }
 /* line 66, ../sass/splash.scss */
 .newClient fieldset {
@@ -208,32 +208,34 @@ html {
   border: none;
   height: 22px;
   width: 15%;
+  outline: none;
+  cursor: pointer;
 }
-/* line 158, ../sass/splash.scss */
+/* line 160, ../sass/splash.scss */
 .newClient button#prev, .newClient button#cancel {
   left: 12.5%;
 }
-/* line 161, ../sass/splash.scss */
+/* line 163, ../sass/splash.scss */
 .newClient button#next, .newClient button#submit {
   right: 12.5%;
 }
-/* line 165, ../sass/splash.scss */
+/* line 167, ../sass/splash.scss */
 .newClient input[name="client"], .newClient input[name="button"], .newClient button {
   display: none;
 }
-/* line 168, ../sass/splash.scss */
+/* line 170, ../sass/splash.scss */
 .newClient input[value="particulier"]:checked ~ fieldset:nth-of-type(2) {
   display: inline-block;
 }
-/* line 171, ../sass/splash.scss */
+/* line 173, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ #cancel {
   display: inline-block;
 }
-/* line 174, ../sass/splash.scss */
+/* line 176, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ #next {
   display: inline-block;
 }
-/* line 177, ../sass/splash.scss */
+/* line 179, ../sass/splash.scss */
 .newClient input[value="society"]:checked ~ fieldset:nth-of-type(1) {
   display: inline-block;
 }

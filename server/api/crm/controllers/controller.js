@@ -7,7 +7,7 @@ const saltRounds = 10;
 
 
 exports.getCustomer = function(req, res, next) {
-    logger.log("--- CONTROLLER : get");
+    logger.log("--- CONTROLLER : Get Customer");
     // find() function of the model thanks to Mongoose [cf : http://mongoosejs.com/docs/queries.html]
     model.Customer.find()
     // once the query is done, do the following action thanks to a "promise"
@@ -18,7 +18,7 @@ exports.getCustomer = function(req, res, next) {
 };
 
 exports.postCustomer = function(req, res, next) {
-    logger.log("--- CONTROLLER : post");
+    logger.log("--- CONTROLLER : Post Customer");
     
     // we create a new model with the data to add to the db
     let customer = new model.Customer(req.body);
@@ -41,7 +41,7 @@ exports.postCustomer = function(req, res, next) {
 };
 
 exports.updateCustomer = function(req, res, next) {
-    logger.log("--- CONTROLLER : Update");
+    logger.log("--- CONTROLLER : Update Customer");
     
     // update the data corresponding to the id with the new one in the request
     model.Customer.findByIdAndUpdate(req.params.id, req.body, 
@@ -58,7 +58,7 @@ exports.updateCustomer = function(req, res, next) {
 };
 
 exports.deleteById = function(req, res, next) {
-    logger.log("--- CONTROLLER : deleteById");
+    logger.log("--- CONTROLLER : Delete Customer");
     
     // get id from the parameters sent in the url
     model.Customer.findByIdAndRemove(req.params.id,
@@ -93,10 +93,8 @@ exports.dynamicSearch = function(req, res, next) {
 };
 
 exports.getAdmin = function(req, res, next) {
-    logger.log("--- CONTROLLER : get");
-    // find() function of the model thanks to Mongoose [cf : http://mongoosejs.com/docs/queries.html]
+    logger.log("--- CONTROLLER : Get Admin");
     model.find()
-    // once the query is done, do the following action thanks to a "promise"
     .then(function(docs){
         logger.log(docs);
         res.json(docs);
@@ -104,9 +102,8 @@ exports.getAdmin = function(req, res, next) {
 };
 
 exports.updateAdmin = function(req, res, next) {
-    logger.log("--- CONTROLLER : Update")
+    logger.log("--- CONTROLLER : Update Admin")
     
-    // update the data corresponding to the id with the new one in the request
     model.findByIdAndUpdate(req.params.id, req.body, 
         function(err, doc) {
             if (err) {
@@ -118,15 +115,4 @@ exports.updateAdmin = function(req, res, next) {
             logger.log('Document upated');
         }
     );
-};
-
-exports.getParams = function(req, res, next) {
-    logger.log("--- CONTROLLER : get");
-    // find() function of the model thanks to Mongoose [cf : http://mongoosejs.com/docs/queries.html]
-    model.Param.find()
-    // once the query is done, do the following action thanks to a "promise"
-    .then(function(docs){
-        logger.log(docs);
-        res.json(docs);
-    });
 };
