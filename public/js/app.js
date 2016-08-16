@@ -38,6 +38,13 @@ var app = angular.module('abakusApp', [
 	    transclude: true,      // (4)
 	    templateUrl: "components/searchBar.html"    // (5)
 	  }})
+	.directive('profiledashboard', function() { // (1)
+	  return {
+	    restrict: "E",         // (2)
+	    replace: false,         // (3)
+	    transclude: true,      // (4)
+	    templateUrl: "components/profiledashboard.html"    // (5)
+	  }})
 	.directive('moreclient', function() { // (1)
 	  return {
 	    restrict: "E",         // (2)
@@ -186,6 +193,11 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/profile/edit-terms', {
 		title:"mon compte",
 		templateUrl : 'partials/pro/profile/editTerms.html',
+		controller : ''
+	}).
+	when('/pro/profile/edit-articles', {
+		title:"mon compte",
+		templateUrl : 'partials/pro/profile/editArticle.html',
 		controller : ''
 	}).
 	when('/pro/profile/infos', {
