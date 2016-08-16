@@ -7,16 +7,26 @@ services.factory('Crm',['$resource', function($resource) {
 	let list = {
 		login : function(hash, pwd, callback) {
 			let logResource = $resource("/api/crm/login?hash="+hash+"&pwd="+pwd);
-            // callback is not required but it's better to get the different messages [error, validation,...] 
+            
             logResource.query(callback);
 		},
-        upload : function(uploadQuery, callback) {
+        upload : function(newUpload, callback) {
 			let uploadResource = $resource("/api/crm/upload");
-            uploadResource = uploadQuery;
-            // callback is not required but it's better to get the different messages [error, validation,...] 
+            uploadResource.folder = newUpload.folder;
+            uploadResource.filename = newUpload.filename;
+            // file is the image and must be the last one
+            uploadResource.file = newUpload.file;
+
             uploadResource.$save(callback);
 		}
-        createPdf : function(pdfQuery, callback) {
+        createPdf : function(newPdf, callback) {
+            let pdfResource = $resource("/api/crm/createPdf");
+            // informations about file and folder
+            pdfResource.file = newPdf.file;
+            // data to put inside the pdf
+            pdfResource.data = newPdf.data;
+            
+            pdfResource.$save(callback);
 		}
 	}
 
