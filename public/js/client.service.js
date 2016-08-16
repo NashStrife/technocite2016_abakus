@@ -10,12 +10,19 @@ clientService.factory('Client',['$resource', function($resource) {
 		},
 		addClient : function(newClient, callback) {
 			let client = new resource();
-            // client.name = newClient.name;
-            // client.isCompany = newClient.isCompany;
-			// client.vat = newClient.vat; // object
+            client.name = newClient.name;
+			if(newClient.picture)
+				client.picture = newClient.picture;
+            client.isCompany = newClient.isCompany;
+			if(newClient.vat)
+				client.vat = newClient.vat; // object
+			client.billingInfo = newClient.billingInfo;
+			client.deliveryInfo = newClient.deliveryInfo;
+			client.contactPerson = newClient.contactPerson;
+			if(newClient.memo)
+				client.memo = newClient.memo;
+            client.createdAt = Date.now();
 
-            // client.createdAt = Date.now();
-			client = newClient;
             console.log(client);
             client.$save(callback);
 		},
