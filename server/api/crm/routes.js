@@ -27,8 +27,8 @@ router.route('/admin/:id')
 
 // PARAMETERS
 router.route('/params')
-.get(controller.getParams)
-.post(controller.postParams);
+.get(paramsController.getParams)
+.post(paramsController.postParams);
 
 // MISC
 router.route('/login')
