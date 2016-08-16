@@ -79,6 +79,7 @@ body{
     position: fixed;
     bottom: 0;
     padding-top: 25px;
+    z-index: 1000;
     .copyright {
         opacity: 0.6;
     }
