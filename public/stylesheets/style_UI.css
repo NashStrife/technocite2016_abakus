@@ -18,7 +18,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
@@ -108,8 +108,9 @@ body {
   position: fixed;
   bottom: 0;
   padding-top: 25px;
+  z-index: 1000;
 }
-/* line 82, ../sass/style_UI.scss */
+/* line 83, ../sass/style_UI.scss */
 .foot .copyright {
   opacity: 0.6;
 }

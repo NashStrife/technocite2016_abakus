@@ -8,7 +8,10 @@
 	<div class="client active">
 		<h2>Je souhaite consulter mes factures</h2>
 		<a href="index.html#/client/home"><img src="images/fleche-blanche.png" alt="white arrow" id="arrow"></a><br/>
-		
+
+		<button ng-click="" id="moreClient">CLIENT</button>
+		<!-- <div class="overlay" id="splash" ng-if="showForm"></div> -->
+
 	<div class="or">OU</div>
 	</div>
 	
@@ -16,6 +19,7 @@
 		<h2>Je souhaite éditer des factures</h2>
 		<a href="index.html#/pro/home"><img src="images/fleche-blanche.png" alt="blue arrow" id="arrow"></a><br/>
 
+		<button ng-click="" id="moreClient">PRO</button>
 	</div>
 
 	<!-- <div class="category">
@@ -23,10 +27,18 @@
 		<a href="#" class="pro active">Pro</a>
 	</div> -->
 	<div class="formulaire">
+		<form name="logClient" ng-submit="checkLog(logClient.$valid)">
+			<input type="text" name="log.email" id="email-input" ng-model="log.email" placeholder="Email"><br/>
+			<input type="password" name="log.password" id="password-input" ng-model="log.password"  placeholder="Mot de passe"><br/>
+			<!-- <a href="index.html#/client/home">Se Connecter</a> -->
+			<input type="submit" value="Se connecter">
+		</form>
+	</div> <!--fin du formulaire-->
+	<div class="formulaire">
 		<form action="">
 			<input type="text" placeholder="Email"><br/>
 			<input type="text" placeholder="Mot de passe"><br/>
-			<a href="#">Se Connecter</a>
+			<!-- <a href="index.html#/pro/home">Se Connecter</a> -->
 		</form>
 	</div> <!--fin du formulaire-->
 </div> <!-- Fin de container -->

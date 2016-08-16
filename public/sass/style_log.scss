@@ -44,11 +44,11 @@ body{
     margin-bottom: 80px;
 }
 .formulaire{
-    visibility: hidden;
+    visibility: visible;
     @include span(6 of 12);
     @include pre(3 of 12);
     text-align: center;
-        color: $textColor;
+    color: $textColor;
     
     input{
         width: 100%;
@@ -67,5 +67,42 @@ body{
         display: block;
         padding: 14px 0;
         
+    }
+}
+@media screen and(min-width:480px) {
+    .container {
+        @include container(940px);
+    }
+    .category {
+        @include container;
+        text-align: center;
+    }
+    .category a {
+        @include span(6 of 12);
+        margin-left: 0;
+        &.active {
+            background: $focusColor;
+            color: $primaryColor;
+        }
+        &:last-child {
+            @include last;
+        }
+    }
+    .logo {
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+    .formulaire {
+        @include span(6 of 12);
+        @include pre(3 of 12);
+        input {
+            margin-bottom: 20px;
+            padding: 9px 0;
+            padding-left: 7px;
+            background: $textColor;
+        }
+        a {
+            margin-left: 80px;
+        }
     }
 }

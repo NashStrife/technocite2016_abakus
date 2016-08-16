@@ -18,7 +18,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
@@ -38,7 +38,7 @@ body {
   margin-right: auto;
   text-align: center;
 }
-/* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .category:after {
   content: " ";
   display: block;
@@ -80,7 +80,7 @@ body {
 
 /* line 46, ../sass/style_log.scss */
 .formulaire {
-  visibility: hidden;
+  visibility: visible;
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
@@ -106,4 +106,76 @@ body {
   text-transform: uppercase;
   display: block;
   padding: 14px 0;
+}
+
+@media screen and (min-width: 480px) {
+  /* line 73, ../sass/style_log.scss */
+  .container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  /* line 76, ../sass/style_log.scss */
+  .category {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  /* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+  .category:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  /* line 80, ../sass/style_log.scss */
+  .category a {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-left: 0;
+  }
+  /* line 83, ../sass/style_log.scss */
+  .category a.active {
+    background: #e5af28;
+    color: #2a4158;
+  }
+  /* line 87, ../sass/style_log.scss */
+  .category a:last-child {
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 91, ../sass/style_log.scss */
+  .logo {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+
+  /* line 95, ../sass/style_log.scss */
+  .formulaire {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-left: 25.42373%;
+  }
+  /* line 98, ../sass/style_log.scss */
+  .formulaire input {
+    margin-bottom: 20px;
+    padding: 9px 0;
+    padding-left: 7px;
+    background: #e3e4e6;
+  }
+  /* line 104, ../sass/style_log.scss */
+  .formulaire a {
+    margin-left: 80px;
+  }
 }
