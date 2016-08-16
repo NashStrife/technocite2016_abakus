@@ -28,8 +28,8 @@
 	</div> -->
 	<div class="formulaire">
 		<form name="logClient" ng-submit="checkLog(logClient.$valid)">
-			<input type="text" name="log.email" id="email-input" ng-model="log.email" placeholder="Email"><br/>
-			<input type="password" name="log.password" id="password-input" ng-model="log.password"  placeholder="Mot de passe"><br/>
+			<input type="email" name="log.email" id="email-input" ng-model="log.email" placeholder="Email" required><br/>
+			<input type="password" name="log.password" id="password-input" ng-model="log.password"  placeholder="Mot de passe" required><br/>
 			<!-- <a href="index.html#/client/home">Se Connecter</a> -->
 			<input type="submit" value="Se connecter">
 		</form>

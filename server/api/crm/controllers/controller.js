@@ -83,11 +83,11 @@ exports.dynamicSearch = function(req, res, next) {
     .then(function(docs){
         // the result is not empty we have a corresponding result
         if(docs.length) {
-            res.json({error_code:0,data: docs});
+            res.json([{error_code:0,data: docs}]);
             logger.log(docs);
         } else {
             logger.log(`No result for the query ${JSON.stringify(query)}`);
-            res.json({error_code:1,message:`No result for the query ${JSON.stringify(query)}`});
+            res.json([{error_code:1,message:`No result for the query ${JSON.stringify(query)}`}]);
         }
     });
 };

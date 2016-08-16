@@ -1,27 +1,34 @@
 var abakusControllers = angular.module('abakusControllers', []);
 
 
-abakusControllers.controller('loginCtrl', ['$scope', 'Crm', function($scope, Crm){
+abakusControllers.controller('loginCtrl', ['$scope', 'Crm','Client', function($scope, Crm,Client){
 
 			$scope.log = {};
 
 
 		$scope.error = false;
 		$scope.checkLog = function(isValid){
-			console.log($scope.log);
-			// if(isValid){
-			// 	Rest.addResto($scope.newResto, $scope.types, $scope.pics, function(result){
-			// 		alert(result.message);
-			// 		console.log(result);
-			// 		// clean the temp Arrays after sending the form for the next one
-			// 		voidArrays();
-			// 	});
-			// 	$scope.error = false;
-			// } else {
-			// 	console.log("Invalid Submit !");
-			// 	alert("Please complete all required champs");
-			// 	$scope.error = true;
-			// }
+			
+			if(isValid){
+				console.log($scope.log);
+				Client.getOne("contactPerson.mail", $scope.log.email, function(result){
+					console.log(result);
+				})
+				// if(log.email = email de la db) {
+
+				// }
+				// Crm.addResto($scope.newResto, $scope.types, $scope.pics, function(result){
+				// 	alert(result.message);
+				// 	console.log(result);
+				// 	// clean the temp Arrays after sending the form for the next one
+				// 	voidArrays();
+				// });
+				// $scope.error = false;
+			} else {
+				console.log("Invalid Submit !");
+				alert("Please complete all required champs");
+				// $scope.error = true;
+			}
 		}
 }]);
 

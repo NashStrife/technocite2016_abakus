@@ -1,9 +1,10 @@
 var app = angular.module('abakusApp', [
 	'ngRoute',
+	'ngResource',
 	'abakusControllers',
 	'addClientModule',
 	'servicesAbakus',
-	'ngResource'
+	'clientService'
 	])
 	.directive('linkhomeclient', function() { // (1)
 	  return {

@@ -8,6 +8,11 @@ clientService.factory('Client',['$resource', function($resource) {
 		getList : function(callback) {
 			resource.query(callback);
 		},
+		getOne : function(searchKey, searchValue, callback){
+			let getOneResource = $resource("/api/crm/search?"+searchKey+"="+searchValue);
+            
+            getOneResource.query(callback);
+		},
 		addClient : function(newClient, callback) {
 			let client = new resource();
             client.name = newClient.name;
