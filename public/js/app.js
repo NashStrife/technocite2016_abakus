@@ -1,7 +1,9 @@
 var app = angular.module('abakusApp', [
 	'ngRoute',
 	'abakusControllers',
-	'addClientModule'
+	'addClientModule',
+	'servicesAbakus',
+	'ngResource'
 	])
 	.directive('linkhomeclient', function() { // (1)
 	  return {
@@ -80,7 +82,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/', {
 		title:"login",
 		templateUrl : 'partials/login.html',
-		controller : ''
+		controller : 'loginCtrl'
 	}).
 	when('/client/home', {
 		title:"home",

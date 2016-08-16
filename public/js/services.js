@@ -18,7 +18,7 @@ services.factory('Crm',['$resource', function($resource) {
             uploadResource.file = newUpload.file;
 
             uploadResource.$save(callback);
-		}
+		},
         createPdf : function(newPdf, callback) {
             let pdfResource = $resource("/api/crm/createPdf");
             // informations about file and folder
