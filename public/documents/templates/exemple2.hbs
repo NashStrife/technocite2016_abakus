@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple facture</title>
+    <link rel="stylesheet" href="../stylesheets/reset.css">
+    <link rel="stylesheet" href="../stylesheets/exemple.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <!--Début de l'en-tête de facture contenant les coordonnées client-->
+            <img src="../images/logo.jpg" alt="Logo entreprise" width="470" height="470">
+            <form action="" class="entreprise">
+               <label for="nom_entreprise">{{Nom Entreprise}}</label><input type="text" id="nom_entreprise"></br>
+               <label for="rue"> {{Rue}}</label><input type="text" id="rue"></br>
+                <label for="localite">{{Localité}}</label><input type="text" id="localite"></br>
+               <label for="pays"> {{Pays}}</label><input type="text" id="pays"></br>
+                <label for="phone">{{Téléphone}}</label><input type="text" id="phone"></br>
+                <label for="fax">{{Fax}}</label><input type="text" id="fax"></br>
+                <label for="mail">{{E-mail}}</label><input type="text" id="mail"></br>
+            </form>
+            <section class="num_facture">
+            <h1>Facture</h1></br>
+            <p>{{num facture}}</p></br>
+            <p>{{date}}</p></br>
+            </section>
+        </div>
+        <div class="info_client">
+            <form action="">
+             <label for="nom_client">{{Nom client}}</label><input type="text" id="nom_client"></br>
+              <label for="rue">{{rue}}</label><input type="text" id="rue"></br>
+              <label for="localite">{{localite}}</label><input type="text" id="localite"></br>
+              <label for="pays">{{pays}}</label><input type="text" id="pays"></br>
+            </form>
+        </div>
+        <table>
+            <tr>
+                <th>Article</th>
+                <th>Description</th>
+                <th>Qte</th>
+                <th>P/U</th>
+                <th>Montant</th>
+            </tr>
+            <tr>
+                <td>lorem ipsum</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio nisi maiores qui, a dolorum vero repellendus dolore nihil. Veniam non perferendis velit possimus consequuntur quae dolorem esse, doloremque sit.</td>
+                <td>2</td>
+                <td>22,00</td>
+                <td>44,00</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
