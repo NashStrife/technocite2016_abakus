@@ -57,12 +57,16 @@ body {
 }
 
 @media screen and (min-width: 480px) {
-    .logo {
+    .logoHeader {
+        background-color: #e5af28;
         margin: auto;
+        padding-bottom: 5px;
         margin-bottom: 50px;
         margin-top: 50px;
+        text-align: left;
+        z-index: 150;
         img {
-            width: 420px;
+            margin-top: 5px;
         }
     }
     .client {
@@ -70,7 +74,7 @@ body {
         text-align: center;
         position: relative;
     }
-    p {
+    .or {
         position: absolute;
         width: 80px;
         height: 80px;

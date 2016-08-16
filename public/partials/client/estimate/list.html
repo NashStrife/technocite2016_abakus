@@ -1,11 +1,11 @@
-<!-- <linkhomeclient></linkhomeclient> -->
+<linkhomeclient></linkhomeclient>
 
 <navbarclient></navbarclient>
 <search-bar></search-bar>
 
 <div ng-controller="profile">
-
-	<ul style="margin-top:165px;">    <!-- Liste des devis -->
+	<div class="container">
+	<ul>    <!-- Liste des devis -->
 	            <li ng-repeat="item in listEstimates | filter: filter">
 	                <div class="listItem">
 	                    <div class="blocItem">
@@ -24,5 +24,6 @@
 	                </a>
 	            </li>
 	</ul> <!-- Fin de liste des devis -->
+	</div>
 </div>
 

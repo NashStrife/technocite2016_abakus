@@ -1,0 +1,241 @@
+/* line 8, ../sass/splash.scss */
+html {
+  box-sizing: border-box;
+  font-family: "century Gothic", arial, sans-serif;
+}
+
+/* line 10, ../sass/splash.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 11, ../sass/splash.scss */
+#moreClient {
+  position: fixed;
+  z-index: 999;
+  background-color: #e5af28;
+  color: #2a4158;
+  border: none;
+  height: 22px;
+  width: 100px;
+  cursor: pointer;
+}
+/* line 20, ../sass/splash.scss */
+#moreClient::first-letter {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* line 25, ../sass/splash.scss */
+.overlay {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 36, ../sass/splash.scss */
+.newClient {
+  color: #2a4158;
+  position: relative;
+  height: 410px;
+  width: 650px;
+  background-color: #95a0ac;
+  margin: auto;
+  align-self: center;
+  text-align: center;
+}
+/* line 45, ../sass/splash.scss */
+.newClient img {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+/* line 53, ../sass/splash.scss */
+.newClient input {
+  color: #2a4158;
+}
+/* line 56, ../sass/splash.scss */
+.newClient .intro {
+  height: 30px;
+  width: 220px;
+  color: #cad0d6;
+  background-color: #2a4158;
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+/* line 66, ../sass/splash.scss */
+.newClient fieldset {
+  display: none;
+  background-color: #95a0ac;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  margin: 0;
+}
+/* line 77, ../sass/splash.scss */
+.newClient :-moz-any(label[for="logo"]) {
+  height: 42.5px;
+}
+/* line 80, ../sass/splash.scss */
+.newClient legend {
+  background-color: #95a0ac;
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+  width: 100%;
+  display: block;
+  padding: 5%;
+}
+/* line 90, ../sass/splash.scss */
+.newClient label {
+  display: inline-block;
+  font-style: italic;
+  text-align: left;
+}
+/* line 95, ../sass/splash.scss */
+.newClient select, .newClient input {
+  height: 21px;
+}
+/* line 98, ../sass/splash.scss */
+.newClient .line {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.newClient .line:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 100, ../sass/splash.scss */
+.newClient .line label {
+  margin-top: 2%;
+}
+/* line 101, ../sass/splash.scss */
+.newClient .line label, .newClient .line input, .newClient .line select {
+  width: 100%;
+}
+/* line 104, ../sass/splash.scss */
+.newClient .line label[for="tva"], .newClient .line label[for="ref"] {
+  width: 74.4898%;
+  float: left;
+  margin-right: 2.04082%;
+}
+/* line 107, ../sass/splash.scss */
+.newClient .line label[for="modeTva"], .newClient .line label[for="logo"] {
+  width: 23.46939%;
+  float: right;
+  margin-right: 0;
+}
+/* line 110, ../sass/splash.scss */
+.newClient .line label[for="civil"], .newClient .line label[for="name"] {
+  width: 31.96939%;
+  float: left;
+  margin-right: 2.04082%;
+}
+/* line 113, ../sass/splash.scss */
+.newClient .line label[for="firstName"] {
+  width: 31.96939%;
+  float: right;
+  margin-right: 0;
+}
+/* line 116, ../sass/splash.scss */
+.newClient .line label[for="phone1"], .newClient .line label[for="email"] {
+  width: 48.97959%;
+  float: left;
+  margin-right: 2.04082%;
+}
+/* line 119, ../sass/splash.scss */
+.newClient .line label[for="phone2"] {
+  width: 48.97959%;
+  float: right;
+  margin-right: 0;
+}
+/* line 122, ../sass/splash.scss */
+.newClient .line label[for="fonction"] {
+  display: none;
+}
+/* line 125, ../sass/splash.scss */
+.newClient .line #prefixeTva {
+  width: 12%;
+}
+/* line 128, ../sass/splash.scss */
+.newClient .line #tva {
+  width: 88%;
+}
+/* line 131, ../sass/splash.scss */
+.newClient .line label[for="logo"] {
+  position: relative;
+}
+/* line 133, ../sass/splash.scss */
+.newClient .line label[for="logo"] span {
+  color: #cad0d6;
+  position: absolute;
+  line-height: 21px;
+  bottom: 0;
+  text-align: center;
+  background-color: #2a4158;
+  display: block;
+  width: 100%;
+}
+/* line 145, ../sass/splash.scss */
+.newClient input[type="file"] {
+  outline: none;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+/* line 151, ../sass/splash.scss */
+.newClient button {
+  position: absolute;
+  bottom: 10%;
+  color: #cad0d6;
+  background-color: #2a4158;
+  border: none;
+  height: 22px;
+  width: 15%;
+  outline: none;
+  cursor: pointer;
+}
+/* line 160, ../sass/splash.scss */
+.newClient button#prev, .newClient button#cancel {
+  left: 12.5%;
+}
+/* line 163, ../sass/splash.scss */
+.newClient button#next, .newClient button#submit {
+  right: 12.5%;
+}
+/* line 167, ../sass/splash.scss */
+.newClient input[name="client"], .newClient input[name="button"], .newClient button {
+  display: none;
+}
+/* line 170, ../sass/splash.scss */
+.newClient input[value="particulier"]:checked ~ fieldset:nth-of-type(2) {
+  display: inline-block;
+}
+/* line 173, ../sass/splash.scss */
+.newClient input[name="client"]:checked ~ #cancel {
+  display: inline-block;
+}
+/* line 176, ../sass/splash.scss */
+.newClient input[name="client"]:checked ~ #next {
+  display: inline-block;
+}
+/* line 179, ../sass/splash.scss */
+.newClient input[value="society"]:checked ~ fieldset:nth-of-type(1) {
+  display: inline-block;
+}

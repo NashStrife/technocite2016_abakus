@@ -59,27 +59,26 @@ body {
   display: inline-block;
   height: 230px;
   background: #95a0ac;
-  margin-top: 130px;
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 43, ../sass/style_UI.scss */
+/* line 42, ../sass/style_UI.scss */
 .navigation:hover {
   background: #e5af28;
 }
-/* line 46, ../sass/style_UI.scss */
+/* line 45, ../sass/style_UI.scss */
 .navigation:last-child {
   margin-right: 0;
 }
-/* line 50, ../sass/style_UI.scss */
+/* line 49, ../sass/style_UI.scss */
 .navigation a {
   text-decoration: none;
   text-transform: uppercase;
   color: #2a4158;
   text-align: center;
 }
-/* line 57, ../sass/style_UI.scss */
+/* line 56, ../sass/style_UI.scss */
 .navigation h2 {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -89,7 +88,7 @@ body {
   font-weight: bold;
   border-bottom: 2px solid #2a4158;
 }
-/* line 66, ../sass/style_UI.scss */
+/* line 65, ../sass/style_UI.scss */
 .navigation img {
   margin: auto;
   display: block;
@@ -97,7 +96,7 @@ body {
   padding-bottom: 20px;
 }
 
-/* line 73, ../sass/style_UI.scss */
+/* line 72, ../sass/style_UI.scss */
 .foot {
   background: #16202c;
   color: #fff;
@@ -107,9 +106,9 @@ body {
   margin-top: 40px;
   position: fixed;
   bottom: 0;
+  padding-top: 25px;
 }
 /* line 82, ../sass/style_UI.scss */
-.foot p {
-  padding-top: 25px;
+.foot .copyright {
   opacity: 0.6;
 }

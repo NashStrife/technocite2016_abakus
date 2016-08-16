@@ -1,19 +1,28 @@
+<linkhomepro></linkhomepro>
+
 <navbarpro></navbarpro>
 <search-bar></search-bar>
 
-<h1 style="background-color:#d6eaf8;"> Liste des Devis</h1>
+<div ng-controller="profile">
+	<div class="container">
+	<ul>    <!-- Liste des devis -->
+	            <li ng-repeat="item in listEstimates | filter: filter">
+	                <div class="listItem">
+	                    <div class="blocItem">
+	                        <span class="itemDatas blocDate">{{item.date}}</span>
+	                        <span class="itemDatas blocCompany">{{item.company}}</span>
+	                        <span class="itemDatas blocInvoiceNumber">{{item.invoiceNumber}}</span>
+	                    </div>
+	                    <div class="listNote">
+	                    <p>{{item.note}}</p>
+	                    </div>
+	                    <button class="reveal">v</button>
+	                </div>
 
-<ul>
-	<li>
-		<a href="#">Devis 1</a>
-	</li>
-	<li>
-		<a href="#">Devis 2</a>
-	</li>
-	<li>
-		<a href="#">Devis 3</a>
-	</li>
-	<li>
-		<a href="#">Devis 4</a>
-	</li>
-</ul>
+	                <a href="#/client/estimate/detail" class="moreInfos">
+	                    Plus d'infos
+	                </a>
+	            </li>
+	</ul> <!-- Fin de liste des devis -->
+	</div>
+</div>
