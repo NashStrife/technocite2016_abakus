@@ -90,6 +90,9 @@ body {
         background: $primaryColor;
     }
     .container {
+        .listing {
+            padding-top:170px;
+        }
         @include container(940px);
         > div {
             @include span(3 of 6);

@@ -119,13 +119,17 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  /* line 93, ../sass/style_index.scss */
+  .container .listing {
+    padding-top: 170px;
+  }
   /* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
   .container:after {
     content: " ";
     display: block;
     clear: both;
   }
-  /* line 94, ../sass/style_index.scss */
+  /* line 97, ../sass/style_index.scss */
   .container > div {
     width: 48.27586%;
     float: left;
@@ -135,28 +139,28 @@ body {
     margin-left: 0;
     height: 200px;
   }
-  /* line 101, ../sass/style_index.scss */
+  /* line 104, ../sass/style_index.scss */
   .container > div img {
     margin-bottom: 50px;
     margin-top: 0px;
   }
-  /* line 105, ../sass/style_index.scss */
+  /* line 108, ../sass/style_index.scss */
   .container > div.pro {
     float: right;
     margin-right: 0;
     background: #95a0ac;
     color: #2a4158;
   }
-  /* line 110, ../sass/style_index.scss */
+  /* line 113, ../sass/style_index.scss */
   .container > div > p {
     display: unset;
   }
-  /* line 114, ../sass/style_index.scss */
+  /* line 117, ../sass/style_index.scss */
   .container a {
     text-decoration: none;
     color: #2a4158;
   }
-  /* line 118, ../sass/style_index.scss */
+  /* line 121, ../sass/style_index.scss */
   .container h2 {
     margin-top: 0px;
     font-size: 24px;
