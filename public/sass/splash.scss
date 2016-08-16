@@ -75,7 +75,7 @@ html {	box-sizing: border-box;
 			margin: 0;
 		}
 		:-moz-any(label[for="logo"]){
-			height: 42.5px;
+			height: 37px;
 		}
 		legend{
 			background-color: $mainBackgroundColor;
@@ -130,6 +130,7 @@ html {	box-sizing: border-box;
 			}
 			label[for="logo"]{
 				position: relative;
+				cursor: pointer;
 				span {
 					color: $navColor;
 					position: absolute;
@@ -147,6 +148,7 @@ html {	box-sizing: border-box;
 			position: relative;
 			z-index: 1;
 			opacity: 0;
+			pointer-events: none;
 		}
 		button {position: absolute;
 				bottom: 10%;
