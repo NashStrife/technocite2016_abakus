@@ -16,6 +16,8 @@ services.factory('Crm',['$resource', function($resource) {
             // callback is not required but it's better to get the different messages [error, validation,...] 
             uploadResource.$save(callback);
 		}
+        createPdf : function(pdfQuery, callback) {
+		}
 	}
 
 	return list;

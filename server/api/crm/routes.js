@@ -1,10 +1,11 @@
 let router = require('express').Router();
 let controller = require('./controllers/controller');
+let paramsController = require('./controllers/paramsController');
 let loginController = require('./controllers/loginController');
 let formController = require('./controllers/formController');
 let pdfController = require('./controllers/pdfController');
 
-// CUSTOMERS 
+// CLIENTS 
 router.route('/')
 .get(controller.getCustomer)
 .post(controller.postCustomer);
@@ -26,9 +27,10 @@ router.route('/admin/:id')
 
 // PARAMETERS
 router.route('/params')
-.get(controller.getParams);
+.get(controller.getParams)
+.post(controller.postParams);
 
-// DIVERS
+// MISC
 router.route('/login')
 .get(loginController.checkPwd);
 
