@@ -74,6 +74,8 @@ body {
 @media screen and (min-width: 480px) {
   /* line 60, ../sass/style_index.scss */
   .logoHeader {
+    position: fixed;
+    width: 100%;
     background-color: #e5af28;
     margin: auto;
     padding-bottom: 5px;
@@ -82,12 +84,12 @@ body {
     text-align: left;
     z-index: 150;
   }
-  /* line 68, ../sass/style_index.scss */
+  /* line 70, ../sass/style_index.scss */
   .logoHeader img {
     margin-top: 5px;
   }
 
-  /* line 72, ../sass/style_index.scss */
+  /* line 74, ../sass/style_index.scss */
   .client {
     width: 48.27586%;
     float: left;
@@ -96,7 +98,7 @@ body {
     position: relative;
   }
 
-  /* line 77, ../sass/style_index.scss */
+  /* line 79, ../sass/style_index.scss */
   .or {
     position: absolute;
     width: 80px;
@@ -111,7 +113,7 @@ body {
     background: #2a4158;
   }
 
-  /* line 90, ../sass/style_index.scss */
+  /* line 92, ../sass/style_index.scss */
   .container {
     max-width: 940px;
     margin-left: auto;
@@ -123,7 +125,7 @@ body {
     display: block;
     clear: both;
   }
-  /* line 92, ../sass/style_index.scss */
+  /* line 94, ../sass/style_index.scss */
   .container > div {
     width: 48.27586%;
     float: left;
@@ -133,28 +135,28 @@ body {
     margin-left: 0;
     height: 200px;
   }
-  /* line 99, ../sass/style_index.scss */
+  /* line 101, ../sass/style_index.scss */
   .container > div img {
     margin-bottom: 50px;
     margin-top: 0px;
   }
-  /* line 103, ../sass/style_index.scss */
+  /* line 105, ../sass/style_index.scss */
   .container > div.pro {
     float: right;
     margin-right: 0;
     background: #95a0ac;
     color: #2a4158;
   }
-  /* line 108, ../sass/style_index.scss */
+  /* line 110, ../sass/style_index.scss */
   .container > div > p {
     display: unset;
   }
-  /* line 112, ../sass/style_index.scss */
+  /* line 114, ../sass/style_index.scss */
   .container a {
     text-decoration: none;
     color: #2a4158;
   }
-  /* line 116, ../sass/style_index.scss */
+  /* line 118, ../sass/style_index.scss */
   .container h2 {
     margin-top: 0px;
     font-size: 24px;

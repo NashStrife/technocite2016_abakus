@@ -58,6 +58,8 @@ body {
 
 @media screen and (min-width: 480px) {
     .logoHeader {
+        position: fixed;
+        width: 100%;
         background-color: #e5af28;
         margin: auto;
         padding-bottom: 5px;
