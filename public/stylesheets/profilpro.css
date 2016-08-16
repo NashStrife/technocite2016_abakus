@@ -1,0 +1,109 @@
+/* line 5, ../sass/profilpro.scss */
+.warpper {
+  width: 940px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* line 13, ../sass/profilpro.scss */
+.contener {
+  width: 742px;
+  height: 600px;
+  z-index: 1;
+  float: right;
+  margin-top: 117px;
+  background-color: lightgrey;
+}
+
+/* line 23, ../sass/profilpro.scss */
+.coordonnee {
+  height: 46px;
+  width: 231px;
+  background-color: #e5af28;
+  float: left;
+}
+/* line 30, ../sass/profilpro.scss */
+.coordonnee img {
+  width: 28px;
+  height: 28px;
+  float: left;
+  margin-top: 7px;
+  margin-left: 7px;
+}
+/* line 39, ../sass/profilpro.scss */
+.coordonnee p {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 13px;
+  color: #2a4158;
+  float: left;
+  margin-left: 7px;
+}
+
+/* line 51, ../sass/profilpro.scss */
+.coordonneeCont {
+  background-color: #95a0ac;
+  width: 100%;
+  height: 212px;
+  float: left;
+  display: block;
+}
+/* line 59, ../sass/profilpro.scss */
+.coordonneeCont img {
+  width: 90px;
+  height: 90px;
+  float: left;
+  margin-top: 14px;
+  margin-left: 22px;
+}
+
+/* line 69, ../sass/profilpro.scss */
+.nomentreprise {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 13px;
+  color: #2a4158;
+  float: left;
+  margin-left: 17px;
+}
+
+/* line 81, ../sass/profilpro.scss */
+.info {
+  display: block;
+  width: 315px;
+  float: left;
+}
+/* line 87, ../sass/profilpro.scss */
+.info p:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 13px;
+  color: #2a4158;
+  float: left;
+  margin-left: 17px;
+}
+/* line 99, ../sass/profilpro.scss */
+.info p {
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 40px;
+  color: #2a4158;
+  text-align: justify;
+  line-height: 15px;
+  margin-left: 17px;
+}
+
+/* line 113, ../sass/profilpro.scss */
+.tva {
+  display: inline-block;
+  float: left;
+}
+/* line 121, ../sass/profilpro.scss */
+.tva p {
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 40px;
+  color: #2a4158;
+  text-align: justify;
+  line-height: 15px;
+}
