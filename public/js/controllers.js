@@ -5,12 +5,8 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 	// object to store logs informations from the login form
 	$scope.log = {};
 
-	// $cookies.put('isLogged', true);
-	// let log = {
-    //     'isLogged' : false,
-    //     'isPro' : false
-    // };
-	console.log($cookies.get('Abakus'));
+	var abakusCookies = $cookies.get('Abakus');
+	console.log(abakusCookies);
 
 	// for form validation
 	$scope.error = false;
@@ -23,7 +19,6 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 			// verify if the user exist or not
 			Client.getOne("contactPerson.mail", $scope.log.email, function(result){
 				var loginMsg = 'Incorrect email or/and password';
-				
 				// 1 = error, 0 = ok
 				var error_code = result[0].error_code; 
 
@@ -46,28 +41,27 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 							// redirect to the right view
 							$location.path('/client/home');
 							// set cookie
-							$cookies.putObject('Abakus', {
+							abakusCookies = {
 								'isLogged' : true,
 								'isPro' : false
-								});
-							
-							// Crm.setLog(true, false);
-							// console.log(Crm.getLog());
+							};
+							// and re inject it
+							$cookies.putObject('Abakus', abakusCookies);
 						}
-							console.log(loginMsg);
-							console.log($cookies.get('Abakus'));
+						console.log(loginMsg);
+						console.log($cookies.get('Abakus'));
 					});
 				}
 			});
 		} else {
 			console.log("Invalid Submit !");
 			alert("Please complete all required champs");
-			// $scope.error = true;
+			$scope.error = true;
 		}
 	}
 }]);
 
-abakusControllers.controller('profile', ['$scope', '$http', function($scope,$http ) {
+abakusControllers.controller('profileCtrl', ['$scope', '$http', function($scope,$http ) {
 	
 
 	$scope.listClients = [
