@@ -1,6 +1,7 @@
 var app = angular.module('abakusApp', [
 	'ngRoute',
 	'ngResource',
+	'ngCookies',
 	'abakusControllers',
 	'addClientModule',
 	'servicesAbakus',

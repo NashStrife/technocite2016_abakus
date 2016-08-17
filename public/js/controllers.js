@@ -1,54 +1,70 @@
 var abakusControllers = angular.module('abakusControllers', []);
 
 
-abakusControllers.controller('loginCtrl', ['$scope','$location', 'Crm','Client', function($scope,$location, Crm,Client){
+abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'Crm', 'Client', function($scope, $location, $cookies,  Crm, Client){
+	// object to store logs informations from the login form
+	$scope.log = {};
 
-			$scope.log = {};
+	// $cookies.put('isLogged', true);
+	// let log = {
+    //     'isLogged' : false,
+    //     'isPro' : false
+    // };
+	console.log($cookies.get('Abakus'));
 
-			console.log(Crm.getLog());
-		$scope.error = false;
-		$scope.checkLog = function(isValid){
-			
-			if(isValid){
-				console.log($scope.log);
+	// for form validation
+	$scope.error = false;
+	
+	// verify logs for client
+	$scope.checkLog = function(isValid){
+		if(isValid){
+			console.log($scope.log);
+
+			// verify if the user exist or not
+			Client.getOne("contactPerson.mail", $scope.log.email, function(result){
+				var loginMsg = 'Incorrect email or/and password';
 				
-				Client.getOne("contactPerson.mail", $scope.log.email, function(result){
-					var loginMsg = 'Incorrect email or/and password';
-					if (result[0].error_code === 0){
-						console.log(result[0].data[0].contactPerson.pwd);
-						var hash = result[0].data[0].contactPerson.pwd;
-						var pwd = $scope.log.password;
-						Crm.login(hash,pwd, function(logResult){
-							console.log(logResult[0].data);
-							if(logResult[0].data === true) {
-								// index.html#/client/home
-								loginMsg = 'login Ok';
-								$location.path('/client/home');
-								Crm.setLog(true, false);
-								console.log(Crm.getLog());
-							}
-								console.log(loginMsg);
-						});
-					} else {
-						console.log(loginMsg);
-					}
-				});
-				// if(log.email = email de la db) {
+				// 1 = error, 0 = ok
+				var error_code = result[0].error_code; 
 
-				// }
-				// Crm.addResto($scope.newResto, $scope.types, $scope.pics, function(result){
-				// 	alert(result.message);
-				// 	console.log(result);
-				// 	// clean the temp Arrays after sending the form for the next one
-				// 	voidArrays();
-				// });
-				// $scope.error = false;
-			} else {
-				console.log("Invalid Submit !");
-				alert("Please complete all required champs");
-				// $scope.error = true;
-			}
+				if (error_code)
+					console.log(loginMsg);
+				// if client exist
+				else {
+					var dataFromDb = result[0].data[0];
+					// console.log(dataFromDb.contactPerson.pwd);
+					var hash = dataFromDb.contactPerson.pwd;
+					var pwd = $scope.log.password;
+
+					// verify if password from the login form is corresponding with hash from DB
+					Crm.login(hash, pwd, function(compareResult){
+						// console.log(compareResult[0].data);
+
+						// if pass corresponding
+						if(compareResult[0].data) { 
+							loginMsg = 'login Ok';
+							// redirect to the right view
+							$location.path('/client/home');
+							// set cookie
+							$cookies.putObject('Abakus', {
+								'isLogged' : true,
+								'isPro' : false
+								});
+							
+							// Crm.setLog(true, false);
+							// console.log(Crm.getLog());
+						}
+							console.log(loginMsg);
+							console.log($cookies.get('Abakus'));
+					});
+				}
+			});
+		} else {
+			console.log("Invalid Submit !");
+			alert("Please complete all required champs");
+			// $scope.error = true;
 		}
+	}
 }]);
 
 abakusControllers.controller('profile', ['$scope', '$http', function($scope,$http ) {
