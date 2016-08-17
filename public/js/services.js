@@ -4,7 +4,21 @@ services.factory('Crm',['$resource', function($resource) {
 
 	let resource = $resource("/api/crm");
 
+    let log = {
+        'isLogged' : false,
+        'isPro' : false
+    };
+
 	let list = {
+
+        setLog : function(isLogged, isPro, callback) {
+            log.isLogged = isLogged;
+            log.isPro = isPro;
+        },
+        getLog : function() {
+            return log;
+        },
+
 		login : function(hash, pwd, callback) {
 			let logResource = $resource("/api/crm/login?hash="+hash+"&pwd="+pwd);
             

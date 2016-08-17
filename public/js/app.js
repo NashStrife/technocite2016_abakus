@@ -1,6 +1,7 @@
 var app = angular.module('abakusApp', [
 	'ngRoute',
 	'ngResource',
+	'ngCookies',
 	'abakusControllers',
 	'addClientModule',
 	'servicesAbakus',
@@ -88,7 +89,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/client/home', {
 		title:"home",
 		templateUrl : 'partials/client/home.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/client/estimate/detail', {
 		title:"devis",
@@ -123,7 +124,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/home', {
 		title:"home",
 		templateUrl : 'partials/pro/home.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/pro/create-new-file', {
 		title:"home",
@@ -145,7 +146,6 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl : 'partials/pro/clients/list.html',
 		controller : 'addClient'
 	}).
-
 	when('/pro/estimate/add', {
 		title:"devis",
 		templateUrl : 'partials/pro/estimate/add.html',
@@ -161,7 +161,6 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl : 'partials/pro/estimate/list.html',
 		controller : ''
 	}).
-
 	when('/pro/invoice/add', {
 		title:"factures",
 		templateUrl : 'partials/pro/invoice/add.html',
@@ -177,7 +176,6 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl : 'partials/pro/invoice/list.html',
 		controller : ''
 	}).
-
 	when('/pro/profile/edit-method-of-payement', {
 		title:"mon compte",
 		templateUrl : 'partials/pro/profile/editPayMethod.html',
@@ -217,8 +215,8 @@ app.config(['$routeProvider', function($routeProvider) {
 
 }]);
 
-app.run(['$rootScope', function($rootScope) {
-	    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-	        $rootScope.title = current.$$route.title;
-	    });
-	 }]);
+app.run(['$rootScope', '$cookies', function($rootScope, $cookies) {
+	$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+		$rootScope.title = current.$$route.title;
+	});
+}]);
