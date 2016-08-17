@@ -49,6 +49,7 @@ body{
     @include pre(3 of 12);
     text-align: center;
     color: $textColor;
+
     
     input{
         width: 100%;
@@ -56,7 +57,7 @@ body{
         border: none;
         padding: 9px 0;
         padding-left: 7px;
-    background: $textColor;
+        background: $textColor;
     }
     a{
         background: $focusColor;
@@ -93,13 +94,25 @@ body{
         margin-bottom: 80px;
     }
     .formulaire {
-        @include span(6 of 12);
-        @include pre(3 of 12);
+        @include span(12 of 12);
+        // @include pre(3 of 12);
+        background-color: $focusColor;
+        padding: 50px 0;
+        border-top: 1px solid $primaryColor;
         input {
+            @include span(10 of 12);
+            @include pre(1 of 12);
             margin-bottom: 20px;
             padding: 9px 0;
             padding-left: 7px;
             background: $textColor;
+
+        }
+        .connection {
+            text-transform: uppercase;
+            padding: 20px 0;
+            background-color: $primaryColor;
+            color: white;
         }
         a {
             margin-left: 80px;
