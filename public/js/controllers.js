@@ -3,7 +3,7 @@ var abakusControllers = angular.module('abakusControllers', []);
 
 abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'Crm', 'Client', function($scope, $location, $cookies,  Crm, Client){
 	// object to store logs informations from the login form
-	$scope.log = {};
+	$scope.logClient = {};
 
 	var abakusCookies = $cookies.get('Abakus');
 	console.log(abakusCookies);
@@ -14,10 +14,10 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 	// verify logs for client
 	$scope.checkLog = function(isValid){
 		if(isValid){
-			console.log($scope.log);
+			console.log($scope.logClient);
 
 			// verify if the user exist or not
-			Client.getOne("contactPerson.mail", $scope.log.email, function(result){
+			Client.getOne("contactPerson.mail", $scope.logClient.email, function(result){
 				var loginMsg = 'Incorrect email or/and password';
 				// 1 = error, 0 = ok
 				var error_code = result[0].error_code; 
@@ -29,7 +29,7 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 					var dataFromDb = result[0].data[0];
 					// console.log(dataFromDb.contactPerson.pwd);
 					var hash = dataFromDb.contactPerson.pwd;
-					var pwd = $scope.log.password;
+					var pwd = $scope.logClient.password;
 
 					// verify if password from the login form is corresponding with hash from DB
 					Crm.login(hash, pwd, function(compareResult){
