@@ -14,11 +14,11 @@ exports.checkPwd = function(req, res, next) {
 
     bcrypt.compare(pwd, hash, function(err, check) { 
         if(err){
-            res.json({error_code:1,err_desc:err});
+            res.json([{error_code:1,err_desc:err}]);
             logger.log(err);    
             return;
         }
-        res.json({error_code:0,data:check}); // data = "true" if pwd corresponding to hash or "false" if not
+        res.json([{error_code:0,data:check}]); // data = "true" if pwd corresponding to hash or "false" if not
         logger.log(check);
     });
 };
