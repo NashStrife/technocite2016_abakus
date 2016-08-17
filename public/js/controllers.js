@@ -4,6 +4,7 @@ var abakusControllers = angular.module('abakusControllers', []);
 abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'Crm', 'Client', function($scope, $location, $cookies,  Crm, Client){
 	// object to store logs informations from the login form
 	$scope.logClient = {};
+	$scope.logPro = {};
 
 	var abakusCookies = $cookies.get('Abakus');
 	console.log(abakusCookies);
@@ -12,7 +13,7 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 	$scope.error = false;
 	
 	// verify logs for client
-	$scope.checkLog = function(isValid){
+	$scope.checkLogCl = function(isValid){
 		if(isValid){
 			console.log($scope.logClient);
 
@@ -44,6 +45,54 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 							abakusCookies = {
 								'isLogged' : true,
 								'isPro' : false
+							};
+							// and re inject it
+							$cookies.putObject('Abakus', abakusCookies);
+						}
+						console.log(loginMsg);
+						console.log($cookies.get('Abakus'));
+					});
+				}
+			});
+		} else {
+			console.log("Invalid Submit !");
+			alert("Please complete all required champs");
+			$scope.error = true;
+		}
+	}
+	// verify logs for pro
+	$scope.checkLogPro = function(isValid){
+		if(isValid){
+			console.log($scope.logPro);
+
+			// verify if the user exist or not
+			Client.getOne("contactPerson.mail", $scope.logPro.email, function(result){
+				var loginMsg = 'Incorrect email or/and password';
+				// 1 = error, 0 = ok
+				var error_code = result[0].error_code; 
+
+				if (error_code)
+					console.log(loginMsg);
+				// if client exist
+				else {
+					var dataFromDb = result[0].data[0];
+					// console.log(dataFromDb.contactPerson.pwd);
+					var hash = dataFromDb.contactPerson.pwd;
+					var pwd = $scope.logPro.password;
+
+					// verify if password from the login form is corresponding with hash from DB
+					Crm.login(hash, pwd, function(compareResult){
+						// console.log(compareResult[0].data);
+
+						// if pass corresponding
+						if(compareResult[0].data) { 
+							loginMsg = 'login Ok';
+							// redirect to the right view
+							$location.path('/pro/home');
+							// set cookie
+							abakusCookies = {
+								'isLogged' : true,
+								'isPro' : true
 							};
 							// and re inject it
 							$cookies.putObject('Abakus', abakusCookies);

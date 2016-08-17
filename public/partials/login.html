@@ -13,9 +13,9 @@
 		</button>
 		
 		<div class="formulaire active">
-			<form name="formClient" ng-submit="checkLog(formClient.$valid)">
-				<input type="email" name="logClient.email" id="email-input" ng-model="logClient.email" placeholder="Email" required><br/>
-				<input type="password" name="logClient.password" id="password-input" ng-model="logClient.password"  placeholder="Mot de passe" required><br/>
+			<form name="formClient" ng-submit="checkLogCl(formClient.$valid)">
+				<input type="email" name="logClient.email" id="email-input-cl" ng-model="logClient.email" placeholder="Email" required><br/>
+				<input type="password" name="logClient.password" id="password-input-cl" ng-model="logClient.password"  placeholder="Mot de passe" required><br/>
 				<input type="submit" value="Se connecter" class="connection">
 			</form>
 		</div>
@@ -30,9 +30,9 @@
 		</button>
 		
 		<div class="formulaire active">
-			<form name="formPro" ng-submit="checkLog(formPro.$valid)">
-				<input type="email" name="logClient.email" id="email-input" ng-model="logClient.email" placeholder="Email" required><br/>
-				<input type="password" name="logClient.password" id="password-input" ng-model="logClient.password"  placeholder="Mot de passe" required><br/>
+			<form name="formPro" ng-submit="checkLogPro(formPro.$valid)">
+				<input type="email" name="logPro.email" id="email-input-pro" ng-model="logPro.email" placeholder="Email" required><br/>
+				<input type="password" name="logPro.password" id="password-input-pro" ng-model="logPro.password"  placeholder="Mot de passe" required><br/>
 				<input type="submit" value="Se connecter" class="connection">
 			</form>
 		</div>
