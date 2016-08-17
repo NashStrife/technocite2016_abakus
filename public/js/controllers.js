@@ -1,19 +1,38 @@
 var abakusControllers = angular.module('abakusControllers', []);
 
 
-abakusControllers.controller('loginCtrl', ['$scope', 'Crm','Client', function($scope, Crm,Client){
+abakusControllers.controller('loginCtrl', ['$scope','$location', 'Crm','Client', function($scope,$location, Crm,Client){
 
 			$scope.log = {};
 
-
+			console.log(Crm.getLog());
 		$scope.error = false;
 		$scope.checkLog = function(isValid){
 			
 			if(isValid){
 				console.log($scope.log);
+				
 				Client.getOne("contactPerson.mail", $scope.log.email, function(result){
-					console.log(result);
-				})
+					var loginMsg = 'Incorrect email or/and password';
+					if (result[0].error_code === 0){
+						console.log(result[0].data[0].contactPerson.pwd);
+						var hash = result[0].data[0].contactPerson.pwd;
+						var pwd = $scope.log.password;
+						Crm.login(hash,pwd, function(logResult){
+							console.log(logResult[0].data);
+							if(logResult[0].data === true) {
+								// index.html#/client/home
+								loginMsg = 'login Ok';
+								$location.path('/client/home');
+								Crm.setLog(true, false);
+								console.log(Crm.getLog());
+							}
+								console.log(loginMsg);
+						});
+					} else {
+						console.log(loginMsg);
+					}
+				});
 				// if(log.email = email de la db) {
 
 				// }
