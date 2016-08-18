@@ -7,7 +7,7 @@
 <div class="container" ng-controller="loginCtrl">
 
 	<div class="client">
-		<button ng-switch="inactive" class="active">
+		<button ng-click="expression" class="active">
 			<h2>Je souhaite consulter mes factures</h2>
 			<img src="images/fleche-blanche.png" alt="white arrow" id="arrow">
 		</button>
@@ -24,7 +24,7 @@
 	</div>
 
 	<div class="pro">
-		<button ng-switch="active" class="inactive">
+		<button ng-click="expression" class="inactive">
 			<h2>Je souhaite éditer des factures</h2>
 			<img src="images/fleche-blanche.png" alt="white arrow" id="arrow">
 		</button>
