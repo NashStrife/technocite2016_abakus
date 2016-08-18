@@ -16,11 +16,12 @@ html {
     h2 {
         font-size: 24px;
         color: $primaryColor;
+        // color: white;
         padding-top: 30px;
         padding-bottom: 20px;
     }
     > div {
-        background: $mainBackgroundColor;
+        // background: $mainBackgroundColor;
         width: 300px;
         height: 200px;
         text-align: center;
@@ -43,7 +44,61 @@ body {
     margin: 60px 0px;
 }
 
+button {
+    width: 100%;
+    height: 100%;
+    background-color: $focusColor;
+    border: none;
+    &:hover {
+        cursor:pointer;
+    }
+
+    img {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+
+        &:hover {
+            -webkit-animation: arrowAnim 0.5s 1 forwards;
+            animation: arrowAnim 0.5s 1 forwards;
+            @-webkit-keyframes arrowAnim {
+                0% {
+                    -webkit-transform: scaleY(1);
+                    -ms-transform: scaleY(1);
+                    -o-transform: scaleY(1);
+                    transform: scaleY(1);
+                }
+                100% {
+                    -webkit-transform: scaleY(-1);
+                    -ms-transform: scaleY(-1);
+                    -o-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                }
+            }
+
+            @keyframes arrowAnim {
+                0% {
+                    -webkit-transform: scaleY(1);
+                    -ms-transform: scaleY(1);
+                    -o-transform: scaleY(1);
+                    transform: scaleY(1);
+                }
+                100% {
+                    -webkit-transform: scaleY(-1);
+                    -ms-transform: scaleY(-1);
+                    -o-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                }
+            }  
+        }
+        
+    }
+}
+
 .client {
+
+
     &.active {
         background: $focusColor;
         color: white;
@@ -56,8 +111,11 @@ body {
 
 }
 
+
 @media screen and (min-width: 480px) {
     .logoHeader {
+        position: fixed;
+        width: 100%;
         background-color: #e5af28;
         margin: auto;
         padding-bottom: 5px;
@@ -88,16 +146,19 @@ body {
         background: $primaryColor;
     }
     .container {
+        .listing {
+            padding-top:170px;
+        }
         @include container(940px);
         > div {
             @include span(3 of 6);
-            padding: 10px;
+            // padding: 10px;
             position: relative;
             margin-left: 0;
             height: 200px;
-
+            
             img {
-                margin-bottom: 50px;
+                margin-bottom: 20px;
                 margin-top: 0px;
             }
             &.pro {

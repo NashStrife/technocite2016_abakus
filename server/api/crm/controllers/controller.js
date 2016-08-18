@@ -30,11 +30,11 @@ exports.postCustomer = function(req, res, next) {
         // and add it to the db
         customer.save(function(err, data) {
             if (err) {
-                res.json({error_code:1,err_desc:err});
+                res.json([{error_code:1,err_desc:err}]);
                 logger.log(err);    
                 return;
             }
-            res.json({error_code:0,message: 'Document saved'});
+            res.json([{error_code:0,message: 'Document saved'}]);
             logger.log('Document saved');
         });
     });
@@ -47,11 +47,11 @@ exports.updateCustomer = function(req, res, next) {
     model.Customer.findByIdAndUpdate(req.params.id, req.body, 
         function(err, doc) {
             if (err) {
-                res.json({error_code:1,err_desc:err});
+                res.json([{error_code:1,err_desc:err}]);
                 logger.log(err);    
                 return;
             }
-            res.json({error_code:0,message: 'Document upated'});
+            res.json([{error_code:0,message: 'Document upated'}]);
             logger.log('Document upated');
         }
     );
@@ -64,11 +64,11 @@ exports.deleteById = function(req, res, next) {
     model.Customer.findByIdAndRemove(req.params.id,
         function(err, doc) {
             if (err) {
-                res.json({error_code:1,err_desc:err});
+                res.json([{error_code:1,err_desc:err}]);
                 logger.log(err);    
                 return;
             }
-            res.json({error_code:0,message: 'Document removed'});
+            res.json([{error_code:0,message: 'Document removed'}]);
             logger.log('Document removed');
         }
     );
@@ -83,11 +83,11 @@ exports.dynamicSearch = function(req, res, next) {
     .then(function(docs){
         // the result is not empty we have a corresponding result
         if(docs.length) {
-            res.json({error_code:0,data: docs});
+            res.json([{error_code:0,data: docs}]);
             logger.log(docs);
         } else {
+            res.json([{error_code:1,message:`No result for the query ${JSON.stringify(query)}`}]);
             logger.log(`No result for the query ${JSON.stringify(query)}`);
-            res.json({error_code:1,message:`No result for the query ${JSON.stringify(query)}`});
         }
     });
 };
@@ -107,11 +107,11 @@ exports.updateAdmin = function(req, res, next) {
     model.findByIdAndUpdate(req.params.id, req.body, 
         function(err, doc) {
             if (err) {
-                res.json({error_code:1,err_desc:err});
+                res.json([{error_code:1,err_desc:err}]);
                 logger.log(err);    
                 return;
             }
-            res.json({error_code:0,message: 'Document upated'});
+            res.json([{error_code:0,message: 'Document upated'}]);
             logger.log('Document upated');
         }
     );

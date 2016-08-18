@@ -23,11 +23,11 @@ exports.postParams = function(req, res, next) {
     logger.log(parameter);
     parameter.save(function(err, data) {
         if (err) {
-            res.json({error_code:1,err_desc:err});
+            res.json([{error_code:1,err_desc:err}]);
             logger.log(err);    
             return;
         }
-        res.json({error_code:0,message: 'Parameters saved'});
+        res.json([{error_code:0,message: 'Parameters saved'}]);
         logger.log('Parameters saved');
     });
 };

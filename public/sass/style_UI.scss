@@ -16,7 +16,7 @@ body{
 }
 .blue{
     background: $primaryColor;
-    height: 40px;
+    height: 50px;
     position: fixed;
     top: 0px;
     width: 100%;
@@ -34,9 +34,9 @@ body{
     float: right;
 }
 .navigation{
-    
+    margin-top: 140px;
     display: inline-block;
-    height: 230px;
+    height: 300px;
     background: $mainBackgroundColor;
     @include span(3 of 12);
     &:hover{
@@ -79,6 +79,7 @@ body{
     position: fixed;
     bottom: 0;
     padding-top: 25px;
+    z-index: 1000;
     .copyright {
         opacity: 0.6;
     }

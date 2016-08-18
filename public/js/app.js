@@ -1,13 +1,20 @@
 var app = angular.module('abakusApp', [
 	'ngRoute',
+	'ngResource',
+	'ngCookies',
 	'abakusControllers',
-	'addClientModule'
+	'addClientModule',
+	'servicesAbakus',
+	'clientService',
+	'adminService',
+	'paramsService'
 	])
 	.directive('linkhomeclient', function() { // (1)
 	  return {
 	    restrict: "E",         // (2)
 	    replace: true,         // (3)
 	    transclude: true,      // (4)
+			controller : 'loginCtrl',
 	    templateUrl: "components/linkhomeclient.html"    // (5)
 	  }})
 	.directive('linkhomepro', function() { // (1)
@@ -15,6 +22,7 @@ var app = angular.module('abakusApp', [
 	    restrict: "E",         // (2)
 	    replace: true,         // (3)
 	    transclude: true,      // (4)
+			controller : 'loginCtrl',
 	    templateUrl: "components/linkhomepro.html"    // (5)
 	  }})
 	.directive('navbarclient', function() { // (1)
@@ -80,12 +88,12 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/', {
 		title:"login",
 		templateUrl : 'partials/login.html',
-		controller : ''
+		controller : 'loginCtrl'
 	}).
 	when('/client/home', {
 		title:"home",
 		templateUrl : 'partials/client/home.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/client/estimate/detail', {
 		title:"devis",
@@ -95,7 +103,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/client/estimate/list', {
 		title:"devis",
 		templateUrl : 'partials/client/estimate/list.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/client/invoice/detail', {
 		title:"factures",
@@ -105,7 +113,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/client/invoice/list', {
 		title:"factures",
 		templateUrl : 'partials/client/invoice/list.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/client/profile/edit', {
 		title:"mon compte",
@@ -120,7 +128,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/home', {
 		title:"home",
 		templateUrl : 'partials/pro/home.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/pro/create-new-file', {
 		title:"home",
@@ -142,7 +150,6 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl : 'partials/pro/clients/list.html',
 		controller : 'addClient'
 	}).
-
 	when('/pro/estimate/add', {
 		title:"devis",
 		templateUrl : 'partials/pro/estimate/add.html',
@@ -158,7 +165,6 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl : 'partials/pro/estimate/list.html',
 		controller : ''
 	}).
-
 	when('/pro/invoice/add', {
 		title:"factures",
 		templateUrl : 'partials/pro/invoice/add.html',
@@ -174,7 +180,6 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl : 'partials/pro/invoice/list.html',
 		controller : ''
 	}).
-
 	when('/pro/profile/edit-method-of-payement', {
 		title:"mon compte",
 		templateUrl : 'partials/pro/profile/editPayMethod.html',
@@ -214,8 +219,8 @@ app.config(['$routeProvider', function($routeProvider) {
 
 }]);
 
-app.run(['$rootScope', function($rootScope) {
-	    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-	        $rootScope.title = current.$$route.title;
-	    });
-	 }]);
+app.run(['$rootScope', '$cookies', function($rootScope, $cookies) {
+	$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+		$rootScope.title = current.$$route.title;
+	});
+}]);

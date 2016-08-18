@@ -1,32 +1,80 @@
 
-		<div class="logoLogin">
-			<img src="images/logo_jaune.svg" alt="logo" width="420px">
-		</div>
+<div class="logoLogin">
+	<img src="images/logo_jaune.svg" alt="logo" width="420px">
+</div>
 
 
 <div class="container">
+
 	<div class="client active">
-		<h2>Je souhaite consulter mes factures</h2>
-		<a href="index.html#/client/home"><img src="images/fleche-blanche.png" alt="white arrow" id="arrow"></a><br/>
+		<button >
+			<h2>Je souhaite consulter mes factures</h2>
+			<img src="images/fleche-blanche.png" alt="white arrow" id="arrow">
+		</button>
 		
-	<div class="or">OU</div>
+		<div class="formulaire active">
+			<form name="formClient" ng-submit="loginCl(formClient.$valid)">
+				<input type="email" name="logClient.email" id="email-input-cl" ng-model="logClient.email" placeholder="Email" required><br/>
+				<input type="password" name="logClient.password" id="password-input-cl" ng-model="logClient.password"  placeholder="Mot de passe" required><br/>
+				<input type="submit" value="Se connecter" class="connection">
+			</form>
+		</div>
+		<a href="#/client/home" style="color:aliceblue;">Lien direct HOME CLIENT</a>
+		<div class="or">OU</div>
 	</div>
-	
+
 	<div class="pro">
+		<button >
+			<h2>Je souhaite éditer des factures</h2>
+			<img src="images/fleche-blanche.png" alt="white arrow" id="arrow">
+		</button>
+		
+		<div class="formulaire active">
+			<form name="formPro" ng-submit="loginPro(formPro.$valid)">
+				<input type="email" name="logPro.email" id="email-input-pro" ng-model="logPro.email" placeholder="Email" required><br/>
+				<input type="password" name="logPro.password" id="password-input-pro" ng-model="logPro.password"  placeholder="Mot de passe" required><br/>
+				<input type="submit" value="Se connecter" class="connection">
+			</form>
+		</div>
+		<a href="#/pro/home" style="color:aliceblue;">Lien direct HOME PRO</a>
+	</div>
+
+<!-- 	<div class="client active">
+		<h2>Je souhaite consulter mes factures</h2>
+		<a href="index.html#/client/home">
+		<img src="images/fleche-blanche.png" alt="white arrow" id="arrow">
+		</a><br/>
+
+		<button ng-click="" id="moreClient">CLIENT</button>
+
+		<div class="formulaire active">
+			<form name="logClient" ng-submit="checkLog(logClient.$valid)">
+				<input type="email" name="log.email" id="email-input" ng-model="log.email" placeholder="Email" required><br/>
+				<input type="password" name="log.password" id="password-input" ng-model="log.password"  placeholder="Mot de passe" required><br/>
+				<input type="submit" value="Se connecter">
+			</form>
+		</div>
+
+		<div class="or">OU</div>
+	</div> -->
+
+	
+<!-- 	<div class="pro">
 		<h2>Je souhaite éditer des factures</h2>
 		<a href="index.html#/pro/home"><img src="images/fleche-blanche.png" alt="blue arrow" id="arrow"></a><br/>
 
-	</div>
+		<button ng-click="" id="moreClient">PRO</button>
 
-	<!-- <div class="category">
-		<a href="#" class="client">Client</a>
-		<a href="#" class="pro active">Pro</a>
+		<div class="formulaire active">
+			<form name="logClient" ng-submit="checkLog(logClient.$valid)">
+				<input type="email" name="log.email" id="email-input" ng-model="log.email" placeholder="Email" required><br/>
+				<input type="password" name="log.password" id="password-input" ng-model="log.password"  placeholder="Mot de passe" required><br/>
+				<input type="submit" value="Se connecter">
+			</form>
+		</div>
+
 	</div> -->
-	<div class="formulaire">
-		<form action="">
-			<input type="text" placeholder="Email"><br/>
-			<input type="text" placeholder="Mot de passe"><br/>
-			<a href="#">Se Connecter</a>
-		</form>
-	</div> <!--fin du formulaire-->
+
+
+
 </div> <!-- Fin de container -->

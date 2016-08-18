@@ -1,6 +1,8 @@
-<button ng-click="splash(true)" id="moreClient">+ CLIENT</button>
+<div ng-controller="addClient">
+	<button ng-click="splash(true)" id="moreClient">+ CLIENT</button>
 	<div class="overlay" id="splash" ng-if="showForm">
         
+
 	<form action="" class="newClient">		
 		<legend>Introduction d'un nouveau client</legend>
 		<label for="particulier" class="intro">Particulier</label>
@@ -710,3 +712,4 @@
         <img src="../images/close.svg" alt="close" ng-click="splash(false)">
 	</form>
 	</div>
+</div>

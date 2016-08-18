@@ -62,31 +62,16 @@ exports.createPdf = function(req, res, next) {
 
             pdf.create(html_with_data, options).toFile(destination_path, function(err) {   //pdf.create(html_with_data, options).toFile('public/tmp/pdf_from_hbs.pdf', function(err) {
                 if(err){
-                        res.json({error_code:1,err_desc:err});
+                        res.json([{error_code:1,err_desc:err}]);
                         logger.log(err);    
                         return;
                 }
-                    res.json({error_code:0,data:destination_path});
+                    res.json([{error_code:0,data:destination_path}]);
                     logger.log('PDF Created !');
                     logger.log(destination_path);
             });
         });
     } else {
-        res.json({error_code:1,err_desc:'file.folder is not defined'});
+        res.json([{error_code:1,err_desc:'file.folder is not defined'}]);
     }
-}
-
-exports.testPdf = function(req, res, next) {
-    
-    var html = fs.readFileSync('public/documents/templates/test.hbs', 'utf8');
-    var options = { format: 'A4' };
-    pdf.create(html, options).toFile('public/tmp/pdf_from_html.pdf', function(err, data) {
-        if(err){
-                res.json({error_code:1,err_desc:err});
-                logger.log(err);    
-                return;
-        }
-            res.json({error_code:0,err_desc:null});
-            logger.log('PDF Created on ' + data);
-    });
 }

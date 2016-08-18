@@ -1,15 +1,15 @@
 <linkhomepro></linkhomepro>
 
 <navbarpro></navbarpro>
-<moreclient></moreclient>
+<!-- <moreclient></moreclient> -->
 <search-bar></search-bar>
 
 
 
-<div ng-controller="profile">
+<div ng-controller="profileCtrl">
 
 	<div class="container">
-		<ul>    <!-- Liste des clients -->
+		<ul class="listing">   <!-- Liste des clients -->
 		            <li ng-repeat="item in listClients | filter: filter">
 		                <div class="listItem">
 		                    <div class="blocItem">

@@ -18,7 +18,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
@@ -34,7 +34,7 @@ body {
 /* line 17, ../sass/style_UI.scss */
 .blue {
   background: #2a4158;
-  height: 40px;
+  height: 50px;
   position: fixed;
   top: 0px;
   width: 100%;
@@ -56,8 +56,9 @@ body {
 
 /* line 36, ../sass/style_UI.scss */
 .navigation {
+  margin-top: 140px;
   display: inline-block;
-  height: 230px;
+  height: 300px;
   background: #95a0ac;
   width: 23.72881%;
   float: left;
@@ -107,8 +108,9 @@ body {
   position: fixed;
   bottom: 0;
   padding-top: 25px;
+  z-index: 1000;
 }
-/* line 82, ../sass/style_UI.scss */
+/* line 83, ../sass/style_UI.scss */
 .foot .copyright {
   opacity: 0.6;
 }

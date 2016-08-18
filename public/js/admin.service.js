@@ -5,7 +5,7 @@ adminService.factory('Admin',['$resource', function($resource) {
 	let resource = $resource("/api/crm/admin");
 
 	let list = {
-		getList : function(callback) {
+		getAdmin : function(callback) {
 			resource.query(callback);
 		},
 		updateAdmin : function(edAdmin, callback) {

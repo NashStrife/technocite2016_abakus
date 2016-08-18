@@ -33,47 +33,99 @@ html {
   padding-top: 30px;
   padding-bottom: 20px;
 }
-/* line 22, ../sass/style_index.scss */
+/* line 23, ../sass/style_index.scss */
 .container > div {
-  background: #95a0ac;
   width: 300px;
   height: 200px;
   text-align: center;
   margin-bottom: 30px;
   margin-left: 60px;
 }
-/* line 29, ../sass/style_index.scss */
+/* line 30, ../sass/style_index.scss */
 .container > div > p {
   display: none;
 }
 
-/* line 35, ../sass/style_index.scss */
+/* line 36, ../sass/style_index.scss */
 body {
   background: #2a4158;
   font-family: "century gothic", arial, sans-serif;
   text-align: center;
 }
 
-/* line 41, ../sass/style_index.scss */
+/* line 42, ../sass/style_index.scss */
 .logo img {
   width: 300px;
   margin: 60px 0px;
 }
 
 /* line 47, ../sass/style_index.scss */
+button {
+  width: 100%;
+  height: 100%;
+  background-color: #e5af28;
+  border: none;
+}
+/* line 52, ../sass/style_index.scss */
+button:hover {
+  cursor: pointer;
+}
+/* line 56, ../sass/style_index.scss */
+button img {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+/* line 62, ../sass/style_index.scss */
+button img:hover {
+  -webkit-animation: arrowAnim 0.5s 1 forwards;
+  animation: arrowAnim 0.5s 1 forwards;
+}
+@-webkit-keyframes arrowAnim {
+  0% {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  100% {
+    -webkit-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+  }
+}
+@keyframes arrowAnim {
+  0% {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  100% {
+    -webkit-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+  }
+}
+/* line 102, ../sass/style_index.scss */
 .client.active {
   background: #e5af28;
   color: white;
 }
 
-/* line 54, ../sass/style_index.scss */
+/* line 109, ../sass/style_index.scss */
 .pro {
   height: 260px;
 }
 
 @media screen and (min-width: 480px) {
-  /* line 60, ../sass/style_index.scss */
+  /* line 116, ../sass/style_index.scss */
   .logoHeader {
+    position: fixed;
+    width: 100%;
     background-color: #e5af28;
     margin: auto;
     padding-bottom: 5px;
@@ -82,12 +134,12 @@ body {
     text-align: left;
     z-index: 150;
   }
-  /* line 68, ../sass/style_index.scss */
+  /* line 126, ../sass/style_index.scss */
   .logoHeader img {
     margin-top: 5px;
   }
 
-  /* line 72, ../sass/style_index.scss */
+  /* line 130, ../sass/style_index.scss */
   .client {
     width: 48.27586%;
     float: left;
@@ -96,7 +148,7 @@ body {
     position: relative;
   }
 
-  /* line 77, ../sass/style_index.scss */
+  /* line 135, ../sass/style_index.scss */
   .or {
     position: absolute;
     width: 80px;
@@ -111,11 +163,15 @@ body {
     background: #2a4158;
   }
 
-  /* line 90, ../sass/style_index.scss */
+  /* line 148, ../sass/style_index.scss */
   .container {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
+  }
+  /* line 149, ../sass/style_index.scss */
+  .container .listing {
+    padding-top: 170px;
   }
   /* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
   .container:after {
@@ -123,38 +179,37 @@ body {
     display: block;
     clear: both;
   }
-  /* line 92, ../sass/style_index.scss */
+  /* line 153, ../sass/style_index.scss */
   .container > div {
     width: 48.27586%;
     float: left;
     margin-right: 3.44828%;
-    padding: 10px;
     position: relative;
     margin-left: 0;
     height: 200px;
   }
-  /* line 99, ../sass/style_index.scss */
+  /* line 160, ../sass/style_index.scss */
   .container > div img {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-top: 0px;
   }
-  /* line 103, ../sass/style_index.scss */
+  /* line 164, ../sass/style_index.scss */
   .container > div.pro {
     float: right;
     margin-right: 0;
     background: #95a0ac;
     color: #2a4158;
   }
-  /* line 108, ../sass/style_index.scss */
+  /* line 169, ../sass/style_index.scss */
   .container > div > p {
     display: unset;
   }
-  /* line 112, ../sass/style_index.scss */
+  /* line 173, ../sass/style_index.scss */
   .container a {
     text-decoration: none;
     color: #2a4158;
   }
-  /* line 116, ../sass/style_index.scss */
+  /* line 177, ../sass/style_index.scss */
   .container h2 {
     margin-top: 0px;
     font-size: 24px;
