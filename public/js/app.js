@@ -58,6 +58,7 @@ var app = angular.module('abakusApp', [
 	    restrict: "E",         // (2)
 	    replace: false,         // (3)
 	    transclude: true,      // (4)
+			controller : 'addClientCtrl',
 	    templateUrl: "components/moreClient.html"    // (5)
 	  }})
 ;
@@ -148,7 +149,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/clients/list', {
 		title:"clients",
 		templateUrl : 'partials/pro/clients/list.html',
-		controller : 'addClient'
+		controller : 'profileCtrl'
 	}).
 	when('/pro/estimate/add', {
 		title:"devis",

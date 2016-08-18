@@ -1,3 +1,5 @@
+"use strict";
+
 let clientService = angular.module('clientService', []);
 
 clientService.factory('Client',['$resource', function($resource) {
