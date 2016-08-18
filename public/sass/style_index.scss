@@ -40,7 +40,29 @@ body {
     }
 }
 
-
+// .category{ 
+//      @include container; 
+//      text-align: center;
+//      background-color: hotpink;
+//      }
+//     .category a {
+//     @include span(6 of 12);    
+//     background: $descriptionColor;
+//     color: $primaryColor;
+//     text-transform: uppercase;
+//     display: block;
+//     text-decoration: none;
+//     font-size: 2em;
+//     padding: 30px 0;
+//     margin-bottom: 70px;
+//     &.active{
+//         background: $focusColor;
+//         color: $primaryColor;
+//     }
+//     &:last-child{
+//         @include last;
+//     }
+// }
 
 
 .logo img {
@@ -70,21 +92,21 @@ body {
         padding-left: 7px;
         background: $textColor;
     }
-    a{
-        background: $focusColor;
-        color: $primaryColor;
-        text-decoration: none;
-        width: 100%;
-        text-transform: uppercase;
-        display: block;
-        padding: 14px 0;
+    // a{
+    //     background: $focusColor;
+    //     color: $primaryColor;
+    //     text-decoration: none;
+    //     width: 100%;
+    //     text-transform: uppercase;
+    //     display: block;
+    //     padding: 14px 0;
         
-    }
+    // }
 }
 button {
     width: 100%;
     height: 100%;
-    background-color: $focusColor;
+    // background-color: $focusColor;
     border: none;
     &:hover {
         cursor:pointer;
@@ -101,31 +123,31 @@ button {
             animation: arrowAnim 0.5s 1 forwards;
             @-webkit-keyframes arrowAnim {
                 0% {
-                    -webkit-transform: scaleY(1);
-                    -ms-transform: scaleY(1);
-                    -o-transform: scaleY(1);
-                    transform: scaleY(1);
-                }
-                100% {
                     -webkit-transform: scaleY(-1);
                     -ms-transform: scaleY(-1);
                     -o-transform: scaleY(-1);
                     transform: scaleY(-1);
+                }
+                100% {
+                    -webkit-transform: scaleY(1);
+                    -ms-transform: scaleY(1);
+                    -o-transform: scaleY(1);
+                    transform: scaleY(1);
                 }
             }
 
             @keyframes arrowAnim {
                 0% {
-                    -webkit-transform: scaleY(1);
-                    -ms-transform: scaleY(1);
-                    -o-transform: scaleY(1);
-                    transform: scaleY(1);
-                }
-                100% {
                     -webkit-transform: scaleY(-1);
                     -ms-transform: scaleY(-1);
                     -o-transform: scaleY(-1);
                     transform: scaleY(-1);
+                }
+                100% {
+                    -webkit-transform: scaleY(1);
+                    -ms-transform: scaleY(1);
+                    -o-transform: scaleY(1);
+                    transform: scaleY(1);
                 }
             }  
         }
@@ -133,20 +155,56 @@ button {
     }
 }
 
+// .client {
+
+//     &.active {
+//         background: $focusColor!important;
+//         color: white;
+//     }
+
+// }
+
+// .pro {
+//     height: 260px;
+
+// }
+
+
+
 .client {
-
-
-    &.active {
-        background: $focusColor;
-        color: white;
+    .active {
+        background-color: $focusColor!important;
+        visibility: visible;
     }
-
+    .inactive {
+        background-color: $textColor;
+        visibility: visible;
+    }
+    .formulaire {
+        &.inactive {
+            visibility: hidden;
+        }
+    }
 }
-
 .pro {
-    height: 260px;
-
+    @include last;
+    color: $primaryColor;
+    .active {
+        background-color: $focusColor!important;
+        visibility: visible;
+    }
+    .inactive {
+        background-color: $textColor;
+        visibility: visible;
+    }
+    .formulaire {
+        &.inactive {
+            visibility: hidden;
+        }
+    }
 }
+
+
 
 
 @media screen and (min-width: 480px) {
@@ -165,31 +223,31 @@ button {
         }
     }
 
-    .category {
-        @include container;
-        text-align: center;
-    }
-    .category a {
-        @include span(6 of 12);
-        margin-left: 0;
-        &.active {
-            background: $focusColor;
-            color: $primaryColor;
-        }
-        &:last-child {
-            @include last;
-        }
-    }
+    // .category {
+    //     @include container;
+    //     text-align: center;
+    // }
+    // .category a {
+    //     @include span(6 of 12);
+    //     margin-left: 0;
+    //     &.active {
+    //         background: $focusColor;
+    //         color: $primaryColor;
+    //     }
+    //     &:last-child {
+    //         @include last;
+    //     }
+    // }
     .logo {
         margin-top: 50px;
         margin-bottom: 80px;
     }
 
-        .formulaire {
+    .formulaire {
 
         @include span(12 of 12);
         // @include pre(3 of 12);
-        background-color: $focusColor;
+        // background-color: $focusColor;
         padding: 50px 0;
         border-top: 1px solid $primaryColor;
         input {
@@ -201,7 +259,7 @@ button {
             background: $textColor;
 
         }
-        .connection {
+    .connection {
             text-transform: uppercase;
             padding: 20px 0;
             background-color: $primaryColor;
@@ -235,6 +293,7 @@ button {
             padding-top:170px;
         }
         @include container(940px);
+
         > div {
             @include span(3 of 6);
             // padding: 10px;
@@ -246,12 +305,26 @@ button {
                 margin-bottom: 20px;
                 margin-top: 0px;
             }
+            &.client {
+                .active {
+                    background-color: $focusColor!important;
+                    visibility: visible;
+                }
+                .inactive {
+                    background-color: $textColor;
+                    
+                }
+            }
             &.pro {
                 @include last;
-                background: aliceblue;
                 color: $primaryColor;
+                .active {
+                    background-color: $focusColor;
+                    visibility: visible;
+                }
                 .inactive {
-                    visibility: hidden;
+                    background-color: $textColor;
+                    
                 }
             }
             > p {
