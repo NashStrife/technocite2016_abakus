@@ -6,5 +6,8 @@ addClientModule.controller('addClientCtrl', ['$scope', function($scope) {
 	$scope.splash = function(status) {
        $scope.showForm = status;
       };
+    $scope.moreClient = function() {
+        
+    }
 
 }]);
