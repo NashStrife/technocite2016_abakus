@@ -84,7 +84,7 @@ html {	box-sizing: border-box;
 			margin: auto;
 			width: 100%;
 			display: block;
-			padding: 5%;
+			padding: 3%;
 
 		}
 		label{
@@ -100,23 +100,37 @@ html {	box-sizing: border-box;
 			label {margin-top: 2%;}
 			label, input, select {
 				width: 100%;
-			}			
+			}
+			.delivery {
+				text-align: left;
+				width: initial;
+				vertical-align: top;
+			}		
 			label[for="tva"], label[for="ref"] {
 				@include span(7.5 of 10);
 			}
 			label[for="modeTva"], label[for="logo"] {
 				@include span(2.5 of 10 last);
 			}
-			label[for="civil"], label[for="name"] {
+			label[for="civil"], label[for="name"], label[for="civilFact"], label[for="nameFact"], label[for="civilDeliver"], label[for="nameDeliver"] {
 				@include span(3.333 of 10);
 			}
-			label[for="firstName"] {
+			label[for="firstName"], label[for="firstNameFact"], label[for="firstNameDeliver"] {
 				@include span(3.333 of 10 last);
 			}
-			label[for="phone1"], label[for="email"] {
+			label[for="phone1"], label[for="email"], label[for="cityFact"], label[for="phone1Fact"], label[for="emailFact"], label[for="cityDeliver"], label[for="phone1Deliver"], label[for="emailDeliver"] {
 				@include span(5 of 10);
 			}
-			label[for="phone2"] {
+			label[for="streetFact"], label[for="streetDeliver"] {
+				@include span(6 of 10);
+			}
+			label[for="numFact"], label[for="boxFact"], label[for="numDeliver"], label[for="boxDeliver"] {
+				@include span(0.75 of 10);
+			}
+			label[for="zipFact"], label[for="zipDeliver"] {
+				@include span(2.50 of 10 last);
+			}
+			label[for="phone2"], label[for="countryFact"], label[for="phone2Fact"], label[for="faxFact"], label[for="countryDeliver"], label[for="phone2Deliver"], label[for="faxDeliver"] {
 				@include span(5 of 10 last);
 			}
 			label[for="fonction"] {
@@ -143,14 +157,11 @@ html {	box-sizing: border-box;
 				}
 			}
 		}
-		input[type="file"] {
-			outline: none;
-			position: relative;
-			z-index: 1;
-			opacity: 0;
-			pointer-events: none;
+		#logo {
+				outline: none;
+				opacity: 0;
 		}
-		button {position: absolute;
+		.progress {position: absolute;
 				bottom: 10%;
 				color: $navColor;
 				background-color: $primaryColor;
@@ -159,27 +170,63 @@ html {	box-sizing: border-box;
 				width: 15%;
 				outline: none;
 				cursor: pointer;
-				&#prev, &#cancel {
+				text-align: center;
+				&#cancel {
 					left: 12.5%;
 				}
-				&#next, &#submit {
+				&#submit {
 					right: 12.5%;
 				}
+				&input {
+					top: 1%;
+				}
 		}
-		input[name="client"], input[name="button"], button{
+		input[name="client"], input[name="progress"], button, .progress{
 			display: none;
-		}
-		input[value="particulier"]:checked ~ fieldset:nth-of-type(2) {
-		 	display: inline-block;
 		}
 		input[name="client"]:checked ~ #cancel{
 			display: inline-block;
+			right: 12.5%;
 		}
-		input[name="client"]:checked ~ #next{
+		#particulier:checked ~ #lien2{
+			display: inline-block;
+			right: 12.5%;
+		}
+		#society:checked ~ #lien1{
+			display: inline-block;
+			right: 12.5%;
+		}
+		#step1:checked ~ #lien2 {
+			display: inline-block;
+			right: 12.5%;
+		}
+		#step2:checked ~ #lien3 {
+			display: inline-block;
+			right: 12.5%;
+		}
+		#step3:checked ~ #lien4 {
+			display: inline-block;
+			right: 12.5%;
+		}
+		#step4:checked ~ #submit {
 			display: inline-block;
 		}
-		input[value="society"]:checked ~ fieldset:nth-of-type(1) {
+		#particulier:checked ~ fieldset:nth-of-type(2) {
 		 	display: inline-block;
 		}
-
+		#society:checked ~ fieldset:nth-of-type(1) {
+		 	display: inline-block;
+		}
+		#step1:checked + fieldset:nth-of-type(2) {
+			display: inline-block;
+		}
+		#step2:checked + fieldset:nth-of-type(3) {
+			display: inline-block;
+		}
+		#step3:checked + fieldset:nth-of-type(4) {
+			display: inline-block;
+		}
+		#step4:checked + fieldset:nth-of-type(5) {
+			display: inline-block;
+		}
 	}
