@@ -6,12 +6,12 @@
 
 <div class="container">
 	<div class="client">
-		<button ng-click="activateForm(true)" class="active">
+		<button ng-click="activateForm('client')" ng-class="{active:clientAct, inactive:clientInact}">
 			<h2>Je souhaite consulter mes factures</h2>
 			<img src="images/fleche-blanche.png" alt="white arrow" id="arrow">
 		</button>
 		
-		<div class="formulaire active">
+		<div class="formulaire" ng-class="{active:clientAct, inactive:clientInact}">
 			<form name="formClient" ng-submit="loginCl(formClient.$valid)">
 				<input type="email" name="logClient.email" id="email-input-cl" ng-model="logClient.email" placeholder="Email" required><br/>
 				<input type="password" name="logClient.password" id="password-input-cl" ng-model="logClient.password"  placeholder="Mot de passe" required><br/>
@@ -23,12 +23,12 @@
 	</div>
 
 	<div class="pro">
-		<button ng-click="activateForm(false)" class="inactive">
+		<button ng-click="activateForm('pro')" ng-class="{active:proAct, inactive:proInact}">
 			<h2>Je souhaite éditer des factures</h2>
 			<img src="images/fleche-blanche.png" alt="white arrow" id="arrow">
 		</button>
 		
-		<div class="formulaire inactive">
+		<div class="formulaire" ng-class="{active:proAct, inactive:proInact}">
 			<form name="formPro" ng-submit="loginPro(formPro.$valid)">
 				<input type="email" name="logPro.email" id="email-input-pro" ng-model="logPro.email" placeholder="Email" required><br/>
 				<input type="password" name="logPro.password" id="password-input-pro" ng-model="logPro.password"  placeholder="Mot de passe" required><br/>

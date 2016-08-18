@@ -43,7 +43,7 @@ clientService.factory('Client',['$resource', function($resource) {
 
 			client.update(callback);
 		},
-		deleteClient : function(id, callback) {
+		removeClient : function(id, callback) {
 			let client = $resource("/api/crm/"+id);
             // callback is not required but it's better to get the different messages [error, validation,...] 
             client.remove(callback);

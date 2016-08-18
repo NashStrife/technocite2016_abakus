@@ -12,11 +12,27 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 	$scope.logClient = {};
 	$scope.logPro = {};
 
+	$scope.clientAct = true;
+	$scope.clientInact = false;
+	$scope.proAct = false;
+	$scope.proInact = true;
+
 	$scope.activateForm = function(status) {
+		if (status == 'client' ) {
+			$scope.clientAct = true;
+			$scope.clientInact = false;
+			$scope.proAct = false;
+			$scope.proInact = true;			
+		} else {
+			$scope.clientAct = false;
+			$scope.clientInact = true;
+			$scope.proAct = true;
+			$scope.proInact = false;	
+		}
 	};
 
 	var abakusCookies = $cookies.getObject('Abakus');
-	// console.log(abakusCookies);
+	console.log(abakusCookies);
 	// console.log(abakusCookies.isLogged);
 	// if(!abakusCookies.isLogged){
 	// 	$location.path('/');
