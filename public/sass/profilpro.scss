@@ -16,8 +16,7 @@
   	height: 1200px;
 	z-index: 1;
 	float: right;
-	margin-top: 117px;
-	background-color: lightgrey;
+	margin-top: 117px;	
 }
 
 .coordonnee, .coordonnee2 {
@@ -359,7 +358,7 @@
 
 .savecoordonnee5 {
 
-	margin-top: 40px;
+	margin-top: 9px;
 }
 
 .facture {
@@ -386,8 +385,7 @@
 .designfacture {
 
 	width: 300px;
-	height: 20px;
-	background-color: red;	
+	height: 25px;	
 	margin-top: 10px;
 	margin-left: 17px;	
 
@@ -419,23 +417,56 @@
 .designdevis {
 
 	width: 300px;
-	height: 20px;
-	background-color: red;	
+	height: 25px;	
 	margin-top: 42px;
 	margin-left: 17px;	
 }
 
-.f01, .f02, .f03, .f04, .f05, .f06, .f07, .f08, .f09,.f10, {
+.f01, .f02, .f03, .f04, .f05, .f06, .f07, .f08, .f09,.f10 {
 
-	background-color: blue;
 	width: 20px;
 	height: 20px;
 	margin-right: 6px;
 	display: inline-block;
+	border: 2px solid $navColor; 
 } 
 
-	
+.f01 {
+	background-color: #000000;
 
+}
+.f02 {
+	background-color: #696969;
+}
+.f03 {
+	background-color: #046381;
+}
+.f04 {
+	background-color: #2b4158;
+}
+.f05 {
+	background-color: #97ca2d;
+}
+.f06 {
+	background-color: #006401;
+}
+.f07 {
+	background-color: #550288;
+}
+.f08 {
+	background-color: #b9121a;
+}
+.f09 {
+	background-color: #f89d19;
+}
+.f10 {
+	background-color: #e5b028;
+}
+	
+.coordonneeCont5 {
+
+	height: 186px;
+}
 	
 
 
