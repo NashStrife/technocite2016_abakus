@@ -1,3 +1,5 @@
+"use strict";
+
 let adminService = angular.module('adminService', []);
 
 adminService.factory('Admin',['$resource', function($resource) {

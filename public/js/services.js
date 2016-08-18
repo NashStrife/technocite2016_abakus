@@ -1,3 +1,5 @@
+"use strict";
+
 let services = angular.module('servicesAbakus', []);
 
 services.factory('Crm',['$resource', function($resource) {
