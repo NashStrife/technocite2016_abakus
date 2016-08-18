@@ -1,3 +1,5 @@
+"use strict";
+
 let adminService = angular.module('adminService', []);
 
 adminService.factory('Admin',['$resource', function($resource) {
@@ -11,7 +13,7 @@ adminService.factory('Admin',['$resource', function($resource) {
 		updateAdmin : function(edAdmin, callback) {
 			// need tests on clients before adding here
 		},
-		deleteAdmin : function(id, callback) {
+		removeAdmin : function(id, callback) {
 			let admin = $resource("/api/crm/admin/"+id);
             admin.remove(callback);
 		}

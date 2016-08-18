@@ -2,23 +2,24 @@
 
 <navbarpro></navbarpro>
 <!-- <moreclient></moreclient> -->
-<search-bar></search-bar>
+<searchbarpro></searchbarpro>
 
 
 
-<div ng-controller="profileCtrl">
+<div>
 
 	<div class="container">
 		<ul class="listing">   <!-- Liste des clients -->
 		            <li ng-repeat="item in listClients | filter: filter">
 		                <div class="listItem">
 		                    <div class="blocItem">
-		                        <span class="itemDatas blocDate">{{item.date}}</span>
-		                        <span class="itemDatas blocCompany">{{item.name}}</span>
-		                        <span class="itemDatas blocInvoiceNumber">{{item.company}}</span>
+		                        <span class="itemDatas blocDate">{{item.name}}</span>
+		                        <span class="itemDatas blocCompany">{{item.contactPerson.mail}}</span>
+		                        <span ng-show="item.isCompany" class="itemDatas blocInvoiceNumber">Société</span>
+								<span ng-hide="item.isCompany" class="itemDatas blocInvoiceNumber">Particulier</span>
 		                    </div>
 		                    <div class="listNote">
-		                    <p>{{item.note}}</p>
+		                    <p>{{item.memo}}</p>
 		                    </div>
 		                    <button class="reveal">v</button>
 		                </div>

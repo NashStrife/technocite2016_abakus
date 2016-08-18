@@ -1,14 +1,43 @@
 var abakusControllers = angular.module('abakusControllers', []);
 
 
+// abakusControllers.controller('mainCtrl', ['$scope', '$location', '$cookies', function($scope, $location, $cookies){
+// 	var abakusCookies = $cookies.get('Abakus');
+// 	console.log(abakusCookies);
+	
+// }]);
+
 abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'Crm', 'Client', 'Admin', function($scope, $location, $cookies,  Crm, Client, Admin){
 	// object to store logs informations from the login form
 	$scope.logClient = {};
 	$scope.logPro = {};
 
-	var abakusCookies = $cookies.get('Abakus');
-	console.log(abakusCookies);
+	$scope.clientAct = true;
+	$scope.clientInact = false;
+	$scope.proAct = false;
+	$scope.proInact = true;
 
+	$scope.activateForm = function(status) {
+		if (status == 'client' ) {
+			$scope.clientAct = true;
+			$scope.clientInact = false;
+			$scope.proAct = false;
+			$scope.proInact = true;			
+		} else {
+			$scope.clientAct = false;
+			$scope.clientInact = true;
+			$scope.proAct = true;
+			$scope.proInact = false;	
+		}
+	};
+
+	var abakusCookies = $cookies.getObject('Abakus');
+	console.log(abakusCookies);
+	// console.log(abakusCookies.isLogged);
+	// if(!abakusCookies.isLogged){
+	// 	$location.path('/');
+	// }
+		
 	// for form validation
 	$scope.error = false;
 	

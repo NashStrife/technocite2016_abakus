@@ -3,6 +3,7 @@ var app = angular.module('abakusApp', [
 	'ngResource',
 	'ngCookies',
 	'abakusControllers',
+	'proControllers',
 	'addClientModule',
 	'servicesAbakus',
 	'clientService',
@@ -39,12 +40,19 @@ var app = angular.module('abakusApp', [
 	    transclude: true,      // (4)
 	    templateUrl: "components/navbarpro.html"    // (5)
 	  }})
-	.directive('searchBar', function() { // (1)
+	.directive('searchbarclient', function() { // (1)
 	  return {
 	    restrict: "E",         // (2)
 	    replace: true,         // (3)
 	    transclude: true,      // (4)
-	    templateUrl: "components/searchBar.html"    // (5)
+	    templateUrl: "components/searchbarclient.html"    // (5)
+	  }})
+	.directive('searchbarpro', function() { // (1)
+	  return {
+	    restrict: "E",         // (2)
+	    replace: true,         // (3)
+	    transclude: true,      // (4)
+	    templateUrl: "components/searchbarpro.html"    // (5)
 	  }})
 	.directive('profiledashboard', function() { // (1)
 	  return {
@@ -58,29 +66,10 @@ var app = angular.module('abakusApp', [
 	    restrict: "E",         // (2)
 	    replace: false,         // (3)
 	    transclude: true,      // (4)
+			controller : 'addClientCtrl',
 	    templateUrl: "components/moreClient.html"    // (5)
 	  }})
 ;
-
-// angular.module("abakusApp", ["abakusControllers"])
-//   .directive("navBar", function() { // (1)
-//   return {
-//     restrict: "E",         // (2)
-//     replace: true,         // (3)
-//     transclude: true,      // (4)
-//     templateUrl: "components/navBar.html"    // (5)
-//   }});
-// ;
-
-// angular.module("abakusApp", ["abakusControllers"])
-//   .directive("searchBar", function() { // (1)
-//   return {
-//     restrict: "E",         // (2)
-//     replace: true,         // (3)
-//     transclude: true,      // (4)
-//     templateUrl: "components/searchBar.html"    // (5)
-//   }});
-// ;
 
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -148,7 +137,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/clients/list', {
 		title:"clients",
 		templateUrl : 'partials/pro/clients/list.html',
-		controller : 'addClient'
+		controller : 'ProListCtrl'
 	}).
 	when('/pro/estimate/add', {
 		title:"devis",
@@ -163,7 +152,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/estimate/list', {
 		title:"devis",
 		templateUrl : 'partials/pro/estimate/list.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/pro/invoice/add', {
 		title:"factures",
@@ -178,7 +167,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/invoice/list', {
 		title:"factures",
 		templateUrl : 'partials/pro/invoice/list.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/pro/profile/edit-method-of-payement', {
 		title:"mon compte",

@@ -1,3 +1,5 @@
+"use strict";
+
 let paramsService = angular.module('paramsService', []);
 
 paramsService.factory('Param',['$resource', function($resource) {
