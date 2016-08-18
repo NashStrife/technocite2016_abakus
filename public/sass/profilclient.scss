@@ -2,10 +2,302 @@
 @import "grids";
 @import "variables";
 
-.lol {
+.myProfileClientwarpper {
 
-	width: 200px;
-	height: 200px;
-	background-color: red;
-	margin-top: 200px;
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+
 }
+
+.myProfileClient {
+
+	width: 742px;
+	height: 1200px;
+	float: right;
+	background-color: $mainBackgroundColor;
+	text-align: left;
+	margin-top: 117px;
+	position: relative;
+
+
+	img {
+
+		width: 90px;
+		height: 90px;
+		margin-top: 15px;
+		margin-left: 22px;
+		display: inline-block;
+		float: left;
+	}
+
+	label {
+
+		font-size: 14px;		
+	}
+
+	fieldset:first-child {
+
+		height: 150px;	
+
+		label[for=civil] {
+
+			margin-top: 16px;
+			margin-left: 15px;
+			display: inline-block;
+			float: left;
+		}
+
+		select[id=civil] {
+
+			display: inline-block;
+			margin-left: 5px;
+			margin-top: -4px;
+		}
+
+		label[for=name] {
+
+			margin-left: 15px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+		input[id=name] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+		label[for=firstName] {
+
+			margin-left: 15px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+		input[id=firstName] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+		.telephoneEmail {
+
+			width: 342px;
+			height: auto;
+			float: right;
+			display: inline-block;
+			position: relative;
+			top: -107px;
+
+		}
+
+		label[for=phone] {
+
+			margin-left: 15px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+		input[id=phone] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+		label[for=email] {
+
+			margin-left: 15px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+		input[id=email] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+		label[for=phone2] {
+
+			margin-left: 15px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+		input[id=phone2] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+}
+
+
+	.barre1 {
+	
+		width: 696px;
+		height: 1px;
+		margin: 0 auto;
+		background-color: $primaryColor;
+		margin-top: 30px;
+	}
+
+	
+	label[for=civil] {
+
+			margin-left: 23px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+	select[id=civil] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+	label[for=name] {
+
+			margin-left: 23px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+	input[id=name] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+	label[for=firstName] {
+
+			margin-left: 23px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+	input[id=firstName] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+	
+
+	.colone1 {
+
+		width: 259px;
+		height: auto;
+		background-color: red;
+		
+		display: inline-block;
+		position: relative;
+		top: -110px;
+		right: -240px;
+	}
+
+	label[for=num] {
+
+			margin-left: 23px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+	input[id=num] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+	label[for=box] {
+
+			margin-left: 23px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+	input[id=box] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+	label[for=zip] {
+
+			margin-left: 23px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+	input[id=zip] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+	label[for=city] {
+
+			margin-left: 23px;
+			margin-top: 17px;
+			float: left;
+			display: inline-block;
+		}
+
+	input[id=city] {
+
+			display: inline;
+			margin-top: -4px;
+			margin-left: 5px;
+		}
+
+	.colone2 {
+
+		width: 259px;
+		height: auto;
+		background-color: red;
+		
+		display: inline-block;
+		position: relative;
+		top: -110px;
+		right: -240px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
