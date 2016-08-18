@@ -1,11 +1,11 @@
-/* line 4, ../sass/style_index.scss */
+/* line 5, ../sass/style_index.scss */
 html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 8, ../sass/style_index.scss */
+/* line 9, ../sass/style_index.scss */
 *,
 *:before,
 *:after {
@@ -14,7 +14,14 @@ html {
   box-sizing: inherit;
 }
 
-/* line 14, ../sass/style_index.scss */
+/* line 15, ../sass/style_index.scss */
+body {
+  background: #2a4158;
+  font-family: "century gothic", arial, sans-serif;
+  text-align: center;
+}
+
+/* line 21, ../sass/style_index.scss */
 .container {
   max-width: 420px;
   margin-left: auto;
@@ -26,14 +33,14 @@ html {
   display: block;
   clear: both;
 }
-/* line 16, ../sass/style_index.scss */
+/* line 23, ../sass/style_index.scss */
 .container h2 {
   font-size: 24px;
   color: #2a4158;
   padding-top: 30px;
   padding-bottom: 20px;
 }
-/* line 23, ../sass/style_index.scss */
+/* line 30, ../sass/style_index.scss */
 .container > div {
   width: 300px;
   height: 200px;
@@ -41,64 +48,18 @@ html {
   margin-bottom: 30px;
   margin-left: 60px;
 }
-/* line 30, ../sass/style_index.scss */
+/* line 37, ../sass/style_index.scss */
 .container > div > p {
   display: none;
 }
 
-/* line 36, ../sass/style_index.scss */
-.category {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-/* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
-.category:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-/* line 40, ../sass/style_index.scss */
-.category a {
-  width: 49.15254%;
-  float: left;
-  margin-right: 1.69492%;
-  background: #7c8894;
-  color: #2a4158;
-  text-transform: uppercase;
-  display: block;
-  text-decoration: none;
-  font-size: 2em;
-  padding: 30px 0;
-  margin-bottom: 70px;
-}
-/* line 50, ../sass/style_index.scss */
-.category a.active {
-  background: #e5af28;
-  color: #2a4158;
-}
-/* line 54, ../sass/style_index.scss */
-.category a:last-child {
-  float: right;
-  margin-right: 0;
-}
-
-/* line 59, ../sass/style_index.scss */
-body {
-  background: #2a4158;
-  font-family: "century gothic", arial, sans-serif;
-  text-align: center;
-}
-
-/* line 65, ../sass/style_index.scss */
+/* line 46, ../sass/style_index.scss */
 .logo img {
   width: 300px;
   margin: 60px 0px;
 }
 
-/* line 70, ../sass/style_index.scss */
+/* line 51, ../sass/style_index.scss */
 .logoLogin {
   text-align: center;
   margin: auto;
@@ -106,7 +67,7 @@ body {
   margin-bottom: 80px;
 }
 
-/* line 76, ../sass/style_index.scss */
+/* line 57, ../sass/style_index.scss */
 .formulaire {
   visibility: visible;
   width: 49.15254%;
@@ -116,7 +77,7 @@ body {
   text-align: center;
   color: #e3e4e6;
 }
-/* line 84, ../sass/style_index.scss */
+/* line 65, ../sass/style_index.scss */
 .formulaire input {
   width: 100%;
   margin-bottom: 20px;
@@ -125,7 +86,7 @@ body {
   padding-left: 7px;
   background: #e3e4e6;
 }
-/* line 92, ../sass/style_index.scss */
+/* line 73, ../sass/style_index.scss */
 .formulaire a {
   background: #e5af28;
   color: #2a4158;
@@ -136,25 +97,25 @@ body {
   padding: 14px 0;
 }
 
-/* line 103, ../sass/style_index.scss */
+/* line 84, ../sass/style_index.scss */
 button {
   width: 100%;
   height: 100%;
   background-color: #e5af28;
   border: none;
 }
-/* line 108, ../sass/style_index.scss */
+/* line 89, ../sass/style_index.scss */
 button:hover {
   cursor: pointer;
 }
-/* line 112, ../sass/style_index.scss */
+/* line 93, ../sass/style_index.scss */
 button img {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 118, ../sass/style_index.scss */
+/* line 99, ../sass/style_index.scss */
 button img:hover {
   -webkit-animation: arrowAnim 0.5s 1 forwards;
   animation: arrowAnim 0.5s 1 forwards;
@@ -187,19 +148,19 @@ button img:hover {
     transform: scaleY(-1);
   }
 }
-/* line 158, ../sass/style_index.scss */
+/* line 139, ../sass/style_index.scss */
 .client.active {
   background: #e5af28;
   color: white;
 }
 
-/* line 165, ../sass/style_index.scss */
+/* line 146, ../sass/style_index.scss */
 .pro {
   height: 260px;
 }
 
 @media screen and (min-width: 480px) {
-  /* line 172, ../sass/style_index.scss */
+  /* line 153, ../sass/style_index.scss */
   .logoHeader {
     position: fixed;
     width: 100%;
@@ -211,12 +172,12 @@ button img:hover {
     text-align: left;
     z-index: 150;
   }
-  /* line 182, ../sass/style_index.scss */
+  /* line 163, ../sass/style_index.scss */
   .logoHeader img {
     margin-top: 5px;
   }
 
-  /* line 187, ../sass/style_index.scss */
+  /* line 168, ../sass/style_index.scss */
   .category {
     max-width: 100%;
     margin-left: auto;
@@ -230,31 +191,31 @@ button img:hover {
     clear: both;
   }
 
-  /* line 191, ../sass/style_index.scss */
+  /* line 172, ../sass/style_index.scss */
   .category a {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
     margin-left: 0;
   }
-  /* line 194, ../sass/style_index.scss */
+  /* line 175, ../sass/style_index.scss */
   .category a.active {
     background: #e5af28;
     color: #2a4158;
   }
-  /* line 198, ../sass/style_index.scss */
+  /* line 179, ../sass/style_index.scss */
   .category a:last-child {
     float: right;
     margin-right: 0;
   }
 
-  /* line 202, ../sass/style_index.scss */
+  /* line 183, ../sass/style_index.scss */
   .logo {
     margin-top: 50px;
     margin-bottom: 80px;
   }
 
-  /* line 207, ../sass/style_index.scss */
+  /* line 188, ../sass/style_index.scss */
   .formulaire {
     width: 100%;
     float: left;
@@ -264,7 +225,7 @@ button img:hover {
     padding: 50px 0;
     border-top: 1px solid #2a4158;
   }
-  /* line 214, ../sass/style_index.scss */
+  /* line 195, ../sass/style_index.scss */
   .formulaire input {
     width: 83.05085%;
     float: left;
@@ -275,19 +236,19 @@ button img:hover {
     padding-left: 7px;
     background: #e3e4e6;
   }
-  /* line 223, ../sass/style_index.scss */
+  /* line 204, ../sass/style_index.scss */
   .formulaire .connection {
     text-transform: uppercase;
     padding: 20px 0;
     background-color: #2a4158;
     color: white;
   }
-  /* line 229, ../sass/style_index.scss */
+  /* line 210, ../sass/style_index.scss */
   .formulaire a {
     margin-left: 80px;
   }
 
-  /* line 234, ../sass/style_index.scss */
+  /* line 215, ../sass/style_index.scss */
   .client {
     width: 48.27586%;
     float: left;
@@ -296,7 +257,7 @@ button img:hover {
     position: relative;
   }
 
-  /* line 239, ../sass/style_index.scss */
+  /* line 220, ../sass/style_index.scss */
   .or {
     position: absolute;
     width: 80px;
@@ -311,13 +272,13 @@ button img:hover {
     background: #2a4158;
   }
 
-  /* line 252, ../sass/style_index.scss */
+  /* line 233, ../sass/style_index.scss */
   .container {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 253, ../sass/style_index.scss */
+  /* line 234, ../sass/style_index.scss */
   .container .listing {
     padding-top: 170px;
   }
@@ -327,7 +288,7 @@ button img:hover {
     display: block;
     clear: both;
   }
-  /* line 257, ../sass/style_index.scss */
+  /* line 238, ../sass/style_index.scss */
   .container > div {
     width: 48.27586%;
     float: left;
@@ -336,32 +297,32 @@ button img:hover {
     margin-left: 0;
     height: 200px;
   }
-  /* line 264, ../sass/style_index.scss */
+  /* line 245, ../sass/style_index.scss */
   .container > div img {
     margin-bottom: 20px;
     margin-top: 0px;
   }
-  /* line 268, ../sass/style_index.scss */
+  /* line 249, ../sass/style_index.scss */
   .container > div.pro {
     float: right;
     margin-right: 0;
     background: aliceblue;
     color: #2a4158;
   }
-  /* line 272, ../sass/style_index.scss */
+  /* line 253, ../sass/style_index.scss */
   .container > div.pro .inactive {
     visibility: hidden;
   }
-  /* line 276, ../sass/style_index.scss */
+  /* line 257, ../sass/style_index.scss */
   .container > div > p {
     display: unset;
   }
-  /* line 280, ../sass/style_index.scss */
+  /* line 261, ../sass/style_index.scss */
   .container a {
     text-decoration: none;
     color: #2a4158;
   }
-  /* line 284, ../sass/style_index.scss */
+  /* line 265, ../sass/style_index.scss */
   .container h2 {
     margin-top: 0px;
     font-size: 24px;
