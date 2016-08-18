@@ -12,6 +12,9 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 	$scope.logClient = {};
 	$scope.logPro = {};
 
+	$scope.activateForm = function(status) {
+	};
+
 	var abakusCookies = $cookies.getObject('Abakus');
 	// console.log(abakusCookies);
 	// console.log(abakusCookies.isLogged);
