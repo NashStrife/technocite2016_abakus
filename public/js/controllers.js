@@ -32,7 +32,7 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 	};
 
 	var abakusCookies = $cookies.getObject('Abakus');
-	// console.log(abakusCookies);
+	console.log(abakusCookies);
 	// console.log(abakusCookies.isLogged);
 	// if(!abakusCookies.isLogged){
 	// 	$location.path('/');

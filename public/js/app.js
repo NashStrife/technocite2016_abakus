@@ -3,6 +3,7 @@ var app = angular.module('abakusApp', [
 	'ngResource',
 	'ngCookies',
 	'abakusControllers',
+	'proControllers',
 	'addClientModule',
 	'servicesAbakus',
 	'clientService',
@@ -70,26 +71,6 @@ var app = angular.module('abakusApp', [
 	  }})
 ;
 
-// angular.module("abakusApp", ["abakusControllers"])
-//   .directive("navBar", function() { // (1)
-//   return {
-//     restrict: "E",         // (2)
-//     replace: true,         // (3)
-//     transclude: true,      // (4)
-//     templateUrl: "components/navBar.html"    // (5)
-//   }});
-// ;
-
-// angular.module("abakusApp", ["abakusControllers"])
-//   .directive("searchBar", function() { // (1)
-//   return {
-//     restrict: "E",         // (2)
-//     replace: true,         // (3)
-//     transclude: true,      // (4)
-//     templateUrl: "components/searchBar.html"    // (5)
-//   }});
-// ;
-
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
@@ -156,7 +137,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/clients/list', {
 		title:"clients",
 		templateUrl : 'partials/pro/clients/list.html',
-		controller : 'profileCtrl'
+		controller : 'ProListCtrl'
 	}).
 	when('/pro/estimate/add', {
 		title:"devis",
