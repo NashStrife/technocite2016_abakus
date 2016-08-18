@@ -1,6 +1,7 @@
 @import "compass";
 @import "grids";
 @import "variables";
+
 html {
     @include box-sizing(border-box);
 }
@@ -9,6 +10,12 @@ html {
 *:before,
 *:after {
     @include box-sizing(inherit);
+}
+
+body {
+    background: $primaryColor;
+    font-family: "century gothic", arial, sans-serif;
+    text-align: center;
 }
 
 .container {
@@ -33,34 +40,8 @@ html {
     }
 }
 
-.category{ 
-     @include container; 
-     text-align: center;
-     }
-    .category a{
-    @include span(6 of 12);    
-    background: $descriptionColor;
-    color: $primaryColor;
-    text-transform: uppercase;
-    display: block;
-    text-decoration: none;
-    font-size: 2em;
-    padding: 30px 0;
-    margin-bottom: 70px;
-    &.active{
-        background: $focusColor;
-        color: $primaryColor;
-    }
-    &:last-child{
-        @include last;
-    }
-}
 
-body {
-    background: $primaryColor;
-    font-family: "century gothic", arial, sans-serif;
-    text-align: center;
-}
+
 
 .logo img {
     width: 300px;
@@ -203,7 +184,7 @@ button {
         margin-top: 50px;
         margin-bottom: 80px;
     }
-    
+
         .formulaire {
 
         @include span(12 of 12);
