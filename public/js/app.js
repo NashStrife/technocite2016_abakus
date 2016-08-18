@@ -103,7 +103,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/client/estimate/list', {
 		title:"devis",
 		templateUrl : 'partials/client/estimate/list.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/client/invoice/detail', {
 		title:"factures",
@@ -113,7 +113,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/client/invoice/list', {
 		title:"factures",
 		templateUrl : 'partials/client/invoice/list.html',
-		controller : ''
+		controller : 'profileCtrl'
 	}).
 	when('/client/profile/edit', {
 		title:"mon compte",
