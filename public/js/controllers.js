@@ -13,9 +13,9 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 	$scope.logPro = {};
 
 	$scope.clientAct = true;
-	$scope.clientInact = true;
+	$scope.clientInact = false;
 	$scope.proAct = false;
-	$scope.proInact = false;
+	$scope.proInact = true;
 
 	$scope.activateForm = function(status) {
 		if (status == 'client' ) {

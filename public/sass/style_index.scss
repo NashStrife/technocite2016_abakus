@@ -18,6 +18,10 @@ body {
     text-align: center;
 }
 
+body * {
+    font-family: "century gothic", arial, sans-serif;
+}
+
 .container {
     @include container(420px);
     h2 {
@@ -118,7 +122,68 @@ button {
         -o-transform: rotate(180deg);
         transform: rotate(180deg);
 
-        &:hover {
+        // &:hover {
+        //     -webkit-animation: arrowAnim 0.5s 1 forwards;
+        //     animation: arrowAnim 0.5s 1 forwards;
+        //     @-webkit-keyframes arrowAnim {
+        //         0% {
+        //             -webkit-transform: scaleY(-1);
+        //             -ms-transform: scaleY(-1);
+        //             -o-transform: scaleY(-1);
+        //             transform: scaleY(-1);
+        //         }
+        //         100% {
+        //             -webkit-transform: scaleY(1);
+        //             -ms-transform: scaleY(1);
+        //             -o-transform: scaleY(1);
+        //             transform: scaleY(1);
+        //         }
+        //     }
+
+        //     @keyframes arrowAnim {
+        //         0% {
+        //             -webkit-transform: scaleY(-1);
+        //             -ms-transform: scaleY(-1);
+        //             -o-transform: scaleY(-1);
+        //             transform: scaleY(-1);
+        //         }
+        //         100% {
+        //             -webkit-transform: scaleY(1);
+        //             -ms-transform: scaleY(1);
+        //             -o-transform: scaleY(1);
+        //             transform: scaleY(1);
+        //         }
+        //     }  
+        // }
+        
+    }
+}
+
+// .client {
+
+//     &.active {
+//         background: $focusColor!important;
+//         color: white;
+//     }
+
+// }
+
+// .pro {
+//     height: 260px;
+
+// }
+
+
+
+.client {
+    .active {
+        background-color: $focusColor!important;
+        visibility: visible;
+        -webkit-transition: background-color 0.5s, visibility 0.5s;
+        -o-transition: background-color 0.5s, visibility 0.5s;
+        transition: background-color 0.5s, visibility 0.5s;
+        img {
+            &:hover {
             -webkit-animation: arrowAnim 0.5s 1 forwards;
             animation: arrowAnim 0.5s 1 forwards;
             @-webkit-keyframes arrowAnim {
@@ -149,32 +214,9 @@ button {
                     -o-transform: scaleY(1);
                     transform: scaleY(1);
                 }
-            }  
+            }   
+            }
         }
-        
-    }
-}
-
-// .client {
-
-//     &.active {
-//         background: $focusColor!important;
-//         color: white;
-//     }
-
-// }
-
-// .pro {
-//     height: 260px;
-
-// }
-
-
-
-.client {
-    .active {
-        background-color: $focusColor!important;
-        visibility: visible;
     }
     .inactive {
         background-color: $textColor;
@@ -192,6 +234,44 @@ button {
     .active {
         background-color: $focusColor!important;
         visibility: visible;
+        -webkit-transition: background-color 0.5s, visibility 0.5s;
+        -o-transition: background-color 0.5s, visibility 0.5s;
+        transition: background-color 0.5s, visibility 0.5s;
+        img {
+            &:hover {
+            -webkit-animation: arrowAnim 0.5s 1 forwards;
+            animation: arrowAnim 0.5s 1 forwards;
+            @-webkit-keyframes arrowAnim {
+                0% {
+                    -webkit-transform: scaleY(-1);
+                    -ms-transform: scaleY(-1);
+                    -o-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                }
+                100% {
+                    -webkit-transform: scaleY(1);
+                    -ms-transform: scaleY(1);
+                    -o-transform: scaleY(1);
+                    transform: scaleY(1);
+                }
+            }
+
+            @keyframes arrowAnim {
+                0% {
+                    -webkit-transform: scaleY(-1);
+                    -ms-transform: scaleY(-1);
+                    -o-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                }
+                100% {
+                    -webkit-transform: scaleY(1);
+                    -ms-transform: scaleY(1);
+                    -o-transform: scaleY(1);
+                    transform: scaleY(1);
+                }
+            }   
+            }
+        }
     }
     .inactive {
         background-color: $textColor;
