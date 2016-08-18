@@ -39,12 +39,19 @@ var app = angular.module('abakusApp', [
 	    transclude: true,      // (4)
 	    templateUrl: "components/navbarpro.html"    // (5)
 	  }})
-	.directive('searchBar', function() { // (1)
+	.directive('searchbarclient', function() { // (1)
 	  return {
 	    restrict: "E",         // (2)
 	    replace: true,         // (3)
 	    transclude: true,      // (4)
-	    templateUrl: "components/searchBar.html"    // (5)
+	    templateUrl: "components/searchbarclient.html"    // (5)
+	  }})
+	.directive('searchbarpro', function() { // (1)
+	  return {
+	    restrict: "E",         // (2)
+	    replace: true,         // (3)
+	    transclude: true,      // (4)
+	    templateUrl: "components/searchbarpro.html"    // (5)
 	  }})
 	.directive('profiledashboard', function() { // (1)
 	  return {
