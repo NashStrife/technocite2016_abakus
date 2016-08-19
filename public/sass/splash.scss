@@ -6,12 +6,12 @@
 @import "_variables";
 
 	#moreClient {
-		position: fixed;
+		// position: fixed;
 		z-index: 999;
 		background-color: $focusColor;
 		color: $primaryColor;
 		border: none;
-		height: 22px;
+		// height: 22px;
 		width: 100px;
 		cursor: pointer;
 		&::first-letter{
