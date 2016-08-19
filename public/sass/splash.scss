@@ -4,7 +4,10 @@
 @import "compass";
 @import "grids";
 @import "_variables";
-
+	#addInvoiceButton{
+		background: red;
+		margin: 100px 50px;
+	}
 	#moreClient {
 		// position: fixed;
 		z-index: 999;
