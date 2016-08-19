@@ -437,9 +437,8 @@ let companyModel = function() {
             required : true
         }],
         vatRate : [{
-            type : Number,
-            required : true,
-            validate : numberValidator
+            type : String,
+            required : true
         }]
     });
 

@@ -234,7 +234,7 @@ let params = [{
         "Angleterre",
         "Etats-Unis"
     ],
-    "vatRate" : [21,0,6]
+    "vatRate" : ["0%","6%", "21%"]
 }]
 
 

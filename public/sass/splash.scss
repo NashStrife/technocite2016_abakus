@@ -93,11 +93,18 @@
 		select, input{
 			height: 21px;
 		}
+		.note {
+				height: 68%;
+			}
 		.line {
 			@include container(75%);
 			label {margin-top: 2%;}
-			label, input, select {
+			label, input, select, textarea {
 				width: 100%;
+				resize: none;
+			}
+			#note {
+				height: 100%;
 			}
 			#delivery {
 				vertical-align: text-bottom;
