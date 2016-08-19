@@ -10,7 +10,12 @@ nav{
     top: 100px;
     .h1Border {
         border-bottom: 2px solid $primaryColor;
-        padding-bottom: 15px;
+        border-top: 2px solid $primaryColor;
+        letter-spacing: 3px;
+        font-weight: bold;
+        padding-bottom: 25px;
+        padding-top: 25px;
+        background: $focusColor;
     }
     a {
         display: block;
@@ -35,18 +40,26 @@ nav{
     }
     #factures{
         background: url(../images/facture.svg) no-repeat;
+        width: 50px;
+        height: 50px;
         @include navButton();
     }
     #devis{
         background: url(../images/devis.svg) no-repeat;
+        width: 50px;
+        height: 50px;
         @include navButton();       
     }
     #myClients{
         background: url(../images/client_icon.svg) no-repeat;
+        width: 50px;
+        height: 50px;
         @include navButton();
     }
     #setting{
         background: url(../images/setting.svg) no-repeat;
+        width: 50px;
+        height: 50px;
         @include navButton();  
        a{
            padding-top: 25px;
@@ -59,7 +72,8 @@ section{
     // background-color: red;
     position: fixed;
     font-size: 12px;
-    top: 100px;
+    top: 110px;
+    text-align: right;
     // margin-left: span(4 of 24 wider);
     // img{
     //     display: inline-block;
@@ -72,13 +86,14 @@ section{
 .blue2{
     background: $primaryColor;
     width: 100%;
-    height: 20px;
+    height: 10px;
     margin-left: 198px;
 }
 .search{
-    padding: 10px 20px;
+    padding: 10px;
     background: $mainBackgroundColor;
     margin-left: 198px;
+    text-align: left;
     *{
         display: inline-block;
         vertical-align: middle;
@@ -91,6 +106,10 @@ section{
         &:hover{
             background-color: aliceblue;
         }
+    }
+    p {
+        margin-right: 15px;
+        text-transform: uppercase;
     }
     input{
         border: none;
@@ -139,6 +158,6 @@ section{
     }
 }
 .searchArea{
-    width: 200px;
-    
+    width: 300px;
+    margin-right: 20px;
 }

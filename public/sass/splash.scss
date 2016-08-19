@@ -5,16 +5,13 @@
 @import "grids";
 @import "_variables";
 
-html {	box-sizing: border-box;
-		font-family: "century Gothic", arial, sans-serif;}
-*, *:before, *:after {box-sizing: inherit;}
 	#moreClient {
-		position: fixed;
+		// position: fixed;
 		z-index: 999;
 		background-color: $focusColor;
 		color: $primaryColor;
 		border: none;
-		height: 22px;
+		// height: 22px;
 		width: 100px;
 		cursor: pointer;
 		&::first-letter{
@@ -34,6 +31,7 @@ html {	box-sizing: border-box;
 	}
 
 	.newClient{
+		font-size: initial;
 		color: $primaryColor;
 		position: relative;
 		height: 410px; 
@@ -95,18 +93,35 @@ html {	box-sizing: border-box;
 		select, input{
 			height: 21px;
 		}
+		.note {
+				height: 68%;
+			}
 		.line {
 			@include container(75%);
 			label {margin-top: 2%;}
-			label, input, select {
+			label, input, select, textarea {
 				width: 100%;
+				resize: none;
 			}
-			.delivery {
-				text-align: left;
+			#note {
+				height: 100%;
+			}
+			#delivery {
+				vertical-align: text-bottom;
+				height: 100%;
+			}
+			.deliver {
+				vertical-align: bottom;
 				width: initial;
-				vertical-align: top;
-			}		
-			label[for="tva"], label[for="ref"] {
+				margin: 0;
+			}
+			label[for="same"] {
+				@include span(1.25 of 10);
+			}
+			label[for="different"] {
+				@include span(1.25 of 10 last);
+			}
+			label[for="tva"], label[for="ref"], #delivery {
 				@include span(7.5 of 10);
 			}
 			label[for="modeTva"], label[for="logo"] {
@@ -167,6 +182,11 @@ html {	box-sizing: border-box;
 				background-color: $primaryColor;
 				border: none;
 				height: 22px;
+				line-height: 22px;
+				font-family: arial;
+				font-size: 100%;
+				font-style: normal;
+				font-weight: normal;
 				width: 15%;
 				outline: none;
 				cursor: pointer;

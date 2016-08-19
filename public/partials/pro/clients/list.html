@@ -13,18 +13,18 @@
 		            <li ng-repeat="item in listClients | filter: filter">
 		                <div class="listItem">
 		                    <div class="blocItem">
-		                        <span class="itemDatas blocDate">{{item.name}}</span>
-		                        <span class="itemDatas blocCompany">{{item.contactPerson.mail}}</span>
-		                        <span ng-show="item.isCompany" class="itemDatas blocInvoiceNumber">Société</span>
-								<span ng-hide="item.isCompany" class="itemDatas blocInvoiceNumber">Particulier</span>
+		                        <div class="itemDatas blocDate">{{item.name}}</div>
+		                        <div class="itemDatas blocCompany">{{item.contactPerson.mail}}</div>
+		                        <div ng-show="item.isCompany" class="itemDatas blocInvoiceNumber">Société</div>
+								<div ng-hide="item.isCompany" class="itemDatas blocInvoiceNumber">Particulier</div>
 		                    </div>
-		                    <div class="listNote">
+		                    <!-- <div class="listNote">
 		                    <p>{{item.memo}}</p>
-		                    </div>
-		                    <button class="reveal">v</button>
+		                    </div> -->
+		                    <!-- <button class="reveal">v</button> -->
 		                </div>
 
-		                <a href="#/pro/clients/detail" class="moreInfos">
+		                <a href="#/pro/clients/detail/{{listClients.indexOf(item)}}" class="moreInfos">
 		                    Plus d'infos
 		                </a>
 		            </li>
