@@ -59,7 +59,7 @@ abakusControllers.controller('ProListCtrl', ['$scope', 'Client', function($scope
 		}
 	];
 
-	// create a function to refresh the list [used when we delete a client]
+	// create a function to refresh the list when needed
 	function refresh() {
 		Client.getList(function(result){
 			$scope.listClients = result;
@@ -73,13 +73,26 @@ abakusControllers.controller('ProListCtrl', ['$scope', 'Client', function($scope
 	// define the base order when list appear
 	// $scope.order = "name";
 	// $scope.direction = "";
+}]);
 
-	// when we click on the remove button on the list
-	$scope.removeClient = function(id){
-		if(confirm("Delete this client ?")){
-			Client.deleteClient(id);
-			// use the custom function created before
-			refresh();
+abakusControllers.controller('ProDetailCtrl', ['$scope', '$routeParams', 'Client', function($scope, $routeParams, Client){
+	Client.getList(function(result){
+		// get list of clients
+		$scope.clients = result;
+		// get the item that we want details thx to the id sent in the route
+		$scope.whichItem = $routeParams.itemId;
+		console.log($scope.clients[$scope.whichItem]);
+
+		$scope.nextItem = parseInt($scope.whichItem) + 1;
+		// get back to the begining of the loop
+		if($scope.nextItem >= $scope.clients.length){
+			$scope.nextItem = 0;
 		}
-	}
+
+		// go to the end of the loop
+		$scope.prevItem = parseInt($scope.whichItem) - 1;
+		if($scope.prevItem < 0){
+			$scope.prevItem = $scope.clients.length-1;
+		}
+	});
 }]);

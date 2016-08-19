@@ -1,11 +1,9 @@
 /* line 8, ../sass/splash.scss */
 #moreClient {
-  position: fixed;
   z-index: 999;
   background-color: #e5af28;
   color: #2a4158;
   border: none;
-  height: 22px;
   width: 100px;
   cursor: pointer;
 }
