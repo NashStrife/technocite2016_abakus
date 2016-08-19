@@ -439,6 +439,11 @@ let companyModel = function() {
         vatRate : [{
             type : String,
             required : true
+        }],
+        vatPrefix : [{
+            type : String,
+            required : true,
+            uppercase : true
         }]
     });
 
