@@ -1,15 +1,4 @@
 /* line 8, ../sass/splash.scss */
-html {
-  box-sizing: border-box;
-  font-family: "century Gothic", arial, sans-serif;
-}
-
-/* line 10, ../sass/splash.scss */
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-/* line 11, ../sass/splash.scss */
 #moreClient {
   position: fixed;
   z-index: 999;
@@ -20,13 +9,13 @@ html {
   width: 100px;
   cursor: pointer;
 }
-/* line 20, ../sass/splash.scss */
+/* line 17, ../sass/splash.scss */
 #moreClient::first-letter {
   font-size: 22px;
   font-weight: bold;
 }
 
-/* line 25, ../sass/splash.scss */
+/* line 22, ../sass/splash.scss */
 .overlay {
   display: flex;
   position: fixed;
@@ -38,8 +27,9 @@ html {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 36, ../sass/splash.scss */
+/* line 33, ../sass/splash.scss */
 .newClient {
+  font-size: initial;
   color: #2a4158;
   position: relative;
   height: 410px;
@@ -49,7 +39,7 @@ html {
   align-self: center;
   text-align: center;
 }
-/* line 45, ../sass/splash.scss */
+/* line 43, ../sass/splash.scss */
 .newClient img {
   position: absolute;
   top: -25px;
@@ -58,11 +48,11 @@ html {
   height: 25px;
   cursor: pointer;
 }
-/* line 53, ../sass/splash.scss */
+/* line 51, ../sass/splash.scss */
 .newClient input {
   color: #2a4158;
 }
-/* line 56, ../sass/splash.scss */
+/* line 54, ../sass/splash.scss */
 .newClient .intro {
   height: 30px;
   width: 220px;
@@ -73,7 +63,7 @@ html {
   line-height: 30px;
   cursor: pointer;
 }
-/* line 66, ../sass/splash.scss */
+/* line 64, ../sass/splash.scss */
 .newClient fieldset {
   display: none;
   background-color: #95a0ac;
@@ -85,11 +75,11 @@ html {
   border: none;
   margin: 0;
 }
-/* line 77, ../sass/splash.scss */
+/* line 75, ../sass/splash.scss */
 .newClient :-moz-any(label[for="logo"]) {
   height: 37px;
 }
-/* line 80, ../sass/splash.scss */
+/* line 78, ../sass/splash.scss */
 .newClient legend {
   background-color: #95a0ac;
   text-align: center;
@@ -99,17 +89,17 @@ html {
   display: block;
   padding: 3%;
 }
-/* line 90, ../sass/splash.scss */
+/* line 88, ../sass/splash.scss */
 .newClient label {
   display: inline-block;
   font-style: italic;
   text-align: left;
 }
-/* line 95, ../sass/splash.scss */
+/* line 93, ../sass/splash.scss */
 .newClient select, .newClient input {
   height: 21px;
 }
-/* line 98, ../sass/splash.scss */
+/* line 96, ../sass/splash.scss */
 .newClient .line {
   max-width: 75%;
   margin-left: auto;
@@ -121,92 +111,109 @@ html {
   display: block;
   clear: both;
 }
-/* line 100, ../sass/splash.scss */
+/* line 98, ../sass/splash.scss */
 .newClient .line label {
   margin-top: 2%;
 }
-/* line 101, ../sass/splash.scss */
+/* line 99, ../sass/splash.scss */
 .newClient .line label, .newClient .line input, .newClient .line select {
   width: 100%;
 }
-/* line 104, ../sass/splash.scss */
-.newClient .line .delivery {
-  text-align: left;
-  width: initial;
-  vertical-align: top;
+/* line 102, ../sass/splash.scss */
+.newClient .line #delivery {
+  vertical-align: text-bottom;
+  height: 100%;
 }
-/* line 109, ../sass/splash.scss */
-.newClient .line label[for="tva"], .newClient .line label[for="ref"] {
+/* line 106, ../sass/splash.scss */
+.newClient .line .deliver {
+  vertical-align: bottom;
+  width: initial;
+  margin: 0;
+}
+/* line 111, ../sass/splash.scss */
+.newClient .line label[for="same"] {
+  width: 10.71429%;
+  float: left;
+  margin-right: 2.04082%;
+}
+/* line 114, ../sass/splash.scss */
+.newClient .line label[for="different"] {
+  width: 10.71429%;
+  float: right;
+  margin-right: 0;
+}
+/* line 117, ../sass/splash.scss */
+.newClient .line label[for="tva"], .newClient .line label[for="ref"], .newClient .line #delivery {
   width: 74.4898%;
   float: left;
   margin-right: 2.04082%;
 }
-/* line 112, ../sass/splash.scss */
+/* line 120, ../sass/splash.scss */
 .newClient .line label[for="modeTva"], .newClient .line label[for="logo"] {
   width: 23.46939%;
   float: right;
   margin-right: 0;
 }
-/* line 115, ../sass/splash.scss */
+/* line 123, ../sass/splash.scss */
 .newClient .line label[for="civil"], .newClient .line label[for="name"], .newClient .line label[for="civilFact"], .newClient .line label[for="nameFact"], .newClient .line label[for="civilDeliver"], .newClient .line label[for="nameDeliver"] {
   width: 31.96939%;
   float: left;
   margin-right: 2.04082%;
 }
-/* line 118, ../sass/splash.scss */
+/* line 126, ../sass/splash.scss */
 .newClient .line label[for="firstName"], .newClient .line label[for="firstNameFact"], .newClient .line label[for="firstNameDeliver"] {
   width: 31.96939%;
   float: right;
   margin-right: 0;
 }
-/* line 121, ../sass/splash.scss */
+/* line 129, ../sass/splash.scss */
 .newClient .line label[for="phone1"], .newClient .line label[for="email"], .newClient .line label[for="cityFact"], .newClient .line label[for="phone1Fact"], .newClient .line label[for="emailFact"], .newClient .line label[for="cityDeliver"], .newClient .line label[for="phone1Deliver"], .newClient .line label[for="emailDeliver"] {
   width: 48.97959%;
   float: left;
   margin-right: 2.04082%;
 }
-/* line 124, ../sass/splash.scss */
+/* line 132, ../sass/splash.scss */
 .newClient .line label[for="streetFact"], .newClient .line label[for="streetDeliver"] {
   width: 59.18367%;
   float: left;
   margin-right: 2.04082%;
 }
-/* line 127, ../sass/splash.scss */
+/* line 135, ../sass/splash.scss */
 .newClient .line label[for="numFact"], .newClient .line label[for="boxFact"], .newClient .line label[for="numDeliver"], .newClient .line label[for="boxDeliver"] {
   width: 5.61224%;
   float: left;
   margin-right: 2.04082%;
 }
-/* line 130, ../sass/splash.scss */
+/* line 138, ../sass/splash.scss */
 .newClient .line label[for="zipFact"], .newClient .line label[for="zipDeliver"] {
   width: 23.46939%;
   float: right;
   margin-right: 0;
 }
-/* line 133, ../sass/splash.scss */
+/* line 141, ../sass/splash.scss */
 .newClient .line label[for="phone2"], .newClient .line label[for="countryFact"], .newClient .line label[for="phone2Fact"], .newClient .line label[for="faxFact"], .newClient .line label[for="countryDeliver"], .newClient .line label[for="phone2Deliver"], .newClient .line label[for="faxDeliver"] {
   width: 48.97959%;
   float: right;
   margin-right: 0;
 }
-/* line 136, ../sass/splash.scss */
+/* line 144, ../sass/splash.scss */
 .newClient .line label[for="fonction"] {
   display: none;
 }
-/* line 139, ../sass/splash.scss */
+/* line 147, ../sass/splash.scss */
 .newClient .line #prefixeTva {
   width: 12%;
 }
-/* line 142, ../sass/splash.scss */
+/* line 150, ../sass/splash.scss */
 .newClient .line #tva {
   width: 88%;
 }
-/* line 145, ../sass/splash.scss */
+/* line 153, ../sass/splash.scss */
 .newClient .line label[for="logo"] {
   position: relative;
   cursor: pointer;
 }
-/* line 148, ../sass/splash.scss */
+/* line 156, ../sass/splash.scss */
 .newClient .line label[for="logo"] span {
   color: #cad0d6;
   position: absolute;
@@ -217,12 +224,12 @@ html {
   display: block;
   width: 100%;
 }
-/* line 160, ../sass/splash.scss */
+/* line 168, ../sass/splash.scss */
 .newClient #logo {
   outline: none;
   opacity: 0;
 }
-/* line 164, ../sass/splash.scss */
+/* line 172, ../sass/splash.scss */
 .newClient .progress {
   position: absolute;
   bottom: 10%;
@@ -230,82 +237,87 @@ html {
   background-color: #2a4158;
   border: none;
   height: 22px;
+  line-height: 22px;
+  font-family: arial;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
   width: 15%;
   outline: none;
   cursor: pointer;
   text-align: center;
 }
-/* line 174, ../sass/splash.scss */
+/* line 187, ../sass/splash.scss */
 .newClient .progress#cancel {
   left: 12.5%;
 }
-/* line 177, ../sass/splash.scss */
+/* line 190, ../sass/splash.scss */
 .newClient .progress#submit {
   right: 12.5%;
 }
-/* line 180, ../sass/splash.scss */
+/* line 193, ../sass/splash.scss */
 .newClient .progressinput {
   top: 1%;
 }
-/* line 184, ../sass/splash.scss */
+/* line 197, ../sass/splash.scss */
 .newClient input[name="client"], .newClient input[name="progress"], .newClient button, .newClient .progress {
   display: none;
 }
-/* line 187, ../sass/splash.scss */
+/* line 200, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ #cancel {
   display: inline-block;
   right: 12.5%;
 }
-/* line 191, ../sass/splash.scss */
+/* line 204, ../sass/splash.scss */
 .newClient #particulier:checked ~ #lien2 {
   display: inline-block;
   right: 12.5%;
 }
-/* line 195, ../sass/splash.scss */
+/* line 208, ../sass/splash.scss */
 .newClient #society:checked ~ #lien1 {
   display: inline-block;
   right: 12.5%;
 }
-/* line 199, ../sass/splash.scss */
+/* line 212, ../sass/splash.scss */
 .newClient #step1:checked ~ #lien2 {
   display: inline-block;
   right: 12.5%;
 }
-/* line 203, ../sass/splash.scss */
+/* line 216, ../sass/splash.scss */
 .newClient #step2:checked ~ #lien3 {
   display: inline-block;
   right: 12.5%;
 }
-/* line 207, ../sass/splash.scss */
+/* line 220, ../sass/splash.scss */
 .newClient #step3:checked ~ #lien4 {
   display: inline-block;
   right: 12.5%;
 }
-/* line 211, ../sass/splash.scss */
+/* line 224, ../sass/splash.scss */
 .newClient #step4:checked ~ #submit {
   display: inline-block;
 }
-/* line 214, ../sass/splash.scss */
+/* line 227, ../sass/splash.scss */
 .newClient #particulier:checked ~ fieldset:nth-of-type(2) {
   display: inline-block;
 }
-/* line 217, ../sass/splash.scss */
+/* line 230, ../sass/splash.scss */
 .newClient #society:checked ~ fieldset:nth-of-type(1) {
   display: inline-block;
 }
-/* line 220, ../sass/splash.scss */
+/* line 233, ../sass/splash.scss */
 .newClient #step1:checked + fieldset:nth-of-type(2) {
   display: inline-block;
 }
-/* line 223, ../sass/splash.scss */
+/* line 236, ../sass/splash.scss */
 .newClient #step2:checked + fieldset:nth-of-type(3) {
   display: inline-block;
 }
-/* line 226, ../sass/splash.scss */
+/* line 239, ../sass/splash.scss */
 .newClient #step3:checked + fieldset:nth-of-type(4) {
   display: inline-block;
 }
-/* line 229, ../sass/splash.scss */
+/* line 242, ../sass/splash.scss */
 .newClient #step4:checked + fieldset:nth-of-type(5) {
   display: inline-block;
 }

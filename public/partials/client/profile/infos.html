@@ -5,13 +5,13 @@
 <!-- <search-bar></search-bar> -->
 
 <h1 style="background-color:#d5f5e3;">Mes coordonnées</h1>
-	
-	<div class="lol">
-	</div>
+
+<div class="myProfileClientwarpper">
+	<div class="myProfileClient">
 
 	<form action="">
 		<fieldset>
-			<legend>Personne de contact</legend>
+			<img src="#">			
 			<label for="civil">Civilité</label><br/>
 			<select name="Civilité" id="civil">
 				<option value="Monsieur">Monsieur</option>
@@ -22,12 +22,20 @@
 			<input type="text" id="name"><br/>
 			<label for="firstName">Prénom</label><br/>
 			<input type="text" id="firstName"><br/>
-			<label for="phone">Téléphone</label><br/>
-			<input type="text" id="phone"><br/>
-			<label for="email">Email</label><br/>
-			<input type="text" id="email"><br/>
-			<label for="phone2">Téléphone secondaire</label><br/>
-			<input type="text" id="phone2"><br/>
+
+			<div class="telephoneEmail">
+
+				<label for="phone">Téléphone</label><br/>
+				<input type="text" id="phone"><br/>
+				<label for="email">Email</label><br/>
+				<input type="text" id="email"><br/>
+				<label for="phone2">Téléphone secondaire</label><br/>
+				<input type="text" id="phone2"><br/>
+
+			</div>
+
+			<div class="barre1"></div>
+
 		</fieldset>
 		<fieldset>
 			<legend>Coordonnées de facturation</legend>
@@ -41,6 +49,9 @@
 			<input type="text" id="name"><br/>
 			<label for="firstName">Prénom</label><br/>
 			<input type="text" id="firstName"><br/>
+			
+			<div class="colone1">
+
 			<label for="num">N°</label><br>
 			<input type="text" id="num"><br>
 			<label for="box">Bte</label><br>
@@ -49,6 +60,11 @@
 			<input type="text" id="zip"><br>
 			<label for="city">Localité</label><br>
 			<input type="text" id="city"><br>
+
+			</div>
+
+			<div class="colone2">
+
 			<label for="country">Pays</label><br/>
 			<select id="country">
 				<option value="AF">Afghanistan</option>
@@ -309,6 +325,9 @@
 			<input type="text" id="email"><br/>
 			<label for="fax">Fax</label><br>
 			<input type="text" id="fax"><br>
+
+			</div>
+
 			<label for="sameAs">Coordonnées de livraison</label> 
 			<input type="radio" id="sameAs" value="yes" name="sameAs">Oui</input>
 			<input type="radio" id="sameAs" value="no" name="sameAs">Non</input>
@@ -602,3 +621,6 @@
 		</fieldset>
 		<input type="submit" value="Valider"></input>
 	</form>
+
+	</div>
+</div>
