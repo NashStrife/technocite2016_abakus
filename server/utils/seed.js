@@ -234,7 +234,41 @@ let params = [{
         "Angleterre",
         "Etats-Unis"
     ],
-    "vatRate" : ["0%","6%", "21%"]
+    "vatRate" : [
+        "0%",
+        "6%",
+        "21%"
+    ],
+    "vatPrefix" : [
+        "AT",
+        "BE",
+        "BG",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "EE",
+        "EL",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "HR",
+        "HU",
+        "IE",
+        "IT",
+        "LT",
+        "LU",
+        "LV",
+        "MT",
+        "NL",
+        "PL",
+        "PT",
+        "RO",
+        "SE",
+        "SI",
+        "SK"
+    ]
 }]
 
 
