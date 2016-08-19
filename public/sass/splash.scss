@@ -136,7 +136,7 @@
 			label[for="firstName"], label[for="firstNameFact"], label[for="firstNameDeliver"] {
 				@include span(3.333 of 10 last);
 			}
-			label[for="phone1"], label[for="email"], label[for="cityFact"], label[for="phone1Fact"], label[for="emailFact"], label[for="cityDeliver"], label[for="phone1Deliver"], label[for="emailDeliver"] {
+			label[for="phone1"], label[for="email"], label[for="cityFact"], label[for="phone1Fact"], label[for="emailFact"], label[for="cityDeliver"] {
 				@include span(5 of 10);
 			}
 			label[for="streetFact"], label[for="streetDeliver"] {
@@ -148,7 +148,7 @@
 			label[for="zipFact"], label[for="zipDeliver"] {
 				@include span(2.50 of 10 last);
 			}
-			label[for="phone2"], label[for="countryFact"], label[for="phone2Fact"], label[for="faxFact"], label[for="countryDeliver"], label[for="phone2Deliver"], label[for="faxDeliver"] {
+			label[for="phone2"], label[for="countryFact"], label[for="phone2Fact"], label[for="faxFact"], label[for="countryDeliver"] {
 				@include span(5 of 10 last);
 			}
 			label[for="fonction"] {
@@ -178,6 +178,7 @@
 		#logo {
 				outline: none;
 				opacity: 0;
+				pointer-events: none;
 		}
 		.progress {position: absolute;
 				bottom: 10%;
