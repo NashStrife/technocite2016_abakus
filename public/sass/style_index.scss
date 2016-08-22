@@ -79,17 +79,22 @@ body * {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 80px;
+    padding: 0 15px;
+
+    img {
+        padding: 0 15px;
+    }
 }
+
 .formulaire{
     visibility: visible;
-    @include span(6 of 12);
-    @include pre(3 of 12);
+    @include span(12 of 12);
+    // @include pre(3 of 12);
     text-align: center;
-    color: $textColor;
-
     
+    color: $textColor;
     input{
-        width: 100%;
+        width: 80%;
         margin-bottom: 20px;
         border: none;
         padding: 9px 0;
@@ -173,7 +178,10 @@ button {
 
 // }
 
-
+.or {
+    display: none;
+    visibility: hidden;
+}
 
 .client {
     .active {
@@ -229,7 +237,7 @@ button {
     }
 }
 .pro {
-    @include last;
+    // @include last;
     color: $primaryColor;
     .active {
         background-color: $focusColor!important;
@@ -322,7 +330,13 @@ button {
         margin-top: 50px;
         margin-bottom: 80px;
     }
-
+    .logoLogin{
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        padding: 0 15px;
+    }
     .formulaire {
 
         @include span(12 of 12);
@@ -364,7 +378,7 @@ button {
         line-height: 80px;
         color: $textColor;
         left: calc(50% - 40px);
-        top: calc(35% - 50px);
+        top: 300px;
         z-index: 100;
         background: $primaryColor;
     }

@@ -38,9 +38,10 @@ body {
   position: fixed;
   top: 0px;
   width: 100%;
+  z-index: 10;
 }
 
-/* line 25, ../sass/style_UI.scss */
+/* line 26, ../sass/style_UI.scss */
 .logo {
   width: 100%;
   background: #e5af28;
@@ -49,12 +50,12 @@ body {
   top: 40px;
 }
 
-/* line 33, ../sass/style_UI.scss */
+/* line 34, ../sass/style_UI.scss */
 #off {
   float: right;
 }
 
-/* line 36, ../sass/style_UI.scss */
+/* line 37, ../sass/style_UI.scss */
 .navigation {
   margin-top: 140px;
   display: inline-block;
@@ -64,22 +65,22 @@ body {
   float: left;
   margin-right: 1.69492%;
 }
-/* line 42, ../sass/style_UI.scss */
+/* line 43, ../sass/style_UI.scss */
 .navigation:hover {
   background: #e5af28;
 }
-/* line 45, ../sass/style_UI.scss */
+/* line 46, ../sass/style_UI.scss */
 .navigation:last-child {
   margin-right: 0;
 }
-/* line 49, ../sass/style_UI.scss */
+/* line 50, ../sass/style_UI.scss */
 .navigation a {
   text-decoration: none;
   text-transform: uppercase;
   color: #2a4158;
   text-align: center;
 }
-/* line 56, ../sass/style_UI.scss */
+/* line 57, ../sass/style_UI.scss */
 .navigation h2 {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -89,7 +90,7 @@ body {
   font-weight: bold;
   border-bottom: 2px solid #2a4158;
 }
-/* line 65, ../sass/style_UI.scss */
+/* line 66, ../sass/style_UI.scss */
 .navigation img {
   margin: auto;
   display: block;
@@ -97,7 +98,7 @@ body {
   padding-bottom: 20px;
 }
 
-/* line 72, ../sass/style_UI.scss */
+/* line 73, ../sass/style_UI.scss */
 .foot {
   background: #16202c;
   color: #fff;
@@ -110,7 +111,7 @@ body {
   padding-top: 25px;
   z-index: 1000;
 }
-/* line 83, ../sass/style_UI.scss */
+/* line 84, ../sass/style_UI.scss */
 .foot .copyright {
   opacity: 0.6;
 }
