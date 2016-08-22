@@ -4,6 +4,7 @@
 html {
     @include box-sizing(border-box);
 }
+
 .contener {
     @include container(742px);
 }
@@ -43,29 +44,31 @@ fieldset {
 
 .cent {
     @include span(12 of 12);
-    
-    }
-.half{
+}
+
+.half {
     margin-top: 20px;
     margin-bottom: 20px;
     box-sizing: border-box;
-        @include span(6 of 12);
-        &:nth-child(2) {
-            @include last;
-        }
-        select{
-            width: 100%;
-            display: block;
-        }
-        input{
-            width: 100%;
-            display: block;
-        }
+    @include span(6 of 12);
+    &:nth-child(2) {
+        @include last;
+    }
+    select {
+        width: 100%;
+        display: block;
+    }
+    input {
+        width: 100%;
+        display: block;
+    }
 }
-.last{
+
+.last {
     @include last;
 }
-.next{
+
+.next {
     @include navButton;
     width: 90px;
     float: right;
@@ -73,6 +76,38 @@ fieldset {
     color: white;
     text-transform: uppercase;
 }
-#po{
+
+#po {
     text-transform: capitalize;
+}
+
+.facture {
+    @include span(12 of 12);
+
+
+.article {
+    @include span(2 of 12);
+    label{
+    display: block;
+    }
+}
+
+.description {
+    @include span(3 of 12);
+    label{
+    display: block;
+    }
+}
+.small{
+    @include span(2 of 12);
+    label{
+    display: block;
+    }
+}
+.bill{
+    @include span(2 of 12);
+    label{
+        display: block;
+    }
+}
 }
