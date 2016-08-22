@@ -8,7 +8,7 @@ html {
     @include container(742px);
 }
 
-form {
+.addInvoice {
     margin: auto;
     margin-left: 198px;
     margin-top: 180px;
@@ -22,7 +22,6 @@ fieldset {
     legend {
         margin-bottom: 20px;
     }
-    input {}
 }
 
 .references {
