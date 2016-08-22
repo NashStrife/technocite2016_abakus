@@ -96,3 +96,12 @@ abakusControllers.controller('ProDetailCtrl', ['$scope', '$routeParams', 'Client
 		}
 	});
 }]);
+
+abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams', 'Admin', function($scope, $routeParams, Admin){
+	Admin.getAdmin(function(result){
+		// get first tab of the array because we have only one admin
+		$scope.details = result[0];
+		console.log($scope.details);
+
+	});
+}]);
