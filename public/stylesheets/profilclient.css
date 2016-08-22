@@ -101,7 +101,7 @@
 .myProfileClient fieldset[id=fieldset2] {
   height: 209px;
 }
-/* line 136, ../sass/profilclient.scss */
+/* line 141, ../sass/profilclient.scss */
 .myProfileClient fieldset[id=fieldset2] .colone1 {
   width: 230px;
   height: auto;
@@ -110,7 +110,7 @@
   top: -103px;
   right: -227px;
 }
-/* line 147, ../sass/profilclient.scss */
+/* line 152, ../sass/profilclient.scss */
 .myProfileClient fieldset[id=fieldset2] .colone2 {
   width: 262px;
   height: auto;
@@ -119,11 +119,11 @@
   top: -103px;
   right: -223px;
 }
-/* line 160, ../sass/profilclient.scss */
+/* line 165, ../sass/profilclient.scss */
 .myProfileClient fieldset[id=fieldset3] {
   height: 242px;
 }
-/* line 165, ../sass/profilclient.scss */
+/* line 170, ../sass/profilclient.scss */
 .myProfileClient fieldset[id=fieldset3] .colone2 {
   width: 262px;
   height: auto;
@@ -132,7 +132,7 @@
   top: -105px;
   right: -227px;
 }
-/* line 176, ../sass/profilclient.scss */
+/* line 181, ../sass/profilclient.scss */
 .myProfileClient fieldset[id=fieldset3] .colone3 {
   width: 262px;
   height: auto;
@@ -141,7 +141,7 @@
   top: -139px;
   right: -191px;
 }
-/* line 190, ../sass/profilclient.scss */
+/* line 195, ../sass/profilclient.scss */
 .myProfileClient textarea {
   margin-left: 22px;
   width: 698px;
@@ -150,7 +150,7 @@
   background-color: #7c8894;
   border: none;
 }
-/* line 200, ../sass/profilclient.scss */
+/* line 205, ../sass/profilclient.scss */
 .myProfileClient input[id=valid] {
   margin-top: 15px;
   margin-left: 22px;
