@@ -1,0 +1,71 @@
+@import "compass";
+@import "grids";
+@import "variables";
+html {
+    @include box-sizing(border-box);
+}
+.contener {
+    @include container(742px);
+}
+
+form {
+    margin: auto;
+    margin-left: 198px;
+    margin-top: 180px;
+    background: $mainBackgroundColor;
+}
+
+fieldset {
+    border: 1px solid $primaryColor;
+    width: 100%;
+    padding: 0 10%;
+    legend {
+        margin-bottom: 20px;
+    }
+    input {}
+}
+
+.references {
+    input {
+        @include span(4 of 12);
+        background: green;
+        &:last-child {
+            @include last;
+        }
+    }
+}
+
+.ref_client {
+    #client {
+        margin: auto;
+    }
+}
+
+.cent {
+    @include span(12 of 12);
+    
+    }
+.half{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+        @include span(6 of 12);
+        &:nth-child(2) {
+            @include last;
+        }
+        select{
+            width: 100%;
+            display: block;
+        }
+}
+.last{
+    @include last;
+}
+.next{
+    @include navButton;
+    width: 90px;
+    float: right;
+    background: $primaryColor;
+    color: white;
+    text-transform: uppercase;
+}

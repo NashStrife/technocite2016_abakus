@@ -1,7 +1,7 @@
 <linkhomeclient></linkhomeclient>
 
 <navbarclient></navbarclient>
-<searchbarclient></searchbarclient>
+<!-- <searchbarclient></searchbarclient> -->
 <!-- <search-bar></search-bar> -->
 
 <h1 style="background-color:#d5f5e3;">Mes coordonnées</h1>
@@ -10,28 +10,30 @@
 	<div class="myProfileClient">
 
 	<form action="">
+
 		<fieldset>
-			<img src="#">			
-			<label for="civil">Civilité</label><br/>
-			<select name="Civilité" id="civil">
-				<option value="Monsieur">Monsieur</option>
-				<option value="Madame">Madame</option>
-				<option value="Mademoiselle">Mademoiselle</option>
-			</select><br/>
-			<label for="name">Nom</label><br/>
-			<input type="text" id="name"><br/>
-			<label for="firstName">Prénom</label><br/>
-			<input type="text" id="firstName"><br/>
+			<img src="#">
+
+			<div class="introCivilite">
+				<label for="civil">Civilité</label><br/>
+				<select name="Civilité" id="civil">
+					<option value="Monsieur">Monsieur</option>
+					<option value="Madame">Madame</option>
+					<option value="Mademoiselle">Mademoiselle</option>
+				</select><br/>
+				<label for="name">Nom</label><br/>
+				<input type="text" id="name"><br/>
+				<label for="firstName">Prénom</label><br/>
+				<input type="text" id="firstName"><br/>
+			</div>
 
 			<div class="telephoneEmail">
-
 				<label for="phone">Téléphone</label><br/>
 				<input type="text" id="phone"><br/>
 				<label for="email">Email</label><br/>
 				<input type="text" id="email"><br/>
 				<label for="phone2">Téléphone secondaire</label><br/>
 				<input type="text" id="phone2"><br/>
-
 			</div>			
 
 		</fieldset>
@@ -39,7 +41,10 @@
 		<div class="barre1"></div>
 
 		<fieldset id="fieldset2">
+
 			<legend>Coordonnées de facturation</legend>
+
+			<div class="facturationC"></div>
 			<label for="civil">Civilité</label><br/>
 			<select name="Civilité" id="civil">
 				<option value="Monsieur">Monsieur</option>

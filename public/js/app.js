@@ -165,7 +165,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/estimate/list', {
 		title:"devis",
 		templateUrl : 'partials/pro/estimate/list.html',
-		controller : 'profileCtrl'
+		controller : 'ProListCtrl'
 	}).
 	when('/pro/invoice/add', {
 		title:"factures",
@@ -180,7 +180,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/invoice/list', {
 		title:"factures",
 		templateUrl : 'partials/pro/invoice/list.html',
-		controller : 'profileCtrl'
+		controller : 'ProListCtrl'
 	}).
 	when('/pro/profile/edit-method-of-payement', {
 		title:"mon compte",
