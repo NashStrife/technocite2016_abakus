@@ -31,8 +31,11 @@ abakusControllers.controller('ProListCtrl', ['$scope', 'Client', function($scope
 					$scope.listEstimates.push(estimate);
 				});
 			});
+			console.log("Clients :");
 			console.log($scope.listClients);
+			console.log("Factures :");
 			console.log($scope.listBills);
+			console.log("Devis :");
 			console.log($scope.listEstimates);
 		});
 	}
