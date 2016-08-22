@@ -15,7 +15,11 @@
   margin-top: 117px;
   position: relative;
 }
-/* line 24, ../sass/profilclient.scss */
+/* line 23, ../sass/profilclient.scss */
+.myProfileClient select {
+  width: 148px;
+}
+/* line 29, ../sass/profilclient.scss */
 .myProfileClient img {
   width: 90px;
   height: 90px;
@@ -24,54 +28,44 @@
   display: inline-block;
   float: left;
 }
-/* line 34, ../sass/profilclient.scss */
-.myProfileClient label {
-  font-size: 14px;
-}
 /* line 39, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child {
-  height: 150px;
-}
-/* line 43, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child label[for=civil] {
-  margin-top: 16px;
+.myProfileClient label {
+  font-size: 12px;
+  color: white;
+  margin-top: 19px;
   margin-left: 15px;
   display: inline-block;
   float: left;
 }
-/* line 51, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child select[id=civil] {
-  display: inline-block;
-  margin-left: 5px;
-  margin-top: -4px;
+/* line 49, ../sass/profilclient.scss */
+.myProfileClient input, .myProfileClient select {
+  background-color: #7c8894;
+  border: none;
+  color: white;
 }
-/* line 58, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child label[for=name] {
-  margin-left: 15px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 66, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child input[id=name] {
+/* line 55, ../sass/profilclient.scss */
+.myProfileClient input {
   display: inline;
   margin-top: -4px;
   margin-left: 5px;
+  width: 98px;
+  padding: 5px;
+  height: 20px;
 }
-/* line 73, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child label[for=firstName] {
-  margin-left: 15px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
+/* line 65, ../sass/profilclient.scss */
+.myProfileClient select {
+  width: 98px;
+  margin-left: 5px;
+}
+/* line 74, ../sass/profilclient.scss */
+.myProfileClient label[for=civil], .myProfileClient label[for=name], .myProfileClient label[for=firstName] {
+  margin-left: 23px;
 }
 /* line 81, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child input[id=firstName] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
+.myProfileClient fieldset:first-child {
+  height: 105px;
 }
-/* line 88, ../sass/profilclient.scss */
+/* line 86, ../sass/profilclient.scss */
 .myProfileClient fieldset:first-child .telephoneEmail {
   width: 342px;
   height: auto;
@@ -80,161 +74,75 @@
   position: relative;
   top: -107px;
 }
-/* line 99, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child label[for=phone] {
-  margin-left: 15px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 107, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child input[id=phone] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
-}
-/* line 114, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child label[for=email] {
-  margin-left: 15px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 122, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child input[id=email] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
-}
-/* line 129, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child label[for=phone2] {
-  margin-left: 15px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 137, ../sass/profilclient.scss */
-.myProfileClient fieldset:first-child input[id=phone2] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
-}
-/* line 146, ../sass/profilclient.scss */
-.myProfileClient .barre1 {
+/* line 100, ../sass/profilclient.scss */
+.myProfileClient .barre1, .myProfileClient .barre2, .myProfileClient .barre3 {
   width: 696px;
   height: 1px;
   margin: 0 auto;
   background-color: #2a4158;
   margin-top: 30px;
 }
-/* line 156, ../sass/profilclient.scss */
-.myProfileClient label[for=civil] {
+/* line 109, ../sass/profilclient.scss */
+.myProfileClient legend {
+  margin-top: 20px;
   margin-left: 23px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
+  color: white;
 }
-/* line 164, ../sass/profilclient.scss */
-.myProfileClient select[id=civil] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
+/* line 116, ../sass/profilclient.scss */
+.myProfileClient fieldset[id=fieldset2] {
+  height: 209px;
 }
-/* line 171, ../sass/profilclient.scss */
-.myProfileClient label[for=name] {
-  margin-left: 23px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 179, ../sass/profilclient.scss */
-.myProfileClient input[id=name] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
-}
-/* line 186, ../sass/profilclient.scss */
-.myProfileClient label[for=firstName] {
-  margin-left: 23px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 194, ../sass/profilclient.scss */
-.myProfileClient input[id=firstName] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
-}
-/* line 202, ../sass/profilclient.scss */
-.myProfileClient .colone1 {
-  width: 259px;
+/* line 121, ../sass/profilclient.scss */
+.myProfileClient fieldset[id=fieldset2] .colone1 {
+  width: 230px;
   height: auto;
-  background-color: red;
   display: inline-block;
   position: relative;
-  top: -110px;
-  right: -240px;
+  top: -103px;
+  right: -227px;
 }
-/* line 214, ../sass/profilclient.scss */
-.myProfileClient label[for=num] {
-  margin-left: 23px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 222, ../sass/profilclient.scss */
-.myProfileClient input[id=num] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
-}
-/* line 229, ../sass/profilclient.scss */
-.myProfileClient label[for=box] {
-  margin-left: 23px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 237, ../sass/profilclient.scss */
-.myProfileClient input[id=box] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
-}
-/* line 244, ../sass/profilclient.scss */
-.myProfileClient label[for=zip] {
-  margin-left: 23px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 252, ../sass/profilclient.scss */
-.myProfileClient input[id=zip] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
-}
-/* line 259, ../sass/profilclient.scss */
-.myProfileClient label[for=city] {
-  margin-left: 23px;
-  margin-top: 17px;
-  float: left;
-  display: inline-block;
-}
-/* line 267, ../sass/profilclient.scss */
-.myProfileClient input[id=city] {
-  display: inline;
-  margin-top: -4px;
-  margin-left: 5px;
-}
-/* line 274, ../sass/profilclient.scss */
-.myProfileClient .colone2 {
-  width: 259px;
+/* line 132, ../sass/profilclient.scss */
+.myProfileClient fieldset[id=fieldset2] .colone2 {
+  width: 262px;
   height: auto;
-  background-color: red;
   display: inline-block;
   position: relative;
-  top: -110px;
-  right: -240px;
+  top: -103px;
+  right: -223px;
+}
+/* line 145, ../sass/profilclient.scss */
+.myProfileClient fieldset[id=fieldset3] {
+  height: 242px;
+}
+/* line 150, ../sass/profilclient.scss */
+.myProfileClient fieldset[id=fieldset3] .colone2 {
+  width: 262px;
+  height: auto;
+  display: inline-block;
+  position: relative;
+  top: -105px;
+  right: -227px;
+}
+/* line 161, ../sass/profilclient.scss */
+.myProfileClient fieldset[id=fieldset3] .colone3 {
+  width: 262px;
+  height: auto;
+  display: inline-block;
+  position: relative;
+  top: -139px;
+  right: -191px;
+}
+/* line 175, ../sass/profilclient.scss */
+.myProfileClient textarea {
+  margin-left: 22px;
+  width: 698px;
+  height: 100px;
+  margin-top: 15px;
+  background-color: #7c8894;
+  border: none;
+}
+/* line 185, ../sass/profilclient.scss */
+.myProfileClient input[id=valid] {
+  margin-top: 15px;
+  margin-left: 22px;
 }

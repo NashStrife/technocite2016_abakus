@@ -69,7 +69,13 @@ var app = angular.module('abakusApp', [
 			controller : 'addClientCtrl',
 	    templateUrl: "components/moreClient.html"    // (5)
 	  }})
-;
+		.directive('addinvoice', function() { // (1)
+	  return {
+	    restrict: "E",         // (2)
+	    replace: false,         // (3)
+	    transclude: true,      // (4)
+	    templateUrl: "components/addInvoice.html"    // (5)
+	  }});
 
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -129,10 +135,10 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl : 'partials/pro/clients/add.html',
 		controller : 'addClient'
 	}).
-	when('/pro/clients/detail', {
+	when('/pro/clients/detail/:itemId', {
 		title:"clients",
 		templateUrl : 'partials/pro/clients/detail.html',
-		controller : ''
+		controller : 'ProDetailCtrl'
 	}).
 	when('/pro/clients/list', {
 		title:"clients",
