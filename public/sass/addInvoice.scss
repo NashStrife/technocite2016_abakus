@@ -8,11 +8,12 @@ html {
     @include container(742px);
 }
 
-form {
+.addInvoice {
     margin: auto;
     margin-left: 198px;
     margin-top: 180px;
     background: $mainBackgroundColor;
+    text-transform: capitalize;
 }
 
 fieldset {
@@ -22,7 +23,6 @@ fieldset {
     legend {
         margin-bottom: 20px;
     }
-    input {}
 }
 
 .references {
@@ -72,4 +72,7 @@ fieldset {
     background: $primaryColor;
     color: white;
     text-transform: uppercase;
+}
+#po{
+    text-transform: capitalize;
 }

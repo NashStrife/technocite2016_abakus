@@ -19,20 +19,21 @@ html {
 }
 
 /* line 11, ../sass/addInvoice.scss */
-form {
+.addInvoice {
   margin: auto;
   margin-left: 198px;
   margin-top: 180px;
   background: #95a0ac;
+  text-transform: capitalize;
 }
 
-/* line 18, ../sass/addInvoice.scss */
+/* line 19, ../sass/addInvoice.scss */
 fieldset {
   border: 1px solid #2a4158;
   width: 100%;
   padding: 0 10%;
 }
-/* line 22, ../sass/addInvoice.scss */
+/* line 23, ../sass/addInvoice.scss */
 fieldset legend {
   margin-bottom: 20px;
 }
@@ -103,4 +104,9 @@ fieldset legend {
   background: #2a4158;
   color: white;
   text-transform: uppercase;
+}
+
+/* line 76, ../sass/addInvoice.scss */
+#po {
+  text-transform: capitalize;
 }

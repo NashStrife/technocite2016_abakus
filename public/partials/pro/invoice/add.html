@@ -6,7 +6,7 @@
 
 
 	<h1 style="background-color:#d6eaf8;">Création de nouvelle facture</h1>
-	<form action="">
+	<form action="" class="addInvoice">
 		<!--<fieldset class="references">
 			<legend>Vos références</legend><br>
 			<label for="invoice-number">N° de facture</label><br/>
@@ -21,19 +21,17 @@
 			<input name="Client" id="client" placeholder="" class="cent"><br/>
 			<div class="half">
 				<label for="po">PO</label><br/>
-				<select name="PO" id="po">
-				<option value="client 1">client 1</option>
-				<option value="client 2">client 2</option>
-				<option value="client 3">client 3</option>
+				<select name="PO" id="po" ng-model="newBill.client" ng-options="listClients.indexOf(client) as client.name for client in listClients">
+					
 			</select>
+			<!--<p>{{newBill.client}}</p>-->
 			</div>
 			<div class="half last">
 				<label for="estimate">Devis n°</label><br/>
-				<select name="Devis" id="estimate">
-				<option value="client 1">client 1</option>
-				<option value="client 2">client 2</option>
-				<option value="client 3">client 3</option>
+				<select name="Devis" id="estimate" ng-model="newBill.estimate" ng-options="estimate.link for estimate in listClients[newBill.client].quotations">
+			
 			</select>
+			<!--<p>{{listClients[newBill.client]}}</p>-->
 			</div>
 			<button type="next" class="next">Suivant</button>
 
