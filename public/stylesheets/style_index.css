@@ -70,21 +70,26 @@ body * {
   margin: auto;
   margin-top: 50px;
   margin-bottom: 80px;
+  padding: 0 15px;
+}
+/* line 84, ../sass/style_index.scss */
+.logoLogin img {
+  padding: 0 15px;
 }
 
-/* line 83, ../sass/style_index.scss */
+/* line 89, ../sass/style_index.scss */
 .formulaire {
   visibility: visible;
-  width: 49.15254%;
+  width: 100%;
   float: left;
-  margin-right: 1.69492%;
-  margin-left: 25.42373%;
+  margin-left: 0;
+  margin-right: 0;
   text-align: center;
   color: #e3e4e6;
 }
-/* line 91, ../sass/style_index.scss */
+/* line 96, ../sass/style_index.scss */
 .formulaire input {
-  width: 100%;
+  width: 80%;
   margin-bottom: 20px;
   border: none;
   padding: 9px 0;
@@ -92,17 +97,17 @@ body * {
   background: #e3e4e6;
 }
 
-/* line 110, ../sass/style_index.scss */
+/* line 115, ../sass/style_index.scss */
 button {
   width: 100%;
   height: 100%;
   border: none;
 }
-/* line 115, ../sass/style_index.scss */
+/* line 120, ../sass/style_index.scss */
 button:hover {
   cursor: pointer;
 }
-/* line 119, ../sass/style_index.scss */
+/* line 124, ../sass/style_index.scss */
 button img {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -110,7 +115,13 @@ button img {
   transform: rotate(180deg);
 }
 
-/* line 179, ../sass/style_index.scss */
+/* line 181, ../sass/style_index.scss */
+.or {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 187, ../sass/style_index.scss */
 .client .active {
   background-color: #e5af28 !important;
   visibility: visible;
@@ -118,7 +129,7 @@ button img {
   -o-transition: background-color 0.5s, visibility 0.5s;
   transition: background-color 0.5s, visibility 0.5s;
 }
-/* line 186, ../sass/style_index.scss */
+/* line 194, ../sass/style_index.scss */
 .client .active img:hover {
   -webkit-animation: arrowAnim 0.5s 1 forwards;
   animation: arrowAnim 0.5s 1 forwards;
@@ -151,23 +162,21 @@ button img {
     transform: scaleY(1);
   }
 }
-/* line 221, ../sass/style_index.scss */
+/* line 229, ../sass/style_index.scss */
 .client .inactive {
   background-color: #e3e4e6;
   visibility: visible;
 }
-/* line 226, ../sass/style_index.scss */
+/* line 234, ../sass/style_index.scss */
 .client .formulaire.inactive {
   visibility: hidden;
 }
 
-/* line 231, ../sass/style_index.scss */
+/* line 239, ../sass/style_index.scss */
 .pro {
-  float: right;
-  margin-right: 0;
   color: #2a4158;
 }
-/* line 234, ../sass/style_index.scss */
+/* line 242, ../sass/style_index.scss */
 .pro .active {
   background-color: #e5af28 !important;
   visibility: visible;
@@ -175,7 +184,7 @@ button img {
   -o-transition: background-color 0.5s, visibility 0.5s;
   transition: background-color 0.5s, visibility 0.5s;
 }
-/* line 241, ../sass/style_index.scss */
+/* line 249, ../sass/style_index.scss */
 .pro .active img:hover {
   -webkit-animation: arrowAnim 0.5s 1 forwards;
   animation: arrowAnim 0.5s 1 forwards;
@@ -208,18 +217,18 @@ button img {
     transform: scaleY(1);
   }
 }
-/* line 276, ../sass/style_index.scss */
+/* line 284, ../sass/style_index.scss */
 .pro .inactive {
   background-color: #e3e4e6;
   visibility: visible;
 }
-/* line 281, ../sass/style_index.scss */
+/* line 289, ../sass/style_index.scss */
 .pro .formulaire.inactive {
   visibility: hidden;
 }
 
 @media screen and (min-width: 480px) {
-  /* line 291, ../sass/style_index.scss */
+  /* line 299, ../sass/style_index.scss */
   .logoHeader {
     position: fixed;
     width: 100%;
@@ -231,18 +240,27 @@ button img {
     text-align: left;
     z-index: 150;
   }
-  /* line 301, ../sass/style_index.scss */
+  /* line 309, ../sass/style_index.scss */
   .logoHeader img {
     margin-top: 5px;
   }
 
-  /* line 321, ../sass/style_index.scss */
+  /* line 329, ../sass/style_index.scss */
   .logo {
     margin-top: 50px;
     margin-bottom: 80px;
   }
 
-  /* line 326, ../sass/style_index.scss */
+  /* line 333, ../sass/style_index.scss */
+  .logoLogin {
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding: 0 15px;
+  }
+
+  /* line 340, ../sass/style_index.scss */
   .formulaire {
     width: 100%;
     float: left;
@@ -251,7 +269,7 @@ button img {
     padding: 50px 0;
     border-top: 1px solid #2a4158;
   }
-  /* line 333, ../sass/style_index.scss */
+  /* line 347, ../sass/style_index.scss */
   .formulaire input {
     width: 83.05085%;
     float: left;
@@ -262,19 +280,19 @@ button img {
     padding-left: 7px;
     background: #e3e4e6;
   }
-  /* line 342, ../sass/style_index.scss */
+  /* line 356, ../sass/style_index.scss */
   .formulaire .connection {
     text-transform: uppercase;
     padding: 20px 0;
     background-color: #2a4158;
     color: white;
   }
-  /* line 348, ../sass/style_index.scss */
+  /* line 362, ../sass/style_index.scss */
   .formulaire a {
     margin-left: 80px;
   }
 
-  /* line 353, ../sass/style_index.scss */
+  /* line 367, ../sass/style_index.scss */
   .client {
     width: 48.27586%;
     float: left;
@@ -282,7 +300,7 @@ button img {
     text-align: center;
   }
 
-  /* line 358, ../sass/style_index.scss */
+  /* line 372, ../sass/style_index.scss */
   .or {
     position: absolute;
     width: 80px;
@@ -292,18 +310,18 @@ button img {
     line-height: 80px;
     color: #e3e4e6;
     left: calc(50% - 40px);
-    top: calc(35% - 50px);
+    top: 300px;
     z-index: 100;
     background: #2a4158;
   }
 
-  /* line 371, ../sass/style_index.scss */
+  /* line 385, ../sass/style_index.scss */
   .container {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 372, ../sass/style_index.scss */
+  /* line 386, ../sass/style_index.scss */
   .container .listing {
     padding-top: 190px;
   }
@@ -313,7 +331,7 @@ button img {
     display: block;
     clear: both;
   }
-  /* line 377, ../sass/style_index.scss */
+  /* line 391, ../sass/style_index.scss */
   .container > div {
     width: 48.27586%;
     float: left;
@@ -321,45 +339,45 @@ button img {
     margin-left: 0;
     height: 200px;
   }
-  /* line 384, ../sass/style_index.scss */
+  /* line 398, ../sass/style_index.scss */
   .container > div img {
     margin-bottom: 20px;
     margin-top: 0px;
   }
-  /* line 389, ../sass/style_index.scss */
+  /* line 403, ../sass/style_index.scss */
   .container > div.client .active {
     background-color: #e5af28 !important;
     visibility: visible;
   }
-  /* line 393, ../sass/style_index.scss */
+  /* line 407, ../sass/style_index.scss */
   .container > div.client .inactive {
     background-color: #e3e4e6;
   }
-  /* line 398, ../sass/style_index.scss */
+  /* line 412, ../sass/style_index.scss */
   .container > div.pro {
     float: right;
     margin-right: 0;
     color: #2a4158;
   }
-  /* line 401, ../sass/style_index.scss */
+  /* line 415, ../sass/style_index.scss */
   .container > div.pro .active {
     background-color: #e5af28;
     visibility: visible;
   }
-  /* line 405, ../sass/style_index.scss */
+  /* line 419, ../sass/style_index.scss */
   .container > div.pro .inactive {
     background-color: #e3e4e6;
   }
-  /* line 410, ../sass/style_index.scss */
+  /* line 424, ../sass/style_index.scss */
   .container > div > p {
     display: unset;
   }
-  /* line 414, ../sass/style_index.scss */
+  /* line 428, ../sass/style_index.scss */
   .container a {
     text-decoration: none;
     color: #2a4158;
   }
-  /* line 418, ../sass/style_index.scss */
+  /* line 432, ../sass/style_index.scss */
   .container h2 {
     margin-top: 0px;
     font-size: 24px;
