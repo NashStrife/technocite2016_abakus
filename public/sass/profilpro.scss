@@ -17,7 +17,7 @@
 .contener {
 
 	width: 742px;
-  	height: 1200px;
+  	height: 1550px;
 	z-index: 1;
 	float: right;
 	margin-top: 117px;	
@@ -52,7 +52,7 @@
 	}
 }
 
-.coordonneeCont, .coordonneeCont2, .coordonneeCont3, .coordonneeCont4, .coordonneeCont5 {
+.coordonneeCont, .coordonneeCont1, .coordonneeCont2, .coordonneeCont3, .coordonneeCont4, .coordonneeCont5 {
 
 	background-color: $mainBackgroundColor;
 	width: 100%;
@@ -135,7 +135,7 @@
 		}
 	}
 
-.savecoordonnee, .savecoordonnee2, .savecoordonnee3, .savecoordonnee4, .savecoordonnee5 {
+.savecoordonnee, .savecoordonnee1, .savecoordonnee2, .savecoordonnee3, .savecoordonnee4, .savecoordonnee5 {
 
 	width: 94px;
 	height: 20px;
@@ -153,6 +153,18 @@
 		font-weight: bold;
 
 	}
+
+}
+
+.coordonneeCont1 {
+
+	height: 308px;
+}
+
+.savecoordonnee1 {
+
+	margin-top: 273px;
+	
 }
 
 .coordonneeCont2 {
@@ -169,8 +181,12 @@
 .info2 {
 
 	display: block;
-	width: 315px;			
+	width: 360px;			
 	float: left;
+	margin-top: 13px;
+	margin-left: 17px;
+
+	
 
 	p {
 
@@ -180,7 +196,29 @@
 		color: $primaryColor;
 		text-align: justify;
 		line-height: 15px;
-		margin-left: 17px;		
+				
+	}
+
+	fieldset {
+
+		text-align: left;
+
+		label,  {
+			font-size: 12px;
+			font-family: "century gothic";
+			font-weight: bold;
+			color: $primaryColor;
+		}
+
+		input, select {
+
+			margin-top: 5px;
+			background-color: $descriptionColor;
+			color: white;
+			border: none;
+			
+
+		}
 	}
 
 }
@@ -228,6 +266,11 @@
 	}
 }
 
+.importer {
+
+	margin-left: 0px;
+}
+
 
 .bic {
 	
@@ -267,7 +310,7 @@
 
 .savecoordonnee3 {
 
-	margin-top: 41px;
+	margin-top: 28px;
 }
 
 .article {
