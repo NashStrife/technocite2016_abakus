@@ -24,38 +24,39 @@ html {
   margin-left: 198px;
   margin-top: 180px;
   background: #95a0ac;
+  text-transform: capitalize;
 }
 
-/* line 18, ../sass/addInvoice.scss */
+/* line 19, ../sass/addInvoice.scss */
 fieldset {
   border: 1px solid #2a4158;
   width: 100%;
   padding: 0 10%;
 }
-/* line 22, ../sass/addInvoice.scss */
+/* line 23, ../sass/addInvoice.scss */
 fieldset legend {
   margin-bottom: 20px;
 }
 
-/* line 28, ../sass/addInvoice.scss */
+/* line 29, ../sass/addInvoice.scss */
 .references input {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
   background: green;
 }
-/* line 31, ../sass/addInvoice.scss */
+/* line 32, ../sass/addInvoice.scss */
 .references input:last-child {
   float: right;
   margin-right: 0;
 }
 
-/* line 38, ../sass/addInvoice.scss */
+/* line 39, ../sass/addInvoice.scss */
 .ref_client #client {
   margin: auto;
 }
 
-/* line 43, ../sass/addInvoice.scss */
+/* line 44, ../sass/addInvoice.scss */
 .cent {
   width: 100%;
   float: left;
@@ -63,7 +64,7 @@ fieldset legend {
   margin-right: 0;
 }
 
-/* line 47, ../sass/addInvoice.scss */
+/* line 48, ../sass/addInvoice.scss */
 .half {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -72,29 +73,29 @@ fieldset legend {
   float: left;
   margin-right: 1.69492%;
 }
-/* line 52, ../sass/addInvoice.scss */
+/* line 53, ../sass/addInvoice.scss */
 .half:nth-child(2) {
   float: right;
   margin-right: 0;
 }
-/* line 55, ../sass/addInvoice.scss */
+/* line 56, ../sass/addInvoice.scss */
 .half select {
   width: 100%;
   display: block;
 }
-/* line 59, ../sass/addInvoice.scss */
+/* line 60, ../sass/addInvoice.scss */
 .half input {
   width: 100%;
   display: block;
 }
 
-/* line 64, ../sass/addInvoice.scss */
+/* line 65, ../sass/addInvoice.scss */
 .last {
   float: right;
   margin-right: 0;
 }
 
-/* line 67, ../sass/addInvoice.scss */
+/* line 68, ../sass/addInvoice.scss */
 .next {
   margin-top: 20px;
   margin-left: 15px;
@@ -103,4 +104,9 @@ fieldset legend {
   background: #2a4158;
   color: white;
   text-transform: uppercase;
+}
+
+/* line 76, ../sass/addInvoice.scss */
+#po {
+  text-transform: capitalize;
 }

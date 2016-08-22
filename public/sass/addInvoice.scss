@@ -13,6 +13,7 @@ html {
     margin-left: 198px;
     margin-top: 180px;
     background: $mainBackgroundColor;
+    text-transform: capitalize;
 }
 
 fieldset {
@@ -71,4 +72,7 @@ fieldset {
     background: $primaryColor;
     color: white;
     text-transform: uppercase;
+}
+#po{
+    text-transform: capitalize;
 }
