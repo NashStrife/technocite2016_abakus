@@ -2,6 +2,7 @@
 @import "grids";
 @import "variables";
 
+
 .myProfileClientwarpper {
 
 	width: 940px;
@@ -9,6 +10,7 @@
 	margin: 0 auto;
 
 }
+
 
 .myProfileClient {
 
@@ -19,6 +21,16 @@
 	text-align: left;
 	margin-top: 117px;
 	position: relative;
+
+	.introCivilite {
+
+	height: 105px;
+	width: 171px;
+	background-color: red;
+	margin-left: 220px;
+
+	}
+	
 
 	select {
 
@@ -85,12 +97,15 @@
 
 		.telephoneEmail {
 
-			width: 342px;
+			width: 249px;
 			height: auto;
 			float: right;
 			display: inline-block;
 			position: relative;
 			top: -107px;
+			margin-right: 37px;
+			background-color: red;
+
 
 		}
 		
