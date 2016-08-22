@@ -20,24 +20,24 @@
 			<div class="info">
 				<p>{{details.name}}</p>
 					<p>
-						Rue n° bte<br>
-						Code postal<br>
-						Localité<br>
-						Pays<br>
-						Telephone principal<br>
-						telephone secondaire<br>
-						fax<br>
-						email<br>
-						site web<br>
+						Adresse : {{details.contact.street}} n° {{details.contact.number}}<span ng-if="details.contact.box">, boite {{details.contact.box}}</span><br>
+						Code postal : {{details.contact.zip}}<br>
+						Localité : {{details.contact.town}}<br>
+						Pays : {{details.contact.country}}<br> 
+						Telephone principal : {{details.contact.phoneMain}}<br>
+						<span ng-if="details.contact.phoneSec">Telephone secondaire : {{details.contact.phoneSec}}<br></span>
+						<span ng-if="details.contact.fax">Fax : {{details.contact.fax}}<br></span>
+						Email : {{details.contact.mail}}<br>
+						Site web : {{details.contact.web}}<br>
 					</p>				
 			</div>
 
 			<div class="tva">
 				
 				<p>
-					n°de TVA<br>
-					n°de siren<br>
-					n°de rcs<br>
+					n° TVA : {{details.vat.num}}<br>
+					n° SIREN : {{details.vat.siren}}<br>
+					n° RCS : {{details.vat.rcs}}<br>
 				</p>
 
 			</div>
