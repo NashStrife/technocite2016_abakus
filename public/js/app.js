@@ -210,7 +210,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/profile/infos', {
 		title:"mon compte",
 		templateUrl : 'partials/pro/profile/infos.html',
-		controller : ''
+		controller : 'ProAccountCtrl'
 	}).
 	otherwise({
 		templateUrl : '404.html',
