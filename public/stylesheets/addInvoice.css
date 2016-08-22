@@ -82,14 +82,19 @@ fieldset legend {
   width: 100%;
   display: block;
 }
+/* line 60, ../sass/addInvoice.scss */
+.half input {
+  width: 100%;
+  display: block;
+}
 
-/* line 61, ../sass/addInvoice.scss */
+/* line 65, ../sass/addInvoice.scss */
 .last {
   float: right;
   margin-right: 0;
 }
 
-/* line 64, ../sass/addInvoice.scss */
+/* line 68, ../sass/addInvoice.scss */
 .next {
   margin-top: 20px;
   margin-left: 15px;
