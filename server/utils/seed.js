@@ -64,7 +64,22 @@ let companies = [{
             "bill" : 1,
             "quotation" : 1
         },
-        "createdAt" : Date.now()
+        "createdAt" : Date.now(),
+        "articles" : [{
+                "name" : "lunettes solaire",
+                "description" :"lunettes de soleil",
+                "unitPrice" : 120
+            },
+            {
+                "name" :"lunettes classiques" ,
+                "description" : "lunettes de vue de loin",
+                "unitPrice" : 245
+            },{
+                "name" : "lentilles",
+                "description" : "lentilles de contact pour myope",
+                "unitPrice" : 25
+            }
+            ],
     }];
 
 let customers = [
