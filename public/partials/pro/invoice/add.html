@@ -2,41 +2,55 @@
 
 <navbarpro></navbarpro>
 <searchbarpro></searchbarpro>
+<div class="container">
 
-<h1 style="background-color:#d6eaf8;">Création de nouvelle facture</h1>
-<form action="">
-		<fieldset>
-			<legend>Vos références</legend>
+
+	<h1 style="background-color:#d6eaf8;">Création de nouvelle facture</h1>
+	<form action="">
+		<!--<fieldset class="references">
+			<legend>Vos références</legend><br>
 			<label for="invoice-number">N° de facture</label><br/>
 			<input name="Numero de facture" id="invoice-number" placeholder="20136473-023"><br/>
 			<label for="invoice-date">Date de la facture</label><br/>
 			<input name="Date de la facture" id="invoice-date" placeholder="05-07-2016">
-		</fieldset>
-		<fieldset>
+			<button type="" class="next">Suivant</button>
+		</fieldset>-->
+		<fieldset class="ref_client">
 			<legend>Références client</legend>
 			<label for="client">Client</label><br/>
-			<input name="Client" id="client" placeholder=""><br/>
-			<label for="po">PO</label><br/>
-			<select name="PO" id="po">
+			<input name="Client" id="client" placeholder="" class="cent"><br/>
+			<div class="half">
+				<label for="po">PO</label><br/>
+				<select name="PO" id="po">
 				<option value="client 1">client 1</option>
 				<option value="client 2">client 2</option>
 				<option value="client 3">client 3</option>
-			</select><br/>
-			<label for="estimate">Devis n°</label><br/>
-			<select name="Devis" id="estimate">
+			</select>
+			</div>
+			<div class="half last">
+				<label for="estimate">Devis n°</label><br/>
+				<select name="Devis" id="estimate">
 				<option value="client 1">client 1</option>
 				<option value="client 2">client 2</option>
 				<option value="client 3">client 3</option>
-			</select><br/>
+			</select>
+			</div>
+			<button type="next" class="next">Suivant</button>
+
 		</fieldset>
 		<fieldset>
 			<legend>Objet</legend>
 			<label for="project-name">Nom du projet</label><br/>
-			<input name="Nom du projet" id="project-name" placeholder=""><br/>
-			<label for="starting-date ">Date de début</label><br/>
-			<input name="Date de début" id="starting-date " placeholder=""><br/>
-			<label for="ending-date">Date de fin</label><br/>
-			<input name="Date de fin" id="ending-date" placeholder=""><br/>
+			<input name="Nom du projet" id="project-name" placeholder="" class="cent"><br/>
+			<div class="half">
+				<label for="starting-date ">Date de début</label><br/>
+				<input type="date" name="Date de début" id="starting-date " placeholder=""><br/>
+			</div>
+			<div class="half last">
+				<label for="ending-date">Date de fin</label><br/>
+				<input type="date" name="Date de fin" id="ending-date" placeholder=""><br/>
+			</div>
+			<button type="" class="next">Suivant</button>
 		</fieldset>
 		<fieldset>
 			<legend>Détail</legend>
@@ -63,7 +77,7 @@
 				<option value="option 1">%</option>
 				<option value="option 2">%</option>
 				<option value="option 3">%</option>
-			</select><br/>	
+			</select><br/>
 			<label for="sous-total">Sous-Total hors taxes</label><br/>
 			<input name="Sous-Total hors taxes" id="sous-total" placeholder=""><br/>
 			<label for="tva-21">TVA 21%</label><br/>
@@ -76,6 +90,7 @@
 			<hr>
 			<label for="sum">A payer</label><br/>
 			<input name="A payer" id="sum" placeholder=""><br/>
+			<button type="" class="next">Suivant</button>
 		</fieldset>
 		<fieldset>
 			<legend>Informations et règles de paiement</legend>
@@ -97,9 +112,10 @@
 				<option value="option 2">option 2</option>
 				<option value="option 3">option 3</option>
 			</select><br/>
+			<button type="" class="next">Suivant</button>
 		</fieldset>
 		<input type="submit" value="Valider"></input>
-<!-- 		<label for="civil">Civilité</label><br/>
+		<!-- 		<label for="civil">Civilité</label><br/>
 			<select name="Civilité" id="civil">
 				<option value="Monsieur">Monsieur</option>
 				<option value="Madame">Madame</option>
@@ -115,4 +131,5 @@
 			<input type="text" id="email"><br/>
 			<label for="phone2">Téléphone secondaire</label><br/>
 			<input type="text" id="phone2"><br/> -->
-</form>
+	</form>
+</div>

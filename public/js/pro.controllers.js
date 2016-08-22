@@ -5,65 +5,38 @@ var abakusControllers = angular.module('proControllers', []);
 // add the "Rest" service inside the diferent Ctrl
 abakusControllers.controller('ProListCtrl', ['$scope', 'Client', function($scope, Client){
 
-	$scope.listItems = [
-
-		{
-			'date' : '00/00/2016',
-			'company' : 'company',
-			'invoiceNumber' : 15,
-			'note' : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione soluta, corrupti ipsum commodi provident ut, eos quis atque repellat magnam esse vero voluptatibus suscipit illum at aperiam voluptas ducimus error.'
-		},
-		{
-			'date' : 'Cannibal Corpse',
-			'company' : 'enfant',
-			'invoiceNumber' : 10,
-			'note' : 'lorem ipsum'
-		},
-		{
-			'date' : 'Levis',
-			'company' : 'homme',
-			'invoiceNumber' : 20,
-			'note' : 'lorem ipsum'
-		},
-		{
-			'date' : '00/00/2016',
-			'company' : 'company',
-			'invoiceNumber' : 15,
-			'note' : 'lorem ipsum'
-		}
-	];
-	$scope.listEstimates = [
-		{
-			'date' : '00/00/2016',
-			'company' : 'devis 1',
-			'invoiceNumber' : 15456465,
-			'note' : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione soluta, corrupti ipsum commodi provident ut, eos quis atque repellat magnam esse vero voluptatibus suscipit illum at aperiam voluptas ducimus error.'
-		},
-		{
-			'date' : '00/00/2016',
-			'company' : 'devis 2',
-			'invoiceNumber' : 10337,
-			'note' : 'lorem ipsum'
-		},
-		{
-			'date' : '00/00/2016',
-			'company' : 'devis 3',
-			'invoiceNumber' : 2067373,
-			'note' : 'lorem ipsum'
-		},
-		{
-			'date' : '00/00/2016',
-			'company' : 'devis 4',
-			'invoiceNumber' : 1546,
-			'note' : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa perspiciatis, itaque accusantium facere repellendus saepe nisi, voluptatum blanditiis doloribus, et laboriosam assumenda nesciunt, ad esse. At quidem nihil dolorum porro.'
-		}
-	];
-
 	// create a function to refresh the list when needed
 	function refresh() {
 		Client.getList(function(result){
+			// prepare some var
 			$scope.listClients = result;
+			$scope.listBills = [];
+			$scope.listEstimates = [];
+
+			result.map(function(item){
+				// console.log(item.bills);
+				// store list of bills for easy use inside html
+				item.bills.map(function(bill){
+					// console.log(bill);
+					// add customer name to result to avoid some tricky manipulations inside html
+					bill.clientName = item.name
+					bill.clientId = item._id;
+					$scope.listBills.push(bill);
+				});
+				// same with estimates
+				item.quotations.map(function(estimate){
+					// console.log(estimate);
+					estimate.clientName = item.name
+					estimate.clientId = item._id;
+					$scope.listEstimates.push(estimate);
+				});
+			});
+			console.log("Clients :");
 			console.log($scope.listClients);
+			console.log("Factures :");
+			console.log($scope.listBills);
+			console.log("Devis :");
+			console.log($scope.listEstimates);
 		});
 	}
 
@@ -71,8 +44,8 @@ abakusControllers.controller('ProListCtrl', ['$scope', 'Client', function($scope
 	refresh();
 	
 	// define the base order when list appear
-	// $scope.order = "name";
-	// $scope.direction = "";
+	$scope.order = "createdAt";
+	$scope.direction = "reverse";
 }]);
 
 abakusControllers.controller('ProDetailCtrl', ['$scope', '$routeParams', 'Client', function($scope, $routeParams, Client){

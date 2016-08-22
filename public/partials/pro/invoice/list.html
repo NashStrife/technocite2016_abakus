@@ -4,30 +4,39 @@
 <searchbarpro></searchbarpro>
 
 <div>
-
 	<div class="container">
-	<section>
-		<a href="#/pro/invoice/add" id="moreClient">+ facture</a>
-	</section>
-		
-	<ul class="listing">     <!-- Liste des devis -->
-	            <li ng-repeat="item in listItems | filter: filter">
-	                <div class="listItem">
-	                    <div class="blocItem">
-	                        <span class="itemDatas blocDate">{{item.date}}</span>
-	                        <span class="itemDatas blocCompany">{{item.company}}</span>
-	                        <span class="itemDatas blocInvoiceNumber">{{item.invoiceNumber}}</span>
-	                    </div>
-	                    <!-- <div class="listNote">
-	                    <p>{{item.note}}</p>
-	                    </div> -->
-	                    <!-- <button class="reveal">v</button> -->
-	                </div>
+		<section>
+			<a href="#/pro/invoice/add" id="moreClient">+ facture</a>
+		</section>
+		<div class="listing">
+			<div class="listItem">
+				<div class="blocItem">
+					<span class="itemDatas blocDate">Numéro</span>
+					<span class="itemDatas blocCompany">Client</span>
+					<span class="itemDatas blocInvoiceNumber">Date de facturation</span>
+					<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
+				</div>
+			</div>
+		</div>
+		<ul class="listing">     <!-- Liste des devis -->
+			<li ng-repeat="item in listBills | filter: filter | orderBy : order:direction">
+				<div class="listItem">
+					<div class="blocItem">
+						<span class="itemDatas blocDate">{{item.link}}</span>
+						<span class="itemDatas blocCompany">{{item.clientName}}</span>
+						<span class="itemDatas blocInvoiceNumber">{{item.createdAt | date:'dd-MM-yyyy'}}</span>
+						<!--<span class="itemDatas blocInvoiceNumber">{{item.state}}</span>-->
+					</div>
+					<!-- <div class="listNote">
+					<p>{{item.note}}</p>
+					</div> -->
+					<!-- <button class="reveal">v</button> -->
+				</div>
 
-	                <a href="#/client/estimate/detail" class="moreInfos">
-	                    Plus d'infos
-	                </a>
-	            </li>
-	</ul> <!-- Fin de liste des devis -->
+				<a href="documents/bills/{{item.clientId}}/{{item.link}}.pdf" class="moreInfos">
+					Ouvrir le PDF
+				</a>
+			</li>
+		</ul> <!-- Fin de liste des devis -->
 	</div>
 </div>
