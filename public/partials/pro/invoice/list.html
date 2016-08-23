@@ -32,10 +32,11 @@
 						<span class="itemDatas blocDate">{{item.createdAt | date:'dd-MM-yyyy'}}</span>
 						<!--<span class="itemDatas blocInvoiceNumber">{{item.state}}</span>-->
 						</div>
+							<a href="documents/bills/{{item.clientId}}/{{item.link}}.pdf" class="moreInfos">
+							Ouvrir le PDF
+						</a>
 					</div>
-					<a href="documents/bills/{{item.clientId}}/{{item.link}}.pdf" class="moreInfos">
-						Ouvrir le PDF
-					</a>
+					
 			</li>
 		</ul> <!-- Fin de liste des devis -->
 	</div>

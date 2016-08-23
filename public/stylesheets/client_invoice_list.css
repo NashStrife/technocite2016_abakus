@@ -34,35 +34,29 @@
   background-color: #485867;
   color: #e3e4e6;
   border-right: 1px solid #2a4158;
+  border-bottom: 1px solid red;
   font-weight: bold;
   text-align: left;
   margin-right: 0px;
   overflow: hidden;
   text-transform: capitalize;
 }
-
-/* line 41, ../sass/client_invoice_list.scss */
-.moreInfos {
-  float: right;
-  display: inline-block;
-  background-color: #e5af28;
-  color: #2a4158;
-  font-weight: bold;
-  font-size: 12px;
-  padding: 15px 5px 15px 10px;
-  display: inline-block;
-  margin-right: 0px;
-  text-align: center;
-  text-decoration: none;
-  transition: 0.5s;
+/* line 40, ../sass/client_invoice_list.scss */
+.listItem .blocItem .focusItem {
+  display: none;
+  background-color: #95a0ac;
 }
-/* line 57, ../sass/client_invoice_list.scss */
-.moreInfos:hover {
-  background-color: #e3e4e6;
+
+/* line 46, ../sass/client_invoice_list.scss */
+.moreInfos {
+  background-color: hotpink;
+  position: absolute;
+  display: inline-block;
+  padding: 15px;
 }
 
 @media screen and (min-width: 480px) {
-  /* line 64, ../sass/client_invoice_list.scss */
+  /* line 54, ../sass/client_invoice_list.scss */
   .listItem {
     background-color: #485867;
     width: 612px;
@@ -72,26 +66,26 @@
     margin-left: 198px;
     margin-bottom: 10px;
   }
-  /* line 75, ../sass/client_invoice_list.scss */
+  /* line 65, ../sass/client_invoice_list.scss */
   .listItem .blocItem {
     list-style-type: none;
     font-size: 12px;
     background-color: #95a0ac;
     padding: 0px;
   }
-  /* line 80, ../sass/client_invoice_list.scss */
+  /* line 70, ../sass/client_invoice_list.scss */
   .listItem .blocItem .blocNumber {
     font-size: 12px;
   }
-  /* line 83, ../sass/client_invoice_list.scss */
+  /* line 73, ../sass/client_invoice_list.scss */
   .listItem .blocItem .blocName {
     font-size: 12px;
   }
-  /* line 86, ../sass/client_invoice_list.scss */
+  /* line 76, ../sass/client_invoice_list.scss */
   .listItem .blocItem .blocDate {
     font-size: 12px;
   }
-  /* line 89, ../sass/client_invoice_list.scss */
+  /* line 79, ../sass/client_invoice_list.scss */
   .listItem .blocItem .itemDatas {
     width: 25%;
     float: left;
@@ -107,11 +101,12 @@
     overflow: hidden;
     text-transform: capitalize;
   }
-  /* line 102, ../sass/client_invoice_list.scss */
+  /* line 92, ../sass/client_invoice_list.scss */
   .listItem .blocItem .focusItem {
+    display: block;
     background-color: #95a0ac;
   }
-  /* line 106, ../sass/client_invoice_list.scss */
+  /* line 97, ../sass/client_invoice_list.scss */
   .listItem .listNote {
     height: 50%;
     padding: 15px;
@@ -121,7 +116,7 @@
     color: #e3e4e6;
     font-size: 12px;
   }
-  /* line 114, ../sass/client_invoice_list.scss */
+  /* line 105, ../sass/client_invoice_list.scss */
   .listItem .listNote p {
     overflow: hidden;
     width: 100%;
@@ -129,7 +124,7 @@
     height: 20px;
   }
 
-  /* line 139, ../sass/client_invoice_list.scss */
+  /* line 130, ../sass/client_invoice_list.scss */
   .moreInfos {
     float: right;
     display: inline-block;
@@ -144,7 +139,7 @@
     text-decoration: none;
     transition: 0.5s;
   }
-  /* line 155, ../sass/client_invoice_list.scss */
+  /* line 147, ../sass/client_invoice_list.scss */
   .moreInfos:hover {
     background-color: #e3e4e6;
   }
