@@ -52,30 +52,35 @@
 		</fieldset>
 		<fieldset>
 			<legend>Détail</legend>
-			<div class="facture">
-				<div class="article">
-					<label for="article">Article</label>
-					<select name="Article" id="article" ng-model="newBill.article" ng-options="article as article.name for article in adminfromdb.articles">
+			<div id="facture_list">
+
+
+				<div class="facture" id="facture-1">
+					<div class="article">
+						<label for="article">Article</label>
+						<select name="Article" id="article" ng-model="newBill.article" ng-options="article as article.name for article in adminfromdb.articles">
 			</select>
-				</div>
-				<div class="description">
-					<label for="description">Description</label>
-					<input name="Description" id="description" placeholder="" ng-model="newBill.description" ng-value="newBill.article.description">
-				</div>
-				<div class="small">
-					<label for="quantity">Qté</label>
-					<input type="number" name="Quantité" id="quantity" ng-model="newBill.article.quantity" ng-change="calcAmount()">
-				</div>
-				<div class="small">
-					<label for="p-u">P/U</label>
-					<input name="P/U" id="p-u" placeholder="" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice">
-				</div>
-				<div class="bill">
-					<label for="amount">Montant</label>
-					<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount">
+					</div>
+					<div class="description">
+						<label for="description">Description</label>
+						<input name="Description" id="description" placeholder="" ng-model="newBill.description" ng-value="newBill.article.description">
+					</div>
+					<div class="small">
+						<label for="quantity">Qté</label>
+						<input type="number" name="Quantité" id="quantity" ng-model="newBill.article.quantity" ng-change="calcAmount()">
+					</div>
+					<div class="small">
+						<label for="p-u">P/U</label>
+						<input name="P/U" id="p-u" placeholder="" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice">
+					</div>
+					<div class="bill">
+						<label for="amount">Montant</label>
+						<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount">
+					</div>
 				</div>
 			</div>
-			<hr>
+			<button type="button" class="more_line" ng-click="addArticle($event)">+ Ajouter</button>
+
 			<div class="total">
 
 				<div class="htva">
@@ -90,34 +95,34 @@
 				<option value="option 2">%</option>
 				<option value="option 3">%</option>
 			</select>
-			</div>
-					<div class="subtotal">
-						<label for="sous-total">Sous-Total hors taxes</label>
-						<input name="Sous-Total hors taxes" id="sous-total" placeholder="">
-					
-					</div>
-					<div class="tva">
-						<label for="tva-21">TVA 21%</label>
-						<input name="TVA 21%" id="tva-21" placeholder="">
-					</div>
-				
-					<div class="ttc">
+				</div>
+				<div class="subtotal">
+					<label for="sous-total">Sous-Total hors taxes</label>
+					<input name="Sous-Total hors taxes" id="sous-total" placeholder="">
 
-						<label for="total-ttc">Total TTC</label>
-						<input name="Total TTC" id="total-ttc" placeholder="">
-					</div>
-					<div class="deposit">
-						<label for="deposit">Acompte</label>
-						<input name="Acompte" id="deposit" placeholder="">
-					</div>
+				</div>
+				<div class="tva">
+					<label for="tva-21">TVA 21%</label>
+					<input name="TVA 21%" id="tva-21" placeholder="">
+				</div>
 
-				
-					<div class="sum">
-						<label for="sum">A payer</label>
-						<input name="A payer" id="sum" placeholder="">
-					</div>
+				<div class="ttc">
 
-					<button type="" class="next">Suivant</button>
+					<label for="total-ttc">Total TTC</label>
+					<input name="Total TTC" id="total-ttc" placeholder="">
+				</div>
+				<div class="deposit">
+					<label for="deposit">Acompte</label>
+					<input name="Acompte" id="deposit" placeholder="">
+				</div>
+
+
+				<div class="sum">
+					<label for="sum">A payer</label>
+					<input name="A payer" id="sum" placeholder="">
+				</div>
+
+				<button type="" class="next">Suivant</button>
 		</fieldset>
 		<fieldset>
 			<legend>Informations et règles de paiement</legend>
