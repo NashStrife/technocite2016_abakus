@@ -118,51 +118,26 @@ fieldset {
 .total {
     float: right;
     display: block;
-    .htva {
-        float: right;
-        display: inline-block;
-        margin-bottom: 15px;
-        label{
-            display: inline-block;
-        }
-    }
-    .rebate {
-        float: right;
-        display: inline-block;
-        margin-bottom: 15px;
-        label{
-            display: inline-block;
-        }
-    }
-    .subtotal {
-        float: right;
-        display: inline-block;
-        margin-bottom: 15px;
-        label{
-            display: inline-block;
-        }
-    }
-    .tva{
-        float: right;        
-        margin-bottom: 15px;
-        display: inline-block;
-        label{
-            display: inline-block;
-        }
-    }
-    .ttc{
-        float: right;
-        margin-bottom: 15px;
+    >div {
+        @include pie-clearfix;
         display: block;
-    }
-    .deposit{
-        float: right;
         margin-bottom: 15px;
-        display: inline-block;
+        text-align: right;
+        label{
+            @include span(7);
+            display: inline-block;
+        }
+        input{
+            @include span(5 last);
+        }
+        &.rebate{
+            input{
+            @include span(3);
+        }
+        select{
+            @include span(2 last);
+        }
+        }
     }
-    .sum{
-        float: right;
-        margin-bottom: 15px;
-        display: inline-block;
-    }
+    
 }
