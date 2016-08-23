@@ -8,8 +8,10 @@ $listElementPadding:15px 5px 15px 10px;
 
 .listItem {
 	background-color: $noteColor;
-	@include span(8 of 12);
+	background-color: aliceblue;
+	@include span(11 of 12);
 	margin:10px;
+	position: relative;
 
 	.blocItem {
 		padding: 0px;
@@ -30,7 +32,6 @@ $listElementPadding:15px 5px 15px 10px;
 			background-color: $noteColor;
 			color: $textColor;
 			border-right: 1px solid $primaryColor;
-			border-bottom: 1px solid red;
 			font-weight: bold;
 			text-align: left;
 			margin-right: 0px;
@@ -44,10 +45,16 @@ $listElementPadding:15px 5px 15px 10px;
 	}
 }
 .moreInfos {
-	background-color: hotpink;
+	background-color: $focusColor;
+	color: $primaryColor;
 	position: absolute;
 	display: inline-block;
 	padding: 15px;
+	top: 10px;
+	right: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	text-decoration: none;
 }
 
 @media screen and (min-width: 480px) {
