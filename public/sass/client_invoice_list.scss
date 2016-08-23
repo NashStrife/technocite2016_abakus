@@ -56,6 +56,11 @@ $listElementPadding:15px 5px 15px 10px;
 	font-size: 16px;
 	text-decoration: none;
 }
+.titleItem {
+	display: inline-block;
+	width: 90px;
+	text-align: left;
+}
 
 @media screen and (min-width: 480px) {
 	.listItem {
@@ -155,5 +160,8 @@ $listElementPadding:15px 5px 15px 10px;
 			background-color: $textColor;
 
 		}
+	}
+	.titleItem {
+		display: none;
 	}
 }
