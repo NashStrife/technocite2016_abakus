@@ -1,20 +1,97 @@
+/* line 9, ../sass/client_invoice_list.scss */
+.listItem {
+  background-color: #485867;
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  margin: 10px;
+}
+/* line 14, ../sass/client_invoice_list.scss */
+.listItem .blocItem {
+  padding: 0px;
+  text-align: left;
+}
+/* line 17, ../sass/client_invoice_list.scss */
+.listItem .blocItem .blocNumber {
+  font-size: 16px;
+}
+/* line 20, ../sass/client_invoice_list.scss */
+.listItem .blocItem .blocName {
+  font-size: 16px;
+}
+/* line 23, ../sass/client_invoice_list.scss */
+.listItem .blocItem .blocDate {
+  font-size: 12px;
+}
+/* line 26, ../sass/client_invoice_list.scss */
+.listItem .blocItem .itemDatas {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 5px 5px 5px 10px;
+  display: inline-block;
+  background-color: #485867;
+  color: #e3e4e6;
+  border-right: 1px solid #2a4158;
+  font-weight: bold;
+  text-align: left;
+  margin-right: 0px;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+/* line 41, ../sass/client_invoice_list.scss */
+.moreInfos {
+  float: right;
+  display: inline-block;
+  background-color: #e5af28;
+  color: #2a4158;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 15px 5px 15px 10px;
+  display: inline-block;
+  margin-right: 0px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s;
+}
+/* line 57, ../sass/client_invoice_list.scss */
+.moreInfos:hover {
+  background-color: #e3e4e6;
+}
+
 @media screen and (min-width: 480px) {
-  /* line 9, ../sass/client_invoice_list.scss */
+  /* line 64, ../sass/client_invoice_list.scss */
   .listItem {
     background-color: #485867;
     width: 612px;
     display: inline-block;
     float: left;
+    margin: 0px;
     margin-left: 198px;
     margin-bottom: 10px;
   }
-  /* line 19, ../sass/client_invoice_list.scss */
+  /* line 75, ../sass/client_invoice_list.scss */
   .listItem .blocItem {
     list-style-type: none;
     font-size: 12px;
     background-color: #95a0ac;
+    padding: 0px;
   }
-  /* line 33, ../sass/client_invoice_list.scss */
+  /* line 80, ../sass/client_invoice_list.scss */
+  .listItem .blocItem .blocNumber {
+    font-size: 12px;
+  }
+  /* line 83, ../sass/client_invoice_list.scss */
+  .listItem .blocItem .blocName {
+    font-size: 12px;
+  }
+  /* line 86, ../sass/client_invoice_list.scss */
+  .listItem .blocItem .blocDate {
+    font-size: 12px;
+  }
+  /* line 89, ../sass/client_invoice_list.scss */
   .listItem .blocItem .itemDatas {
     width: 25%;
     float: left;
@@ -30,11 +107,11 @@
     overflow: hidden;
     text-transform: capitalize;
   }
-  /* line 46, ../sass/client_invoice_list.scss */
+  /* line 102, ../sass/client_invoice_list.scss */
   .listItem .blocItem .focusItem {
     background-color: #95a0ac;
   }
-  /* line 50, ../sass/client_invoice_list.scss */
+  /* line 106, ../sass/client_invoice_list.scss */
   .listItem .listNote {
     height: 50%;
     padding: 15px;
@@ -44,32 +121,15 @@
     color: #e3e4e6;
     font-size: 12px;
   }
-  /* line 58, ../sass/client_invoice_list.scss */
+  /* line 114, ../sass/client_invoice_list.scss */
   .listItem .listNote p {
     overflow: hidden;
     width: 100%;
     line-height: 20px;
     height: 20px;
   }
-  /* line 65, ../sass/client_invoice_list.scss */
-  .listItem .reveal {
-    display: block;
-    background-color: #485867;
-    color: #e3e4e6;
-    width: 100%;
-    height: 19px;
-    text-align: center;
-    border: none;
-    border-top: 1px solid #2a4158;
-    transition: 0.5s;
-  }
-  /* line 76, ../sass/client_invoice_list.scss */
-  .listItem .reveal:hover {
-    background-color: #e3e4e6;
-    color: #2a4158;
-  }
 
-  /* line 83, ../sass/client_invoice_list.scss */
+  /* line 139, ../sass/client_invoice_list.scss */
   .moreInfos {
     float: right;
     display: inline-block;
@@ -84,7 +144,7 @@
     text-decoration: none;
     transition: 0.5s;
   }
-  /* line 99, ../sass/client_invoice_list.scss */
+  /* line 155, ../sass/client_invoice_list.scss */
   .moreInfos:hover {
     background-color: #e3e4e6;
   }
