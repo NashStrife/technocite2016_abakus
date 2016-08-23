@@ -1,9 +1,8 @@
 <span>
-	<button ng-click="splash(true)" id="moreClient">+ CLIENT</button>
 	<span class="overlay" id="splash" ng-if="showForm">
         
 
-	<form name="addClient" ng-submit="moreClient(addClient)" class="newClient">		
+	<form name="addClient" ng-submit="moreClient(addClient.$valid)" class="newClient">		
 		<legend>Introduction d'un nouveau client</legend>
 		<label for="particulier" class="intro">Particulier</label>
 		<input type="radio" value="false" id="particulier" name="client" ng-model="newClient.isCompany">
@@ -24,35 +23,7 @@
 			</div>
 			<div class="line">
 				<label for="tva">N° de TVA<br>
-				<select id="prefixeTva">
-					<option value="AT">AT</option>
-					<option value="BE" selected="selected">BE</option>
-					<option value="BG">BG</option>
-					<option value="CY">CY</option>
-					<option value="CZ">CZ</option>
-					<option value="DE">DE</option>
-					<option value="DK">DK</option>
-					<option value="EE">EE</option>
-					<option value="EL">EL</option>
-					<option value="ES">ES</option>
-					<option value="FI">FI</option>
-					<option value="FR">FR</option>
-					<option value="GB">GB</option>
-					<option value="HR">HR</option>
-					<option value="HU">HU</option>
-					<option value="IE">IE</option>
-					<option value="IT">IT</option>
-					<option value="LT">LT</option>
-					<option value="LU">LU</option>
-					<option value="LV">LV</option>
-					<option value="MT">MT</option>
-					<option value="NL">NL</option>
-					<option value="PL">PL</option>
-					<option value="PT">PT</option>
-					<option value="RO">RO</option>
-					<option value="SE">SE</option>
-					<option value="SI">SI</option>
-					<option value="SK">SK</option>
+				<select id="prefixeTva"  ng-model="newClient.prevat.num" ng-options="pretva for pretva in param[0].vatPrefix">
 				</select><!--
 				--><input type="text" id="tva" ng-model="newClient.vat.num">
 				</label>
@@ -144,14 +115,6 @@
 				<label for="faxFact">Fax<br>
 				<input type="tel" id="faxFact"   ng-model="newClient.billingInfo.fax"></label>
 			</div>
-			<div class="line">
-			<label id="delivery">Coordonnées de livraison identiques :</label>
-			<label for="same">
-			<input type="radio" value="yes" id="same" name="delivery" class="deliver"> Oui</label>
-			<label for="different">
-			<input type="radio" value="no" id="different" name="delivery" class="deliver"> Non</label>
-			
-			</div>
 		</fieldset>
 
 		<input type="radio" name="progress" value="step3" id="step3">
@@ -159,6 +122,14 @@
 		
 		<fieldset>
 			<legend>Coordonnées de livraison</legend>
+			<div class="line">
+			<label id="delivery">Préremplir les coordonnées de livraison :</label>
+			<label for="same">
+			<input type="radio" value="true" id="same" name="delivery" class="deliver" ng-model="sameDelivery" ng-change="checkDelivery(true)"> Oui</label>
+			<label for="different">
+			<input type="radio" value="false" id="different" name="delivery" class="deliver" ng-model="sameDelivery" ng-change="checkDelivery(false)"> Non</label>
+			</div>
+			<br><br><hr>
 			<div class="line">
 				<label for="civilDeliver">Civilité<br/>
 					<select name="Civilité" id="civilDeliver"   ng-model="newClient.deliveryInfo.civility">
@@ -169,7 +140,7 @@
 			<label for="nameDeliver">Nom<br/>
 			<input type="text" id="nameDeliver" ng-model="newClient.deliveryInfo.lastname"></label>
 			<label for="firstNameDeliver">Prénom<br/>
-			<input type="text" id="firstNameDeliver" ng-model="newClient.deliveryInfo.firstname"></label>
+			<input type="text" id="firstNameDeliver" ng-value="newClient.deliveryInfo.firstname" ng-model="newClient.deliveryInfo.firstname"></label>
 			</div>
 			<div class="line">
 				<label for="societyDeliver">Société (si livraison dans une société)<br>
