@@ -71,15 +71,23 @@
 .detailClient .telephone p {
   margin-bottom: 10px;
 }
-/* line 102, ../sass/details_clients.scss */
-.detailClient .facturation {
+/* line 101, ../sass/details_clients.scss */
+.detailClient .contact {
   width: 100%;
   height: auto;
-  margin-top: 28px;
+  margin-top: 18px;
   width: 722px;
   margin-left: 10px;
 }
 /* line 112, ../sass/details_clients.scss */
+.detailClient .facturation {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  width: 722px;
+  margin-left: 10px;
+}
+/* line 122, ../sass/details_clients.scss */
 .detailClient .livraison {
   width: 100%;
   height: auto;
@@ -87,27 +95,27 @@
   margin-top: 10px;
   margin-left: 10px;
 }
-/* line 122, ../sass/details_clients.scss */
-.detailClient .livraison, .detailClient .facturation {
+/* line 132, ../sass/details_clients.scss */
+.detailClient .livraison, .detailClient .facturation, .detailClient .contact {
   border-top: 1px solid #2a4158;
 }
-/* line 126, ../sass/details_clients.scss */
-.detailClient .livraison h2, .detailClient .facturation h2 {
+/* line 136, ../sass/details_clients.scss */
+.detailClient .livraison h2, .detailClient .facturation h2, .detailClient .contact h2 {
   padding-top: 10px;
   font-weight: bold;
 }
-/* line 134, ../sass/details_clients.scss */
+/* line 144, ../sass/details_clients.scss */
 .detailClient .colone1, .detailClient .colone2, .detailClient .colone3 {
   width: 237px;
   display: inline-block;
   vertical-align: top;
   padding-top: 10px;
 }
-/* line 141, ../sass/details_clients.scss */
+/* line 151, ../sass/details_clients.scss */
 .detailClient .colone1 p, .detailClient .colone2 p, .detailClient .colone3 p {
   font-size: 14px;
 }
-/* line 157, ../sass/details_clients.scss */
+/* line 167, ../sass/details_clients.scss */
 .detailClient .colone1 p {
   font-size: 16px;
 }

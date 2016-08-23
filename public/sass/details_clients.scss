@@ -98,13 +98,23 @@
 }
 
 
+.contact {
+
+	width: 100%;
+	height: auto;
+	margin-top: 18px;
+	width: 722px;
+	margin-left: 10px;
+
+}
+
 
 .facturation {
 
 	
 	width: 100%;
 	height: auto;
-	margin-top: 28px;
+	margin-top: 10px;
 	width: 722px;
 	margin-left: 10px;
 }
@@ -119,7 +129,7 @@
 	
 }
 
-.livraison, .facturation {
+.livraison, .facturation, .contact {
 
 	border-top: 1px solid $primaryColor;
 

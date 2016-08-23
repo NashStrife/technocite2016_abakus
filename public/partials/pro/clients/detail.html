@@ -38,6 +38,44 @@
 
             
 
+            <div class="contact">
+
+                <h2>Personne de contact</h2>
+
+                <div class="colone1">
+
+                    <p>{{clients[whichItem].contactPerson.civility}}</p>
+                    <p>{{clients[whichItem].contactPerson.firstname}}</p>
+                    <p>{{clients[whichItem].contactPerson.lastname}}</p>
+                    
+                </div>                   
+
+                <div class="colone2">
+
+                    
+                    <p>{{clients[whichItem].contactPerson.mail}}</p>
+                     <p ng-if="clients[whichItem].contactPerson.post">
+                        Fonction : {{clients[whichItem].contactPerson.post}}
+                    </p>  
+                    <p>Principal : {{clients[whichItem].contactPerson.phoneMain}}</p>
+                    <p ng-if="clients[whichItem].contactPerson.phoneSec">
+                        Secondaire : {{clients[whichItem].contactPerson.phoneSec}}
+                    </p>
+                    <p ng-if="clients[whichItem].contactPerson.fax">
+                        Fax : {{clients[whichItem].contactPerson.fax}}
+                    </p>                                           
+
+                </div>
+
+               
+            </div>
+
+
+
+
+
+
+
             <div class="facturation">
 
                 <h2>Coordonnées de facturation</h2>
