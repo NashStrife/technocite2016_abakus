@@ -169,10 +169,11 @@ fieldset legend {
 
 /* line 118, ../sass/addInvoice.scss */
 .total {
+  margin-top: 35px;
   float: right;
   display: block;
 }
-/* line 121, ../sass/addInvoice.scss */
+/* line 122, ../sass/addInvoice.scss */
 .total > div {
   *zoom: 1;
   display: block;
@@ -185,28 +186,40 @@ fieldset legend {
   display: table;
   clear: both;
 }
-/* line 126, ../sass/addInvoice.scss */
+/* line 127, ../sass/addInvoice.scss */
 .total > div label {
   width: 57.62712%;
   float: left;
   margin-right: 1.69492%;
   display: inline-block;
 }
-/* line 130, ../sass/addInvoice.scss */
+/* line 131, ../sass/addInvoice.scss */
 .total > div input {
   width: 40.67797%;
   float: right;
   margin-right: 0;
 }
-/* line 134, ../sass/addInvoice.scss */
+/* line 135, ../sass/addInvoice.scss */
 .total > div.rebate input {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 137, ../sass/addInvoice.scss */
+/* line 138, ../sass/addInvoice.scss */
 .total > div.rebate select {
   width: 15.25424%;
   float: right;
   margin-right: 0;
+}
+
+/* line 145, ../sass/addInvoice.scss */
+.more_line {
+  margin-top: 20px;
+  margin-left: 15px;
+  float: left;
+  margin-bottom: 20px;
+  width: 90px;
+  background: #2a4158;
+  color: white;
+  text-transform: uppercase;
 }

@@ -5,6 +5,8 @@ var abakusControllers = angular.module('addBillsControllers', []);
 // add the "Rest" service inside the diferent Ctrl
 abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', function($scope, Client, Admin) {
 	$scope.newBill = {};
+	$scope.addArticle = {};
+	
 	// create a function to refresh the list when needed
 	function refresh() {
 		Client.getList(function(result) {
@@ -64,4 +66,28 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', functi
 		// console.log(quantity);
 		// console.log($scope.newBill.article.amount);
 	};
+	
+	function voidArrays(){
+		$scope.newArticle = {};
+		$scope.description = {};
+		$scope.quantite = {};
+		$scope.unitPrice = {};
+	}
+	voidArrays()
+
+	$scope.addArticle = function(elem){
+		//angular.element(elem).clone();
+		console.log(angular.element(event.target));
+		// var target = angular.element(event.target);
+		 var target = document.getElementById("facture");
+		 
+		var cln = target.cloneNode(true);
+		var wrapper = document.getElementById("facture_list");
+		wrapper.appendChild(cln);
+		console.log(cln);
+		if(elem === 'article'){
+			$scope.article.push($scope.addArticle);
+			$scope.addArticle = "";
+		};
+	}
 }]);

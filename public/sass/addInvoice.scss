@@ -116,6 +116,7 @@ fieldset {
 }
 
 .total {
+    margin-top: 35px;
     float: right;
     display: block;
     >div {
@@ -140,4 +141,14 @@ fieldset {
         }
     }
     
+}
+.more_line{
+
+    @include navButton;
+    float: left;
+    margin-bottom: 20px;
+    width: 90px;
+    background: $primaryColor;
+    color: white;
+    text-transform: uppercase;
 }

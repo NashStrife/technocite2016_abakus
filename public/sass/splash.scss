@@ -5,26 +5,11 @@
 @import "grids";
 @import "_variables";
 
-@media screen and (min-width: 480px) {
-	#addInvoiceButton{
-		background: red;
-		margin: 100px 50px;
-	}
-	#moreClient {
-		// position: fixed;
-		z-index: 999;
-		background-color: $focusColor;
-		color: $primaryColor;
-		border: none;
-		height: 30px;
-		width: 100px;
-		cursor: pointer;
-		line-height: 30px;
-		&::first-letter{
-			font-size: 22px;
-			font-weight: bold;
-		}
-	}
+// @media screen and (min-width: 480px) {
+// 	#addInvoiceButton{
+// 		background: red;
+// 		margin: 100px 50px;
+// 	}
 	.overlay {
 		display: flex;
 		position: fixed;
@@ -89,7 +74,6 @@
 			width: 100%;
 			display: block;
 			padding: 3%;
-
 		}
 		label {
 			display: inline-block;
@@ -101,7 +85,7 @@
 		}
 		.note {
 				height: 68%;
-			}
+		}
 		.line {
 			// @include container(75%);
 			label {margin-top: 2%;}
@@ -200,10 +184,10 @@
 				cursor: pointer;
 				text-align: center;
 				&#cancel {
-					left: 12.5%;
+					left: 10%;
 				}
 				&#submit {
-					right: 12.5%;
+					right: 10%;
 				}
 				&input {
 					top: 1%;
@@ -214,7 +198,7 @@
 		}
 		input[name="client"]:checked ~ #cancel {
 			display: inline-block;
-			right: 12.5%;
+			right: 10%;
 		}
 		input[name="client"]:checked ~ input[name="progress"] {
 			display: inline-block;
@@ -228,28 +212,28 @@
 		
 		#particulier:checked ~ #lien2 {
 			display: inline-block;
-			right: 12.5%;
+			right: 10%;
 		}
 		#society:checked ~ #lien1 {
 			display: inline-block;
-			right: 12.5%;
+			right: 10%;
 		}
 		#step1:checked + #lien1 {
-			display: inline-block;
-			left: 30%;
-			z-index: 2;
+			// display: inline-block;
+			left: 25%;
+			// z-index: 2;
 		}
 		#step1:checked ~ #lien2 {
 			display: inline-block;
-			right: 12.5%;
+			right: 10%;
 		}
 		#step2:checked ~ #lien3 {
 			display: inline-block;
-			right: 12.5%;
+			right: 10%;
 		}
 		#step3:checked ~ #lien4 {
 			display: inline-block;
-			right: 12.5%;
+			right: 10%;
 		}
 		#step4:checked ~ #submit {
 			display: inline-block;
@@ -276,4 +260,3 @@
 			display: inline-block;
 		}
 	}
-}
