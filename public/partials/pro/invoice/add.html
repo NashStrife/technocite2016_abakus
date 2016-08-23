@@ -63,45 +63,59 @@
 					<input name="Description" id="description" placeholder="" ng-model="newBill.description" ng-value="newBill.article.description">
 				</div>
 				<div class="small">
-				<label for="quantity">Qté</label>
-				<input type="number" name="Quantité" id="quantity" ng-model="newBill.article.quantity" ng-change="calcAmount()">
+					<label for="quantity">Qté</label>
+					<input type="number" name="Quantité" id="quantity" ng-model="newBill.article.quantity" ng-change="calcAmount()">
 				</div>
 				<div class="small">
-				<label for="p-u">P/U</label>
-				<input name="P/U" id="p-u" placeholder="" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice">
+					<label for="p-u">P/U</label>
+					<input name="P/U" id="p-u" placeholder="" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice">
 				</div>
 				<div class="bill">
-				<label for="amount">Montant</label>
-				<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount">
+					<label for="amount">Montant</label>
+					<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount">
 				</div>
 			</div>
 			<hr>
-			<div class="htva">	
-			<label for="total xvat">Total hors Taxes</label><br/>
-			<input name="Total hors Taxes" id="total xvat" placeholder=""><br/>
-			</div>
-			<div class="rebate">
-				
-			<label for="rebate">Ristourne</label><br/>
-			<input name="Ristourne" id="rebate" placeholder="">
-			<select name="percent" id="rebate">
+			<div class="total">
+
+				<div class="htva">
+					<label for="total xvat">Total hors Taxes</label>
+					<input name="Total hors Taxes" id="total xvat" placeholder="">
+				</div><br>
+				<div class="rebate">
+					<label for="rebate">Ristourne</label>
+					<input name="Ristourne" id="rebate" placeholder="">
+					<select name="percent" id="rebate">
 				<option value="option 1">%</option>
 				<option value="option 2">%</option>
 				<option value="option 3">%</option>
-			</select><br/>
-			<label for="sous-total">Sous-Total hors taxes</label><br/>
-			<input name="Sous-Total hors taxes" id="sous-total" placeholder=""><br/>
-			<label for="tva-21">TVA 21%</label><br/>
-			<input name="TVA 21%" id="tva-21" placeholder=""><br/>
-			<hr>
-			<label for="total-ttc">Total TTC</label><br/>
-			<input name="Total TTC" id="total-ttc" placeholder=""><br/>
-			<label for="deposit">Acompte</label><br/>
-			<input name="Acompte" id="deposit" placeholder=""><br/>
-			<hr>
-			<label for="sum">A payer</label><br/>
-			<input name="A payer" id="sum" placeholder=""><br/>
-			<button type="" class="next">Suivant</button>
+			</select><br>
+					<div class="subtotal">
+						<label for="sous-total">Sous-Total hors taxes</label>
+						<input name="Sous-Total hors taxes" id="sous-total" placeholder="">
+					</div><br/>
+					<div class="tva">
+						<label for="tva-21">TVA 21%</label>
+						<input name="TVA 21%" id="tva-21" placeholder="">
+					</div><br>
+				
+					<div class="ttc">
+
+						<label for="total-ttc">Total TTC</label>
+						<input name="Total TTC" id="total-ttc" placeholder="">
+					</div><br>
+					<div class="deposit">
+						<label for="deposit">Acompte</label>
+						<input name="Acompte" id="deposit" placeholder="">
+					</div><br>
+
+				
+					<div class="sum">
+						<label for="sum">A payer</label>
+						<input name="A payer" id="sum" placeholder="">
+					</div><br>
+
+					<button type="" class="next">Suivant</button>
 		</fieldset>
 		<fieldset>
 			<legend>Informations et règles de paiement</legend>
@@ -143,4 +157,4 @@
 			<label for="phone2">Téléphone secondaire</label><br/>
 			<input type="text" id="phone2"><br/> -->
 	</form>
-</div>
+	</div>

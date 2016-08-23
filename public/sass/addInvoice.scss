@@ -94,17 +94,16 @@ fieldset {
         label {
             display: block;
         }
-        input{
+        input {
             width: 120px;
         }
-        
     }
     .small {
         @include span(1 of 12);
         label {
             display: block;
         }
-        input{
+        input {
             width: 40px;
         }
     }
@@ -113,5 +112,57 @@ fieldset {
         label {
             display: block;
         }
+    }
+}
+
+.total {
+    float: right;
+    display: block;
+    .htva {
+        float: right;
+        display: inline-block;
+        margin-bottom: 15px;
+        label{
+            display: inline-block;
+        }
+    }
+    .rebate {
+        float: right;
+        display: inline-block;
+        margin-bottom: 15px;
+        label{
+            display: inline-block;
+        }
+    }
+    .subtotal {
+        float: right;
+        display: inline-block;
+        margin-bottom: 15px;
+        label{
+            display: inline-block;
+        }
+    }
+    .tva{
+        float: right;        
+        margin-bottom: 15px;
+        display: inline-block;
+        label{
+            display: inline-block;
+        }
+    }
+    .ttc{
+        float: right;
+        margin-bottom: 15px;
+        display: block;
+    }
+    .deposit{
+        float: right;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+    .sum{
+        float: right;
+        margin-bottom: 15px;
+        display: inline-block;
     }
 }

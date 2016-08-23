@@ -142,27 +142,91 @@ fieldset legend {
 .facture .description input {
   width: 120px;
 }
-/* line 102, ../sass/addInvoice.scss */
+/* line 101, ../sass/addInvoice.scss */
 .facture .small {
   width: 6.77966%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 104, ../sass/addInvoice.scss */
+/* line 103, ../sass/addInvoice.scss */
 .facture .small label {
   display: block;
 }
-/* line 107, ../sass/addInvoice.scss */
+/* line 106, ../sass/addInvoice.scss */
 .facture .small input {
   width: 40px;
 }
-/* line 111, ../sass/addInvoice.scss */
+/* line 110, ../sass/addInvoice.scss */
 .facture .bill {
   width: 15.25424%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 113, ../sass/addInvoice.scss */
+/* line 112, ../sass/addInvoice.scss */
 .facture .bill label {
   display: block;
+}
+
+/* line 118, ../sass/addInvoice.scss */
+.total {
+  float: right;
+  display: block;
+}
+/* line 121, ../sass/addInvoice.scss */
+.total .htva {
+  float: right;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+/* line 125, ../sass/addInvoice.scss */
+.total .htva label {
+  display: inline-block;
+}
+/* line 129, ../sass/addInvoice.scss */
+.total .rebate {
+  float: right;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+/* line 133, ../sass/addInvoice.scss */
+.total .rebate label {
+  display: inline-block;
+}
+/* line 137, ../sass/addInvoice.scss */
+.total .subtotal {
+  float: right;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+/* line 141, ../sass/addInvoice.scss */
+.total .subtotal label {
+  display: inline-block;
+}
+/* line 145, ../sass/addInvoice.scss */
+.total .tva {
+  float: right;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+/* line 149, ../sass/addInvoice.scss */
+.total .tva label {
+  display: inline-block;
+}
+/* line 153, ../sass/addInvoice.scss */
+.total .ttc {
+  float: right;
+  margin-bottom: 15px;
+  display: block;
+}
+/* line 158, ../sass/addInvoice.scss */
+.total .deposit {
+  float: right;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+/* line 163, ../sass/addInvoice.scss */
+.total .sum {
+  float: right;
+  margin-bottom: 15px;
+  display: inline-block;
 }
