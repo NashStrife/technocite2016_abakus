@@ -142,27 +142,71 @@ fieldset legend {
 .facture .description input {
   width: 120px;
 }
-/* line 102, ../sass/addInvoice.scss */
+/* line 101, ../sass/addInvoice.scss */
 .facture .small {
   width: 6.77966%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 104, ../sass/addInvoice.scss */
+/* line 103, ../sass/addInvoice.scss */
 .facture .small label {
   display: block;
 }
-/* line 107, ../sass/addInvoice.scss */
+/* line 106, ../sass/addInvoice.scss */
 .facture .small input {
   width: 40px;
 }
-/* line 111, ../sass/addInvoice.scss */
+/* line 110, ../sass/addInvoice.scss */
 .facture .bill {
   width: 15.25424%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 113, ../sass/addInvoice.scss */
+/* line 112, ../sass/addInvoice.scss */
 .facture .bill label {
   display: block;
+}
+
+/* line 118, ../sass/addInvoice.scss */
+.total {
+  float: right;
+  display: block;
+}
+/* line 121, ../sass/addInvoice.scss */
+.total > div {
+  *zoom: 1;
+  display: block;
+  margin-bottom: 15px;
+  text-align: right;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.total > div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 126, ../sass/addInvoice.scss */
+.total > div label {
+  width: 57.62712%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline-block;
+}
+/* line 130, ../sass/addInvoice.scss */
+.total > div input {
+  width: 40.67797%;
+  float: right;
+  margin-right: 0;
+}
+/* line 134, ../sass/addInvoice.scss */
+.total > div.rebate input {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 137, ../sass/addInvoice.scss */
+.total > div.rebate select {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
 }

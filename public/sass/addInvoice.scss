@@ -94,17 +94,16 @@ fieldset {
         label {
             display: block;
         }
-        input{
+        input {
             width: 120px;
         }
-        
     }
     .small {
         @include span(1 of 12);
         label {
             display: block;
         }
-        input{
+        input {
             width: 40px;
         }
     }
@@ -114,4 +113,31 @@ fieldset {
             display: block;
         }
     }
+}
+
+.total {
+    float: right;
+    display: block;
+    >div {
+        @include pie-clearfix;
+        display: block;
+        margin-bottom: 15px;
+        text-align: right;
+        label{
+            @include span(7);
+            display: inline-block;
+        }
+        input{
+            @include span(5 last);
+        }
+        &.rebate{
+            input{
+            @include span(3);
+        }
+        select{
+            @include span(2 last);
+        }
+        }
+    }
+    
 }
