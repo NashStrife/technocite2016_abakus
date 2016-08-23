@@ -4,7 +4,7 @@ var abakusControllers = angular.module('addBillsControllers', []);
 
 // add the "Rest" service inside the diferent Ctrl
 abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', function($scope, Client, Admin) {
-$scope.newBill = {};
+	$scope.newBill = {};
 	// create a function to refresh the list when needed
 	function refresh() {
 		Client.getList(function(result) {
@@ -51,11 +51,15 @@ $scope.newBill = {};
 	// define the base order when list appear
 	$scope.order = "createdAt";
 	$scope.direction = "reverse";
-	$scope.newBill.quantity = 0;
 
-	//$scope.$watch($scope.quantity, function(){
-	//	console.log($scope.quantity);
-	//	$scope.amount = $scope.quantity * $scope.unitPrice;
+	$scope.calcAmount = function(){
+		// console.log("it changes !");
+		var quantity = $scope.newBill.article.quantity;
+		var unitPrice = $scope.newBill.article.unitPrice;
+		$scope.newBill.article.amount = quantity * unitPrice;
 
-	//});
+		// console.log(unitPrice);
+		// console.log(quantity);
+		// console.log($scope.newBill.article.amount);
+	};
 }]);

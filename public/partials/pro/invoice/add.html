@@ -64,15 +64,15 @@
 				</div>
 				<div class="small">
 				<label for="quantity">Qté</label>
-				<input type="number" name="Quantité" id="quantity" ng-model="newBill.quantity" ng-change="alert('bipbip')">
+				<input type="number" name="Quantité" id="quantity" ng-model="newBill.article.quantity" ng-change="calcAmount()">
 				</div>
 				<div class="small">
 				<label for="p-u">P/U</label>
-				<input name="P/U" id="p-u" placeholder="" ng-model="newBill.unitPrice" ng-value="newBill.article.unitPrice">
+				<input name="P/U" id="p-u" placeholder="" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice">
 				</div>
 				<div class="bill">
 				<label for="amount">Montant</label>
-				<input name="Montant" id="amount" ng-model="amount" ng-value="amount">
+				<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount">
 				</div>
 			</div>
 			<hr>
