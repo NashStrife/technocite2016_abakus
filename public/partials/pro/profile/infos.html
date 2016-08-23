@@ -14,7 +14,7 @@
 		</div></a>
 
 		<div class="coordonneeCont">
-			<img src="#">
+			<img src="images/admin/profile/{{details.logo}}" alt="Logo Entreprise" width="90" height="90">
 			
 
 			<div class="info">
@@ -36,8 +36,8 @@
 				
 				<p>
 					n° TVA : {{details.vat.num}}<br>
-					n° SIREN : {{details.vat.siren}}<br>
-					n° RCS : {{details.vat.rcs}}<br>
+					<span ng-if="details.vat.siren">n° SIREN : {{details.vat.siren}}</span><br>
+					<span ng-if="details.vat.rcs">n° RCS : {{details.vat.rcs}}</span><br>
 				</p>
 
 			</div>
@@ -64,13 +64,11 @@
 					<div class="info2">			
 						
 							<p>
-							Civilité<br>							
-							Prénom<br>							
-							Nom<br>
-							Email<br>
-							Téléphone<br>
-							Téléphone secondaire<br>
-							Poste						
+							{{details.contactPerson.civility}} {{details.contactPerson.firstname}} {{details.contactPerson.lastname}}<br>
+							Email : {{details.contactPerson.mail}}<br>
+							Tél : {{details.contactPerson.phoneMain}}<br>
+							<span ng-if="details.contactPerson.phoneSec">Téléphone secondaire : {{details.contactPerson.phoneSec}}</span><br>
+							Fonction : {{details.contactPerson.post}}
 						
 
 					</div>
