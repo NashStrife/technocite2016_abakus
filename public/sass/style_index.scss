@@ -23,6 +23,7 @@ body * {
 }
 
 .container {
+
     @include container(420px);
     h2 {
         font-size: 24px;
@@ -420,6 +421,7 @@ button {
     .container {
         .listing {
             padding-top:190px;
+            padding-bottom:190px;
         }
         @include container(940px);
 

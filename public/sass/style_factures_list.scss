@@ -7,8 +7,9 @@ nav {
 }
 
 .search{
-    padding: 70px 10px 20px;
-    background: $mainBackgroundColor;
+    padding: 60px 10px 20px;
+    // background: $mainBackgroundColor;
+    // background: $focusColor;
     margin: 0 auto;
     text-align: left;
     *{
@@ -24,14 +25,16 @@ nav {
         }
     }
     p {
+        display: none;
         margin-top: 15px;
         margin-right: 15px;
         text-transform: uppercase;
     }
     input{
         border: none;
-        width: 100%;
+        @include span(8 of 12);
         padding: 15px;
+
     }
     .labelArrow {position:relative;
         &:after {
@@ -41,7 +44,8 @@ nav {
             height: 100%;
             line-height: 100%;
             width: 20px;
-            background-color: $primaryColor;
+            // background-color: $primaryColor;
+            background-color: $mainBackgroundColor;
             // -webkit-transform:rotate(90deg);
             // -moz-transform:rotate(90deg);
             // -ms-transform:rotate(90deg);
@@ -60,9 +64,10 @@ nav {
     }
     
     select{
+        @include span(2 of 12);
         position: relative;
         border: none;
-        padding: 5px;
+        padding: 15px;
         width: 125px;
         -webkit-appearance: none;  /*Removes default chrome and safari style*/
         -moz-appearance: none;  /*Removes default style Firefox*/
@@ -189,6 +194,7 @@ nav {
             }
         }
         p {
+            display: inline-block;
             margin-top: 0px;
             margin-right: 15px;
             text-transform: uppercase;
@@ -228,6 +234,7 @@ nav {
             position: relative;
             border: none;
             padding: 5px;
+            margin-top: 0px;
             width: 125px;
             -webkit-appearance: none;  /*Removes default chrome and safari style*/
             -moz-appearance: none;  /*Removes default style Firefox*/
