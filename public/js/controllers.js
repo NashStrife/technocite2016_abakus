@@ -7,7 +7,7 @@ var abakusControllers = angular.module('abakusControllers', []);
 	
 // }]);
 
-abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'Crm', 'Client', 'Admin', function($scope, $location, $cookies,  Crm, Client, Admin){
+abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies','$routeParams', 'Crm', 'Client', 'Admin', function($scope, $location, $cookies,$routeParams,  Crm, Client, Admin){
 	// object to store logs informations from the login form
 	$scope.logClient = {};
 	$scope.logPro = {};
@@ -16,6 +16,8 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies', 'C
 	$scope.clientInact = false;
 	$scope.proAct = false;
 	$scope.proInact = true;
+
+	// dynamic addButton based on url
 
 	$scope.activateForm = function(status) {
 		if (status == 'client' ) {

@@ -2,6 +2,11 @@
 @import "grids";
 @import "variables";
 
+
+.detailClient {
+
+	text-align: left;
+
 .contner {
 
 	width: 742px;
@@ -213,5 +218,7 @@
 	background-color:  $focusColor; 
 }
 
+
+}
 
 

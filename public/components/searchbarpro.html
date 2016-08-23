@@ -1,6 +1,6 @@
 <div class="container">
-	<section >
-		<moreclient></moreclient>
+	<section>
+		<!-- <addinvoice></addinvoice> -->
 		        <div class="blue2"></div> 
 		        <div class="search">          
 		            <input type="text" class="searchArea" ng-model='filter' placeholder="Recherche: Entreprise,Date,N° facture">
@@ -9,10 +9,10 @@
 		            </button> -->
 		            <p>Ordonner par</p>
 		            <label class="labelArrow">
-		                <select name="" id="">
-		                    <option value="">Entreprise</option>
-		                    <option value="">Date</option>
-		                    <option value="">Numéro de facture</option>
+		                <select ng-model="order">
+		                    <option value="name">Entreprise</option>
+		                    <option value="createdAt">Date</option>
+		                    <option value="link">Numéro</option>
 		                </select>
 		            </label>
 		            <!-- <label for="croissant"><input type="radio" name="order" id="croissant" value="Croissant" checked>Croissant</label>

@@ -5,6 +5,7 @@ var app = angular.module('abakusApp', [
 	'abakusControllers',
 	'proControllers',
 	'addClientModule',
+	'addBillsControllers',
 	'servicesAbakus',
 	'clientService',
 	'adminService',
@@ -69,8 +70,21 @@ var app = angular.module('abakusApp', [
 			controller : 'addClientCtrl',
 	    templateUrl: "components/moreClient.html"    // (5)
 	  }})
-;
-
+	.directive('addinvoice', function() { // (1)
+	  return {
+	    restrict: "E",         // (2)
+	    replace: false,         // (3)
+	    transclude: true,      // (4)
+	    templateUrl: "components/addInvoice.html"    // (5)
+	}})
+	.directive('addestimate', function() { // (1)
+	  return {
+	    restrict: "E",         // (2)
+	    replace: false,         // (3)
+	    transclude: true,      // (4)
+		controller : 'addClientCtrl',
+	    templateUrl: "components/addEstimate.html"    // (5)
+	}});
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
@@ -152,12 +166,12 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/estimate/list', {
 		title:"devis",
 		templateUrl : 'partials/pro/estimate/list.html',
-		controller : 'profileCtrl'
+		controller : 'ProListCtrl'
 	}).
 	when('/pro/invoice/add', {
 		title:"factures",
 		templateUrl : 'partials/pro/invoice/add.html',
-		controller : ''
+		controller : 'AddBillCtrl'
 	}).
 	when('/pro/invoice/detail', {
 		title:"factures",
@@ -167,7 +181,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/invoice/list', {
 		title:"factures",
 		templateUrl : 'partials/pro/invoice/list.html',
-		controller : 'profileCtrl'
+		controller : 'ProListCtrl'
 	}).
 	when('/pro/profile/edit-method-of-payement', {
 		title:"mon compte",
@@ -197,7 +211,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/profile/infos', {
 		title:"mon compte",
 		templateUrl : 'partials/pro/profile/infos.html',
-		controller : ''
+		controller : 'ProAccountCtrl'
 	}).
 	otherwise({
 		templateUrl : '404.html',

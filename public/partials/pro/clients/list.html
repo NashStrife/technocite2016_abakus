@@ -1,14 +1,19 @@
 <linkhomepro></linkhomepro>
 
 <navbarpro></navbarpro>
-<!-- <moreclient></moreclient> -->
-<searchbarpro></searchbarpro>
+<moreclient></moreclient>
+<searchbarpro>
+	
+</searchbarpro>
 
 
-
+<!-- href="#/pro/clients/add"  Lien de la vue add Client-->
 <div>
 
 	<div class="container">
+	<section>
+		<a ng-click="splash(true)"  id="moreClient">+ client</a>
+	</section>
 		<ul class="listing">   <!-- Liste des clients -->
 		            <li ng-repeat="item in listClients | filter: filter">
 		                <div class="listItem">
