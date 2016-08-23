@@ -118,43 +118,51 @@ fieldset legend {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 88, ../sass/addInvoice.scss */
+/* line 86, ../sass/addInvoice.scss */
 .facture .article {
-  width: 15.25424%;
-  float: left;
-  margin-right: 1.69492%;
-}
-/* line 90, ../sass/addInvoice.scss */
-.facture .article label {
-  display: block;
-}
-/* line 95, ../sass/addInvoice.scss */
-.facture .description {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 97, ../sass/addInvoice.scss */
-.facture .description label {
+/* line 88, ../sass/addInvoice.scss */
+.facture .article label {
   display: block;
 }
-/* line 101, ../sass/addInvoice.scss */
-.facture .small {
-  width: 15.25424%;
+/* line 92, ../sass/addInvoice.scss */
+.facture .description {
+  width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 103, ../sass/addInvoice.scss */
+/* line 94, ../sass/addInvoice.scss */
+.facture .description label {
+  display: block;
+}
+/* line 97, ../sass/addInvoice.scss */
+.facture .description input {
+  width: 120px;
+}
+/* line 102, ../sass/addInvoice.scss */
+.facture .small {
+  width: 6.77966%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 104, ../sass/addInvoice.scss */
 .facture .small label {
   display: block;
 }
 /* line 107, ../sass/addInvoice.scss */
+.facture .small input {
+  width: 40px;
+}
+/* line 111, ../sass/addInvoice.scss */
 .facture .bill {
   width: 15.25424%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 109, ../sass/addInvoice.scss */
+/* line 113, ../sass/addInvoice.scss */
 .facture .bill label {
   display: block;
 }

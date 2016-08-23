@@ -3,20 +3,20 @@ var abakusControllers = angular.module('addBillsControllers', []);
 
 
 // add the "Rest" service inside the diferent Ctrl
-abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', function($scope, Client){
-
+abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', function($scope, Client, Admin) {
+$scope.newBill = {};
 	// create a function to refresh the list when needed
 	function refresh() {
-		Client.getList(function(result){
+		Client.getList(function(result) {
 			// prepare some var
 			$scope.listClients = result;
 			$scope.listBills = [];
 			$scope.listEstimates = [];
 
-			result.map(function(item){
+			result.map(function(item) {
 				// console.log(item.bills);
 				// store list of bills for easy use inside html
-				item.bills.map(function(bill){
+				item.bills.map(function(bill) {
 					// console.log(bill);
 					// add customer name to result to avoid some tricky manipulations inside html
 					bill.clientName = item.name
@@ -24,7 +24,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', function($scope
 					$scope.listBills.push(bill);
 				});
 				// same with estimates
-				item.quotations.map(function(estimate){
+				item.quotations.map(function(estimate) {
 					// console.log(estimate);
 					estimate.clientName = item.name
 					estimate.clientId = item._id;
@@ -38,12 +38,24 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', function($scope
 			console.log("Devis :");
 			console.log($scope.listEstimates);
 		});
+		Admin.getAdmin(function(result) {
+			$scope.adminfromdb = result[0];
+			console.log($scope.adminfromdb);
+
+		});
 	}
 
 	// need to use refresh() at first list loading
 	refresh();
-	
+
 	// define the base order when list appear
 	$scope.order = "createdAt";
 	$scope.direction = "reverse";
+	$scope.newBill.quantity = 0;
+
+	//$scope.$watch($scope.quantity, function(){
+	//	console.log($scope.quantity);
+	//	$scope.amount = $scope.quantity * $scope.unitPrice;
+
+	//});
 }]);
