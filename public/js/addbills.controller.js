@@ -56,8 +56,10 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', functi
 		// console.log("it changes !");
 		var quantity = $scope.newBill.article.quantity;
 		var unitPrice = $scope.newBill.article.unitPrice;
+
 		$scope.newBill.article.amount = quantity * unitPrice;
 
+		
 		// console.log(unitPrice);
 		// console.log(quantity);
 		// console.log($scope.newBill.article.amount);
