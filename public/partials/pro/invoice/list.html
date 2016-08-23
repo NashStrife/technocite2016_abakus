@@ -8,34 +8,40 @@
 		<section>
 			<a href="#/pro/invoice/add" id="moreClient">+ facture</a>
 		</section>
-		<div class="listing">
-			<div class="listItem">
-				<div class="blocItem">
-					<span class="itemDatas blocDate">Numéro</span>
-					<span class="itemDatas blocCompany">Client</span>
-					<span class="itemDatas blocInvoiceNumber">Date de facturation</span>
-					<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
-				</div>
-			</div>
-		</div>
+		<ul class="listing">     <!-- Liste des devis -->
+			<li>
+					<div class="listItem">
+						<div class="blocItem">
+							<span class="itemDatas focusItem">Numéro</span>
+							<span class="itemDatas focusItem">Client</span>
+							<span class="itemDatas focusItem">Date de facturation</span>
+							<span class="itemDatas focusItem">Titre</span>
+							<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
+						</div>
+					</div>
+			</li>
+		</ul> <!-- Fin de liste des devis -->		
 		<ul class="listing">     <!-- Liste des devis -->
 			<li ng-repeat="item in listBills | filter: filter | orderBy : order:direction">
-				<div class="listItem">
-					<div class="blocItem">
-						<span class="itemDatas blocDate">{{item.link}}</span>
-						<span class="itemDatas blocCompany">{{item.clientName}}</span>
-						<span class="itemDatas blocInvoiceNumber">{{item.createdAt}}</span>
+					<div class="listItem">
+						<div class="blocItem">
+							<!-- <span class="itemDatas focusItem">Numéro</span>
+							<span class="itemDatas focusItem">Client</span>
+							<span class="itemDatas focusItem">Date de facturation</span>
+							<span class="itemDatas focusItem">Titre</span> -->
+							<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
+						</div>
+						<div class="blocItem">
+							<span class="itemDatas">{{item.link}}</span>
+							<span class="itemDatas">{{item.clientName}}</span>
+							<span class="itemDatas">{{item.createdAt}}</span>
+							<span class="itemDatas">{{item.createdAt}}</span>
 						<!--<span class="itemDatas blocInvoiceNumber">{{item.state}}</span>-->
+						</div>
 					</div>
-					<!-- <div class="listNote">
-					<p>{{item.note}}</p>
-					</div> -->
-					<!-- <button class="reveal">v</button> -->
-				</div>
-
-				<a href="documents/bills/{{item.clientId}}/{{item.link}}.pdf" class="moreInfos">
-					Ouvrir le PDF
-				</a>
+					<a href="documents/bills/{{item.clientId}}/{{item.link}}.pdf" class="moreInfos">
+						Ouvrir le PDF
+					</a>
 			</li>
 		</ul> <!-- Fin de liste des devis -->
 	</div>

@@ -1,56 +1,89 @@
-/* line 8, ../sass/client_invoice_list.scss */
+/* line 9, ../sass/client_invoice_list.scss */
 .listItem {
-  margin-top: 17px;
-  background-color: #e5af28;
-  width: 572px;
+  background-color: #485867;
+  width: 612px;
   display: inline-block;
   float: left;
   margin-left: 198px;
+  margin-bottom: 10px;
 }
-/* line 17, ../sass/client_invoice_list.scss */
+/* line 19, ../sass/client_invoice_list.scss */
 .listItem .blocItem {
   list-style-type: none;
   font-size: 12px;
   background-color: #95a0ac;
 }
-/* line 31, ../sass/client_invoice_list.scss */
+/* line 33, ../sass/client_invoice_list.scss */
 .listItem .blocItem .itemDatas {
-  width: 32.20339%;
+  width: 25%;
   float: left;
   margin-right: 1.69492%;
   padding: 15px 5px 15px 10px;
   display: inline-block;
   background-color: #485867;
   color: #e3e4e6;
-  border-right: 1px solid black;
+  border-right: 1px solid #2a4158;
   font-weight: bold;
-  text-align: center;
   text-align: left;
   margin-right: 0px;
   overflow: hidden;
+  text-transform: capitalize;
 }
-/* line 43, ../sass/client_invoice_list.scss */
-.listItem .blocItem .itemDatas:last-child {
-  margin-right: 0;
+/* line 46, ../sass/client_invoice_list.scss */
+.listItem .blocItem .focusItem {
+  background-color: #95a0ac;
+}
+/* line 50, ../sass/client_invoice_list.scss */
+.listItem .listNote {
+  height: 50%;
+  padding: 15px;
+  padding-top: 10px;
+  padding-left: 20px;
+  background-color: #485867;
+  color: #e3e4e6;
+  font-size: 12px;
+}
+/* line 58, ../sass/client_invoice_list.scss */
+.listItem .listNote p {
+  overflow: hidden;
+  width: 100%;
+  line-height: 20px;
+  height: 20px;
+}
+/* line 65, ../sass/client_invoice_list.scss */
+.listItem .reveal {
+  display: block;
+  background-color: #485867;
+  color: #e3e4e6;
+  width: 100%;
+  height: 19px;
+  text-align: center;
+  border: none;
+  border-top: 1px solid #2a4158;
+  transition: 0.5s;
+}
+/* line 76, ../sass/client_invoice_list.scss */
+.listItem .reveal:hover {
+  background-color: #e3e4e6;
+  color: #2a4158;
 }
 
-/* line 81, ../sass/client_invoice_list.scss */
+/* line 83, ../sass/client_invoice_list.scss */
 .moreInfos {
   float: right;
-  margin-top: 17px;
+  display: inline-block;
   background-color: #e5af28;
   color: #2a4158;
   font-weight: bold;
   font-size: 12px;
   padding: 15px 5px 15px 10px;
   display: inline-block;
-  width: 152px;
   margin-right: 0px;
   text-align: center;
   text-decoration: none;
   transition: 0.5s;
 }
-/* line 97, ../sass/client_invoice_list.scss */
+/* line 99, ../sass/client_invoice_list.scss */
 .moreInfos:hover {
   background-color: #e3e4e6;
 }
