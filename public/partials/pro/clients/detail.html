@@ -6,15 +6,12 @@
 
 <div class="warpper">
 
-    <div class="contner">
-        <div class="add">                    
-                <p>+</p>
-                <p>client</p>                                 
-        </div>
+    <div class="contner">        
 
         <div class="contenu">
-
-            <div class="photo"></div>
+            
+                <img src="images/main_picture.svg">
+            
 
             <div class="nom">
                 <p>{{clients[whichItem].name}}</p>
@@ -22,7 +19,7 @@
                 <p ng-hide="clients[whichItem].isCompany">Particulier</p>
             </div>
 
-            <div class="barre1"></div>
+          
 
             <div class="telephone">
                 <p>
@@ -42,9 +39,10 @@
             
 
             <div class="facturation">
+
                 <h2>Coordonnées de facturation</h2>
 
-                <div class="nomfactliv">
+                <div class="colone1">
 
                     <p>{{clients[whichItem].billingInfo.civility}}</p>
                     <p>{{clients[whichItem].billingInfo.firstname}}</p>
@@ -52,7 +50,7 @@
                     
                 </div>                   
 
-                <div class="colone3">
+                <div class="colone2">
 
                     <p>{{clients[whichItem].billingInfo.street}}</p>
                     <p>{{clients[whichItem].billingInfo.number}}</p>
@@ -60,11 +58,11 @@
                         {{clients[whichItem].billingInfo.box}}
                     </p>
                     <p>{{clients[whichItem].billingInfo.zip}}</p>
-                    <p>{{clients[whichItem].billingInfo.town}}</p>                    	
+                    <p>{{clients[whichItem].billingInfo.town}}</p>                          	
 
                 </div>
 
-                <div class="colone2">
+                <div class="colone3">
 
                     <p>{{clients[whichItem].billingInfo.country}}</p>
                     <p>{{clients[whichItem].billingInfo.mail}}</p>
@@ -78,12 +76,12 @@
 
                 </div>
             </div>
-            <div class="barre2"></div>
+            
 
             <div class="livraison">
                 <h2>Coordonnées de livraison</h2>
 
-                <div class="nomfactliv">
+                <div class="colone1">
 
                     <p>{{clients[whichItem].deliveryInfo.civility}}</p>
                     <p>{{clients[whichItem].deliveryInfo.firstname}}</p>
@@ -91,7 +89,7 @@
                     
                 </div> 
 
-                <div class="colone3livraison">
+                <div class="colone2">
 
                     <p ng-if="clients[whichItem].deliveryInfo.company">
                         {{clients[whichItem].deliveryInfo.company}}
@@ -104,7 +102,7 @@
 
                 </div>
 
-                <div class="colone2">
+                <div class="colone3">
 
                     <p>{{clients[whichItem].deliveryInfo.zip}}</p>
                     <p>{{clients[whichItem].deliveryInfo.town}}</p>
@@ -112,6 +110,7 @@
 
                 </div>
             </div>
+
         </div>
     </div>
 </div>

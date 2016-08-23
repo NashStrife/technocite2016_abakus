@@ -7,6 +7,11 @@
 
 	text-align: left;
 
+	p, h2 {
+
+		color: $primaryColor;
+	}
+
 .warpper {
 
 	width: 940px;
@@ -17,80 +22,52 @@
 .contner {
 
 	width: 742px;
-	height: 600px;
+	height: auto;
 	z-index: 1;
 	float: right;
 	margin-top: 117px;
 }
 
-.add {
-
-	width: 109px;
-	height: 33px;
-	background-color: $focusColor;
-
-
-	p {
-
-		display: inline-block;
-		text-transform: uppercase;
-		font-weight: bold;
-		vertical-align: middle;
-		color: #2a4158;
-
-	}
-
-	p:first-child {
-
-		font-size: 40px;
-		margin-top: -5px;
-		margin-left: 10px;
-	}
-
-	p:last-child {
-		margin-top: -2px;
-		margin-left: 6px;
-
-	}
-
-}
 
 .contenu {
 
-  background-color: #cad0d6;
+  background-color: $mainBackgroundColor;
   width: 100%;
-  height: 400px;
-  margin-top: 19px;
+  height: auto;
+  padding-bottom: 20px;
+    
 
-}
+}  
 
-.photo {
 
-  background-color: #e5b028;
-  width: 92px;
-  height: 92px;
-  margin-top: 15px;
-  margin-left: 22px;  
-  display: inline-block;
-  float: left;
+  img {
+	
+	width: 92px;
+	height: 92px;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 92px;
+	height: 92px;
+	float: left;
 
-}
+  }
+
+
 
 .nom {
 
-  font-size: 18px;  
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 16px;
-  display: inline-block;
-  color: $primaryColor;
   width: 330px;
   float: left;
+  height: 87px;
 
   	p {
   		
   		margin-bottom: 7px;
+  		font-size: 18px;  
+  		font-weight: bold;
+  		text-transform: uppercase;
   	} 
 
   	p:last-child {
@@ -108,10 +85,10 @@
   font-size: 12px; 
   font-weight: bold; 
   margin-top: 16px;
-  margin-left: 0px;  
-  display: inline-block;
-  color: $primaryColor;
-  width: 220px;
+  margin-left: 20px;  
+  display: inline-block;  
+  width: 270px;
+  height: 87px;
   
   p {
   		
@@ -120,137 +97,72 @@
 
 }
 
-.barre1, .barre2 {
 
-	height: 1px;
-	width: 696px;
-	margin: 0 auto;
-	background-color: $primaryColor;
-	
-}
-
-.barre1 {
-	
-	position: relative;
-	top: 135px;
-
-}
-
-.barre2 {
-
-	position: relative;
-	top: 85px;
-}
-
-.facturation, .livraison {
-
-	margin-top: 20px;
-	margin-left: 21px;
-
-
-	p {
-
-		font-size: 18px;
-		font-weight: bold;
-		color: $primaryColor;
-
-	}
-
-}
 
 .facturation {
 
-	top: 46px;
-	position: relative;
+	
+	width: 100%;
+	height: auto;
+	margin-top: 28px;
+	width: 722px;
+	margin-left: 10px;
 }
 
 .livraison {
-
-	top: 79px;
-	position: relative;
+	
+	width: 100%;	
+	height: auto;
+	width: 722px;
+	margin-top: 10px;
+	margin-left: 10px;
+	
 }
 
-.nomfactliv {
+.livraison, .facturation {
 
-	margin-left: 21px;
-	display: inline-block;
-	width: 229px;
-	margin-top: 20px;
-	float: left;
+	border-top: 1px solid $primaryColor;
 
-	p {
-  		
-  		margin: 0px;
-  		font-size: 14px;		
-		color: $primaryColor;
-		font-weight: bold;
-		text-transform: uppercase;
+	h2 {
 
-
-  	} 
-}
-
-.colone2 {
-
-	margin-left: 9px;
-	display: inline-block;
-	width: 229px;
-	margin-top: 20px;
-
-
-	p {
-  		
-  		margin: 0px;
-  		font-size: 12px;		
-		color: $primaryColor;
+		padding-top: 10px;
 		font-weight: bold;
 
-  	} 
+	}
 }
 
-.colone3, .colone3livraison {
+.colone1, .colone2, .colone3 {
 
-	margin-left: 15px;
+	width: 237px;
 	display: inline-block;
-	width: 200px;
-	float: left;
-	margin-top: 20px;
+	vertical-align: top;
+	padding-top: 10px;
 
+		p {
+
+			font-size: 14px;
+		}
+
+	
+
+	
+
+
+}
+
+
+.colone1 {	
+	
 
 	p {
-  		
-  		margin: 0px;
-  		font-size: 12px;
-		
-		color: $primaryColor;
-		font-weight: bold;
 
-  	}
+	font-size: 16px;
 
-}
-
-.colone3livraison {	
-
-	p {
-  		
-  		padding-bottom: -5px;
-  		text-align: top;
-
-  	}
+	}
+	
+	
 
 
-}
-
-.section {	
-
-	top: 600px;
-
-}
-
-.searchdetail {
-
-	margin-top: 20px;
-	background-color:  $focusColor; 
 }
 
 
