@@ -5,6 +5,13 @@
 $noteColor:#485867;
 $listElementPadding:15px 5px 15px 10px;
 
+.addElemBtn {
+	display: none;
+	background-color: $focusColor;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 15px;
+}
 
 .listItem {
 	background-color: $noteColor;
@@ -63,6 +70,13 @@ $listElementPadding:15px 5px 15px 10px;
 }
 
 @media screen and (min-width: 480px) {
+	.addElemBtn {
+		display: inline-block;
+		background-color: $focusColor;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 15px;
+	}
 	.listItem {
 		background-color: $noteColor;	
 		// @include span(10 of 12);
