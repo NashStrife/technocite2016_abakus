@@ -26,16 +26,18 @@
 
 				<div class="listItem">
 					<div class="blocItem">
-						<span class="itemDatas blocDate">{{item.link}}</span>
-						<span class="itemDatas blocCompany">{{item.clientName}}</span>
-						<span class="itemDatas blocInvoiceNumber">{{item.createdAt | date:'dd-MM-yyyy'}}</span>
-						<span class="itemDatas blocInvoiceNumber">{{item.createdAt | date:'dd-MM-yyyy'}}</span>
+						<span class="itemDatas blocNumber">Numéro - {{item.link}}</span>
+						<span class="itemDatas blocName"> Client - {{item.clientName}}</span>
+						<span class="itemDatas blocDate"> Date - {{item.createdAt | date:'dd-MM-yyyy'}}</span>
+						<span class="itemDatas blocDate">Date - {{item.state}}</span>
 						<!--<span class="itemDatas blocInvoiceNumber">{{item.state}}</span>-->
-						</div>
+					
 					</div>
 					<a href="documents/bills/{{item.clientId}}/{{item.link}}.pdf" class="moreInfos">
-						Ouvrir le PDF
-					</a>
+					Ouvrir le PDF
+				</a>
+				</div>
+				
 			</li>
 		</ul> <!-- Fin de liste des devis -->
 	</div>

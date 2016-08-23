@@ -83,31 +83,61 @@ fieldset {
 
 .facture {
     @include span(12 of 12);
-
-
-.article {
-    @include span(2 of 12);
-    label{
-    display: block;
+    .article {
+        @include span(3 of 12);
+        label {
+            display: block;
+        }
+    }
+    .description {
+        @include span(4 of 12);
+        label {
+            display: block;
+        }
+        input {
+            width: 120px;
+        }
+    }
+    .small {
+        @include span(1 of 12);
+        label {
+            display: block;
+        }
+        input {
+            width: 40px;
+        }
+    }
+    .bill {
+        @include span(2 of 12);
+        label {
+            display: block;
+        }
     }
 }
 
-.description {
-    @include span(3 of 12);
-    label{
+.total {
+    float: right;
     display: block;
-    }
-}
-.small{
-    @include span(2 of 12);
-    label{
-    display: block;
-    }
-}
-.bill{
-    @include span(2 of 12);
-    label{
+    >div {
+        @include pie-clearfix;
         display: block;
+        margin-bottom: 15px;
+        text-align: right;
+        label{
+            @include span(7);
+            display: inline-block;
+        }
+        input{
+            @include span(5 last);
+        }
+        &.rebate{
+            input{
+            @include span(3);
+        }
+        select{
+            @include span(2 last);
+        }
+        }
     }
-}
+    
 }

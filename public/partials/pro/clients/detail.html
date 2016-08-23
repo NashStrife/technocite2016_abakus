@@ -4,110 +4,115 @@
 
 <div class="detailClient">
 
-<div class="contner">
-    <div class="add">                    
-            <p>+</p>
-            <p>client</p>                                 
-    </div>
+<div class="warpper">
 
-    <div class="contenu">
+    <div class="contner">        
 
-        <div class="photo"></div>
-        <div class="nom">
-            <p>{{clients[whichItem].name}}</p>
-            <p ng-show="clients[whichItem].isCompany">Société</p>
-            <p ng-hide="clients[whichItem].isCompany">Particulier</p>
-        </div>
+        <div class="contenu">
+            
+                <img src="images/main_picture.svg">
+            
 
-        <div class="telephone">
-            <p>
-                Téléphone principal <br>
-                {{clients[whichItem].contactPerson.phoneMain}}
-            </p>
-            <p ng-if="clients[whichItem].contactPerson.phoneSec">
-                Téléphone secondaire <br>
-                {{clients[whichItem].contactPerson.phoneSec}}
-            </p>
-            <p>
-                Email <br>
-                {{clients[whichItem].contactPerson.mail}}
-            </p>                        
-        </div>  
-
-        <div class="barre1"></div>
-
-        <div class="facturation">
-            <h2>Coordonnées de facturation</h2>
-
-            <div class="nomfactliv">
-
-                <p>{{clients[whichItem].billingInfo.civility}}</p>
-                <p>{{clients[whichItem].billingInfo.firstname}}</p>
-                <p>{{clients[whichItem].billingInfo.lastname}}</p>
-                
-            </div>                   
-
-            <div class="colone3">
-
-                <p>{{clients[whichItem].billingInfo.street}}</p>
-                <p>{{clients[whichItem].billingInfo.number}}</p>
-                <p ng-if="clients[whichItem].billingInfo.box">
-                    {{clients[whichItem].billingInfo.box}}
-                </p>
-                <p>{{clients[whichItem].billingInfo.zip}}</p>
-                <p>{{clients[whichItem].billingInfo.town}}</p>                    	
-
+            <div class="nom">
+                <p>{{clients[whichItem].name}}</p>
+                <p ng-show="clients[whichItem].isCompany">Société</p>
+                <p ng-hide="clients[whichItem].isCompany">Particulier</p>
             </div>
 
-            <div class="colone2">
+          
 
-                <p>{{clients[whichItem].billingInfo.country}}</p>
-                <p>{{clients[whichItem].billingInfo.mail}}</p>
-                <p>Principal : {{clients[whichItem].billingInfo.phoneMain}}</p>
-                <p ng-if="clients[whichItem].billingInfo.phoneSec">
-                    Secondaire : {{clients[whichItem].billingInfo.phoneSec}}
+            <div class="telephone">
+                <p>
+                    Téléphone principal <br>
+                    {{clients[whichItem].contactPerson.phoneMain}}
                 </p>
-                <p ng-if="clients[whichItem].billingInfo.fax">
-                    Fax : {{clients[whichItem].billingInfo.fax}}
-                </p>                    	
-
-            </div>
-        </div>
-        <div class="barre2"></div>
-
-        <div class="livraison">
-            <h2>Coordonnées de livraison</h2>
-
-            <div class="nomfactliv">
-
-                <p>{{clients[whichItem].deliveryInfo.civility}}</p>
-                <p>{{clients[whichItem].deliveryInfo.firstname}}</p>
-                <p>{{clients[whichItem].deliveryInfo.lastname}}</p>
-                
+                <p ng-if="clients[whichItem].contactPerson.phoneSec">
+                    Téléphone secondaire <br>
+                    {{clients[whichItem].contactPerson.phoneSec}}
+                </p>
+                <p>
+                    Email <br>
+                    {{clients[whichItem].contactPerson.mail}}
+                </p>                        
             </div> 
 
-            <div class="colone3livraison">
+            
 
-                <p ng-if="clients[whichItem].deliveryInfo.company">
-                    {{clients[whichItem].deliveryInfo.company}}
-                </p>
-                <p>{{clients[whichItem].deliveryInfo.street}}</p>
-                <p>{{clients[whichItem].deliveryInfo.number}}</p>
-                <p ng-if="clients[whichItem].deliveryInfo.box">
-                    {{clients[whichItem].deliveryInfo.box}}
-                </p>                     	
+            <div class="facturation">
 
+                <h2>Coordonnées de facturation</h2>
+
+                <div class="colone1">
+
+                    <p>{{clients[whichItem].billingInfo.civility}}</p>
+                    <p>{{clients[whichItem].billingInfo.firstname}}</p>
+                    <p>{{clients[whichItem].billingInfo.lastname}}</p>
+                    
+                </div>                   
+
+                <div class="colone2">
+
+                    <p>{{clients[whichItem].billingInfo.street}}</p>
+                    <p>{{clients[whichItem].billingInfo.number}}</p>
+                    <p ng-if="clients[whichItem].billingInfo.box">
+                        {{clients[whichItem].billingInfo.box}}
+                    </p>
+                    <p>{{clients[whichItem].billingInfo.zip}}</p>
+                    <p>{{clients[whichItem].billingInfo.town}}</p>                          	
+
+                </div>
+
+                <div class="colone3">
+
+                    <p>{{clients[whichItem].billingInfo.country}}</p>
+                    <p>{{clients[whichItem].billingInfo.mail}}</p>
+                    <p>Principal : {{clients[whichItem].billingInfo.phoneMain}}</p>
+                    <p ng-if="clients[whichItem].billingInfo.phoneSec">
+                        Secondaire : {{clients[whichItem].billingInfo.phoneSec}}
+                    </p>
+                    <p ng-if="clients[whichItem].billingInfo.fax">
+                        Fax : {{clients[whichItem].billingInfo.fax}}
+                    </p>                    	
+
+                </div>
+            </div>
+            
+
+            <div class="livraison">
+                <h2>Coordonnées de livraison</h2>
+
+                <div class="colone1">
+
+                    <p>{{clients[whichItem].deliveryInfo.civility}}</p>
+                    <p>{{clients[whichItem].deliveryInfo.firstname}}</p>
+                    <p>{{clients[whichItem].deliveryInfo.lastname}}</p>
+                    
+                </div> 
+
+                <div class="colone2">
+
+                    <p ng-if="clients[whichItem].deliveryInfo.company">
+                        {{clients[whichItem].deliveryInfo.company}}
+                    </p>
+                    <p>{{clients[whichItem].deliveryInfo.street}}</p>
+                    <p>{{clients[whichItem].deliveryInfo.number}}</p>
+                    <p ng-if="clients[whichItem].deliveryInfo.box">
+                        {{clients[whichItem].deliveryInfo.box}}
+                    </p>                     	
+
+                </div>
+
+                <div class="colone3">
+
+                    <p>{{clients[whichItem].deliveryInfo.zip}}</p>
+                    <p>{{clients[whichItem].deliveryInfo.town}}</p>
+                    <p>{{clients[whichItem].deliveryInfo.country}}</p>                                          	
+
+                </div>
             </div>
 
-            <div class="colone2">
-
-                <p>{{clients[whichItem].deliveryInfo.zip}}</p>
-                <p>{{clients[whichItem].deliveryInfo.town}}</p>
-                <p>{{clients[whichItem].deliveryInfo.country}}</p>                                          	
-
-            </div>
         </div>
     </div>
 </div>
+</div>
 
-</div> 
