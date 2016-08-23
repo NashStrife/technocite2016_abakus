@@ -1,173 +1,192 @@
-/* line 5, ../sass/details_clients.scss */
-.contner {
+/* line 6, ../sass/details_clients.scss */
+.detailClient {
+  text-align: left;
+}
+/* line 10, ../sass/details_clients.scss */
+.detailClient .warpper {
+  width: 940px;
+  height: auto;
+  margin: 0 auto;
+}
+/* line 17, ../sass/details_clients.scss */
+.detailClient .contner {
   width: 742px;
   height: 600px;
   z-index: 1;
   float: right;
   margin-top: 117px;
 }
-
-/* line 14, ../sass/details_clients.scss */
-.add {
+/* line 26, ../sass/details_clients.scss */
+.detailClient .add {
   width: 109px;
   height: 33px;
   background-color: #e5af28;
 }
-/* line 21, ../sass/details_clients.scss */
-.add p {
+/* line 33, ../sass/details_clients.scss */
+.detailClient .add p {
   display: inline-block;
   text-transform: uppercase;
   font-weight: bold;
   vertical-align: middle;
   color: #2a4158;
 }
-/* line 31, ../sass/details_clients.scss */
-.add p:first-child {
+/* line 43, ../sass/details_clients.scss */
+.detailClient .add p:first-child {
   font-size: 40px;
   margin-top: -5px;
   margin-left: 10px;
 }
-/* line 38, ../sass/details_clients.scss */
-.add p:last-child {
+/* line 50, ../sass/details_clients.scss */
+.detailClient .add p:last-child {
   margin-top: -2px;
   margin-left: 6px;
 }
-
-/* line 46, ../sass/details_clients.scss */
-.contenu {
+/* line 58, ../sass/details_clients.scss */
+.detailClient .contenu {
   background-color: #cad0d6;
   width: 100%;
   height: 400px;
   margin-top: 19px;
 }
-
-/* line 55, ../sass/details_clients.scss */
-.photo {
+/* line 67, ../sass/details_clients.scss */
+.detailClient .photo {
   background-color: #e5b028;
   width: 92px;
   height: 92px;
   margin-top: 15px;
   margin-left: 22px;
   display: inline-block;
+  float: left;
 }
-
-/* line 67, ../sass/details_clients.scss */
-.nom {
+/* line 79, ../sass/details_clients.scss */
+.detailClient .nom {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 10px;
+  margin-top: 16px;
   display: inline-block;
   color: #2a4158;
   width: 330px;
+  float: left;
 }
-/* line 77, ../sass/details_clients.scss */
-.nom p {
-  margin: 7px;
+/* line 91, ../sass/details_clients.scss */
+.detailClient .nom p {
+  margin-bottom: 7px;
 }
-/* line 82, ../sass/details_clients.scss */
-.nom p:last-child {
+/* line 96, ../sass/details_clients.scss */
+.detailClient .nom p:last-child {
   font-size: 14px;
   margin-top: 12px;
 }
-
-/* line 92, ../sass/details_clients.scss */
-.telephone {
+/* line 106, ../sass/details_clients.scss */
+.detailClient .telephone {
   font-size: 12px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 16px;
   margin-left: 0px;
   display: inline-block;
   color: #2a4158;
   width: 220px;
 }
-/* line 102, ../sass/details_clients.scss */
-.telephone p {
-  margin: 15px;
+/* line 116, ../sass/details_clients.scss */
+.detailClient .telephone p {
+  margin-bottom: 10px;
 }
-
-/* line 109, ../sass/details_clients.scss */
-.barre1, .barre2 {
+/* line 123, ../sass/details_clients.scss */
+.detailClient .barre1, .detailClient .barre2 {
   height: 1px;
-  width: 668px;
+  width: 696px;
   margin: 0 auto;
   background-color: #2a4158;
-  margin-top: 15px;
 }
-
-/* line 118, ../sass/details_clients.scss */
-.facturation, .livraison {
+/* line 132, ../sass/details_clients.scss */
+.detailClient .barre1 {
+  position: relative;
+  top: 135px;
+}
+/* line 139, ../sass/details_clients.scss */
+.detailClient .barre2 {
+  position: relative;
+  top: 85px;
+}
+/* line 145, ../sass/details_clients.scss */
+.detailClient .facturation, .detailClient .livraison {
   margin-top: 20px;
   margin-left: 21px;
 }
-/* line 123, ../sass/details_clients.scss */
-.facturation p, .livraison p {
+/* line 151, ../sass/details_clients.scss */
+.detailClient .facturation p, .detailClient .livraison p {
   font-size: 18px;
   font-weight: bold;
   color: #2a4158;
 }
-
-/* line 133, ../sass/details_clients.scss */
-.nomfactliv {
+/* line 161, ../sass/details_clients.scss */
+.detailClient .facturation {
+  top: 46px;
+  position: relative;
+}
+/* line 167, ../sass/details_clients.scss */
+.detailClient .livraison {
+  top: 79px;
+  position: relative;
+}
+/* line 173, ../sass/details_clients.scss */
+.detailClient .nomfactliv {
   margin-left: 21px;
   display: inline-block;
   width: 229px;
   margin-top: 20px;
   float: left;
 }
-/* line 141, ../sass/details_clients.scss */
-.nomfactliv p {
+/* line 181, ../sass/details_clients.scss */
+.detailClient .nomfactliv p {
   margin: 0px;
   font-size: 14px;
   color: #2a4158;
   font-weight: bold;
   text-transform: uppercase;
 }
-
-/* line 153, ../sass/details_clients.scss */
-.colone2 {
+/* line 193, ../sass/details_clients.scss */
+.detailClient .colone2 {
   margin-left: 9px;
   display: inline-block;
   width: 229px;
   margin-top: 20px;
 }
-/* line 161, ../sass/details_clients.scss */
-.colone2 p {
+/* line 201, ../sass/details_clients.scss */
+.detailClient .colone2 p {
   margin: 0px;
   font-size: 12px;
   color: #2a4158;
   font-weight: bold;
 }
-
-/* line 171, ../sass/details_clients.scss */
-.colone3, .colone3livraison {
+/* line 211, ../sass/details_clients.scss */
+.detailClient .colone3, .detailClient .colone3livraison {
   margin-left: 15px;
   display: inline-block;
   width: 200px;
   float: left;
   margin-top: 20px;
 }
-/* line 180, ../sass/details_clients.scss */
-.colone3 p, .colone3livraison p {
+/* line 220, ../sass/details_clients.scss */
+.detailClient .colone3 p, .detailClient .colone3livraison p {
   margin: 0px;
   font-size: 12px;
   color: #2a4158;
   font-weight: bold;
 }
-
-/* line 194, ../sass/details_clients.scss */
-.colone3livraison p {
+/* line 234, ../sass/details_clients.scss */
+.detailClient .colone3livraison p {
   padding-bottom: -5px;
   text-align: top;
 }
-
-/* line 204, ../sass/details_clients.scss */
-.section {
+/* line 244, ../sass/details_clients.scss */
+.detailClient .section {
   top: 600px;
 }
-
-/* line 210, ../sass/details_clients.scss */
-.searchdetail {
+/* line 250, ../sass/details_clients.scss */
+.detailClient .searchdetail {
   margin-top: 20px;
   background-color: #e5af28;
 }

@@ -19,10 +19,9 @@ abakusControllers.controller('ProListCtrl', ['$scope', 'Client', function($scope
 				item.bills.map(function(bill){
 					// console.log(bill);
 					// add customer name to result to avoid some tricky manipulations inside html
-					
+					bill.clientName = item.name
+					bill.clientId = item._id;
 					$scope.listBills.push(bill);
-					$scope.listBills.clientName = item.name
-					$scope.listBills.clientId = item._id;
 				});
 				// same with estimates
 				item.quotations.map(function(estimate){

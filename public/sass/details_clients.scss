@@ -2,6 +2,18 @@
 @import "grids";
 @import "variables";
 
+
+.detailClient {
+
+	text-align: left;
+
+.warpper {
+
+	width: 940px;
+	height: auto;
+	margin: 0 auto; 
+}
+
 .contner {
 
 	width: 742px;
@@ -58,9 +70,9 @@
   width: 92px;
   height: 92px;
   margin-top: 15px;
-  margin-left: 22px;
-  
+  margin-left: 22px;  
   display: inline-block;
+  float: left;
 
 }
 
@@ -70,13 +82,15 @@
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 10px;
+  margin-top: 16px;
   display: inline-block;
   color: $primaryColor;
   width: 330px;
+  float: left;
 
   	p {
   		
-  		margin: 7px;
+  		margin-bottom: 7px;
   	} 
 
   	p:last-child {
@@ -93,7 +107,7 @@
 
   font-size: 12px; 
   font-weight: bold; 
-  margin-top: 10px;
+  margin-top: 16px;
   margin-left: 0px;  
   display: inline-block;
   color: $primaryColor;
@@ -101,7 +115,7 @@
   
   p {
   		
-  		margin: 15px;
+  		margin-bottom: 10px;
   	} 
 
 }
@@ -109,16 +123,30 @@
 .barre1, .barre2 {
 
 	height: 1px;
-	width: 668px;
+	width: 696px;
 	margin: 0 auto;
 	background-color: $primaryColor;
-	margin-top: 15px;
+	
+}
+
+.barre1 {
+	
+	position: relative;
+	top: 135px;
+
+}
+
+.barre2 {
+
+	position: relative;
+	top: 85px;
 }
 
 .facturation, .livraison {
 
 	margin-top: 20px;
 	margin-left: 21px;
+
 
 	p {
 
@@ -128,6 +156,18 @@
 
 	}
 
+}
+
+.facturation {
+
+	top: 46px;
+	position: relative;
+}
+
+.livraison {
+
+	top: 79px;
+	position: relative;
 }
 
 .nomfactliv {
@@ -213,5 +253,7 @@
 	background-color:  $focusColor; 
 }
 
+
+}
 
 

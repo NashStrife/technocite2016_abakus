@@ -8,36 +8,36 @@
 
 	<div class="contener">
 
-		<div class="coordonnee">
+		<a href="#"><div class="coordonnee">
 			<img src="images/edit.svg">
-			<p>Coordonée</p>			
-		</div>
+			<h2>Coordonée</h2>			
+		</div></a>
 
 		<div class="coordonneeCont">
-			<img src="#">
+			<img src="images/admin/profile/{{details.logo}}" alt="Logo Entreprise" width="90" height="90">
 			
 
 			<div class="info">
-				<p>{{details.name}}</p>
+				<h3>{{details.name}}</h3>
 					<p>
-						Rue n° bte<br>
-						Code postal<br>
-						Localité<br>
-						Pays<br>
-						Telephone principal<br>
-						telephone secondaire<br>
-						fax<br>
-						email<br>
-						site web<br>
+						Adresse : {{details.contact.street}} n° {{details.contact.number}}<span ng-if="details.contact.box">, boite {{details.contact.box}}</span><br>
+						Code postal : {{details.contact.zip}}<br>
+						Localité : {{details.contact.town}}<br>
+						Pays : {{details.contact.country}}<br> 
+						Telephone principal : {{details.contact.phoneMain}}<br>
+						<span ng-if="details.contact.phoneSec">Telephone secondaire : {{details.contact.phoneSec}}<br></span>
+						<span ng-if="details.contact.fax">Fax : {{details.contact.fax}}<br></span>
+						Email : {{details.contact.mail}}<br>
+						Site web : {{details.contact.web}}<br>
 					</p>				
 			</div>
 
 			<div class="tva">
 				
 				<p>
-					n°de TVA<br>
-					n°de siren<br>
-					n°de rcs<br>
+					n° TVA : {{details.vat.num}}<br>
+					<span ng-if="details.vat.siren">n° SIREN : {{details.vat.siren}}</span><br>
+					<span ng-if="details.vat.rcs">n° RCS : {{details.vat.rcs}}</span><br>
 				</p>
 
 			</div>
@@ -54,44 +54,40 @@
 
 
 
-		<div class="coordonnee2">
-					<img src="images/edit.svg">
-					<p>Personne de contact</p>			
-				</div>
-
-				<div class="coordonneeCont1">			
-
-					<div class="info2">			
-						
-							<p>
-							Civilité<br>							
-							Prénom<br>							
-							Nom<br>
-							Email<br>
-							Téléphone<br>
-							Téléphone secondaire<br>
-							Poste
-											
-						
-						
-
-					</div>
-
-					<!-- <div class="savecoordonnee1">
-						<p>sauvegarder</p>
-					</div> -->
-
-				</div>
-
-
-
-
-
-
-		<div class="coordonnee2">
+		<a href="#"><div class="coordonnee2">
 			<img src="images/edit.svg">
-			<p>Informations de paiement</p>			
+			<h2>Personne de contact</h2>			
+		</div></a>
+
+		<div class="coordonneeCont1">			
+
+			<div class="info2">			
+				
+					<p>
+					{{details.contactPerson.civility}} {{details.contactPerson.firstname}} {{details.contactPerson.lastname}}<br>
+					Email : {{details.contactPerson.mail}}<br>
+					Tél : {{details.contactPerson.phoneMain}}<br>
+					<span ng-if="details.contactPerson.phoneSec">Téléphone secondaire : {{details.contactPerson.phoneSec}}</span><br>
+					Fonction : {{details.contactPerson.post}}
+				
+
+			</div>
+
+			<!-- <div class="savecoordonnee1">
+				<p>sauvegarder</p>
+			</div> -->
+
 		</div>
+
+
+
+
+
+
+		<a href="#"><div class="coordonnee2">
+			<img src="images/edit.svg">
+			<h2>Informations de paiement</h2>			
+		</div></a>
 
 		<div class="coordonneeCont3">
 
@@ -110,14 +106,14 @@
 			</div>
 
 			<div class="payement1">
-			
+
 				<p>compte paypal</p>			
 
 			</div>
 
-			<div class="ajouter">				
+			<!-- <div class="ajouter">				
 				<p>+</p><p>Ajouter</p>
-			</div>
+			</div> -->
 
 			<!-- <div class="savecoordonnee3">
 				<p>sauvegarder</p>
@@ -133,10 +129,10 @@
 
 
 
-		<div class="coordonnee2">
+		<a href="#"><div class="coordonnee2">
 			<img src="images/edit.svg">
-			<p>Article</p>			
-		</div>
+			<h2>Article</h2>			
+		</div></a>
 
 		<div class="coordonneeCont4">
 
@@ -151,15 +147,16 @@
 			<div class="articledesc">
 				<p>Bies chaise en bois</p><br>
 				<p>Bies chaise en plastoc</p>
+				
 			</div>
 			<div class="articleprix">
 				<p>10€</p><br>
 				<p>7€</p>
 			</div>
 
-			<div class="ajouter">				
+			<!-- <div class="ajouter">				
 				<p>+</p><p>Ajouter</p>
-			</div>
+			</div> -->
 
 			<!-- <div class="savecoordonnee4">
 				<p>sauvegarder</p>
@@ -172,48 +169,48 @@
 
 
 
-		<div class="coordonnee2">
-			<img src="images/edit.svg">
-			<p>Design</p>			
-		</div>
+	<a href="#"><div class="coordonnee2">
+		<img src="images/edit.svg">
+		<h2>Design</h2>			
+	</div></a>
 
-		<div class="coordonneeCont5">
+	<div class="coordonneeCont5">
 
 
 	<div class="facture">			
-		<p>Template facture</p>
+		<h3>Template facture</h3>
 	</div>
 
 	<div class="designfacture">
-		<div class="f01"></div>
-		<div class="f02"></div>
+		<!-- <div class="f01"></div>
+		<div class="f02"></div> -->
 		<div class="f03"></div>
-		<div class="f04"></div>
-		<div class="f05"></div>
+		<!-- <div class="f05"></div>
 		<div class="f06"></div>
+		<div class="f04"></div>
 		<div class="f07"></div>
 		<div class="f08"></div>
 		<div class="f09"></div>
-		<div class="f10"></div>				
+		<div class="f10"></div>	 -->			
 	</div>		
 	
 
 
 	<div class="devis">
-		<p>Template devis</p>
+		<h3>Template devis</h3>
 	</div>
 
 	<div class="designdevis">
-		<div class="f01"></div>
+		<!-- <div class="f01"></div> -->
 		<div class="f02"></div>
-		<div class="f03"></div>
+		<!-- <div class="f03"></div>
 		<div class="f04"></div>
 		<div class="f05"></div>
 		<div class="f06"></div>
 		<div class="f07"></div>
 		<div class="f08"></div>
 		<div class="f09"></div>
-		<div class="f10"></div>				
+		<div class="f10"></div>	 -->			
 	</div>				
 
 	<!-- <div class="savecoordonnee5">
