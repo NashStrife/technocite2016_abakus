@@ -11,9 +11,10 @@
 		background-color: $focusColor;
 		color: $primaryColor;
 		border: none;
-		// height: 22px;
+		height: 30px;
 		width: 100px;
 		cursor: pointer;
+		line-height: 30px;
 		&::first-letter{
 			font-size: 22px;
 			font-weight: bold;
@@ -30,7 +31,7 @@
 		background-color: rgba(0,0,0,0.5);
 	}
 
-	.newClient{
+	.newClient {
 		font-size: initial;
 		color: $primaryColor;
 		position: relative;
@@ -48,10 +49,10 @@
 			height: 25px;
 			cursor: pointer;
 		}
-		input{
+		input {
 			color: $primaryColor;
 		}
-		.intro{
+		.intro {
 			height: 30px;
 			width: 220px;
 			color: $navColor;
@@ -61,7 +62,7 @@
 			line-height: 30px;
 			cursor: pointer;
 		}
-		fieldset{
+		fieldset {
 			display: none;
 			background-color: $mainBackgroundColor;
 			position: absolute;
@@ -72,10 +73,10 @@
 			border: none;
 			margin: 0;
 		}
-		:-moz-any(label[for="logo"]){
+		:-moz-any(label[for="logo"]) {
 			height: 37px;
 		}
-		legend{
+		legend {
 			background-color: $mainBackgroundColor;
 			text-align: center;
 			font-weight: bold;
@@ -85,12 +86,12 @@
 			padding: 3%;
 
 		}
-		label{
+		label {
 			display: inline-block;
 			font-style: italic;
 			text-align: left;
 		}
-		select, input{
+		select, input {
 			height: 21px;
 		}
 		.note {
@@ -177,7 +178,8 @@
 				opacity: 0;
 				pointer-events: none;
 		}
-		.progress {position: absolute;
+		.progress {
+				position: absolute;
 				bottom: 10%;
 				color: $navColor;
 				background-color: $primaryColor;
@@ -202,20 +204,35 @@
 					top: 1%;
 				}
 		}
-		input[name="client"], input[name="progress"], button, .progress{
+		input[name="client"], input[name="progress"], button, .progress {
 			display: none;
 		}
-		input[name="client"]:checked ~ #cancel{
+		input[name="client"]:checked ~ #cancel {
 			display: inline-block;
 			right: 12.5%;
 		}
-		#particulier:checked ~ #lien2{
+		input[name="client"]:checked ~ input[name="progress"] {
+			display: inline-block;
+			top: -10%;
+			position: absolute;
+		}
+		input[name="client"]:checked ~ #step1{left: 45.5%;}
+		input[name="client"]:checked ~ #step2{left: 48.5%;}
+		input[name="client"]:checked ~ #step3{left: 51.5%;}
+		input[name="client"]:checked ~ #step4{left: 54.5%;}
+		
+		#particulier:checked ~ #lien2 {
 			display: inline-block;
 			right: 12.5%;
 		}
-		#society:checked ~ #lien1{
+		#society:checked ~ #lien1 {
 			display: inline-block;
 			right: 12.5%;
+		}
+		#step1:checked + #lien1 {
+			display: inline-block;
+			left: 30%;
+			z-index: 2;
 		}
 		#step1:checked ~ #lien2 {
 			display: inline-block;
@@ -238,16 +255,19 @@
 		#society:checked ~ fieldset:nth-of-type(1) {
 		 	display: inline-block;
 		}
-		#step1:checked + fieldset:nth-of-type(2) {
+		#step1:checked ~ fieldset:nth-of-type(2) {
 			display: inline-block;
 		}
-		#step2:checked + fieldset:nth-of-type(3) {
+		#step1:not(checked) + fieldset:nth-of-type(2) {
+			display: none;
+		}
+		#step2:checked ~ fieldset:nth-of-type(3) {
 			display: inline-block;
 		}
-		#step3:checked + fieldset:nth-of-type(4) {
+		#step3:checked ~ fieldset:nth-of-type(4) {
 			display: inline-block;
 		}
-		#step4:checked + fieldset:nth-of-type(5) {
+		#step4:checked ~ fieldset:nth-of-type(5) {
 			display: inline-block;
 		}
 	}
