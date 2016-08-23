@@ -11,16 +11,18 @@
     background-color: #e5af28;
     color: #2a4158;
     border: none;
+    height: 30px;
     width: 100px;
     cursor: pointer;
+    line-height: 30px;
   }
-  /* line 22, ../sass/splash.scss */
+  /* line 23, ../sass/splash.scss */
   #moreClient::first-letter {
     font-size: 22px;
     font-weight: bold;
   }
 
-  /* line 27, ../sass/splash.scss */
+  /* line 28, ../sass/splash.scss */
   .overlay {
     display: flex;
     position: fixed;
@@ -32,7 +34,7 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  /* line 38, ../sass/splash.scss */
+  /* line 39, ../sass/splash.scss */
   .newClient {
     font-size: initial;
     color: #2a4158;
@@ -44,7 +46,7 @@
     align-self: center;
     text-align: center;
   }
-  /* line 48, ../sass/splash.scss */
+  /* line 49, ../sass/splash.scss */
   .newClient img {
     position: absolute;
     top: -25px;
@@ -53,11 +55,11 @@
     height: 25px;
     cursor: pointer;
   }
-  /* line 56, ../sass/splash.scss */
+  /* line 57, ../sass/splash.scss */
   .newClient input {
     color: #2a4158;
   }
-  /* line 59, ../sass/splash.scss */
+  /* line 60, ../sass/splash.scss */
   .newClient .intro {
     height: 30px;
     width: 220px;
@@ -68,7 +70,7 @@
     line-height: 30px;
     cursor: pointer;
   }
-  /* line 69, ../sass/splash.scss */
+  /* line 70, ../sass/splash.scss */
   .newClient fieldset {
     display: none;
     background-color: #95a0ac;
@@ -80,11 +82,11 @@
     border: none;
     margin: 0;
   }
-  /* line 80, ../sass/splash.scss */
+  /* line 81, ../sass/splash.scss */
   .newClient :-moz-any(label[for="logo"]) {
     height: 37px;
   }
-  /* line 83, ../sass/splash.scss */
+  /* line 84, ../sass/splash.scss */
   .newClient legend {
     background-color: #95a0ac;
     text-align: center;
@@ -94,128 +96,128 @@
     display: block;
     padding: 3%;
   }
-  /* line 93, ../sass/splash.scss */
+  /* line 94, ../sass/splash.scss */
   .newClient label {
     display: inline-block;
     font-style: italic;
     text-align: left;
   }
-  /* line 98, ../sass/splash.scss */
+  /* line 99, ../sass/splash.scss */
   .newClient select, .newClient input {
     height: 21px;
   }
-  /* line 101, ../sass/splash.scss */
+  /* line 102, ../sass/splash.scss */
   .newClient .note {
     height: 68%;
   }
-  /* line 106, ../sass/splash.scss */
+  /* line 107, ../sass/splash.scss */
   .newClient .line label {
     margin-top: 2%;
   }
-  /* line 107, ../sass/splash.scss */
+  /* line 108, ../sass/splash.scss */
   .newClient .line label, .newClient .line input, .newClient .line select, .newClient .line textarea {
     width: 100%;
     resize: none;
   }
-  /* line 111, ../sass/splash.scss */
+  /* line 112, ../sass/splash.scss */
   .newClient .line #note {
     height: 100%;
   }
-  /* line 114, ../sass/splash.scss */
+  /* line 115, ../sass/splash.scss */
   .newClient .line #delivery {
     vertical-align: text-bottom;
     height: 100%;
   }
-  /* line 118, ../sass/splash.scss */
+  /* line 119, ../sass/splash.scss */
   .newClient .line .deliver {
     vertical-align: bottom;
     width: initial;
     margin: 0;
   }
-  /* line 123, ../sass/splash.scss */
+  /* line 124, ../sass/splash.scss */
   .newClient .line label[for="same"] {
     width: 10.71429%;
     float: left;
     margin-right: 2.04082%;
   }
-  /* line 126, ../sass/splash.scss */
+  /* line 127, ../sass/splash.scss */
   .newClient .line label[for="different"] {
     width: 10.71429%;
     float: right;
     margin-right: 0;
   }
-  /* line 129, ../sass/splash.scss */
+  /* line 130, ../sass/splash.scss */
   .newClient .line label[for="tva"], .newClient .line label[for="ref"], .newClient .line #delivery {
     width: 74.4898%;
     float: left;
     margin-right: 2.04082%;
   }
-  /* line 132, ../sass/splash.scss */
+  /* line 133, ../sass/splash.scss */
   .newClient .line label[for="modeTva"], .newClient .line label[for="logo"] {
     width: 23.46939%;
     float: right;
     margin-right: 0;
   }
-  /* line 135, ../sass/splash.scss */
+  /* line 136, ../sass/splash.scss */
   .newClient .line label[for="civil"], .newClient .line label[for="name"], .newClient .line label[for="civilFact"], .newClient .line label[for="nameFact"], .newClient .line label[for="civilDeliver"], .newClient .line label[for="nameDeliver"] {
     width: 31.96939%;
     float: left;
     margin-right: 2.04082%;
   }
-  /* line 138, ../sass/splash.scss */
+  /* line 139, ../sass/splash.scss */
   .newClient .line label[for="firstName"], .newClient .line label[for="firstNameFact"], .newClient .line label[for="firstNameDeliver"] {
     width: 31.96939%;
     float: right;
     margin-right: 0;
   }
-  /* line 141, ../sass/splash.scss */
+  /* line 142, ../sass/splash.scss */
   .newClient .line label[for="phone1"], .newClient .line label[for="email"], .newClient .line label[for="cityFact"], .newClient .line label[for="phone1Fact"], .newClient .line label[for="emailFact"], .newClient .line label[for="cityDeliver"] {
     width: 48.97959%;
     float: left;
     margin-right: 2.04082%;
   }
-  /* line 144, ../sass/splash.scss */
+  /* line 145, ../sass/splash.scss */
   .newClient .line label[for="streetFact"], .newClient .line label[for="streetDeliver"] {
     width: 59.18367%;
     float: left;
     margin-right: 2.04082%;
   }
-  /* line 147, ../sass/splash.scss */
+  /* line 148, ../sass/splash.scss */
   .newClient .line label[for="numFact"], .newClient .line label[for="boxFact"], .newClient .line label[for="numDeliver"], .newClient .line label[for="boxDeliver"] {
     width: 5.61224%;
     float: left;
     margin-right: 2.04082%;
   }
-  /* line 150, ../sass/splash.scss */
+  /* line 151, ../sass/splash.scss */
   .newClient .line label[for="zipFact"], .newClient .line label[for="zipDeliver"] {
     width: 23.46939%;
     float: right;
     margin-right: 0;
   }
-  /* line 153, ../sass/splash.scss */
+  /* line 154, ../sass/splash.scss */
   .newClient .line label[for="phone2"], .newClient .line label[for="countryFact"], .newClient .line label[for="phone2Fact"], .newClient .line label[for="faxFact"], .newClient .line label[for="countryDeliver"] {
     width: 48.97959%;
     float: right;
     margin-right: 0;
   }
-  /* line 156, ../sass/splash.scss */
+  /* line 157, ../sass/splash.scss */
   .newClient .line label[for="fonction"] {
     display: none;
   }
-  /* line 159, ../sass/splash.scss */
+  /* line 160, ../sass/splash.scss */
   .newClient .line #prefixeTva {
     width: 12%;
   }
-  /* line 162, ../sass/splash.scss */
+  /* line 163, ../sass/splash.scss */
   .newClient .line #tva {
     width: 88%;
   }
-  /* line 165, ../sass/splash.scss */
+  /* line 166, ../sass/splash.scss */
   .newClient .line label[for="logo"] {
     position: relative;
     cursor: pointer;
   }
-  /* line 168, ../sass/splash.scss */
+  /* line 169, ../sass/splash.scss */
   .newClient .line label[for="logo"] span {
     color: #cad0d6;
     position: absolute;
@@ -226,13 +228,13 @@
     display: block;
     width: 100%;
   }
-  /* line 180, ../sass/splash.scss */
+  /* line 181, ../sass/splash.scss */
   .newClient #logo {
     outline: none;
     opacity: 0;
     pointer-events: none;
   }
-  /* line 185, ../sass/splash.scss */
+  /* line 186, ../sass/splash.scss */
   .newClient .progress {
     position: absolute;
     bottom: 10%;
@@ -250,78 +252,110 @@
     cursor: pointer;
     text-align: center;
   }
-  /* line 200, ../sass/splash.scss */
+  /* line 202, ../sass/splash.scss */
   .newClient .progress#cancel {
     left: 12.5%;
   }
-  /* line 203, ../sass/splash.scss */
+  /* line 205, ../sass/splash.scss */
   .newClient .progress#submit {
     right: 12.5%;
   }
-  /* line 206, ../sass/splash.scss */
+  /* line 208, ../sass/splash.scss */
   .newClient .progressinput {
     top: 1%;
   }
-  /* line 210, ../sass/splash.scss */
+  /* line 212, ../sass/splash.scss */
   .newClient input[name="client"], .newClient input[name="progress"], .newClient button, .newClient .progress {
     display: none;
   }
-  /* line 213, ../sass/splash.scss */
+  /* line 215, ../sass/splash.scss */
   .newClient input[name="client"]:checked ~ #cancel {
     display: inline-block;
     right: 12.5%;
   }
-  /* line 217, ../sass/splash.scss */
+  /* line 219, ../sass/splash.scss */
+  .newClient input[name="client"]:checked ~ input[name="progress"] {
+    display: inline-block;
+    top: -10%;
+    position: absolute;
+  }
+  /* line 224, ../sass/splash.scss */
+  .newClient input[name="client"]:checked ~ #step1 {
+    left: 45.5%;
+  }
+  /* line 225, ../sass/splash.scss */
+  .newClient input[name="client"]:checked ~ #step2 {
+    left: 48.5%;
+  }
+  /* line 226, ../sass/splash.scss */
+  .newClient input[name="client"]:checked ~ #step3 {
+    left: 51.5%;
+  }
+  /* line 227, ../sass/splash.scss */
+  .newClient input[name="client"]:checked ~ #step4 {
+    left: 54.5%;
+  }
+  /* line 229, ../sass/splash.scss */
   .newClient #particulier:checked ~ #lien2 {
     display: inline-block;
     right: 12.5%;
   }
-  /* line 221, ../sass/splash.scss */
+  /* line 233, ../sass/splash.scss */
   .newClient #society:checked ~ #lien1 {
     display: inline-block;
     right: 12.5%;
   }
-  /* line 225, ../sass/splash.scss */
+  /* line 237, ../sass/splash.scss */
+  .newClient #step1:checked + #lien1 {
+    display: inline-block;
+    left: 30%;
+    z-index: 2;
+  }
+  /* line 242, ../sass/splash.scss */
   .newClient #step1:checked ~ #lien2 {
     display: inline-block;
     right: 12.5%;
   }
-  /* line 229, ../sass/splash.scss */
+  /* line 246, ../sass/splash.scss */
   .newClient #step2:checked ~ #lien3 {
     display: inline-block;
     right: 12.5%;
   }
-  /* line 233, ../sass/splash.scss */
+  /* line 250, ../sass/splash.scss */
   .newClient #step3:checked ~ #lien4 {
     display: inline-block;
     right: 12.5%;
   }
-  /* line 237, ../sass/splash.scss */
+  /* line 254, ../sass/splash.scss */
   .newClient #step4:checked ~ #submit {
     display: inline-block;
   }
-  /* line 240, ../sass/splash.scss */
+  /* line 257, ../sass/splash.scss */
   .newClient #particulier:checked ~ fieldset:nth-of-type(2) {
     display: inline-block;
   }
-  /* line 243, ../sass/splash.scss */
+  /* line 260, ../sass/splash.scss */
   .newClient #society:checked ~ fieldset:nth-of-type(1) {
     display: inline-block;
   }
-  /* line 246, ../sass/splash.scss */
-  .newClient #step1:checked + fieldset:nth-of-type(2) {
+  /* line 263, ../sass/splash.scss */
+  .newClient #step1:checked ~ fieldset:nth-of-type(2) {
     display: inline-block;
   }
-  /* line 249, ../sass/splash.scss */
-  .newClient #step2:checked + fieldset:nth-of-type(3) {
+  /* line 266, ../sass/splash.scss */
+  .newClient #step1:not(checked) + fieldset:nth-of-type(2) {
+    display: none;
+  }
+  /* line 269, ../sass/splash.scss */
+  .newClient #step2:checked ~ fieldset:nth-of-type(3) {
     display: inline-block;
   }
-  /* line 252, ../sass/splash.scss */
-  .newClient #step3:checked + fieldset:nth-of-type(4) {
+  /* line 272, ../sass/splash.scss */
+  .newClient #step3:checked ~ fieldset:nth-of-type(4) {
     display: inline-block;
   }
-  /* line 255, ../sass/splash.scss */
-  .newClient #step4:checked + fieldset:nth-of-type(5) {
+  /* line 275, ../sass/splash.scss */
+  .newClient #step4:checked ~ fieldset:nth-of-type(5) {
     display: inline-block;
   }
 }

@@ -55,32 +55,33 @@
 			<div class="facture">
 				<div class="article">
 					<label for="article">Article</label>
-					<select name="Article" id="article">
-				<option value="article 1">article 1</option>
-				<option value="article 2">article 2</option>
-				<option value="article 3">article 3</option>
+					<select name="Article" id="article" ng-model="newBill.article" ng-options="article as article.name for article in adminfromdb.articles">
 			</select>
 				</div>
 				<div class="description">
 					<label for="description">Description</label>
-					<input name="Description" id="description" placeholder="">
+					<input name="Description" id="description" placeholder="" ng-model="newBill.description" ng-value="newBill.article.description">
 				</div>
 				<div class="small">
-				<label for="quantity">Quantité</label>
-				<input name="Quantité" id="quantity" placeholder="">
+				<label for="quantity">Qté</label>
+				<input type="number" name="Quantité" id="quantity" ng-model="newBill.article.quantity" ng-change="calcAmount()">
 				</div>
 				<div class="small">
 				<label for="p-u">P/U</label>
-				<input name="P/U" id="p-u" placeholder="">
+				<input name="P/U" id="p-u" placeholder="" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice">
 				</div>
 				<div class="bill">
 				<label for="amount">Montant</label>
-				<input name="Montant" id="amount" placeholder="">
+				<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount">
 				</div>
 			</div>
 			<hr>
+			<div class="htva">	
 			<label for="total xvat">Total hors Taxes</label><br/>
 			<input name="Total hors Taxes" id="total xvat" placeholder=""><br/>
+			</div>
+			<div class="rebate">
+				
 			<label for="rebate">Ristourne</label><br/>
 			<input name="Ristourne" id="rebate" placeholder="">
 			<select name="percent" id="rebate">
