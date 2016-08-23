@@ -7,12 +7,13 @@
 /* line 17, ../sass/profilpro.scss */
 .profilePro .contener {
   width: 742px;
-  height: 1550px;
+  height: auto;
   z-index: 1;
   float: right;
   margin-top: 117px;
+  padding-bottom: 100px;
 }
-/* line 26, ../sass/profilpro.scss */
+/* line 27, ../sass/profilpro.scss */
 .profilePro .coordonnee, .profilePro .coordonnee2 {
   height: 46px;
   width: auto;
@@ -20,7 +21,7 @@
   float: left;
   padding-right: 10px;
 }
-/* line 34, ../sass/profilpro.scss */
+/* line 35, ../sass/profilpro.scss */
 .profilePro .coordonnee img, .profilePro .coordonnee2 img {
   width: 28px;
   height: 28px;
@@ -28,7 +29,7 @@
   margin-top: 7px;
   margin-left: 7px;
 }
-/* line 43, ../sass/profilpro.scss */
+/* line 44, ../sass/profilpro.scss */
 .profilePro .coordonnee p, .profilePro .coordonnee2 p {
   font-weight: bold;
   font-size: 14px;
@@ -37,7 +38,7 @@
   float: left;
   margin-left: 7px;
 }
-/* line 55, ../sass/profilpro.scss */
+/* line 56, ../sass/profilpro.scss */
 .profilePro .coordonneeCont, .profilePro .coordonneeCont1, .profilePro .coordonneeCont2, .profilePro .coordonneeCont3, .profilePro .coordonneeCont4, .profilePro .coordonneeCont5 {
   background-color: #95a0ac;
   width: 100%;
@@ -45,7 +46,7 @@
   float: left;
   display: block;
 }
-/* line 63, ../sass/profilpro.scss */
+/* line 64, ../sass/profilpro.scss */
 .profilePro .coordonneeCont img, .profilePro .coordonneeCont1 img, .profilePro .coordonneeCont2 img, .profilePro .coordonneeCont3 img, .profilePro .coordonneeCont4 img, .profilePro .coordonneeCont5 img {
   width: 90px;
   height: 90px;
@@ -53,7 +54,7 @@
   margin-top: 14px;
   margin-left: 22px;
 }
-/* line 73, ../sass/profilpro.scss */
+/* line 74, ../sass/profilpro.scss */
 .profilePro .nomentreprise {
   font-weight: bold;
   font-size: 18px;
@@ -62,13 +63,13 @@
   float: left;
   margin-left: 17px;
 }
-/* line 85, ../sass/profilpro.scss */
+/* line 86, ../sass/profilpro.scss */
 .profilePro .info {
   display: block;
   width: 315px;
   float: left;
 }
-/* line 91, ../sass/profilpro.scss */
+/* line 92, ../sass/profilpro.scss */
 .profilePro .info p:first-child {
   font-weight: bold;
   font-size: 18px;
@@ -77,7 +78,7 @@
   float: left;
   margin-left: 17px;
 }
-/* line 103, ../sass/profilpro.scss */
+/* line 104, ../sass/profilpro.scss */
 .profilePro .info p {
   font-weight: bold;
   font-size: 13px;
@@ -87,12 +88,12 @@
   line-height: 15px;
   margin-left: 17px;
 }
-/* line 117, ../sass/profilpro.scss */
+/* line 118, ../sass/profilpro.scss */
 .profilePro .tva, .profilePro .bic {
   display: inline-block;
   float: left;
 }
-/* line 122, ../sass/profilpro.scss */
+/* line 123, ../sass/profilpro.scss */
 .profilePro .tva p, .profilePro .bic p {
   font-weight: bold;
   font-size: 13px;
@@ -101,7 +102,7 @@
   text-align: justify;
   line-height: 15px;
 }
-/* line 138, ../sass/profilpro.scss */
+/* line 139, ../sass/profilpro.scss */
 .profilePro .savecoordonnee, .profilePro .savecoordonnee1, .profilePro .savecoordonnee2, .profilePro .savecoordonnee3, .profilePro .savecoordonnee4, .profilePro .savecoordonnee5 {
   width: 94px;
   height: 20px;
@@ -110,7 +111,7 @@
   margin-top: 178px;
   margin-right: 15px;
 }
-/* line 147, ../sass/profilpro.scss */
+/* line 148, ../sass/profilpro.scss */
 .profilePro .savecoordonnee p, .profilePro .savecoordonnee1 p, .profilePro .savecoordonnee2 p, .profilePro .savecoordonnee3 p, .profilePro .savecoordonnee4 p, .profilePro .savecoordonnee5 p {
   color: #2a4158;
   font-size: 12px;
@@ -118,23 +119,23 @@
   margin-top: 4px;
   font-weight: bold;
 }
-/* line 159, ../sass/profilpro.scss */
+/* line 160, ../sass/profilpro.scss */
 .profilePro .coordonneeCont1 {
-  height: 308px;
+  height: 172px;
 }
-/* line 164, ../sass/profilpro.scss */
+/* line 165, ../sass/profilpro.scss */
 .profilePro .savecoordonnee1 {
-  margin-top: 273px;
+  margin-top: 178px;
 }
-/* line 170, ../sass/profilpro.scss */
+/* line 171, ../sass/profilpro.scss */
 .profilePro .coordonneeCont2 {
-  height: 135px;
+  height: 108px;
 }
-/* line 176, ../sass/profilpro.scss */
+/* line 177, ../sass/profilpro.scss */
 .profilePro .coordonnee2 {
   margin-top: 15px;
 }
-/* line 181, ../sass/profilpro.scss */
+/* line 182, ../sass/profilpro.scss */
 .profilePro .info2 {
   display: block;
   width: 360px;
@@ -142,42 +143,42 @@
   margin-top: 13px;
   margin-left: 17px;
 }
-/* line 191, ../sass/profilpro.scss */
+/* line 192, ../sass/profilpro.scss */
 .profilePro .info2 p {
   font-weight: bold;
   font-size: 13px;
-  margin-top: 25px;
   color: #2a4158;
   text-align: justify;
-  line-height: 15px;
+  line-height: 19px;
 }
 /* line 202, ../sass/profilpro.scss */
 .profilePro .info2 fieldset {
   text-align: left;
 }
-/* line 206, ../sass/profilpro.scss */
+/* line 207, ../sass/profilpro.scss */
 .profilePro .info2 fieldset label {
   font-size: 12px;
   font-family: "century gothic";
   font-weight: bold;
   color: #2a4158;
 }
-/* line 213, ../sass/profilpro.scss */
+/* line 214, ../sass/profilpro.scss */
 .profilePro .info2 fieldset input, .profilePro .info2 fieldset select {
   margin-top: 5px;
   background-color: #7c8894;
   color: white;
   border: none;
 }
-/* line 226, ../sass/profilpro.scss */
+/* line 227, ../sass/profilpro.scss */
 .profilePro .coordonneeCont3 {
-  height: 135px;
+  height: auto;
+  padding-bottom: 20px;
 }
-/* line 231, ../sass/profilpro.scss */
+/* line 233, ../sass/profilpro.scss */
 .profilePro .savecoordonnee2 {
   margin-top: 100px;
 }
-/* line 237, ../sass/profilpro.scss */
+/* line 239, ../sass/profilpro.scss */
 .profilePro .importer, .profilePro .ajouter {
   float: left;
   width: 90px;
@@ -186,7 +187,7 @@
   margin-top: 10px;
   margin-left: 17px;
 }
-/* line 247, ../sass/profilpro.scss */
+/* line 249, ../sass/profilpro.scss */
 .profilePro .importer img, .profilePro .ajouter img {
   height: 20px;
   width: 25px;
@@ -194,7 +195,7 @@
   margin-top: 3px;
   margin-left: 3px;
 }
-/* line 256, ../sass/profilpro.scss */
+/* line 258, ../sass/profilpro.scss */
 .profilePro .importer p, .profilePro .ajouter p {
   font-weight: bold;
   font-size: 13px;
@@ -205,22 +206,22 @@
   margin-top: 4px;
   float: left;
 }
-/* line 269, ../sass/profilpro.scss */
+/* line 271, ../sass/profilpro.scss */
 .profilePro .importer {
   margin-left: 0px;
 }
-/* line 277, ../sass/profilpro.scss */
+/* line 279, ../sass/profilpro.scss */
 .profilePro .bic p {
   margin-top: 25px;
 }
-/* line 283, ../sass/profilpro.scss */
+/* line 285, ../sass/profilpro.scss */
 .profilePro .payement1 {
   float: left;
   display: block;
   width: 100%;
   height: auto;
 }
-/* line 290, ../sass/profilpro.scss */
+/* line 292, ../sass/profilpro.scss */
 .profilePro .payement1 p {
   font-weight: bold;
   font-size: 13px;
@@ -231,20 +232,20 @@
   margin-top: 4px;
   float: left;
 }
-/* line 305, ../sass/profilpro.scss */
+/* line 307, ../sass/profilpro.scss */
 .profilePro .ajouter p:first-child {
   font-size: 32px;
 }
-/* line 311, ../sass/profilpro.scss */
+/* line 313, ../sass/profilpro.scss */
 .profilePro .savecoordonnee3 {
   margin-top: 28px;
 }
-/* line 316, ../sass/profilpro.scss */
+/* line 318, ../sass/profilpro.scss */
 .profilePro .article {
   width: 100%;
   height: auto;
 }
-/* line 321, ../sass/profilpro.scss */
+/* line 323, ../sass/profilpro.scss */
 .profilePro .article p {
   margin-top: 20px;
   display: inline-block;
@@ -255,18 +256,18 @@
   font-weight: bold;
   font-size: 14px;
 }
-/* line 333, ../sass/profilpro.scss */
+/* line 335, ../sass/profilpro.scss */
 .profilePro .article p:first-child {
   margin-right: 50px;
 }
-/* line 339, ../sass/profilpro.scss */
+/* line 341, ../sass/profilpro.scss */
 .profilePro .articletitle {
   width: 279px;
   height: auto;
   display: inline-block;
   float: left;
 }
-/* line 346, ../sass/profilpro.scss */
+/* line 348, ../sass/profilpro.scss */
 .profilePro .articletitle p {
   float: left;
   padding-left: 17px;
@@ -274,13 +275,13 @@
   width: 100%;
   text-align: left;
 }
-/* line 358, ../sass/profilpro.scss */
+/* line 360, ../sass/profilpro.scss */
 .profilePro .articledesc {
   width: 313px;
   height: auto;
   display: inline-block;
 }
-/* line 366, ../sass/profilpro.scss */
+/* line 368, ../sass/profilpro.scss */
 .profilePro .articledesc p {
   float: left;
   padding-left: 13px;
@@ -288,13 +289,13 @@
   width: 100%;
   text-align: left;
 }
-/* line 377, ../sass/profilpro.scss */
+/* line 379, ../sass/profilpro.scss */
 .profilePro .articleprix {
   width: 135px;
   height: auto;
   display: inline-block;
 }
-/* line 384, ../sass/profilpro.scss */
+/* line 386, ../sass/profilpro.scss */
 .profilePro .articleprix p {
   float: left;
   padding-left: 5px;
@@ -302,25 +303,26 @@
   width: 100%;
   text-align: left;
 }
-/* line 395, ../sass/profilpro.scss */
+/* line 397, ../sass/profilpro.scss */
 .profilePro .coordonneeCont4 {
-  height: 162px;
+  height: auto;
+  padding-bottom: 20px;
 }
-/* line 400, ../sass/profilpro.scss */
+/* line 403, ../sass/profilpro.scss */
 .profilePro .savecoordonnee4 {
   margin-top: 41px;
 }
-/* line 406, ../sass/profilpro.scss */
+/* line 409, ../sass/profilpro.scss */
 .profilePro .savecoordonnee5 {
   margin-top: 9px;
 }
-/* line 411, ../sass/profilpro.scss */
+/* line 414, ../sass/profilpro.scss */
 .profilePro .facture {
   display: block;
   width: 150px;
   height: auto;
 }
-/* line 418, ../sass/profilpro.scss */
+/* line 421, ../sass/profilpro.scss */
 .profilePro .facture p {
   font-weight: bold;
   font-size: 13px;
@@ -330,20 +332,21 @@
   line-height: 15px;
   margin-left: 17px;
 }
-/* line 432, ../sass/profilpro.scss */
+/* line 435, ../sass/profilpro.scss */
 .profilePro .designfacture {
   width: 300px;
   height: 25px;
   margin-top: 10px;
   margin-left: 17px;
+  text-align: left;
 }
-/* line 442, ../sass/profilpro.scss */
+/* line 446, ../sass/profilpro.scss */
 .profilePro .devis {
   width: 150px;
   height: auto;
   margin-top: 15px;
 }
-/* line 450, ../sass/profilpro.scss */
+/* line 454, ../sass/profilpro.scss */
 .profilePro .devis p {
   font-weight: bold;
   font-size: 13px;
@@ -354,14 +357,15 @@
   margin-top: 4px;
   float: left;
 }
-/* line 464, ../sass/profilpro.scss */
+/* line 468, ../sass/profilpro.scss */
 .profilePro .designdevis {
   width: 300px;
   height: 25px;
   margin-top: 42px;
   margin-left: 17px;
+  text-align: left;
 }
-/* line 472, ../sass/profilpro.scss */
+/* line 477, ../sass/profilpro.scss */
 .profilePro .f01, .profilePro .f02, .profilePro .f03, .profilePro .f04, .profilePro .f05, .profilePro .f06, .profilePro .f07, .profilePro .f08, .profilePro .f09, .profilePro .f10 {
   width: 20px;
   height: 20px;
@@ -369,47 +373,47 @@
   display: inline-block;
   border: 2px solid #cad0d6;
 }
-/* line 481, ../sass/profilpro.scss */
+/* line 486, ../sass/profilpro.scss */
 .profilePro .f01 {
   background-color: #000000;
 }
-/* line 485, ../sass/profilpro.scss */
+/* line 490, ../sass/profilpro.scss */
 .profilePro .f02 {
   background-color: #696969;
 }
-/* line 488, ../sass/profilpro.scss */
+/* line 493, ../sass/profilpro.scss */
 .profilePro .f03 {
   background-color: #046381;
 }
-/* line 491, ../sass/profilpro.scss */
+/* line 496, ../sass/profilpro.scss */
 .profilePro .f04 {
   background-color: #2b4158;
 }
-/* line 494, ../sass/profilpro.scss */
+/* line 499, ../sass/profilpro.scss */
 .profilePro .f05 {
   background-color: #97ca2d;
 }
-/* line 497, ../sass/profilpro.scss */
+/* line 502, ../sass/profilpro.scss */
 .profilePro .f06 {
   background-color: #006401;
 }
-/* line 500, ../sass/profilpro.scss */
+/* line 505, ../sass/profilpro.scss */
 .profilePro .f07 {
   background-color: #550288;
 }
-/* line 503, ../sass/profilpro.scss */
+/* line 508, ../sass/profilpro.scss */
 .profilePro .f08 {
   background-color: #b9121a;
 }
-/* line 506, ../sass/profilpro.scss */
+/* line 511, ../sass/profilpro.scss */
 .profilePro .f09 {
   background-color: #f89d19;
 }
-/* line 509, ../sass/profilpro.scss */
+/* line 514, ../sass/profilpro.scss */
 .profilePro .f10 {
   background-color: #e5b028;
 }
-/* line 513, ../sass/profilpro.scss */
+/* line 518, ../sass/profilpro.scss */
 .profilePro .coordonneeCont5 {
-  height: 186px;
+  height: 170px;
 }

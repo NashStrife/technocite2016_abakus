@@ -8,10 +8,10 @@
 
 	<div class="contener">
 
-		<div class="coordonnee">
+		<a href="#"><div class="coordonnee">
 			<img src="images/edit.svg">
 			<p>Coordonée</p>			
-		</div>
+		</div></a>
 
 		<div class="coordonneeCont">
 			<img src="#">
@@ -20,33 +20,33 @@
 			<div class="info">
 				<p>{{details.name}}</p>
 					<p>
-						Rue n° bte<br>
-						Code postal<br>
-						Localité<br>
-						Pays<br>
-						Telephone principal<br>
-						telephone secondaire<br>
-						fax<br>
-						email<br>
-						site web<br>
+						Adresse : {{details.contact.street}} n° {{details.contact.number}}<span ng-if="details.contact.box">, boite {{details.contact.box}}</span><br>
+						Code postal : {{details.contact.zip}}<br>
+						Localité : {{details.contact.town}}<br>
+						Pays : {{details.contact.country}}<br> 
+						Telephone principal : {{details.contact.phoneMain}}<br>
+						<span ng-if="details.contact.phoneSec">Telephone secondaire : {{details.contact.phoneSec}}<br></span>
+						<span ng-if="details.contact.fax">Fax : {{details.contact.fax}}<br></span>
+						Email : {{details.contact.mail}}<br>
+						Site web : {{details.contact.web}}<br>
 					</p>				
 			</div>
 
 			<div class="tva">
 				
 				<p>
-					n°de TVA<br>
-					n°de siren<br>
-					n°de rcs<br>
+					n° TVA : {{details.vat.num}}<br>
+					n° SIREN : {{details.vat.siren}}<br>
+					n° RCS : {{details.vat.rcs}}<br>
 				</p>
 
 			</div>
 
 			
 
-			<div class="savecoordonnee">
+			<!-- <div class="savecoordonnee">
 				<p>sauvegarder</p>
-			</div>
+			</div> -->
 
 		</div>
 
@@ -54,43 +54,30 @@
 
 
 
-		<div class="coordonnee2">
+				<a href="#"><div class="coordonnee2">
 					<img src="images/edit.svg">
 					<p>Personne de contact</p>			
-				</div>
+				</div></a>
 
 				<div class="coordonneeCont1">			
 
 					<div class="info2">			
-						<fieldset>
-							<label for="civil">Civilité</label>
-							<select name="Civilité" id="civil">
-								<option value="Monsieur">Monsieur</option>
-								<option value="Madame">Madame</option>
-								<option value="Mademoiselle">Mademoiselle</option>								
-							</select><br/>
-							<label for="firstName">Prénom</label>
-							<input type="text" id="firstName"><br/>
-							<label for="name">Nom</label>
-							<input type="text" id="name"><br/>				
-							<label for="email">Email</label>
-							<input type="text" id="email"><br/>
-							<label for="phone">Téléphone</label>
-							<input type="text" id="phone"><br/>
-							<label for="phone2">Téléphone secondaire</label>
-							<input type="text" id="phone2"><br/>
-							<label for="position">Poste</label>
-							<input type="text" id="position"><br/>
-							<label for="position">Mot de passe</label><input type="text" name="passeword"><br>
-							<label for="position">Confirmation mot de passe</label><input type="text" name="passewordconfim">				
 						
-						</fieldset>
+							<p>
+							Civilité<br>							
+							Prénom<br>							
+							Nom<br>
+							Email<br>
+							Téléphone<br>
+							Téléphone secondaire<br>
+							Poste						
+						
 
 					</div>
 
-					<div class="savecoordonnee1">
+					<!-- <div class="savecoordonnee1">
 						<p>sauvegarder</p>
-					</div>
+					</div> -->
 
 				</div>
 
@@ -99,43 +86,10 @@
 
 
 
-
-
-		<div class="coordonnee2">
-			<img src="images/edit.svg">
-			<p>Conditions génèrales de vente</p>			
-		</div>
-
-		<div class="coordonneeCont2">			
-
-			<div class="info2">			
-				<p>
-					Importer les conditions générales de vente<br>
-					.doc ou .pdf					
-				</p>
-
-				<div class="importer">
-					<img src="images/importer.svg">
-					<p>importer</p>
-				</div>
-			</div>
-
-			<div class="savecoordonnee2">
-				<p>sauvegarder</p>
-			</div>
-
-		</div>
-
-
-
-
-
-
-
-		<div class="coordonnee2">
+		<a href="#"><div class="coordonnee2">
 			<img src="images/edit.svg">
 			<p>Informations de paiement</p>			
-		</div>
+		</div></a>
 
 		<div class="coordonneeCont3">
 
@@ -154,16 +108,18 @@
 			</div>
 
 			<div class="payement1">
-				<p>compte paypal</p>
+
+				<p>compte paypal</p>			
+
 			</div>
 
-			<div class="ajouter">				
+			<!-- <div class="ajouter">				
 				<p>+</p><p>Ajouter</p>
-			</div>
+			</div> -->
 
-			<div class="savecoordonnee3">
+			<!-- <div class="savecoordonnee3">
 				<p>sauvegarder</p>
-			</div>
+			</div> -->
 
 		</div>
 
@@ -175,10 +131,10 @@
 
 
 
-		<div class="coordonnee2">
+		<a href="#"><div class="coordonnee2">
 			<img src="images/edit.svg">
 			<p>Article</p>			
-		</div>
+		</div></a>
 
 		<div class="coordonneeCont4">
 
@@ -193,19 +149,20 @@
 			<div class="articledesc">
 				<p>Bies chaise en bois</p><br>
 				<p>Bies chaise en plastoc</p>
+				
 			</div>
 			<div class="articleprix">
 				<p>10€</p><br>
 				<p>7€</p>
 			</div>
 
-			<div class="ajouter">				
+			<!-- <div class="ajouter">				
 				<p>+</p><p>Ajouter</p>
-			</div>
+			</div> -->
 
-			<div class="savecoordonnee4">
+			<!-- <div class="savecoordonnee4">
 				<p>sauvegarder</p>
-			</div>
+			</div> -->
 				
 		</div>
 
@@ -214,10 +171,10 @@
 
 
 
-		<div class="coordonnee2">
+		<a href="#"><div class="coordonnee2">
 			<img src="images/edit.svg">
 			<p>Design</p>			
-		</div>
+		</div></a>
 
 		<div class="coordonneeCont5">
 
@@ -227,16 +184,16 @@
 	</div>
 
 	<div class="designfacture">
-		<div class="f01"></div>
-		<div class="f02"></div>
+		<!-- <div class="f01"></div>
+		<div class="f02"></div> -->
 		<div class="f03"></div>
-		<div class="f04"></div>
-		<div class="f05"></div>
+		<!-- <div class="f05"></div>
 		<div class="f06"></div>
+		<div class="f04"></div>
 		<div class="f07"></div>
 		<div class="f08"></div>
 		<div class="f09"></div>
-		<div class="f10"></div>				
+		<div class="f10"></div>	 -->			
 	</div>		
 	
 
@@ -246,38 +203,33 @@
 	</div>
 
 	<div class="designdevis">
-		<div class="f01"></div>
+		<!-- <div class="f01"></div> -->
 		<div class="f02"></div>
-		<div class="f03"></div>
+		<!-- <div class="f03"></div>
 		<div class="f04"></div>
 		<div class="f05"></div>
 		<div class="f06"></div>
 		<div class="f07"></div>
 		<div class="f08"></div>
 		<div class="f09"></div>
-		<div class="f10"></div>				
+		<div class="f10"></div>	 -->			
 	</div>				
 
-	<div class="savecoordonnee5">
+	<!-- <div class="savecoordonnee5">
 		<p>sauvegarder</p>
-	</div>
+	</div> -->
 
 
-		</div>
-
-
-
-
-			
-
-
-		</div>
-
-	</div>
-
+		</div>	
 
 
 	</div>
+
+</div>
+
+
+
+</div>
 
 
 

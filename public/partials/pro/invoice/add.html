@@ -6,7 +6,7 @@
 
 
 	<h1 style="background-color:#d6eaf8;">Création de nouvelle facture</h1>
-	<form action="">
+	<form action="" class="addInvoice">
 		<!--<fieldset class="references">
 			<legend>Vos références</legend><br>
 			<label for="invoice-number">N° de facture</label><br/>
@@ -21,19 +21,17 @@
 			<input name="Client" id="client" placeholder="" class="cent"><br/>
 			<div class="half">
 				<label for="po">PO</label><br/>
-				<select name="PO" id="po">
-				<option value="client 1">client 1</option>
-				<option value="client 2">client 2</option>
-				<option value="client 3">client 3</option>
+				<select name="PO" id="po" ng-model="newBill.client" ng-options="listClients.indexOf(client) as client.name for client in listClients">
+					
 			</select>
+				<!--<p>{{newBill.client}}</p>-->
 			</div>
 			<div class="half last">
 				<label for="estimate">Devis n°</label><br/>
-				<select name="Devis" id="estimate">
-				<option value="client 1">client 1</option>
-				<option value="client 2">client 2</option>
-				<option value="client 3">client 3</option>
+				<select name="Devis" id="estimate" ng-model="newBill.estimate" ng-options="estimate.link for estimate in listClients[newBill.client].quotations">
+			
 			</select>
+				<!--<p>{{listClients[newBill.client]}}</p>-->
 			</div>
 			<button type="next" class="next">Suivant</button>
 
@@ -44,30 +42,42 @@
 			<input name="Nom du projet" id="project-name" placeholder="" class="cent"><br/>
 			<div class="half">
 				<label for="starting-date ">Date de début</label><br/>
+				<input type="date" name="Date de début" id="starting-date " placeholder=""><br/>
 			</div>
-			<input name="Date de début" id="starting-date " placeholder=""><br/>
 			<div class="half last">
 				<label for="ending-date">Date de fin</label><br/>
-				<input name="Date de fin" id="ending-date" placeholder=""><br/>
+				<input type="date" name="Date de fin" id="ending-date" placeholder=""><br/>
 			</div>
 			<button type="" class="next">Suivant</button>
 		</fieldset>
 		<fieldset>
 			<legend>Détail</legend>
-			<label for="article">Article</label><br/>
-			<select name="Article" id="article">
+			<div class="facture">
+				<div class="article">
+					<label for="article">Article</label>
+					<select name="Article" id="article">
 				<option value="article 1">article 1</option>
 				<option value="article 2">article 2</option>
 				<option value="article 3">article 3</option>
-			</select><br/>
-			<label for="description">Description</label><br/>
-			<input name="Description" id="description" placeholder=""><br/>
-			<label for="quantity">Quantité</label><br/>
-			<input name="Quantité" id="quantity" placeholder=""><br/>
-			<label for="p-u">P/U</label><br/>
-			<input name="P/U" id="p-u" placeholder=""><br/>
-			<label for="amount">Montant</label><br/>
-			<input name="Montant" id="amount" placeholder="">
+			</select>
+				</div>
+				<div class="description">
+					<label for="description">Description</label>
+					<input name="Description" id="description" placeholder="">
+				</div>
+				<div class="small">
+				<label for="quantity">Quantité</label>
+				<input name="Quantité" id="quantity" placeholder="">
+				</div>
+				<div class="small">
+				<label for="p-u">P/U</label>
+				<input name="P/U" id="p-u" placeholder="">
+				</div>
+				<div class="bill">
+				<label for="amount">Montant</label>
+				<input name="Montant" id="amount" placeholder="">
+				</div>
+			</div>
 			<hr>
 			<label for="total xvat">Total hors Taxes</label><br/>
 			<input name="Total hors Taxes" id="total xvat" placeholder=""><br/>
