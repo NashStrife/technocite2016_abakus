@@ -71,12 +71,14 @@ $listElementPadding:15px 5px 15px 10px;
 
 @media screen and (min-width: 480px) {
 	.addElemBtn {
-		margin-top: 15px;
+		margin-left: -400px;
+		margin-top: 185px;
 		display: inline-block;
 		background-color: $focusColor;
 		text-transform: uppercase;
 		font-weight: bold;
 		padding: 15px;
+		width: 150px;
 	}
 	.listItem {
 		background-color: $noteColor;	
@@ -120,7 +122,7 @@ $listElementPadding:15px 5px 15px 10px;
 				display: block;
 				background-color: $mainBackgroundColor;
 			}
-			
+
 		}
 		.listNote {
 			height: 50%;
