@@ -182,3 +182,15 @@ fieldset {
         width: 100%;
     }
 }
+.full{
+    @include span(2.5);
+}
+.quart{
+    @include span(1);
+}
+.hulk{
+    color: #90ec90;
+}
+.superman{
+    color: #ed8e8e;
+}
