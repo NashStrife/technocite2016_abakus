@@ -14,14 +14,14 @@ $listElementPadding:15px 5px 15px 10px;
 }
 
 .listItem {
-	background-color: $noteColor;
-	background-color: aliceblue;
+
 	@include span(11 of 12);
 	margin:10px;
 	position: relative;
 
 	.blocItem {
 		padding: 0px;
+		margin-left: 50px;
 		text-align:left;
 		.blocNumber {
 			font-size: 16px;
@@ -56,11 +56,11 @@ $listElementPadding:15px 5px 15px 10px;
 	color: $primaryColor;
 	position: absolute;
 	display: inline-block;
-	padding: 15px;
+	padding: 10px;
 	top: 10px;
 	right: 10px;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 12px;
 	text-decoration: none;
 }
 .titleItem {
@@ -93,6 +93,7 @@ $listElementPadding:15px 5px 15px 10px;
 		
 		.blocItem {
 			list-style-type: none;
+			margin-left: 0px;
 			font-size: 12px;
 			background-color: $mainBackgroundColor;	
 			padding: 0px;

@@ -13,6 +13,19 @@
 
 <div>
 	<div class="container">
+	<a href="#/pro/invoice/add" class="addElemBtn" style="visibility:hidden">+ facture</a>
+	<ul class="listingTitle">
+		<li>
+			<div class="listItem">
+				<div class="blocItem">
+					<span class="itemDatas focusItem">Numéro</span>
+					<span class="itemDatas focusItem">Client</span>
+					<span class="itemDatas focusItem">Date de création</span>
+					<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
+				</div>
+			</div>
+		</li>
+	</ul>
 	<ul class="listing">     <!-- Liste des factures -->
 	            <li ng-repeat="item in listItems | filter: filter">
 	                <div class="listItem">

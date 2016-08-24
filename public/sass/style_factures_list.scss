@@ -72,7 +72,7 @@ nav {
 }
 
 .search{
-    padding: 60px 10px 20px;
+    padding: 60px 10px 0px;
     // background: $mainBackgroundColor;
     // background: $focusColor;
     margin: 0 auto;
@@ -97,8 +97,9 @@ nav {
     }
     input{
         border: none;
-        @include span(8 of 12);
+        @include span(6.5 of 12);
         padding: 15px;
+        margin-left: 50px;
 
     }
     .labelArrow {position:relative;
@@ -248,7 +249,7 @@ nav {
         // background-color: red;
         position: fixed;
         font-size: 12px;
-        top: 110px;
+        top: 100px;
         text-align: right;
         // margin-left: span(4 of 24 wider);
         // img{

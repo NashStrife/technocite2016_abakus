@@ -5,6 +5,19 @@
 
 <div>
 	<div class="container">
+		<a href="#/pro/estimate/add" class="addElemBtn" style="visibility:hidden">+ devis</a>
+	<ul class="listingTitle">
+		<li>
+			<div class="listItem">
+				<div class="blocItem">
+					<span class="itemDatas focusItem">Numéro</span>
+					<span class="itemDatas focusItem">Client</span>
+					<span class="itemDatas focusItem">Date de création</span>
+					<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
+				</div>
+			</div>
+		</li>
+	</ul>
 	<ul class="listing">     <!-- Liste des devis -->
 	            <li ng-repeat="item in listEstimates | filter: filter">
 	                <div class="listItem">
