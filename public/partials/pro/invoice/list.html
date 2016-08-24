@@ -5,9 +5,9 @@
 
 <div>
 	<div class="container">
-		<section>
+
 			<a href="#/pro/invoice/add" class="addElemBtn">+ facture</a>
-		</section>
+
 		<ul class="listingTitle">     <!-- Liste des devis -->
 			<li>
 					<div class="listItem">
@@ -15,7 +15,7 @@
 							<span class="itemDatas focusItem">Numéro</span>
 							<span class="itemDatas focusItem">Client</span>
 							<span class="itemDatas focusItem">Date de facturation</span>
-							<span class="itemDatas focusItem">Payé</span>
+							<span class="itemDatas focusItem">Statut</span>
 							<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
 						</div>
 					</div>
@@ -39,14 +39,14 @@
 							{{item.createdAt | date:'dd-MM-yyyy'}}
 						</span>
 						<span class="itemDatas blocDate">
-							<span class="titleItem">Payé </span> 
-							<input ng-show="{{item.state}}" type="checkbox" value="{{item.state}}" checked disabled> 
-							<input ng-hide="{{item.state}}" type="checkbox" value="{{item.state}}" disabled>
+							<span class="titleItem">Statut </span> 
+							<span ng-show="{{item.state}}" class="hulk">Payé</span>
+							<span ng-hide="{{item.state}}" class="superman">En attente</span>
 						</span>
 						<!--<span class="itemDatas blocInvoiceNumber">{{item.state}}</span>-->
 					
 					</div>
-					<a href="documents/bills/{{item.clientId}}/{{item.link}}.pdf" class="moreInfos">
+					<a href="documents/bills/{{item.clientId}}/{{item.link}}.pdf" class="moreInfos" target="_blank">
 					Ouvrir le PDF
 					</a>
 				</div>

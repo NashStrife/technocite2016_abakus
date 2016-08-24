@@ -13,9 +13,10 @@
 			<h2>Coordonée</h2>			
 		</div></a>
 
+
 		<div class="coordonneeCont">
-			<img src="images/admin/profile/{{details.logo}}" alt="Logo Entreprise" width="90" height="90">
-			
+
+			<img src="images/admin/profile/{{details.logo}}" alt="Logo Entreprise" width="92" height="92" >			
 
 			<div class="info">
 				<h3>{{details.name}}</h3>
@@ -28,7 +29,7 @@
 						<span ng-if="details.contact.phoneSec">Telephone secondaire : {{details.contact.phoneSec}}<br></span>
 						<span ng-if="details.contact.fax">Fax : {{details.contact.fax}}<br></span>
 						Email : {{details.contact.mail}}<br>
-						Site web : {{details.contact.web}}<br>
+						Site web : {{details.contact.web}}<br>						
 					</p>				
 			</div>
 
@@ -54,25 +55,22 @@
 
 
 
-		<a href="#"><div class="coordonnee2">
+		<a href="#"><div class="contact">
 			<img src="images/edit.svg">
 			<h2>Personne de contact</h2>			
 		</div></a>
 
-		<div class="coordonneeCont1">			
-
-			<div class="info2">			
+		<div class="contactCont">					
 				
-					<p>
-					{{details.contactPerson.civility}} {{details.contactPerson.firstname}} {{details.contactPerson.lastname}}<br>
-					Email : {{details.contactPerson.mail}}<br>
+					<h3>
+					{{details.contactPerson.civility}} {{details.contactPerson.firstname}} {{details.contactPerson.lastname}}</h3><br>
+					<p>Email : {{details.contactPerson.mail}}<br>
 					Tél : {{details.contactPerson.phoneMain}}<br>
 					<span ng-if="details.contactPerson.phoneSec">Téléphone secondaire : {{details.contactPerson.phoneSec}}</span><br>
 					Fonction : {{details.contactPerson.post}}
-				
+					</p>				
 
-			</div>
-
+			
 			<!-- <div class="savecoordonnee1">
 				<p>sauvegarder</p>
 			</div> -->
@@ -84,30 +82,25 @@
 
 
 
-		<a href="#"><div class="coordonnee2">
+		<a href="#"><div class="payment">
 			<img src="images/edit.svg">
 			<h2>Informations de paiement</h2>			
 		</div></a>
 
-		<div class="coordonneeCont3">
+		<div class="paymentCont">
 
-			<div class="info2">			
-				<p>
-					IBAN/RIB
-				</p>
-			</div>
+			<ul>
+				<li>Compte principal</li>
+				<li>IBAN/RIB</li>
+				<li>BIC</li>				
+			</ul>				
+			
 
-			<div class="bic">
+			<div class="payment1">
 
-				<p>
-					BIC
-				</p>				
-					
-			</div>
-
-			<div class="payement1">
-
-				<p>compte paypal</p>			
+				<ul>
+					<li>Compte Paypal</li>					
+				</ul>			
 
 			</div>
 
@@ -129,30 +122,40 @@
 
 
 
-		<a href="#"><div class="coordonnee2">
+		<a href="#"><div class="article">
 			<img src="images/edit.svg">
 			<h2>Article</h2>			
 		</div></a>
 
-		<div class="coordonneeCont4">
+		<div class="articleCont">
 
-			<div class="article">			
-				<p>Montant P/U</p><p>Description</p><p>Article</p>
+			<div class="articletitle">			
+				<ul>
+					<li>Article</li>
+					<li>Description</li>
+					<li>Montant P/U</li>
+				</ul>
 			</div>
 
-			<div class="articletitle">
-				<p>Chaise en bois</p><br>
-				<p>Chaise en plastique</p>
+			<div class="article1">
+				<ul>
+					<li>Chaise en bois</li>
+					<li>Bies chaise en bois</li>
+					<li>10€</li>
+				</ul>				
 			</div>
-			<div class="articledesc">
-				<p>Bies chaise en bois</p><br>
-				<p>Bies chaise en plastoc</p>
-				
+
+			<div class="article2">
+				<ul>
+					<li>Chaise en plastic</li>
+					<li>Bies chaise en plastoc</li>
+					<li>7€</li>
+				</ul>				
 			</div>
-			<div class="articleprix">
-				<p>10€</p><br>
-				<p>7€</p>
-			</div>
+
+
+
+			
 
 			<!-- <div class="ajouter">				
 				<p>+</p><p>Ajouter</p>
@@ -169,56 +172,56 @@
 
 
 
-	<a href="#"><div class="coordonnee2">
+	<a href="#"><div class="template">
 		<img src="images/edit.svg">
 		<h2>Design</h2>			
 	</div></a>
 
-	<div class="coordonneeCont5">
+	<div class="templateCont">
 
 
-	<div class="facture">			
-		<h3>Template facture</h3>
-	</div>
+			<div class="fact">			
+				<h3>Template facture</h3>
+			</div>
 
-	<div class="designfacture">
-		<!-- <div class="f01"></div>
-		<div class="f02"></div> -->
-		<div class="f03"></div>
-		<!-- <div class="f05"></div>
-		<div class="f06"></div>
-		<div class="f04"></div>
-		<div class="f07"></div>
-		<div class="f08"></div>
-		<div class="f09"></div>
-		<div class="f10"></div>	 -->			
-	</div>		
-	
-
-
-	<div class="devis">
-		<h3>Template devis</h3>
-	</div>
-
-	<div class="designdevis">
-		<!-- <div class="f01"></div> -->
-		<div class="f02"></div>
-		<!-- <div class="f03"></div>
-		<div class="f04"></div>
-		<div class="f05"></div>
-		<div class="f06"></div>
-		<div class="f07"></div>
-		<div class="f08"></div>
-		<div class="f09"></div>
-		<div class="f10"></div>	 -->			
-	</div>				
-
-	<!-- <div class="savecoordonnee5">
-		<p>sauvegarder</p>
-	</div> -->
+			<div class="designfacture">
+				<!-- <div class="f01"></div>
+				<div class="f02"></div> -->
+				<div class="f03"></div>
+				<!-- <div class="f05"></div>
+				<div class="f06"></div>
+				<div class="f04"></div>
+				<div class="f07"></div>
+				<div class="f08"></div>
+				<div class="f09"></div>
+				<div class="f10"></div>	 -->			
+			</div>		
+			
 
 
-		</div>	
+			<div class="dev">
+				<h3>Template devis</h3>
+			</div>
+
+			<div class="designdevis">
+				<!-- <div class="f01"></div> -->
+				<div class="f02"></div>
+				<!-- <div class="f03"></div>
+				<div class="f04"></div>
+				<div class="f05"></div>
+				<div class="f06"></div>
+				<div class="f07"></div>
+				<div class="f08"></div>
+				<div class="f09"></div>
+				<div class="f10"></div>	 -->			
+			</div>				
+
+			<!-- <div class="savecoordonnee5">
+				<p>sauvegarder</p>
+			</div> -->
+
+
+	</div>	
 
 
 	</div>
