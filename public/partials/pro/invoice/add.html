@@ -46,12 +46,18 @@
 			<legend>Détail</legend>
 			<div id="facture_list">
 				<!-- list the articles added in the temp array -->
+				<div class="listing_achat">
 				<ul class="elements-types">
 					<li ng-repeat="item in articles track by $index">
-						<input type="" name="name" class="full" value="{{item.name}}" disabled> <input type="" name="description" class="full" value="{{item.description}}" disabled> <input type="" name="quantity" class="quart" value="{{item.quantity}}" disabled> <input type="" name="unitPrice" class="quart" value="{{item.unitPrice}}" disabled><input type="" name="amount" class="full" value="{{item.amount}}" disabled> 
-						<span ng-click="removeElement('article', $index)"> - </span>
+						<input type="" name="name" class="full" value="{{item.name}}" disabled> 
+						<input type="" name="description" class="full" value="{{item.description}}" disabled> 
+						<input type="" name="quantity" class="quart" id="quart1" value="{{item.quantity}}" disabled> 
+						<input type="" name="unitPrice" class="quart" id="quart2" value="{{item.unitPrice}}" disabled>
+						<input type="" name="amount" class="full" value="{{item.amount}}" id="amount" disabled><!--
+						--><span id="less" ng-click="removeElement('article', $index)"> - </span>
 					</li>
 				</ul>
+				</div>
 				<div class="facture" id="facture">
 					<div class="article">
 						<label for="article">Article</label>
@@ -123,10 +129,8 @@
 			<legend>Informations et règles de paiement</legend>
 			<div class="commitment">
 				<label for="financial commitment">Echéance</label><br/>
-				<select name="Echéance" id="financial commitment">
-				<option value="option 1">option 1</option>
-				<option value="option 2">option 2</option>
-				<option value="option 3">option 3</option>
+				<select name="Echéance" id="financial commitment" ng-model="newBill.rules" ng-options="rule for rule in paramFromDb.rules">
+	
 			</select>
 			</div>
 			<div class="payment half">
