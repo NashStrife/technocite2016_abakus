@@ -7,14 +7,6 @@
 
 	<h1 style="background-color:#d6eaf8;">Création de nouvelle facture</h1>
 	<form action="" class="addInvoice">
-		<!--<fieldset class="references">
-			<legend>Vos références</legend><br>
-			<label for="invoice-number">N° de facture</label><br/>
-			<input name="Numero de facture" id="invoice-number" placeholder="20136473-023"><br/>
-			<label for="invoice-date">Date de la facture</label><br/>
-			<input name="Date de la facture" id="invoice-date" placeholder="05-07-2016">
-			<button type="" class="next">Suivant</button>
-		</fieldset>-->
 		<fieldset class="ref_client">
 			<legend>Références client</legend>
 			<label for="client">Client</label><br/>
@@ -53,36 +45,42 @@
 		<fieldset>
 			<legend>Détail</legend>
 			<div id="facture_list">
+				<!-- list the articles added in the temp array -->
+				<ul class="elements-types">
+					<li ng-repeat="item in articles track by $index">
+						<input type="" name="name" class="full" value="{{item.name}}" disabled> <input type="" name="description" class="full" value="{{item.description}}" disabled> <input type="" name="quantity" class="quart" value="{{item.quantity}}" disabled> <input type="" name="unitPrice" class="quart" value="{{item.unitPrice}}" disabled><input type="" name="amount" class="full" value="{{item.amount}}" disabled> 
+						<span ng-click="removeElement('article', $index)"> - </span>
+					</li>
+				</ul>
 				<div class="facture" id="facture">
 					<div class="article">
 						<label for="article">Article</label>
-						<select name="Article" id="article" ng-model="newBill.article" ng-options="article as article.name for article in adminfromdb.articles">
-			</select>
+						<select name="Article" id="article" ng-model="newBill.article" ng-options="article as article.name for article in adminfromdb.articles"></select>
 					</div>
 					<div class="description">
 						<label for="description">Description</label>
-						<input name="Description" id="description" placeholder="" ng-model="newBill.description" ng-value="newBill.article.description">
+						<input name="Description" id="description" placeholder="" ng-model="newBill.description" ng-value="newBill.article.description" disabled>
 					</div>
 					<div class="small">
 						<label for="quantity">Qté</label>
-						<input type="number" name="Quantité" id="quantity" ng-model="newBill.article.quantity" ng-change="calcAmount()">
+						<input type="number" name="Quantité" id="quantity" ng-model="newBill.article.quantity" ng-change="calcAmount()" ng-value="newBill.article.quantity">
 					</div>
 					<div class="small">
 						<label for="p-u">P/U</label>
-						<input name="P/U" id="p-u" placeholder="" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice">
+						<input name="P/U" id="p-u" placeholder="" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice" disabled>
 					</div>
 					<div class="bill">
 						<label for="amount">Montant</label>
-						<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount">
+						<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount" disabled>
 					</div>
 				</div>
 			</div>
-			<button type="button" class="more_line" ng-click="addArticle($event)">+ Ajouter</button>
+			<button type="button" class="more_line" ng-click="addElement('article')">+ Ajouter</button>
 			<div class="total">
 
 				<div class="htva">
-					<label for="total xvat">Total hors Taxes</label>
-					<input name="Total hors Taxes" id="total xvat" placeholder="">
+					<label for="total xvat">Total hors taxes</label>
+					<input name="Total hors Taxes" id="total xvat" placeholder="" ng-model="newBill.totalXvat" ng-value="newBill.totalXvat" disabled>
 				</div>
 				<div class="rebate">
 					<label for="rebate">Ristourne</label>
@@ -94,71 +92,60 @@
 			</select>
 				</div>
 				<div class="subtotal">
-					<label for="sous-total">Sous-Total hors taxes</label>
-					<input name="Sous-Total hors taxes" id="sous-total" placeholder="">
+					<label for="sous-total">Sous-total hors taxes</label>
+					<input name="Sous-Total hors taxes" id="sous-total" ng-model="newBill.underTotalXvat" ng-value="newBill.underTotalXvat" disabled >
 
 				</div>
 				<div class="tva">
 					<label for="tva-21">TVA 21%</label>
-					<input name="TVA 21%" id="tva-21" placeholder="">
+					<input name="TVA 21%" id="tva-21" ng-model="newBill.tva" ng-value="newBill.tva" disabled>
 				</div>
 
 				<div class="ttc">
 
 					<label for="total-ttc">Total TTC</label>
-					<input name="Total TTC" id="total-ttc" placeholder="">
+					<input name="Total TTC" id="total-ttc" ng-model="newBill.totalTtc" ng-value="newBill.totalTtc" disabled>
 				</div>
 				<div class="deposit">
-					<label for="deposit">Acompte</label>
-					<input name="Acompte" id="deposit" placeholder="">
+					<label for="deposit">Accompte</label>
+					<input name="Acompte" id="deposit" ng-model="newBill.deposit" ng-value="newBill.deposit" ng-change="calcAmount()">
 				</div>
 
 
 				<div class="sum">
 					<label for="sum">A payer</label>
-					<input name="A payer" id="sum" placeholder="">
+					<input name="A payer" id="sum" ng-model="newBill.sum" ng-value="newBill.sum" disabled>
 				</div>
 
 				<button type="" class="next">Suivant</button>
 		</fieldset>
-		<fieldset>
+		<fieldset id="commitment">
 			<legend>Informations et règles de paiement</legend>
-			<label for="financial commitment">Echéance</label><br/>
-			<select name="Echéance" id="financial commitment">
+			<div class="commitment">
+				<label for="financial commitment">Echéance</label><br/>
+				<select name="Echéance" id="financial commitment">
 				<option value="option 1">option 1</option>
 				<option value="option 2">option 2</option>
 				<option value="option 3">option 3</option>
-			</select><br/>
-			<label for="primary-payment-method">Mode de paiement principal</label><br/>
-			<select name="Mode de paiement principal" id="primary-payment-method">
-				<option value="option 1">option 1</option>
-				<option value="option 2">option 2</option>
-				<option value="option 3">option 3</option>
-			</select><br/>
-			<label for="secondary-payment-method">Mode de paiement secondaire</label><br/>
-			<select name="Mode de paiement secondaire" id="secondary-payment-method">
-				<option value="option 1">option 1</option>
-				<option value="option 2">option 2</option>
-				<option value="option 3">option 3</option>
-			</select><br/>
+			</select>
+			</div>
+			<div class="payment half">
+				<label for="primary-payment-method">Mode de paiement principal</label><br/>
+				<select name="Mode de paiement principal" id="primary-payment-method" ng-model="newBill.primAccount" ng-options="account as account.name for account in listAccounts">
+			</select>
+			<p ng-hide="newBill.primAccount.isPaypal">{{newBill.primAccount.bic}}<br>{{newBill.primAccount.iban}}</p>
+			<p ng-show="newBill.primAccount.isPaypal">{{newBill.primAccount.mail}}</p>
+			</div>
+			<div class="payment half" id="payement2">
+				<label for="secondary-payment-method">Mode de paiement secondaire</label><br/>
+				<select name="Mode de paiement secondaire" id="secondary-payment-method" ng-model="newBill.secAccount" ng-options="account as account.name for account in listAccounts">
+			</select>
+			<p ng-hide="newBill.secAccount.isPaypal">{{newBill.secAccount.bic}}<br>{{newBill.secAccount.iban}}</p>
+			<p ng-show="newBill.secAccount.isPaypal">{{newBill.secAccount.mail}}</p>
+			</div>
+
 			<button type="" class="next">Suivant</button>
 		</fieldset>
 		<input type="submit" value="Valider"></input>
-		<!-- 		<label for="civil">Civilité</label><br/>
-			<select name="Civilité" id="civil">
-				<option value="Monsieur">Monsieur</option>
-				<option value="Madame">Madame</option>
-				<option value="Mademoiselle">Mademoiselle</option>
-			</select><br/>
-			<label for="name">Nom</label><br/>
-			<input type="text" id="name"><br/>
-			<label for="firstName">Prénom</label><br/>
-			<input type="text" id="firstName"><br/>
-			<label for="phone">Téléphone</label><br/>
-			<input type="text" id="phone"><br/>
-			<label for="email">Email</label><br/>
-			<input type="text" id="email"><br/>
-			<label for="phone2">Téléphone secondaire</label><br/>
-			<input type="text" id="phone2"><br/> -->
 	</form>
 	</div>

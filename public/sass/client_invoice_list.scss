@@ -71,6 +71,7 @@ $listElementPadding:15px 5px 15px 10px;
 
 @media screen and (min-width: 480px) {
 	.addElemBtn {
+		margin-top: 15px;
 		display: inline-block;
 		background-color: $focusColor;
 		text-transform: uppercase;
@@ -119,6 +120,7 @@ $listElementPadding:15px 5px 15px 10px;
 				display: block;
 				background-color: $mainBackgroundColor;
 			}
+			
 		}
 		.listNote {
 			height: 50%;
@@ -166,7 +168,8 @@ $listElementPadding:15px 5px 15px 10px;
 		display: inline-block;
 		margin-right: 0px;
 		text-align: center;
-
+		right: -100px;
+		top: 0px;
 
 		text-decoration: none;
 		transition: 0.5s;

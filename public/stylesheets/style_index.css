@@ -361,8 +361,11 @@ button img {
   }
   /* line 422, ../sass/style_index.scss */
   .container .listing {
-    padding-top: 190px;
     padding-bottom: 190px;
+  }
+  /* line 425, ../sass/style_index.scss */
+  .container .listingTitle {
+    padding-top: 180px;
   }
   /* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
   .container:after {
@@ -370,7 +373,7 @@ button img {
     display: block;
     clear: both;
   }
-  /* line 428, ../sass/style_index.scss */
+  /* line 430, ../sass/style_index.scss */
   .container > div {
     width: 48.27586%;
     float: left;
@@ -378,45 +381,45 @@ button img {
     margin-left: 0;
     height: 200px;
   }
-  /* line 435, ../sass/style_index.scss */
+  /* line 437, ../sass/style_index.scss */
   .container > div img {
     margin-bottom: 20px;
     margin-top: 0px;
   }
-  /* line 440, ../sass/style_index.scss */
+  /* line 442, ../sass/style_index.scss */
   .container > div.client .active {
     background-color: #e5af28 !important;
     visibility: visible;
   }
-  /* line 444, ../sass/style_index.scss */
+  /* line 446, ../sass/style_index.scss */
   .container > div.client .inactive {
     background-color: #e3e4e6;
   }
-  /* line 449, ../sass/style_index.scss */
+  /* line 451, ../sass/style_index.scss */
   .container > div.pro {
     float: right;
     margin-right: 0;
     color: #2a4158;
   }
-  /* line 452, ../sass/style_index.scss */
+  /* line 454, ../sass/style_index.scss */
   .container > div.pro .active {
     background-color: #e5af28;
     visibility: visible;
   }
-  /* line 456, ../sass/style_index.scss */
+  /* line 458, ../sass/style_index.scss */
   .container > div.pro .inactive {
     background-color: #e3e4e6;
   }
-  /* line 461, ../sass/style_index.scss */
+  /* line 463, ../sass/style_index.scss */
   .container > div > p {
     display: unset;
   }
-  /* line 465, ../sass/style_index.scss */
+  /* line 467, ../sass/style_index.scss */
   .container a {
     text-decoration: none;
     color: #2a4158;
   }
-  /* line 469, ../sass/style_index.scss */
+  /* line 471, ../sass/style_index.scss */
   .container h2 {
     margin-top: 0px;
     font-size: 24px;
