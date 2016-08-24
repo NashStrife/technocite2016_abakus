@@ -11,9 +11,10 @@
 <div>
 
 	<div class="container">
-	<section>
+	<!-- <section>
 		<a ng-click="splash(true)"  id="moreClient">+ client</a>
-	</section>
+	</section> -->
+	<a ng-click="splash(true)" class="addElemBtn">+ client</a>
 		<ul class="listingTitle">   <!-- Liste des clients -->
 		            <li ng-repeat="item in listClients | filter: filter">
 		                <div class="listItem">
@@ -22,16 +23,18 @@
 		                        <div class="itemDatas blocCompany">{{item.contactPerson.mail}}</div>
 		                        <div ng-show="item.isCompany" class="itemDatas blocInvoiceNumber">Société</div>
 								<div ng-hide="item.isCompany" class="itemDatas blocInvoiceNumber">Particulier</div>
+								<div class="itemDatas blocDate">{{item.createdAt | date:'dd-MM-yyyy'}}</div>
 		                    </div>
 		                    <!-- <div class="listNote">
 		                    <p>{{item.memo}}</p>
 		                    </div> -->
 		                    <!-- <button class="reveal">v</button> -->
-		                </div>
-
+		                    
 		                <a href="#/pro/clients/detail/{{listClients.indexOf(item)}}" class="moreInfos">
 		                    Plus d'infos
 		                </a>
+		                </div>
+
 		            </li>
 		</ul> <!-- Fin de liste des clients -->
 	</div>

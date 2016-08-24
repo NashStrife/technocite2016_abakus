@@ -3,7 +3,7 @@ var abakusControllers = angular.module('addBillsControllers', []);
 
 
 // add the "Rest" service inside the diferent Ctrl
-abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', function($scope, Client, Admin) {
+abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param', function($scope, Client, Admin, Param) {
 
 	// function to clean all informations when needed
 	function voidArrays() {
@@ -45,6 +45,10 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', functi
 					$scope.listEstimates.push(estimate);
 				});
 			});
+			Param.getList(function(result){
+				console.log(result[0]);
+				$scope.paramFromDb = result[0];
+			});
 			console.log("Clients :");
 			console.log($scope.listClients);
 			console.log("Factures :");
@@ -60,13 +64,10 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', functi
 				// console.log(item.bills);
 				// store list of bills for easy use inside html
 				result[0].paymentInfo.bank.map(function(bank) {
-					bank.isPaypal = false;
-					
 					$scope.listAccounts.push(bank);
 					console.log($scope.listAccounts);
 				});
 				result[0].paymentInfo.paypal.map(function(bank) {
-				bank.isPaypal = true;
 					
 					$scope.listAccounts.push(bank);
 				});

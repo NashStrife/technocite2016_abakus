@@ -10,8 +10,9 @@ const saltRounds = 10;
 logger.log('--- SEED : Seeding the Database');
 
 let companies = [{
+        "_id" : "57bdaa671a4baba8264473bc",
         "name" : "Ma société",
-        "logo" : "logo.png",
+        "logo" : "logo",
         "vat" : {
             "num" : "BE 0214.563.254",
             "siren" : "",
@@ -84,6 +85,7 @@ let companies = [{
 
 let customers = [
     {
+        "_id": "57bd92938ccf68f02aa3a543",
         "name" : "Sébastien Jacques",
         "picture" : "",
         "isCompany" : false, 
@@ -153,6 +155,7 @@ let customers = [
         "memo" : "Le premier client",
         "createdAt" : Date.now()
     },{
+        "_id": "57bd92938ccf68f02aa3a547",
         "name" : "Blizzard",
         "picture" : "",
         "isCompany" : true, 

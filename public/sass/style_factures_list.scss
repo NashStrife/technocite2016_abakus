@@ -3,11 +3,76 @@
 @import "variables";
 
 nav {
-    display: none;
+    display: block;
+    background-color: $mainBackgroundColor;
+    position: fixed;
+    z-index: 5;
+    width: 50px;
+    height: 100%;
+
+    ul {
+        margin-top: 50px;
+
+        li {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            padding: 0px;
+            // &:hover {
+            //         background-color: aliceblue;
+            //     }
+            
+            // &:nth-child(2) {
+            //     padding-top: 25px;
+            // }          
+            a {
+                background-color: yellow;
+                display: inline-block;
+                width: 60%;
+                height: 60%;
+                
+                span {
+                    display: none;
+                }
+                &#factures{
+                    background: url(../images/facture.svg) no-repeat;
+                    
+                    // width: 32px;
+                    // height: 32px;
+                    @include navButton();
+                }
+                &#devis{
+                    background: url(../images/devis.svg) no-repeat;
+                    
+                    // width: 32px;
+                    // height: 32px;
+                    @include navButton();       
+                }
+                &#myClients{
+                    background: url(../images/client_icon.svg) no-repeat;
+                    
+                    // width: 32px;
+                    // height: 32px;
+                    @include navButton();
+                }
+                &#setting{
+                    background: url(../images/setting.svg) no-repeat;
+
+                    // width: 32px;
+                    // height: 32px;
+                    @include navButton();        
+                }
+
+            }
+            
+        }
+
+    }
+
 }
 
 .search{
-    padding: 60px 10px 20px;
+    padding: 60px 10px 0px;
     // background: $mainBackgroundColor;
     // background: $focusColor;
     margin: 0 auto;
@@ -32,8 +97,9 @@ nav {
     }
     input{
         border: none;
-        @include span(8 of 12);
+        @include span(6.5 of 12);
         padding: 15px;
+        margin-left: 50px;
 
     }
     .labelArrow {position:relative;
@@ -103,11 +169,28 @@ nav {
             padding-top: 25px;
             background: $focusColor;
         }
+        ul {
+            margin-top: 0px;
+            li {
+                width: 100%;
+                height: 100%;
+                padding: 15px 0;
+                a {
+                    display: inline-block;
+                    &:hover {
+                        background-color: red;
+                    }
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
         a {
             display: block;
             height: 50px;
-            margin-left: 15px;
-            padding-left: 40px;
+            // margin-left: 15px;
+            padding-left: 65px;
             padding-top:15px;
             text-align: left;
             text-decoration: none;
@@ -126,24 +209,32 @@ nav {
         }
         #factures{
             background: url(../images/facture.svg) no-repeat;
+            margin-left: 15px;
+            float: left;
             width: 50px;
             height: 50px;
             @include navButton();
         }
         #devis{
             background: url(../images/devis.svg) no-repeat;
+            margin-left: 15px;
+            float: left;
             width: 50px;
             height: 50px;
             @include navButton();       
         }
         #myClients{
             background: url(../images/client_icon.svg) no-repeat;
-            width: 50px;
-            height: 50px;
+            margin-left: 15px;
+            float: left;
+            width: 40px;
+            height: 40px;
             @include navButton();
         }
         #setting{
             background: url(../images/setting.svg) no-repeat;
+            margin-left: 15px;
+            float: left;
             width: 50px;
             height: 50px;
             @include navButton();  
@@ -158,7 +249,7 @@ nav {
         // background-color: red;
         position: fixed;
         font-size: 12px;
-        top: 110px;
+        top: 100px;
         text-align: right;
         // margin-left: span(4 of 24 wider);
         // img{
