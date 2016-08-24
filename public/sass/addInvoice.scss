@@ -15,6 +15,7 @@ html {
     margin-top: 180px;
     background: $mainBackgroundColor;
     text-transform: capitalize;
+    margin-bottom: 90px;
 }
 
 fieldset {
@@ -151,4 +152,25 @@ fieldset {
     background: $primaryColor;
     color: white;
     text-transform: uppercase;
+}
+.commitment{
+    @include span(12);
+    margin-bottom: 70px;
+    label{
+        display: block;
+        float: left;
+    }
+    select{
+        width: 100%;
+    }
+}
+.payment{
+    @include span(6);
+    label{
+    display: block;
+
+    }
+    select{
+        width: 100%;
+    }
 }

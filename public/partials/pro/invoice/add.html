@@ -121,26 +121,33 @@
 
 				<button type="" class="next">Suivant</button>
 		</fieldset>
-		<fieldset>
+		<fieldset id="commitment">
 			<legend>Informations et règles de paiement</legend>
-			<label for="financial commitment">Echéance</label><br/>
-			<select name="Echéance" id="financial commitment">
+			<div class="commitment">
+				<label for="financial commitment">Echéance</label><br/>
+				<select name="Echéance" id="financial commitment">
 				<option value="option 1">option 1</option>
 				<option value="option 2">option 2</option>
 				<option value="option 3">option 3</option>
-			</select><br/>
+			</select>
+			</div>
+			<div class="payment">
 			<label for="primary-payment-method">Mode de paiement principal</label><br/>
 			<select name="Mode de paiement principal" id="primary-payment-method">
 				<option value="option 1">option 1</option>
 				<option value="option 2">option 2</option>
 				<option value="option 3">option 3</option>
-			</select><br/>
+			</select>
+			</div>
+			<div class="payment">
 			<label for="secondary-payment-method">Mode de paiement secondaire</label><br/>
 			<select name="Mode de paiement secondaire" id="secondary-payment-method">
 				<option value="option 1">option 1</option>
 				<option value="option 2">option 2</option>
 				<option value="option 3">option 3</option>
-			</select><br/>
+			</select>
+			</div>
+			
 			<button type="" class="next">Suivant</button>
 		</fieldset>
 		<input type="submit" value="Valider"></input>
