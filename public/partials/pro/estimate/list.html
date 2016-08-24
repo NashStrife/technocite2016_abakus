@@ -15,7 +15,7 @@
 						<span class="itemDatas focusItem">Numéro</span>
 						<span class="itemDatas focusItem">Client</span>
 						<span class="itemDatas focusItem">Date de création</span>
-						<span class="itemDatas focusItem">Validé</span>
+						<span class="itemDatas focusItem">Statut</span>
 						<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
 					</div>
 				</div>
@@ -38,9 +38,9 @@
 							{{item.createdAt | date:'dd-MM-yyyy'}}
 						</span>
 						<span class="itemDatas blocDate">
-							<span class="titleItem">Validé </span> 
-							<input ng-show="{{item.state}}" type="checkbox" value="{{item.state}}" checked disabled> 
-							<input ng-hide="{{item.state}}" type="checkbox" value="{{item.state}}" disabled>
+							<span class="titleItem">Statut </span> 
+							<span ng-show="{{item.state}}" class="hulk">Validé</span>
+							<span ng-hide="{{item.state}}" class="superman">Non validé</span>
 						</span>
 						<!--<span class="itemDatas blocInvoiceNumber">{{item.state}}</span>-->
 					</div>
