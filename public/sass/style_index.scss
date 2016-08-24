@@ -420,8 +420,10 @@ button {
     }
     .container {
         .listing {
-            padding-top:190px;
             padding-bottom:190px;
+        }
+        .listingTitle {
+            padding-top: 180px;
         }
         @include container(940px);
 
