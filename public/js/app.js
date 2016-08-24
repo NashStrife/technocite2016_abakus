@@ -191,7 +191,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/profile/edit-profile', {
 		title:"mon compte",
 		templateUrl : 'partials/pro/profile/editProfile.html',
-		controller : ''
+		controller : 'ProAccountCtrl'
 	}).
 	when('/pro/profile/edit-template', {
 		title:"mon compte",
