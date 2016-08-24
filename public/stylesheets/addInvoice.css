@@ -270,25 +270,61 @@ fieldset legend {
 }
 
 /* line 185, ../sass/addInvoice.scss */
+.listing_achat {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 187, ../sass/addInvoice.scss */
+.listing_achat #less {
+  width: 4.23729%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+}
+/* line 192, ../sass/addInvoice.scss */
+.listing_achat #amount {
+  margin-right: 0;
+}
+
+/* line 196, ../sass/addInvoice.scss */
 .full {
   width: 19.49153%;
   float: left;
   margin-right: 1.69492%;
+  margin-right: 20px;
+  width: 118px;
+}
+/* line 200, ../sass/addInvoice.scss */
+.full:first-child {
+  margin-left: 10px;
+  margin-right: 30px;
+}
+/* line 205, ../sass/addInvoice.scss */
+.full:nth-child(2) {
+  margin-left: 23px;
 }
 
-/* line 188, ../sass/addInvoice.scss */
+/* line 211, ../sass/addInvoice.scss */
 .quart {
   width: 6.77966%;
   float: left;
   margin-right: 1.69492%;
 }
 
-/* line 191, ../sass/addInvoice.scss */
+/* line 214, ../sass/addInvoice.scss */
+#quart1 {
+  margin-left: 28px;
+}
+
+/* line 217, ../sass/addInvoice.scss */
 .hulk {
   color: #90ec90;
 }
 
-/* line 194, ../sass/addInvoice.scss */
+/* line 220, ../sass/addInvoice.scss */
 .superman {
   color: #ed8e8e;
 }
