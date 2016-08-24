@@ -13,7 +13,7 @@
 						<span class="itemDatas focusItem">Numéro</span>
 						<span class="itemDatas focusItem">Client</span>
 						<span class="itemDatas focusItem">Date de création</span>
-						<span class="itemDatas focusItem">Etat</span>
+						<span class="itemDatas focusItem">Statut</span>
 						<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
 					</div>
 				</div>
@@ -23,10 +23,23 @@
 			<li ng-repeat="item in listEstimates | filter: filter | orderBy : order:direction">
 				<div class="listItem">
 					<div class="blocItem">
-						<span class="itemDatas blocNumber"><span class="titleItem">Numéro </span>{{item.link}}</span>
-						<span class="itemDatas blocName"><span class="titleItem">Client </span>{{item.clientName}}</span>
-						<span class="itemDatas blocDate"><span class="titleItem">Date </span>{{item.createdAt | date:'dd-MM-yyyy'}}</span>
-						<span class="itemDatas blocDate"><span class="titleItem">Particulier </span> {{item.state}}</span>
+						<span class="itemDatas blocNumber">
+							<span class="titleItem">Numéro </span>
+							{{item.link}}
+						</span>
+						<span class="itemDatas blocName">
+							<span class="titleItem">Client </span>
+							{{item.clientName}}
+						</span>
+						<span class="itemDatas blocDate">
+							<span class="titleItem">Date </span>
+							{{item.createdAt | date:'dd-MM-yyyy'}}
+						</span>
+						<span class="itemDatas blocDate">
+							<span class="titleItem">Statut </span> 
+							<span ng-show="{{item.state}}" class="hulk">Validé</span>
+							<span ng-hide="{{item.state}}" class="superman">Non validé</span>
+						</span>
 						<!--<span class="itemDatas blocInvoiceNumber">{{item.state}}</span>-->
 					</div>
 					<!-- <div class="listNote">

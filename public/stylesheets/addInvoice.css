@@ -24,40 +24,44 @@ html {
   margin-left: 198px;
   margin-top: 180px;
   background: #95a0ac;
-  text-transform: capitalize;
   margin-bottom: 90px;
 }
+/* line 18, ../sass/addInvoice.scss */
+.addInvoice :first-letter {
+  text-transform: uppercase;
+}
 
-/* line 21, ../sass/addInvoice.scss */
+/* line 23, ../sass/addInvoice.scss */
 fieldset {
   border: 1px solid #2a4158;
   width: 100%;
   padding: 0 10%;
+  margin-bottom: 20px;
 }
-/* line 25, ../sass/addInvoice.scss */
+/* line 28, ../sass/addInvoice.scss */
 fieldset legend {
   margin-bottom: 20px;
 }
 
-/* line 31, ../sass/addInvoice.scss */
+/* line 34, ../sass/addInvoice.scss */
 .references input {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
   background: green;
 }
-/* line 34, ../sass/addInvoice.scss */
+/* line 37, ../sass/addInvoice.scss */
 .references input:last-child {
   float: right;
   margin-right: 0;
 }
 
-/* line 41, ../sass/addInvoice.scss */
+/* line 44, ../sass/addInvoice.scss */
 .ref_client #client {
   margin: auto;
 }
 
-/* line 46, ../sass/addInvoice.scss */
+/* line 49, ../sass/addInvoice.scss */
 .cent {
   width: 100%;
   float: left;
@@ -65,7 +69,7 @@ fieldset legend {
   margin-right: 0;
 }
 
-/* line 50, ../sass/addInvoice.scss */
+/* line 53, ../sass/addInvoice.scss */
 .half {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -74,30 +78,33 @@ fieldset legend {
   float: left;
   margin-right: 1.69492%;
 }
-/* line 55, ../sass/addInvoice.scss */
+/* line 58, ../sass/addInvoice.scss */
 .half:nth-child(2) {
   float: right;
   margin-right: 0;
 }
-/* line 58, ../sass/addInvoice.scss */
+/* line 61, ../sass/addInvoice.scss */
 .half select {
   width: 100%;
   display: block;
 }
-/* line 62, ../sass/addInvoice.scss */
+/* line 65, ../sass/addInvoice.scss */
 .half input {
   width: 100%;
   display: block;
 }
 
-/* line 68, ../sass/addInvoice.scss */
+/* line 71, ../sass/addInvoice.scss */
 .last {
   float: right;
   margin-right: 0;
 }
 
-/* line 72, ../sass/addInvoice.scss */
+/* line 75, ../sass/addInvoice.scss */
 .next {
+  margin-top: 20px;
+  margin-left: 15px;
+  display: none;
   width: 90px;
   float: right;
   background: #2a4158;
@@ -105,74 +112,75 @@ fieldset legend {
   text-transform: uppercase;
 }
 
-/* line 81, ../sass/addInvoice.scss */
+/* line 85, ../sass/addInvoice.scss */
 #po {
   text-transform: capitalize;
 }
 
-/* line 85, ../sass/addInvoice.scss */
+/* line 89, ../sass/addInvoice.scss */
 .facture {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
+  text-transform: capitalize;
 }
-/* line 87, ../sass/addInvoice.scss */
+/* line 92, ../sass/addInvoice.scss */
 .facture .article {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 89, ../sass/addInvoice.scss */
+/* line 94, ../sass/addInvoice.scss */
 .facture .article label {
   display: block;
 }
-/* line 93, ../sass/addInvoice.scss */
+/* line 98, ../sass/addInvoice.scss */
 .facture .description {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 95, ../sass/addInvoice.scss */
+/* line 100, ../sass/addInvoice.scss */
 .facture .description label {
   display: block;
 }
-/* line 98, ../sass/addInvoice.scss */
+/* line 103, ../sass/addInvoice.scss */
 .facture .description input {
   width: 120px;
 }
-/* line 102, ../sass/addInvoice.scss */
+/* line 107, ../sass/addInvoice.scss */
 .facture .small {
   width: 6.77966%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 104, ../sass/addInvoice.scss */
+/* line 109, ../sass/addInvoice.scss */
 .facture .small label {
   display: block;
 }
-/* line 107, ../sass/addInvoice.scss */
+/* line 112, ../sass/addInvoice.scss */
 .facture .small input {
   width: 40px;
 }
-/* line 111, ../sass/addInvoice.scss */
+/* line 116, ../sass/addInvoice.scss */
 .facture .bill {
   width: 15.25424%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 113, ../sass/addInvoice.scss */
+/* line 118, ../sass/addInvoice.scss */
 .facture .bill label {
   display: block;
 }
 
-/* line 119, ../sass/addInvoice.scss */
+/* line 124, ../sass/addInvoice.scss */
 .total {
   margin-top: 35px;
   float: right;
   display: block;
 }
-/* line 123, ../sass/addInvoice.scss */
+/* line 128, ../sass/addInvoice.scss */
 .total > div {
   *zoom: 1;
   display: block;
@@ -185,33 +193,33 @@ fieldset legend {
   display: table;
   clear: both;
 }
-/* line 128, ../sass/addInvoice.scss */
+/* line 133, ../sass/addInvoice.scss */
 .total > div label {
   width: 57.62712%;
   float: left;
   margin-right: 1.69492%;
   display: inline-block;
 }
-/* line 132, ../sass/addInvoice.scss */
+/* line 137, ../sass/addInvoice.scss */
 .total > div input {
   width: 40.67797%;
   float: right;
   margin-right: 0;
 }
-/* line 136, ../sass/addInvoice.scss */
+/* line 141, ../sass/addInvoice.scss */
 .total > div.rebate input {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 139, ../sass/addInvoice.scss */
+/* line 144, ../sass/addInvoice.scss */
 .total > div.rebate select {
   width: 15.25424%;
   float: right;
   margin-right: 0;
 }
 
-/* line 146, ../sass/addInvoice.scss */
+/* line 151, ../sass/addInvoice.scss */
 .more_line {
   float: left;
   margin-bottom: 20px;
@@ -221,7 +229,7 @@ fieldset legend {
   text-transform: uppercase;
 }
 
-/* line 156, ../sass/addInvoice.scss */
+/* line 161, ../sass/addInvoice.scss */
 .commitment {
   width: 100%;
   float: left;
@@ -229,27 +237,56 @@ fieldset legend {
   margin-right: 0;
   margin-bottom: 70px;
 }
-/* line 159, ../sass/addInvoice.scss */
+/* line 164, ../sass/addInvoice.scss */
 .commitment label {
   display: block;
   float: left;
 }
-/* line 163, ../sass/addInvoice.scss */
+/* line 168, ../sass/addInvoice.scss */
 .commitment select {
   width: 100%;
 }
 
-/* line 167, ../sass/addInvoice.scss */
+/* line 173, ../sass/addInvoice.scss */
 .payment {
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 169, ../sass/addInvoice.scss */
+/* line 175, ../sass/addInvoice.scss */
+.payment#payement2 {
+  float: right;
+  margin-right: 0;
+}
+/* line 178, ../sass/addInvoice.scss */
 .payment label {
   display: block;
 }
-/* line 173, ../sass/addInvoice.scss */
+/* line 181, ../sass/addInvoice.scss */
 .payment select {
   width: 100%;
+}
+
+/* line 185, ../sass/addInvoice.scss */
+.full {
+  width: 19.49153%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+/* line 188, ../sass/addInvoice.scss */
+.quart {
+  width: 6.77966%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+/* line 191, ../sass/addInvoice.scss */
+.hulk {
+  color: #90ec90;
+}
+
+/* line 194, ../sass/addInvoice.scss */
+.superman {
+  color: #ed8e8e;
 }
