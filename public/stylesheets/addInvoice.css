@@ -11,7 +11,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .contener:after {
   content: " ";
   display: block;
@@ -98,8 +98,6 @@ fieldset legend {
 
 /* line 72, ../sass/addInvoice.scss */
 .next {
-  margin-top: 20px;
-  margin-left: 15px;
   width: 90px;
   float: right;
   background: #2a4158;
@@ -181,7 +179,7 @@ fieldset legend {
   margin-bottom: 15px;
   text-align: right;
 }
-/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .total > div:after {
   content: "";
   display: table;
@@ -215,8 +213,6 @@ fieldset legend {
 
 /* line 146, ../sass/addInvoice.scss */
 .more_line {
-  margin-top: 20px;
-  margin-left: 15px;
   float: left;
   margin-bottom: 20px;
   width: 90px;
