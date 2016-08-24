@@ -23,6 +23,7 @@
 		                        <div class="itemDatas blocCompany">{{item.contactPerson.mail}}</div>
 		                        <div ng-show="item.isCompany" class="itemDatas blocInvoiceNumber">Société</div>
 								<div ng-hide="item.isCompany" class="itemDatas blocInvoiceNumber">Particulier</div>
+								<div class="itemDatas blocDate">{{item.createdAt | date:'dd-MM-yyyy'}}</div>
 		                    </div>
 		                    <!-- <div class="listNote">
 		                    <p>{{item.memo}}</p>
