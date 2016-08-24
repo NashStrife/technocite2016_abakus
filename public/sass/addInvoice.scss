@@ -14,14 +14,17 @@ html {
     margin-left: 198px;
     margin-top: 180px;
     background: $mainBackgroundColor;
-    text-transform: capitalize;
     margin-bottom: 90px;
+    :first-letter {
+        text-transform: uppercase;
+    }
 }
 
 fieldset {
     border: 1px solid $primaryColor;
     width: 100%;
     padding: 0 10%;
+    margin-bottom: 20px;
     legend {
         margin-bottom: 20px;
     }
@@ -71,6 +74,7 @@ fieldset {
 
 .next {
     @include navButton;
+    display: none;
     width: 90px;
     float: right;
     background: $primaryColor;
@@ -84,6 +88,7 @@ fieldset {
 
 .facture {
     @include span(12 of 12);
+    text-transform: capitalize;
     .article {
         @include span(3 of 12);
         label {
@@ -125,26 +130,25 @@ fieldset {
         display: block;
         margin-bottom: 15px;
         text-align: right;
-        label{
+        label {
             @include span(7);
             display: inline-block;
         }
-        input{
+        input {
             @include span(5 last);
         }
-        &.rebate{
-            input{
-            @include span(3);
-        }
-        select{
-            @include span(2 last);
-        }
+        &.rebate {
+            input {
+                @include span(3);
+            }
+            select {
+                @include span(2 last);
+            }
         }
     }
-    
 }
-.more_line{
 
+.more_line {
     @include navButton;
     float: left;
     margin-bottom: 20px;
@@ -153,24 +157,28 @@ fieldset {
     color: white;
     text-transform: uppercase;
 }
-.commitment{
+
+.commitment {
     @include span(12);
     margin-bottom: 70px;
-    label{
+    label {
         display: block;
         float: left;
     }
-    select{
+    select {
         width: 100%;
     }
 }
-.payment{
-    @include span(6);
-    label{
-    display: block;
 
+.payment {
+    @include span(6);
+    &#payement2 {
+        @include last;
     }
-    select{
+    label {
+        display: block;
+    }
+    select {
         width: 100%;
     }
 }
