@@ -6,17 +6,27 @@
 
 <div class="warpper">
 
+	<section>
+		<a href="#/pro/profile/edit-profile">
+			<div class="coordonnee">
+				<img src="images/edit.svg">
+				Editer		
+			</div>
+		</a>
+	</section>
+		
 	<div class="contener">
 
-		<a href="#"><div class="coordonnee">
-			<img src="images/edit.svg">
+
+
+		<div class="coordonnee">
 			<h2>Coordonée</h2>			
-		</div></a>
+		</div>
 
 
 		<div class="coordonneeCont">
 
-			<img src="images/admin/profile/{{details.logo}}" alt="Logo Entreprise" width="92" height="92" >			
+			<img src="images/admin/profile/{{details._id}}.jpg" alt="Logo Entreprise" width="92" height="92" >			
 
 			<div class="info">
 				<h3>{{details.name}}</h3>
@@ -55,10 +65,9 @@
 
 
 
-		<a href="#"><div class="contact">
-			<img src="images/edit.svg">
+		<div class="contact">
 			<h2>Personne de contact</h2>			
-		</div></a>
+		</div>
 
 		<div class="contactCont">					
 				
@@ -82,27 +91,21 @@
 
 
 
-		<a href="#"><div class="payment">
-			<img src="images/edit.svg">
+		<div class="payment">
 			<h2>Informations de paiement</h2>			
-		</div></a>
+		</div>
 
 		<div class="paymentCont">
-
 			<ul>
-				<li>Compte principal</li>
-				<li>IBAN/RIB</li>
-				<li>BIC</li>				
-			</ul>				
-			
-
-			<div class="payment1">
-
-				<ul>
-					<li>Compte Paypal</li>					
-				</ul>			
-
-			</div>
+				<li ng-repeat="account in listAccounts">
+					<ul>
+						<li>Nom : {{account.name}}</li>
+						<li ng-if="account.iban">IBAN/RIB : {{account.iban}}</li>
+						<li ng-if="account.bic">BIC : {{account.bic}}</li>
+						<li ng-if="account.mail">Email : {{account.mail}}</li>
+					</ul>	
+				</li>
+			</ul>		
 
 			<!-- <div class="ajouter">				
 				<p>+</p><p>Ajouter</p>
@@ -122,10 +125,9 @@
 
 
 
-		<a href="#"><div class="article">
-			<img src="images/edit.svg">
+		<div class="article">
 			<h2>Article</h2>			
-		</div></a>
+		</div>
 
 		<div class="articleCont">
 
@@ -137,21 +139,21 @@
 				</ul>
 			</div>
 
-			<div class="article1">
+			<div class="article1" ng-repeat="article in details.articles">
 				<ul>
-					<li>Chaise en bois</li>
-					<li>Bies chaise en bois</li>
-					<li>10€</li>
+					<li>{{article.name}}</li>
+					<li>{{article.description}}</li>
+					<li>{{article.unitPrice}} €</li>
 				</ul>				
 			</div>
 
-			<div class="article2">
+			<!--<div class="article2">
 				<ul>
 					<li>Chaise en plastic</li>
 					<li>Bies chaise en plastoc</li>
 					<li>7€</li>
 				</ul>				
-			</div>
+			</div>-->
 
 
 
@@ -172,10 +174,9 @@
 
 
 
-	<a href="#"><div class="template">
-		<img src="images/edit.svg">
+	<div class="template">
 		<h2>Design</h2>			
-	</div></a>
+	</div>
 
 	<div class="templateCont">
 
@@ -185,16 +186,18 @@
 			</div>
 
 			<div class="designfacture">
-				<!-- <div class="f01"></div>
-				<div class="f02"></div> -->
+				<div class="f0{{colorEstimate}}"></div>
+				<!--
+				<div class="f01"></div> 
+				<div class="f02"></div> 
 				<div class="f03"></div>
-				<!-- <div class="f05"></div>
+				<div class="f05"></div>
 				<div class="f06"></div>
 				<div class="f04"></div>
 				<div class="f07"></div>
 				<div class="f08"></div>
 				<div class="f09"></div>
-				<div class="f10"></div>	 -->			
+				<div class="f10"></div>	 			-->
 			</div>		
 			
 
@@ -204,16 +207,18 @@
 			</div>
 
 			<div class="designdevis">
-				<!-- <div class="f01"></div> -->
+				<div class="f0{{colorBill}}"></div> 
+				<!--
+				<div class="f01"></div> 
 				<div class="f02"></div>
-				<!-- <div class="f03"></div>
+				<div class="f03"></div>
 				<div class="f04"></div>
 				<div class="f05"></div>
 				<div class="f06"></div>
 				<div class="f07"></div>
 				<div class="f08"></div>
 				<div class="f09"></div>
-				<div class="f10"></div>	 -->			
+				<div class="f10"></div>	 			-->
 			</div>				
 
 			<!-- <div class="savecoordonnee5">
