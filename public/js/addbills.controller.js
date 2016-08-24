@@ -3,7 +3,7 @@ var abakusControllers = angular.module('addBillsControllers', []);
 
 
 // add the "Rest" service inside the diferent Ctrl
-abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', function($scope, Client, Admin) {
+abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param', function($scope, Client, Admin, Param) {
 
 	// function to clean all informations when needed
 	function voidArrays() {
@@ -44,6 +44,10 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', functi
 					estimate.clientId = item._id;
 					$scope.listEstimates.push(estimate);
 				});
+			});
+			Param.getList(function(result){
+				console.log(result[0]);
+				$scope.paramFromDb = result[0];
 			});
 			console.log("Clients :");
 			console.log($scope.listClients);

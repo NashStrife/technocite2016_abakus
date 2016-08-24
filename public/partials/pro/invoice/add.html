@@ -129,10 +129,8 @@
 			<legend>Informations et règles de paiement</legend>
 			<div class="commitment">
 				<label for="financial commitment">Echéance</label><br/>
-				<select name="Echéance" id="financial commitment">
-				<option value="option 1">option 1</option>
-				<option value="option 2">option 2</option>
-				<option value="option 3">option 3</option>
+				<select name="Echéance" id="financial commitment" ng-model="newBill.rules" ng-options="rule for rule in paramFromDb.rules">
+	
 			</select>
 			</div>
 			<div class="payment half">
