@@ -15,7 +15,7 @@
 							<span class="itemDatas focusItem">Numéro</span>
 							<span class="itemDatas focusItem">Client</span>
 							<span class="itemDatas focusItem">Date de facturation</span>
-							<span class="itemDatas focusItem">Etat</span>
+							<span class="itemDatas focusItem">Payé</span>
 							<!--<span class="itemDatas blocInvoiceNumber">Payé</span>-->
 						</div>
 					</div>
@@ -26,10 +26,23 @@
 
 				<div class="listItem">
 					<div class="blocItem">
-						<span class="itemDatas blocNumber"><span class="titleItem">Numéro </span> {{item.link}}</span>
-						<span class="itemDatas blocName"><span class="titleItem">Client </span> {{item.clientName}}</span>
-						<span class="itemDatas blocDate"><span class="titleItem">Date </span> {{item.createdAt | date:'dd-MM-yyyy'}}</span>
-						<span class="itemDatas blocDate"><span class="titleItem">Particulier </span> {{item.state}}</span>
+						<span class="itemDatas blocNumber">
+							<span class="titleItem">Numéro </span> 
+							{{item.link}}
+						</span>
+						<span class="itemDatas blocName">
+							<span class="titleItem">Client </span> 
+							{{item.clientName}}
+						</span>
+						<span class="itemDatas blocDate">
+							<span class="titleItem">Date </span> 
+							{{item.createdAt | date:'dd-MM-yyyy'}}
+						</span>
+						<span class="itemDatas blocDate">
+							<span class="titleItem">Payé </span> 
+							<input ng-show="{{item.state}}" type="checkbox" value="{{item.state}}" checked disabled> 
+							<input ng-hide="{{item.state}}" type="checkbox" value="{{item.state}}" disabled>
+						</span>
 						<!--<span class="itemDatas blocInvoiceNumber">{{item.state}}</span>-->
 					
 					</div>
