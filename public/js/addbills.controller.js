@@ -64,13 +64,10 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 				// console.log(item.bills);
 				// store list of bills for easy use inside html
 				result[0].paymentInfo.bank.map(function(bank) {
-					bank.isPaypal = false;
-					
 					$scope.listAccounts.push(bank);
 					console.log($scope.listAccounts);
 				});
 				result[0].paymentInfo.paypal.map(function(bank) {
-				bank.isPaypal = true;
 					
 					$scope.listAccounts.push(bank);
 				});

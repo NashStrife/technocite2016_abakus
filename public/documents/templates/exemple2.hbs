@@ -5,8 +5,215 @@
     <meta charset="UTF-8">
     <title>Exemple facture</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
-    <link rel="stylesheet" href="../stylesheets/exemple.css">
 
+<style>
+ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}   
+    /* line 4, ../sass/exemple.scss */
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 8, ../sass/exemple.scss */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* line 13, ../sass/exemple.scss */
+body {
+  font-family: "century gothic", arial, sans-serif;
+}
+
+/* line 16, ../sass/exemple.scss */
+.container {
+  max-width: 2260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 20, ../sass/exemple.scss */
+.head {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2a4158;
+}
+/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.head:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 24, ../sass/exemple.scss */
+.head img {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  height: auto;
+}
+/* line 28, ../sass/exemple.scss */
+.head .entreprise {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  text-align: left;
+}
+/* line 31, ../sass/exemple.scss */
+.head .entreprise label {
+  display: inline-block;
+  width: 150px;
+}
+/* line 35, ../sass/exemple.scss */
+.head .entreprise input {
+  background: pink;
+  width: 250px;
+  height: 20px;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+}
+/* line 43, ../sass/exemple.scss */
+.head .entreprise:first-child {
+  text-transform: uppercase;
+}
+/* line 47, ../sass/exemple.scss */
+.head .num_facture {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+  float: right;
+}
+/* line 51, ../sass/exemple.scss */
+.head .num_facture h1 {
+  background: #2a4158;
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 24px;
+  height: 115px;
+}
+
+/* line 61, ../sass/exemple.scss */
+.info_client {
+  width: 100%;
+  display: block;
+}
+/* line 64, ../sass/exemple.scss */
+.info_client label {
+  display: inline-block;
+  width: 150px;
+}
+/* line 68, ../sass/exemple.scss */
+.info_client input {
+  width: 350px;
+  height: 20px;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+}
+/* line 76, ../sass/exemple.scss */
+.info_client form:first-child {
+  margin-bottom: 30px;
+}
+
+/* line 81, ../sass/exemple.scss */
+table {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+table:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 85, ../sass/exemple.scss */
+table th {
+  background: #2a4158;
+  height: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+/* line 92, ../sass/exemple.scss */
+table tr :first-child {
+  width: 20%;
+}
+/* line 96, ../sass/exemple.scss */
+table tr :nth-child(2) {
+  width: 30%;
+}
+/* line 101, ../sass/exemple.scss */
+table td, table th {
+  border: 1px solid #2a4158;
+  width: 10%;
+}
+
+</style>
 </head>
 
 <body>
@@ -14,15 +221,15 @@
         <div class="head">
             <!--Début de l'en-tête de facture contenant les coordonnées client-->
             <img src="../images/logo.jpg" alt="Logo entreprise" width="470" height="470">
-            <form action="" class="entreprise">
-               <label for="nom_entreprise">{{Nom Entreprise}}</label><input type="text" id="nom_entreprise"></br>
-               <label for="rue"> {{Rue}}</label><input type="text" id="rue"></br>
-                <label for="localite">{{Localité}}</label><input type="text" id="localite"></br>
-               <label for="pays"> {{Pays}}</label><input type="text" id="pays"></br>
-                <label for="phone">{{Téléphone}}</label><input type="text" id="phone"></br>
-                <label for="fax">{{Fax}}</label><input type="text" id="fax"></br>
-                <label for="mail">{{E-mail}}</label><input type="text" id="mail"></br>
-            </form>
+            <ul>
+                <li>{{Nom Entreprise}}</li>
+                <li>{{Rue}}</li>
+                <li>{{Localité}}</li>
+                <li>{{Pays}}</li>
+                <li>{{Téléphone}}</li>
+                <li>{{Fax}}</li>
+                <li>{{E-mail}}</li>
+            </ul>
             <section class="num_facture">
             <h1>Facture</h1></br>
             <p>{{num facture}}</p></br>
@@ -30,12 +237,12 @@
             </section>
         </div>
         <div class="info_client">
-            <form action="">
-             <label for="nom_client">{{Nom client}}</label><input type="text" id="nom_client"></br>
-              <label for="rue">{{rue}}</label><input type="text" id="rue"></br>
-              <label for="localite">{{localite}}</label><input type="text" id="localite"></br>
-              <label for="pays">{{pays}}</label><input type="text" id="pays"></br>
-            </form>
+                <ul>
+                    <li>{{Nom client}}</li>
+                    <li>{{rue}}</li>
+                    <li>{{localite}}</li>
+                    <li>{{pays}}</li>
+                </ul>
         </div>
         <table>
             <tr>
