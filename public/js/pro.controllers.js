@@ -76,5 +76,15 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams', 'Admin
 		$scope.details = result[0];
 		console.log($scope.details);
 
+		$scope.colorBill = result[0].templates.bill;
+		$scope.colorEstimate = result[0].templates.quotation;
+		$scope.listAccounts = [];
+		result[0].paymentInfo.bank.map(function(bank) {			
+			$scope.listAccounts.push(bank);
+			console.log($scope.listAccounts);
+		});
+		result[0].paymentInfo.paypal.map(function(bank) {			
+			$scope.listAccounts.push(bank);
+		});
 	});
 }]);

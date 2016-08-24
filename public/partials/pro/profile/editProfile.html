@@ -3,10 +3,227 @@
 <navbarpro></navbarpro>
 <!-- <search-bar></search-bar> -->
 
-<h1 style="background-color:#d6eaf8;">Editer mes coordonnées  (Coté Pro)</h1>
+<div class="profilePro">
 
-<a href="#/pro/profile/edit-method-of-payement">Editer mes informations de paiement</a><br/>
-<a href="#/pro/profile/edit-profile">Editer mes coordonnées</a><br/>
-<a href="#/pro/profile/edit-terms">Editer mes conditions générales de vente</a>
-<a href="#/pro/profile/edit-template">Editer mes templates</a>
+<div class="warpper">
 
+
+	<div class="contener">
+
+		<div class="coordonnee">
+			<h2>Coordonée</h2>			
+		</div>
+
+
+		<div class="coordonneeCont">
+
+			<img src="images/admin/profile/{{details._id}}.jpg" alt="Logo Entreprise" width="92" height="92" >			
+
+			<div class="info">
+				<h3>{{details.name}}</h3>
+					<p>
+						Adresse : {{details.contact.street}} n° {{details.contact.number}}<span ng-if="details.contact.box">, boite {{details.contact.box}}</span><br>
+						Code postal : {{details.contact.zip}}<br>
+						Localité : {{details.contact.town}}<br>
+						Pays : {{details.contact.country}}<br> 
+						Telephone principal : {{details.contact.phoneMain}}<br>
+						<span ng-if="details.contact.phoneSec">Telephone secondaire : {{details.contact.phoneSec}}<br></span>
+						<span ng-if="details.contact.fax">Fax : {{details.contact.fax}}<br></span>
+						Email : {{details.contact.mail}}<br>
+						Site web : {{details.contact.web}}<br>						
+					</p>				
+			</div>
+
+			<div class="tva">
+				
+				<p>
+					n° TVA : {{details.vat.num}}<br>
+					<span ng-if="details.vat.siren">n° SIREN : {{details.vat.siren}}</span><br>
+					<span ng-if="details.vat.rcs">n° RCS : {{details.vat.rcs}}</span><br>
+				</p>
+
+			</div>
+
+			
+
+			<!-- <div class="savecoordonnee">
+				<p>sauvegarder</p>
+			</div> -->
+
+		</div>
+
+
+
+
+
+		<div class="contact">
+			<h2>Personne de contact</h2>			
+		</div>
+
+		<div class="contactCont">					
+				
+					<h3>
+					{{details.contactPerson.civility}} {{details.contactPerson.firstname}} {{details.contactPerson.lastname}}</h3><br>
+					<p>Email : {{details.contactPerson.mail}}<br>
+					Tél : {{details.contactPerson.phoneMain}}<br>
+					<span ng-if="details.contactPerson.phoneSec">Téléphone secondaire : {{details.contactPerson.phoneSec}}</span><br>
+					Fonction : {{details.contactPerson.post}}
+					</p>				
+
+			
+			<!-- <div class="savecoordonnee1">
+				<p>sauvegarder</p>
+			</div> -->
+
+		</div>
+
+
+
+
+
+
+		<div class="payment">
+			<h2>Informations de paiement</h2>			
+		</div>
+
+		<div class="paymentCont">
+			<ul>
+				<li ng-repeat="account in listAccounts">
+					<ul>
+						<li>Nom : {{account.name}}</li>
+						<li ng-if="account.iban">IBAN/RIB : {{account.iban}}</li>
+						<li ng-if="account.bic">BIC : {{account.bic}}</li>
+						<li ng-if="account.mail">Email : {{account.mail}}</li>
+					</ul>	
+				</li>
+			</ul>		
+
+			<!-- <div class="ajouter">				
+				<p>+</p><p>Ajouter</p>
+			</div> -->
+
+			<!-- <div class="savecoordonnee3">
+				<p>sauvegarder</p>
+			</div> -->
+
+		</div>
+
+
+
+
+
+
+
+
+
+		<div class="article">
+			<h2>Article</h2>			
+		</div>
+
+		<div class="articleCont">
+
+			<div class="articletitle">			
+				<ul>
+					<li>Article</li>
+					<li>Description</li>
+					<li>Montant P/U</li>
+				</ul>
+			</div>
+
+			<div class="article1" ng-repeat="article in details.articles">
+				<ul>
+					<li>{{article.name}}</li>
+					<li>{{article.description}}</li>
+					<li>{{article.unitPrice}} €</li>
+				</ul>				
+			</div>
+
+			<!--<div class="article2">
+				<ul>
+					<li>Chaise en plastic</li>
+					<li>Bies chaise en plastoc</li>
+					<li>7€</li>
+				</ul>				
+			</div>-->
+
+
+
+			
+
+			<!-- <div class="ajouter">				
+				<p>+</p><p>Ajouter</p>
+			</div> -->
+
+			<!-- <div class="savecoordonnee4">
+				<p>sauvegarder</p>
+			</div> -->
+				
+		</div>
+
+
+
+
+
+
+	<div class="template">
+		<h2>Design</h2>			
+	</div>
+
+	<div class="templateCont">
+
+
+			<div class="fact">			
+				<h3>Template facture</h3>
+			</div>
+
+			<div class="designfacture">
+				<div class="f0{{colorEstimate}}"></div>
+				<!--
+				<div class="f01"></div> 
+				<div class="f02"></div> 
+				<div class="f03"></div>
+				<div class="f05"></div>
+				<div class="f06"></div>
+				<div class="f04"></div>
+				<div class="f07"></div>
+				<div class="f08"></div>
+				<div class="f09"></div>
+				<div class="f10"></div>	 			-->
+			</div>		
+			
+
+
+			<div class="dev">
+				<h3>Template devis</h3>
+			</div>
+
+			<div class="designdevis">
+				<div class="f0{{colorBill}}"></div> 
+				<!--
+				<div class="f01"></div> 
+				<div class="f02"></div>
+				<div class="f03"></div>
+				<div class="f04"></div>
+				<div class="f05"></div>
+				<div class="f06"></div>
+				<div class="f07"></div>
+				<div class="f08"></div>
+				<div class="f09"></div>
+				<div class="f10"></div>	 			-->
+			</div>				
+
+			<!-- <div class="savecoordonnee5">
+				<p>sauvegarder</p>
+			</div> -->
+
+
+	</div>	
+
+
+	</div>
+
+</div>
+
+
+
+</div>
