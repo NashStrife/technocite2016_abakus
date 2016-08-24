@@ -10,7 +10,12 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', functi
 		$scope.newBill = {};
 		$scope.newBill.article = {};
 		$scope.newBill.article.quantity = 0;
-
+		$scope.newBill.totalXvat = 0;
+		$scope.newBill.underTotalXvat = 0;
+		$scope.newBill.tva = 0;
+		$scope.newBill.totalTtc = 0;
+		$scope.newBill.deposit = 0;
+		$scope.newBill.sum = 0;
 		$scope.articles = [];
 	}
 
@@ -84,9 +89,11 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', functi
 
 		var quantity = $scope.newBill.article.quantity;
 		var unitPrice = $scope.newBill.article.unitPrice;
-
+		//when item is selected in the dropdown
 		$scope.newBill.article.amount = quantity * unitPrice;
 
+		//when the deposit is calculate
+		$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
 
 		// console.log(unitPrice);
 		// console.log(quantity);
@@ -104,7 +111,14 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', functi
 					'unitPrice': $scope.newBill.article.unitPrice,
 					'amount': $scope.newBill.article.amount
 				});
-				console.log($scope.articles);
+				$scope.newBill.totalXvat += $scope.newBill.article.amount;
+				$scope.newBill.underTotalXvat = $scope.newBill.totalXvat;
+				$scope.newBill.tva = $scope.newBill.totalXvat/100 * 21;
+				$scope.newBill.totalTtc = ($scope.newBill.tva + $scope.newBill.totalXvat);
+				$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
+				console.log($scope.newBill.underTotalXvat);
+				//console.log($scope.newBill.totalXvat);
+				//console.log($scope.articles);
 				// clean the inputs when we add a new pic on the temporary array
 
 				$scope.newBill.article.quantity = "";

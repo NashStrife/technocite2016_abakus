@@ -101,28 +101,28 @@
 				</div>
 				<div class="subtotal">
 					<label for="sous-total">Sous-total hors taxes</label>
-					<input name="Sous-Total hors taxes" id="sous-total" placeholder="">
+					<input name="Sous-Total hors taxes" id="sous-total" placeholder="" ng-model="newBill.underTotalXvat" ng-value="newBill.underTotalXvat">
 
 				</div>
 				<div class="tva">
 					<label for="tva-21">TVA 21%</label>
-					<input name="TVA 21%" id="tva-21" placeholder="">
+					<input name="TVA 21%" id="tva-21" placeholder="" ng-model="newBill.tva" ng-value="newBill.tva">
 				</div>
 
 				<div class="ttc">
 
 					<label for="total-ttc">Total TTC</label>
-					<input name="Total TTC" id="total-ttc" placeholder="">
+					<input name="Total TTC" id="total-ttc" placeholder="" ng-model="newBill.totalTtc" ng-value="newBill.totalTtc">
 				</div>
 				<div class="deposit">
-					<label for="deposit">Acompte</label>
-					<input name="Acompte" id="deposit" placeholder="">
+					<label for="deposit">Accompte</label>
+					<input name="Acompte" id="deposit" placeholder="" ng-model="newBill.deposit" ng-value="newBill.deposit" ng-change="calcAmount()">
 				</div>
 
 
 				<div class="sum">
 					<label for="sum">A payer</label>
-					<input name="A payer" id="sum" placeholder="">
+					<input name="A payer" id="sum" placeholder="" ng-model="newBill.sum" ng-value="newBill.sum">
 				</div>
 
 				<button type="" class="next">Suivant</button>
