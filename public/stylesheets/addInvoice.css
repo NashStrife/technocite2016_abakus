@@ -268,3 +268,27 @@ fieldset legend {
 .payment select {
   width: 100%;
 }
+
+/* line 185, ../sass/addInvoice.scss */
+.full {
+  width: 19.49153%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+/* line 188, ../sass/addInvoice.scss */
+.quart {
+  width: 6.77966%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+/* line 191, ../sass/addInvoice.scss */
+.hulk {
+  color: #90ec90;
+}
+
+/* line 194, ../sass/addInvoice.scss */
+.superman {
+  color: #ed8e8e;
+}
