@@ -239,18 +239,15 @@ let params = [{
     ],
     "refunds" : [
         "%",
-        "€",
-        "$",
-        "£"
+        "€"
     ],
     "countries" : [
         "Belgique",
         "Pays-Bas",
         "Luxembourg",
         "France",
-        "Allemange",
-        "Angleterre",
-        "Etats-Unis"
+        "Allemange"
+
     ],
     "vatRate" : [
         "0%",
@@ -270,7 +267,6 @@ let params = [{
         "ES",
         "FI",
         "FR",
-        "GB",
         "HR",
         "HU",
         "IE",

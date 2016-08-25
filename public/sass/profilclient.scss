@@ -14,13 +14,18 @@
 
 .myProfileClient {
 
-
 	width: 742px;
-	height: 1200px;
+	height: auto;
 	float: right;	
 	text-align: left;
 	margin-top: 117px;
 	position: relative;
+	padding-bottom: 100px;
+
+	a:first-child {
+
+		margin-top: 0px;
+	}
 
 	p, h2, h3 {
 
@@ -47,13 +52,14 @@
 	}
 
 
-	.coordonnee, .contact, .payment, .article, .template {
+	a {
 
 	height: 46px;
 	width: 230px;
 	background-color: $focusColor;
 	float: left;
 	margin-top: 15px;
+
 
 	img {
 
@@ -68,18 +74,26 @@
 	
 		font-weight: bold;
 		font-size: 14px;
-		margin-top: 20px;
+		margin-top: 16px;
 		color: $primaryColor;
 		float: left;
 		margin-left: 7px;
 
 	}
 }
+ 
 
-.coordonnee {
 
-	margin-top: 0px;
-}
+img {
+
+		width: 92px;
+		height: 92px;
+		float: left;
+		margin-top: 14px;
+		margin-left: 20px;
+		
+	}
+
 
 .coordonneeCont, .contactCont, .paymentCont, .articleCont, .templateCont {
 
@@ -89,48 +103,23 @@
 	float: left;
 	display: block;
 	padding-bottom: 15px;
-
-	img {
-
-		width: 92px;
-		height: 92px;
-		float: left;
-		margin-top: 14px;
-		margin-left: 20px;
-		
-	}
+	display: block;
+	
 } 
+
 
 .info {
 
-		display: block;
-		width: 315px;			
-		float: left;		
+	margin-top: 14px;
+	margin-left: 20px;
+	width: auto;
+	float: left;
 
-		h3 {
+	p {
 
-			margin-left: 20px;
-			margin-top: 14px;
-			
-			font-weight: bold;
-			font-size: 15px; 
-
-		}
-		
-
-		p {
-
-		
-		font-size: 13px;
 		margin-top: 10px;
-		color: $primaryColor;
-		text-align: justify;
-		line-height: 20px;
-		margin-left: 20px;
-		
-		}
-
 	}
+}
 
 
 
