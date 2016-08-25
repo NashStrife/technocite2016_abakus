@@ -8,62 +8,71 @@
 /* line 15, ../sass/profilclient.scss */
 .myProfileClient {
   width: 742px;
-  height: 1200px;
+  height: auto;
   float: right;
   text-align: left;
   margin-top: 117px;
   position: relative;
+  padding-bottom: 100px;
 }
 /* line 25, ../sass/profilclient.scss */
+.myProfileClient a:first-child {
+  margin-top: 0px;
+}
+/* line 30, ../sass/profilclient.scss */
 .myProfileClient p, .myProfileClient h2, .myProfileClient h3 {
   text-align: left;
 }
-/* line 30, ../sass/profilclient.scss */
+/* line 35, ../sass/profilclient.scss */
 .myProfileClient p {
   font-size: 13px;
   line-height: 20px;
 }
-/* line 36, ../sass/profilclient.scss */
+/* line 41, ../sass/profilclient.scss */
 .myProfileClient h3 {
   font-weight: bold;
   font-size: 15px;
   line-height: 20px;
 }
-/* line 43, ../sass/profilclient.scss */
+/* line 48, ../sass/profilclient.scss */
 .myProfileClient h2 {
   font-size: 14px;
   font-weight: bold;
 }
-/* line 50, ../sass/profilclient.scss */
-.myProfileClient .coordonnee, .myProfileClient .contact, .myProfileClient .payment, .myProfileClient .article, .myProfileClient .template {
+/* line 55, ../sass/profilclient.scss */
+.myProfileClient a {
   height: 46px;
   width: 230px;
   background-color: #e5af28;
   float: left;
   margin-top: 15px;
 }
-/* line 58, ../sass/profilclient.scss */
-.myProfileClient .coordonnee img, .myProfileClient .contact img, .myProfileClient .payment img, .myProfileClient .article img, .myProfileClient .template img {
+/* line 64, ../sass/profilclient.scss */
+.myProfileClient a img {
   width: 28px;
   height: 28px;
   float: left;
   margin-top: 9px;
   margin-left: 7px;
 }
-/* line 67, ../sass/profilclient.scss */
-.myProfileClient .coordonnee h2, .myProfileClient .contact h2, .myProfileClient .payment h2, .myProfileClient .article h2, .myProfileClient .template h2 {
+/* line 73, ../sass/profilclient.scss */
+.myProfileClient a h2 {
   font-weight: bold;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 16px;
   color: #2a4158;
   float: left;
   margin-left: 7px;
 }
-/* line 79, ../sass/profilclient.scss */
-.myProfileClient .coordonnee {
-  margin-top: 0px;
+/* line 87, ../sass/profilclient.scss */
+.myProfileClient img {
+  width: 92px;
+  height: 92px;
+  float: left;
+  margin-top: 14px;
+  margin-left: 20px;
 }
-/* line 84, ../sass/profilclient.scss */
+/* line 98, ../sass/profilclient.scss */
 .myProfileClient .coordonneeCont, .myProfileClient .contactCont, .myProfileClient .paymentCont, .myProfileClient .articleCont, .myProfileClient .templateCont {
   background-color: #95a0ac;
   width: 100%;
@@ -71,34 +80,16 @@
   float: left;
   display: block;
   padding-bottom: 15px;
-}
-/* line 93, ../sass/profilclient.scss */
-.myProfileClient .coordonneeCont img, .myProfileClient .contactCont img, .myProfileClient .paymentCont img, .myProfileClient .articleCont img, .myProfileClient .templateCont img {
-  width: 92px;
-  height: 92px;
-  float: left;
-  margin-top: 14px;
-  margin-left: 20px;
-}
-/* line 104, ../sass/profilclient.scss */
-.myProfileClient .info {
   display: block;
-  width: 315px;
+}
+/* line 111, ../sass/profilclient.scss */
+.myProfileClient .info {
+  margin-top: 14px;
+  margin-left: 20px;
+  width: auto;
   float: left;
 }
-/* line 110, ../sass/profilclient.scss */
-.myProfileClient .info h3 {
-  margin-left: 20px;
-  margin-top: 14px;
-  font-weight: bold;
-  font-size: 15px;
-}
-/* line 121, ../sass/profilclient.scss */
+/* line 118, ../sass/profilclient.scss */
 .myProfileClient .info p {
-  font-size: 13px;
   margin-top: 10px;
-  color: #2a4158;
-  text-align: justify;
-  line-height: 20px;
-  margin-left: 20px;
 }
