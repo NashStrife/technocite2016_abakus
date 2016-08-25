@@ -209,7 +209,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 				//alert(result.message);
 				console.log(result);
 				// clean the temp Arrays after sending the form for the next one
-				voidArrays();
+				//voidArrays();
 			});
 
 			$scope.error = false;
