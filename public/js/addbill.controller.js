@@ -9,13 +9,19 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 	function voidArrays() {
 		$scope.newBill = {};
 		$scope.newBill.article = {};
-		$scope.newBill.article.quantity = 0;
-		$scope.newBill.totalXvat = 0;
-		$scope.newBill.underTotalXvat = 0;
-		$scope.newBill.tva = 0;
-		$scope.newBill.totalTtc = 0;
-		$scope.newBill.deposit = 0;
+
+		// all var same value
+		$scope.newBill.article.quantity =
+		$scope.newBill.article.amount =
+		$scope.newBill.totalXvat =
+		$scope.newBill.underTotalXvat =
+		$scope.newBill.refund =
+		$scope.newBill.tva =
+		$scope.newBill.totalTtc =
+		$scope.newBill.deposit =
 		$scope.newBill.sum = 0;
+
+
 		$scope.articles = [];
 	}
 
@@ -83,38 +89,59 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 	// need to use getFromDb() at first to get list of articles and clients
 	getFromDb();
 
-	// define the base order when list appear
-	$scope.order = "createdAt";
-	$scope.direction = "reverse";
-
 	voidArrays();
 
-	// function to calculate the amount in function of unit price and quantity
+	// when unit price and quantity are edited for an article
 	$scope.calcAmount = function() {
-
+		console.log("function calcAmount");
 		var quantity = $scope.newBill.article.quantity;
 		var unitPrice = $scope.newBill.article.unitPrice;
-		//let totalXvat = $scope.newBill.totalXvat;
-		//let refound = $scope.newbill.refound;
-		//if ($scope.newBill.refundCur === "%") {
-		//	$scope.newBill.underTotalXvat -= (totalXvat / 100) * refound;
-		//} else {
-		//	$scope.newBill.underTotalXvat -= refound;
-		//}
 		//when item is selected in the dropdown
 		$scope.newBill.article.amount = quantity * unitPrice;
-
-		//when the deposit is calculate
-		$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
-
+		
 		// console.log(unitPrice);
 		// console.log(quantity);
 		// console.log($scope.newBill.article.amount);
 	};
 
+	// when an amount change in sub totals
+	$scope.calculateAll = function (){
+		console.log("function calculateAll");
 
-	// add articles to the temp list inside the form
+		
+		// calculate underTotalXvat
+		let totalXvat = $scope.newBill.totalXvat;
+		let refund = $scope.newBill.refund;
+		if ($scope.newBill.refundCur === "%") {
+			if($scope.newBill.refund != 0){
+				$scope.newBill.underTotalXvat = totalXvat - (totalXvat / 100) * refund;
+			} else {
+				$scope.newBill.underTotalXvat = totalXvat;
+			}
+		} else {
+			$scope.newBill.underTotalXvat = totalXvat - refund;
+		}
+		// $scope.newBill.underTotalXvat = $scope.newBill.totalXvat - $scope.newBill.refund;
+
+		// calculate tva and totalTtc
+		$scope.newBill.tva = ($scope.newBill.underTotalXvat / 100) * 21;
+		$scope.newBill.totalTtc = ($scope.newBill.tva + $scope.newBill.underTotalXvat);
+
+		// sum less deposit
+		$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
+
+		// console.log("totalXvat :" + $scope.newBill.totalXvat);
+		// console.log("refund :" + $scope.newBill.refund);
+		// console.log("underTotalXvat :" + $scope.newBill.underTotalXvat);
+		// console.log("tva :" + $scope.newBill.tva);
+		// console.log("totalTtc :" + $scope.newBill.totalTtc);
+		// console.log("deposit :" + $scope.newBill.deposit);
+		// console.log("sum :" + $scope.newBill.sum);
+	}
+
+	// when articles are added to the temp list inside the form
 	$scope.addElement = function(elem) {
+		console.log("function addElement");
 		// for the list of articles
 		if (elem === 'article') {
 			if ($scope.newBill.article.quantity) {
@@ -125,30 +152,41 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 					'unitPrice': $scope.newBill.article.unitPrice,
 					'amount': $scope.newBill.article.amount
 				});
+				
+				// calculate the total of the list
 				$scope.newBill.totalXvat += $scope.newBill.article.amount;
-				$scope.newBill.tva = $scope.newBill.totalXvat / 100 * 21;
 
-				$scope.newBill.totalTtc = ($scope.newBill.tva + $scope.newBill.totalXvat);
-				$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
+				// and the other values thx to the previous function
+				$scope.calculateAll();
+
 				//console.log($scope.newBill.underTotalXvat);
 				//console.log($scope.newBill.totalXvat);
 				//console.log($scope.articles);
-				// clean the inputs when we add a new pic on the temporary array
-
+				
+				// clean the inputs when we add a new article on the temporary array
 				$scope.newBill.article.quantity = "";
 				$scope.newBill.article.amount = "";
 			} else {
-				alert("Quantité indéfinie");
+				alert("Article incomplet");
 			}
 
 		}
 	};
 
-	$scope.removeElement = function(elem, index) {
+	$scope.removeElement = function(elem, index, removeAmount) {
+		console.log("function removeElement");
 		if (elem === 'article') {
 			$scope.articles.splice(index, 1);
 		}
+		
+		// calculate the total of the list
+		$scope.newBill.totalXvat -= removeAmount;
+
+		// and the other values
+		calculateAll();
 	};
+
+	// when we send the form
 	$scope.addBill = function(isValid) {
 		if (isValid) {
 			//console.log($scope.articles);
