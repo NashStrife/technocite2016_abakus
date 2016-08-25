@@ -233,16 +233,16 @@ table td, table th {
             </ul>
             <section class="num_facture">
             <h1>Facture</h1></br>
-            <p>{{num facture}}</p></br>
-            <p>{{date}}</p></br>
+            <p>{{numFacture}}</p></br>
+            <p>{{dateFacture}}</p></br>
             </section>
         </div>
         <div class="info_client">
                 <ul>
-                    <li>{{Nom client}}</li>
-                    <li>{{rue}}</li>
-                    <li>{{localite}}</li>
-                    <li>{{pays}}</li>
+                    <li>{{client.contactPerson.civility}} {{client.contactPerson.firstname}} {{client.contactPerson.lastname}}</li>
+                    <li>{{client.billingInfo.street}}, {{client.billingInfo.number}}</li>
+                    <li>{{client.billingInfo.town}}</li>
+                    <li>{{{client.billingInfo.country}}</li>
                 </ul>
         </div>
         <table>
