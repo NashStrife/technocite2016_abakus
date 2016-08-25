@@ -30,35 +30,8 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 		Client.getList(function(result) {
 			// prepare some var
 			$scope.listClients = result;
-			$scope.listBills = [];
-			$scope.listEstimates = [];
-
-			result.map(function(item) {
-				// console.log(item.bills);
-				// store list of bills for easy use inside html
-				item.bills.map(function(bill) {
-					// console.log(bill);
-					// add customer name to result to avoid some tricky manipulations inside html
-					bill.clientName = item.name;
-					bill.clientId = item._id;
-					$scope.listBills.push(bill);
-				});
-				// same with estimates
-				item.quotations.map(function(estimate) {
-					// console.log(estimate);
-					estimate.clientName = item.name
-					estimate.clientId = item._id;
-					$scope.listEstimates.push(estimate);
-				});
-			});
-
 			// console.log("Clients :");
 			// console.log($scope.listClients);
-			// console.log("Factures :");
-			// console.log($scope.listBills);
-			// console.log("Devis :");
-			// console.log($scope.listEstimates);
-
 		});
 
 		Param.getList(function(result) {
@@ -93,7 +66,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 
 	// when unit price and quantity are edited for an article
 	$scope.calcAmount = function() {
-		console.log("function calcAmount");
+		// console.log("function calcAmount");
 		var quantity = $scope.newBill.article.quantity;
 		var unitPrice = $scope.newBill.article.unitPrice;
 		//when item is selected in the dropdown
@@ -106,9 +79,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 
 	// when an amount change in sub totals
 	$scope.calculateAll = function (){
-		console.log("function calculateAll");
-
-		
+		// console.log("function calculateAll");
 		// calculate underTotalXvat
 		let totalXvat = $scope.newBill.totalXvat;
 		let refund = $scope.newBill.refund;
@@ -141,7 +112,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 
 	// when articles are added to the temp list inside the form
 	$scope.addElement = function(elem) {
-		console.log("function addElement");
+		// console.log("function addElement");
 		// for the list of articles
 		if (elem === 'article') {
 			if ($scope.newBill.article.quantity) {
@@ -174,7 +145,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 	};
 
 	$scope.removeElement = function(elem, index, removeAmount) {
-		console.log("function removeElement");
+		// console.log("function removeElement");
 		if (elem === 'article') {
 			$scope.articles.splice(index, 1);
 		}
@@ -183,14 +154,14 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 		$scope.newBill.totalXvat -= removeAmount;
 
 		// and the other values
-		calculateAll();
+		$scope.calculateAll();
 	};
 
 	// when we send the form
 	$scope.addBill = function(isValid) {
 		if (isValid) {
-			//console.log($scope.articles);
-
+			// PREPARE PDF
+			// ===========
 			$scope.newBill.articles = $scope.articles;
 			$scope.newBill.company = $scope.adminfromdb;
 			let newpdf = {
@@ -202,20 +173,53 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 				"data": $scope.newBill
 			};
 
-			console.log("New Pdf to send");
-			console.log(newpdf);
-
-			Crm.createPdf(newpdf, function(result) {
-				//alert(result.message);
-				console.log(result);
-				// clean the temp Arrays after sending the form for the next one
-				//voidArrays();
+			// console.log("New Pdf to send");
+			// console.log(newpdf);
+			
+			// PREPARE REQUEST TO THE DB
+			// =========================
+			// add the new bill to the bills array of the client
+			$scope.newBill.client.bills.push({
+				'link': $scope.newBill.numFacture,
+				'state': false,
+				'quotation_id': $scope.newBill.estimate._id,
+				'createdAt': $scope.newBill.dateFacture
 			});
 
+			// console.log("New client to update");
+			// console.log($scope.newBill.client);
+
+			// STORE FILE AND INFORMATIONS
+			// ===========================
+			// Try to store the file first
+			Crm.createPdf(newpdf, function(result) {
+				console.log(result);
+				if(result.error_code){
+					alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
+				}
+				// if the file is stored
+				else {
+					// store informations about this bill in the DB
+					Client.updateClient($scope.newBill.client, function(result){
+						console.log(result);
+						if(result.error_code){
+							alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
+						}
+						else {
+							alert("La facure a bien été enregistrée");
+
+							// when all is done, clear the form
+							voidArrays();
+						}
+					});
+				}
+			});
+
+			// to manage error messages in form
 			$scope.error = false;
 		} else {
 			console.log("Invalid Submit !");
-			alert("Please complete all required champs");
+			alert("Veuillez compléter tous les champs requis.");
 			$scope.error = true;
 		}
 	};

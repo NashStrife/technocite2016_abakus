@@ -11,14 +11,20 @@ adminService.factory('Admin',['$resource', function($resource) {
 			resource.query(callback);
 		},
 		updateAdmin : function(edAdmin, callback) {
-			let admin = $resource("/api/crm/admin/"+id, null,
+			let resourceAdmin = $resource("/api/crm/admin/"+edAdmin._id, null,
 			{
 				'update': { method:'PUT' }
 			});
-			admin.name = edClient.name;
-            client.editeddAt = Date.now();
 
-			client.update(callback);
+			let admin = new resourceAdmin();
+			admin.name = edAdmin.name;
+			
+            admin.editeddAt = Date.now();
+
+			console.log("Edit admin");
+			// console.log(admin);
+			
+			admin.$update(callback);
 		},
 		removeAdmin : function(id, callback) {
 			let admin = $resource("/api/crm/admin/"+id);

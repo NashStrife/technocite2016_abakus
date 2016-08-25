@@ -204,7 +204,7 @@ let companyModel = function() {
                     required : true
                 },
                 quotation_id : {
-                    type : Number,
+                    type : String,
                     validate : numberValidator
                 },
                 createdAt : {
