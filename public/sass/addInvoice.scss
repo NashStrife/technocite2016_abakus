@@ -56,6 +56,7 @@ fieldset {
     @include span(6 of 12);
     &:nth-child(2) {
         @include last;
+        
     }
     select {
         width: 100%;
@@ -70,7 +71,9 @@ fieldset {
 .last {
     @include last;
 }
-
+#halfEstimate{
+    float: left;
+}
 .next {
     @include navButton;
     display: none;
@@ -181,41 +184,44 @@ fieldset {
         width: 100%;
     }
 }
-.listing_achat{
+
+.listing_achat {
     @include span(12);
-    #less{
-    @include span(0.7);
-    float: right;
-    margin-right: 0;
+    #less {
+        @include span(0.7);
+        float: right;
+        margin-right: 0;
     }
-    #amount{
+    #amount {
         margin-right: 0;
     }
 }
-.full{
+
+.full {
     @include span(2.5);
     margin-right: 20px;
     width: 118px;
-    &:first-child{
+    &:first-child {
         margin-left: 10px;
-    margin-right: 30px;
-        
+        margin-right: 30px;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
         margin-left: 23px;
     }
-    
 }
 
-.quart{
-    @include span(1);   
+.quart {
+    @include span(1);
 }
-#quart1{
+
+#quart1 {
     margin-left: 28px;
 }
-.hulk{
+
+.hulk {
     color: #90ec90;
 }
-.superman{
+
+.superman {
     color: #ed8e8e;
 }

@@ -5,18 +5,26 @@
 
 
 	<h1 style="background-color:#d6eaf8;">Création d'un nouveau devis</h1>
-	<form action="" class="addInvoice">
+	<form action="" class="addInvoice" name="formAddEstimate" ng-submit="addBill(formAddEstimate.$valid)">
+		<fieldset class="ref_invoice">
+			<legend>Références devis</legend>
+			<label for="numInvoice">Numéro de devis</label>
+			<input type="text" ng-model="newInvoice.numInvoice" required>
+			<label for="dateFacture">Date de la facture</label>
+			<input type="date" ng-model="newInvoice.dateInvoice" required>
+		</fieldset>
 		<fieldset class="ref_client">
 			<legend>Références client</legend>
-			<label for="client">Client</label><br/>
-			<input name="Client" id="client" placeholder="" class="cent"><br/>
-			<div class="half">
-				<label for="po">PO</label><br/>
-				<select name="PO" id="po" ng-model="newBill.client" ng-options="listClients.indexOf(client) as client.name for client in listClients">
-					
-			</select>
-				<!--<p>{{newBill.client}}</p>-->
+			<div class="half estimate" id="halfEstimate">
+				<label for="client">Client</label><br/>
+				<select name="client" id="client" ng-model="newBill.client" ng-options="client as client.name for client in listClients" required></select>
 			</div>
+			<div class="cent">
+				<label for="client">PO</label><br/>
+				<input name="Client" id="client" class="cent" ng-model="newInvoice.po" ng-value="newInvoice.client._id" disabled required><br/>
+				</select>
+			</div>
+			
 
 			<button type="next" class="next">Suivant</button>
 
@@ -40,16 +48,17 @@
 			<div id="facture_list">
 				<!-- list the articles added in the temp array -->
 				<div class="listing_achat">
-				<ul class="elements-types">
-					<li ng-repeat="item in articles track by $index">
-						<input type="" name="name" class="full" value="{{item.name}}" disabled> 
-						<input type="" name="description" class="full" value="{{item.description}}" disabled> 
-						<input type="" name="quantity" class="quart" id="quart1" value="{{item.quantity}}" disabled> 
-						<input type="" name="unitPrice" class="quart" id="quart2" value="{{item.unitPrice}}" disabled>
-						<input type="" name="amount" class="full" value="{{item.amount}}" id="amount" disabled><!--
+					<ul class="elements-types">
+						<li ng-repeat="item in articles track by $index">
+							<input type="" name="name" class="full" value="{{item.name}}" disabled>
+							<input type="" name="description" class="full" value="{{item.description}}" disabled>
+							<input type="" name="quantity" class="quart" id="quart1" value="{{item.quantity}}" disabled>
+							<input type="" name="unitPrice" class="quart" id="quart2" value="{{item.unitPrice}}" disabled>
+							<input type="" name="amount" class="full" value="{{item.amount}}" id="amount" disabled>
+							<!--
 						--><span id="less" ng-click="removeElement('article', $index)"> - </span>
-					</li>
-				</ul>
+						</li>
+					</ul>
 				</div>
 				<div class="facture" id="facture">
 					<div class="article">
@@ -92,7 +101,7 @@
 				</div>
 				<div class="subtotal">
 					<label for="sous-total">Sous-total hors taxes</label>
-					<input name="Sous-Total hors taxes" id="sous-total" ng-model="newBill.underTotalXvat" ng-value="newBill.underTotalXvat" disabled >
+					<input name="Sous-Total hors taxes" id="sous-total" ng-model="newBill.underTotalXvat" ng-value="newBill.underTotalXvat" disabled>
 
 				</div>
 				<div class="tva">
@@ -118,7 +127,7 @@
 
 				<button type="" class="next">Suivant</button>
 		</fieldset>
-		
+
 		<input type="submit" value="Valider"></input>
 	</form>
 	</div>
