@@ -7,15 +7,15 @@ abakusControllers.controller('AddEstimateCtrl', ['$scope', 'Client', 'Admin', 'P
 
 	// function to clean all informations when needed
 	function voidArrays() {
-		$scope.newBill = {};
-		$scope.newBill.article = {};
-		$scope.newBill.article.quantity = 0;
-		$scope.newBill.totalXvat = 0;
-		$scope.newBill.underTotalXvat = 0;
-		$scope.newBill.tva = 0;
-		$scope.newBill.totalTtc = 0;
-		$scope.newBill.deposit = 0;
-		$scope.newBill.sum = 0;
+		$scope.newEstimate = {};
+		$scope.newEstimate.article = {};
+		$scope.newEstimate.article.quantity = 0;
+		$scope.newEstimate.totalXvat = 0;
+		$scope.newEstimate.underTotalXvat = 0;
+		$scope.newEstimate.tva = 0;
+		$scope.newEstimate.totalTtc = 0;
+		$scope.newEstimate.deposit = 0;
+		$scope.newEstimate.sum = 0;
 		$scope.articles = [];
 	}
 
@@ -24,35 +24,9 @@ abakusControllers.controller('AddEstimateCtrl', ['$scope', 'Client', 'Admin', 'P
 		Client.getList(function(result) {
 			// prepare some var
 			$scope.listClients = result;
-			$scope.listBills = [];
-			$scope.listEstimates = [];
-
-			result.map(function(item) {
-				// console.log(item.bills);
-				// store list of bills for easy use inside html
-				item.bills.map(function(bill) {
-					// console.log(bill);
-					// add customer name to result to avoid some tricky manipulations inside html
-					bill.clientName = item.name;
-					bill.clientId = item._id;
-					$scope.listBills.push(bill);
-				});
-				// same with estimates
-				item.quotations.map(function(estimate) {
-					// console.log(estimate);
-					estimate.clientName = item.name
-					estimate.clientId = item._id;
-					$scope.listEstimates.push(estimate);
-				});
-			});
 
 			// console.log("Clients :");
 			// console.log($scope.listClients);
-			// console.log("Factures :");
-			// console.log($scope.listBills);
-			// console.log("Devis :");
-			// console.log($scope.listEstimates);
-
 		});
 
 		Param.getList(function(result) {
@@ -64,19 +38,6 @@ abakusControllers.controller('AddEstimateCtrl', ['$scope', 'Client', 'Admin', 'P
 
 		Admin.getAdmin(function(result) {
 			$scope.adminfromdb = result[0];
-			// console.log("Admin");
-			// console.log($scope.adminfromdb);
-			$scope.listAccounts = [];
-			//console.log(result[0].paymentInfo);
-			// console.log(item.bills);
-			// store list of bills for easy use inside html
-			result[0].paymentInfo.bank.map(function(bank) {
-				$scope.listAccounts.push(bank);
-				//console.log($scope.listAccounts);
-			});
-			result[0].paymentInfo.paypal.map(function(bank) {
-				$scope.listAccounts.push(bank);
-			});
 		});
 	}
 
@@ -84,32 +45,30 @@ abakusControllers.controller('AddEstimateCtrl', ['$scope', 'Client', 'Admin', 'P
 	getFromDb();
 
 	// define the base order when list appear
-	$scope.order = "createdAt";
-	$scope.direction = "reverse";
 
 	voidArrays();
 
 	// function to calculate the amount in function of unit price and quantity
 	$scope.calcAmount = function() {
 
-		var quantity = $scope.newBill.article.quantity;
-		var unitPrice = $scope.newBill.article.unitPrice;
-		let totalXvat = $scope.newBill.totalXvat;
-		let refound = $scope.newbill.refound;
-		if ($scope.newBill.refundCur === "%") {
-			$scope.newBill.underTotalXvat -= (totalXvat / 100) * refound;
+		var quantity = $scope.newEstimate.article.quantity;
+		var unitPrice = $scope.newEstimate.article.unitPrice;
+		let totalXvat = $scope.newEstimate.totalXvat;
+		let refound = $scope.newEstimate.refound;
+		if ($scope.newEstimate.refundCur === "%") {
+			$scope.newEstimate.underTotalXvat -= (totalXvat / 100) * refound;
 		} else {
-			$scope.newBill.underTotalXvat -= refound;
+			$scope.newEstimate.underTotalXvat -= refound;
 		}
 		//when item is selected in the dropdown
-		$scope.newBill.article.amount = quantity * unitPrice;
+		$scope.newEstimate.article.amount = quantity * unitPrice;
 
 		//when the deposit is calculate
-		$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
+		$scope.newEstimate.sum = $scope.newEstimate.totalTtc - $scope.newEstimate.deposit;
 
 		// console.log(unitPrice);
 		// console.log(quantity);
-		// console.log($scope.newBill.article.amount);
+		// console.log($scope.newEstimate.article.amount);
 	};
 
 	
@@ -117,26 +76,26 @@ abakusControllers.controller('AddEstimateCtrl', ['$scope', 'Client', 'Admin', 'P
 	$scope.addElement = function(elem) {
 		// for the list of articles
 		if (elem === 'article') {
-			if ($scope.newBill.article.quantity) {
+			if ($scope.newEstimate.article.quantity) {
 				$scope.articles.push({
-					'name': $scope.newBill.article.name,
-					'description': $scope.newBill.article.description,
-					'quantity': $scope.newBill.article.quantity,
-					'unitPrice': $scope.newBill.article.unitPrice,
-					'amount': $scope.newBill.article.amount
+					'name': $scope.newEstimate.article.name,
+					'description': $scope.newEstimate.article.description,
+					'quantity': $scope.newEstimate.article.quantity,
+					'unitPrice': $scope.newEstimate.article.unitPrice,
+					'amount': $scope.newEstimate.article.amount
 				});
-				$scope.newBill.totalXvat += $scope.newBill.article.amount;
-				$scope.newBill.tva = $scope.newBill.totalXvat / 100 * 21;
+				$scope.newEstimate.totalXvat += $scope.newEstimate.article.amount;
+				$scope.newEstimate.tva = $scope.newEstimate.totalXvat / 100 * 21;
 
-				$scope.newBill.totalTtc = ($scope.newBill.tva + $scope.newBill.totalXvat);
-				$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
-				//console.log($scope.newBill.underTotalXvat);
-				//console.log($scope.newBill.totalXvat);
+				$scope.newEstimate.totalTtc = ($scope.newEstimate.tva + $scope.newEstimate.totalXvat);
+				$scope.newEstimate.sum = $scope.newEstimate.totalTtc - $scope.newEstimate.deposit;
+				//console.log($scope.newEstimate.underTotalXvat);
+				//console.log($scope.newEstimate.totalXvat);
 				//console.log($scope.articles);
 				// clean the inputs when we add a new pic on the temporary array
 
-				$scope.newBill.article.quantity = "";
-				$scope.newBill.article.amount = "";
+				$scope.newEstimate.article.quantity = "";
+				$scope.newEstimate.article.amount = "";
 			} else {
 				alert("Quantité indéfinie");
 			}
@@ -153,15 +112,15 @@ abakusControllers.controller('AddEstimateCtrl', ['$scope', 'Client', 'Admin', 'P
 		if (isValid) {
 			//console.log($scope.articles);
 
-			$scope.newBill.articles = $scope.articles;
-			$scope.newBill.company = $scope.adminfromdb;
+			$scope.newEstimate.articles = $scope.articles;
+			$scope.newEstimate.company = $scope.adminfromdb;
 			let newpdf = {
 				"file": {
 					"template": "public/documents/templates/exemple2.hbs",
-					"folder": "public/documents/bills/" + $scope.newBill.client._id,
-					"filename": $scope.newBill.numFacture
+					"folder": "public/documents/Estimate/" + $scope.newEstimate.client._id,
+					"filename": $scope.newEstimate.numFacture
 				},
-				"data": $scope.newBill
+				"data": $scope.newEstimate
 			};
 
 			console.log("New Pdf to send");
