@@ -10,6 +10,8 @@
 
 	<div class="contener">
 
+		<form name="formEditProfile" ng-submit="addBill(formAddInvoice.$valid)">
+
 		<div class="coordonnee">
 			<h2>Coordonée</h2>			
 		</div>
@@ -22,36 +24,66 @@
 			
 			<div class="info">
 					<p>
-						Dénomination Sociale : {{details.name}} <br>
-						Adresse : {{details.contact.street}} n° {{details.contact.number}}<span ng-if="details.contact.box">, boite {{details.contact.box}}</span><br>
-						Code postal : {{details.contact.zip}}<br>
-						Localité : {{details.contact.town}}<br>
-						Pays : {{details.contact.country}}<br> 
-						Telephone principal : {{details.contact.phoneMain}}<br>
-						<span ng-if="details.contact.phoneSec">Telephone secondaire : {{details.contact.phoneSec}}<br></span>
-						<span ng-if="details.contact.fax">Fax : {{details.contact.fax}}<br></span>
-						Email : {{details.contact.mail}}<br>
-						Site web : {{details.contact.web}}<br>						
+						<label for="civility">Dénomination Sociale :</label>
+						<input type="text" ng-model="details.name" ng-value="details.name" required><br>
+
+						<label for="street">Rue :</label>
+						<input type="text" ng-model="details.contact.street" ng-value="details.contact.street" required><br>
+
+						<label for="number">N° :</label>
+						<input type="text" ng-model="details.contact.number" ng-value="details.contact.number" required><br>
+
+						<label for="box">Boite :</label>
+						<input type="text" ng-model="details.contact.box" ng-value="details.contact.box" placeholder="Facultatif"><br>
+
+						<label for="zip">Code Postal:</label>
+						<input type="text" ng-model="details.contact.zip" ng-value="details.contact.zip" required><br>
+
+						<label for="town">Localité</label>
+						<input type="text" ng-model="details.contact.town" ng-value="details.contact.town" required><br>
+
+						<label for="country">Pays :</label>
+						<input type="text" ng-model="details.contact.country" ng-value="details.contact.country" required><br>
+
+						<label for="phoneMain">Telephone Principal</label>
+						<input type="text" ng-model="details.contact.phoneMain" ng-value="details.contact.phoneMain" required><br>
+
+						<label for="phoneSec">Telephone Secondaire</label>
+						<input type="text" ng-model="details.contact.phoneSec" ng-value="details.contact.phoneSec" placeholder="Facultatif"><br>
+
+						<label for="fax">Fax :</label>
+						<input type="text" ng-model="details.contact.fax" ng-value="details.contact.fax" placeholder="Facultatif"><br>
+
+						<label for="email">Email :</label>
+						<input type="text" ng-model="details.contact.mail" ng-value="details.contact.mail" required><br>
+
+						<label for="webSite">Site Web :</label>
+						<input type="text" ng-model="details.contact.web" ng-value="details.contact.web" placeholder="Facultatif">				
+			
 					</p>				
 			</div>
 
 			<div class="tva">
 				
 				<p>
-					n° TVA : {{details.vat.num}}<br>
-					<span ng-if="details.vat.siren">n° SIREN : {{details.vat.siren}}</span><br>
-					<span ng-if="details.vat.rcs">n° RCS : {{details.vat.rcs}}</span><br>
+
+					<label for="tva">N° TVA :</label>
+					<input type="text" ng-model="details.vat.num" ng-value="details.vat.num" required><br>
+
+					<label for="siren">N° SIREN :</label>
+					<input type="text" ng-model="details.vat.siren" ng-value="details.vat.siren" placeholder="Facultatif"><br>
+
+					<label for="rcs">N° RCS :</label>
+					<input type="text" ng-model="details.vat.rcs" ng-value="details.vat.rcs" placeholder="Facultatif"><br>				
+					
 				</p>
 
-			</div>
+			</div>		
 
-			
-
-			<!-- <div class="savecoordonnee">
-				<p>sauvegarder</p>
-			</div> -->
 
 		</div>
+
+
 
 
 
@@ -61,20 +93,40 @@
 			<h2>Personne de contact</h2>			
 		</div>
 
-		<div class="contactCont">					
+		<div class="contactCont">
+
+			<p>
+			
+				<label for="civilityContact">Civilité :</label>
+				<select name="civility" id="" required>
+					<option>Monsieur</option>
+					<option>Madame</option>
+					<option>Mademoiselle</option>
+				</select><br>
+
+				<label for="firstNameContact">Prénom :</label>
+				<input type="text" ng-model="details.contactPerson.firstname" ng-value="details.contactPerson.firstname" required><br>
+
+				<label for="lastNameContact">Nom :</label>
+				<input type="text" ng-model="details.contactPerson.lastname" ng-value="details.contactPerson.lastname" required><br>				
+
+				<label for="mailContact">Mail :</label>
+				<input type="text" ng-model="details.contactPerson.mail" ng-value="details.contactPerson.mail" required><br>
+
+				<label for="phoneMainContact">Telephone Principal :</label>
+				<input type="text" ng-model="details.contactPerson.phoneMain" ng-value="details.contactPerson.phoneMain" required><br>
+
+				<label for="phoneSecContact">Telephone Secondaire :</label>
+				<input type="text" ng-model="details.contactPerson.phoneSec" ng-value="details.contactPerson.phoneSec" placeholder="Facultatif"><br>
 				
-					<h3>
-					{{details.contactPerson.civility}} {{details.contactPerson.firstname}} {{details.contactPerson.lastname}}</h3><br>
-					<p>Email : {{details.contactPerson.mail}}<br>
-					Tél : {{details.contactPerson.phoneMain}}<br>
-					<span ng-if="details.contactPerson.phoneSec">Téléphone secondaire : {{details.contactPerson.phoneSec}}</span><br>
-					Fonction : {{details.contactPerson.post}}
-					</p>				
+				<label for="postContact">Fonction :</label>
+				<input type="text" ng-model="details.contactPerson.post" ng-value="details.contactPerson.post" required>	
+					
+					
+			</p>			
 
 			
-			<!-- <div class="savecoordonnee1">
-				<p>sauvegarder</p>
-			</div> -->
+			
 
 		</div>
 
@@ -83,7 +135,7 @@
 
 
 
-		<div class="payment">
+		<div class="paymentInfos">
 			<h2>Informations de paiement</h2>			
 		</div>
 
@@ -91,21 +143,31 @@
 			<ul>
 				<li ng-repeat="account in listAccounts">
 					<ul>
-						<li>Nom : {{account.name}}</li>
-						<li ng-if="account.iban">IBAN/RIB : {{account.iban}}</li>
-						<li ng-if="account.bic">BIC : {{account.bic}}</li>
-						<li ng-if="account.mail">Email : {{account.mail}}</li>
+						<li>
+							<label for="accountName">Nom du compte :</label>
+							<input type="text" ng-model="account.name" ng-value="account.name" required>
+						</li>
+
+						<li>
+							<label for="accountIban">IBAN/RIB :</label>
+							<input type="text" ng-model="account.iban" ng-value="account.iban" placeholder="Facultatif">
+						</li>
+
+						<li>
+							<label for="accountBic">BIC :</label>
+							<input type="text" ng-model="account.bic" ng-value="account.bic" placeholder="Facultatif">
+						</li>
+
+						<li>
+							<label for="accountEmail">Email :</label>
+							<input type="text" ng-model="account.mail" ng-value="account.mail" placeholder="Facultatif">
+						</li>			
+						
 					</ul>	
 				</li>
-			</ul>		
+			</ul>	
 
-			<!-- <div class="ajouter">				
-				<p>+</p><p>Ajouter</p>
-			</div> -->
-
-			<!-- <div class="savecoordonnee3">
-				<p>sauvegarder</p>
-			</div> -->
+			
 
 		</div>
 
@@ -117,7 +179,7 @@
 
 
 
-		<div class="article">
+		<div class="articleInfos">
 			<h2>Article</h2>			
 		</div>
 
@@ -219,6 +281,9 @@
 
 
 	</div>	
+
+
+	</form>
 
 
 	</div>
