@@ -14,26 +14,22 @@
 			<input type="date" ng-model="newBill.dateFacture">
 		</fieldset>
 		<fieldset class="ref_client">
-			
-			
-			
 			<legend>Références client</legend>
 			<div class="half">
-				<label for="po">Client</label><br/>
-				<select name="PO" id="po" ng-model="newBill.client" ng-options="client as client.name for client in listClients"></select>
-				
-				<!--<p>{{newBill.client}}</p>-->
-			</div>
-			<div class="half last">
 				<label for="estimate">Devis n°</label><br/>
 				<select name="Devis" id="estimate" ng-model="newBill.estimate" ng-options="estimate.link for estimate in newBill.client.quotations">
-			
 			</select>
 				<!--<p>{{listClients[newBill.client]}}</p>-->
 			</div>
+			<div class="half">
+				<label for="client">Client</label><br/>
+				<select name="client" id="client" ng-model="newBill.client" ng-options="client as client.name for client in listClients"></select>
+				<!--<p>{{newBill.client}}</p>-->
+			</div>
+			
 			<label for="client">PO</label><br/>
 
-			<input name="Client" id="client" class="cent" ng-model="newBill.po" ng-value="newBill.client._id"><br/>
+			<input name="Client" id="client" class="cent" ng-model="newBill.po" ng-value="newBill.client._id" disabled><br/>
 			
 			<button type="next" class="next">Suivant</button>
 

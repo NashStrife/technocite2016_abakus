@@ -33,7 +33,6 @@ fieldset {
 .references {
     input {
         @include span(4 of 12);
-        background: green;
         &:last-child {
             @include last;
         }
