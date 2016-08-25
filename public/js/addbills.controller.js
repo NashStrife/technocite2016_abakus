@@ -94,6 +94,13 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 
 		var quantity = $scope.newBill.article.quantity;
 		var unitPrice = $scope.newBill.article.unitPrice;
+		let totalXvat = $scope.newBill.totalXvat;
+		let refound = $scope.newbill.refound;
+		if ($scope.newBill.refundCur === "%") {
+			$scope.newBill.underTotalXvat -= (totalXvat / 100) * refound;
+		} else {
+			$scope.newBill.underTotalXvat -= refound;
+		}
 		//when item is selected in the dropdown
 		$scope.newBill.article.amount = quantity * unitPrice;
 
@@ -117,8 +124,8 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 					'amount': $scope.newBill.article.amount
 				});
 				$scope.newBill.totalXvat += $scope.newBill.article.amount;
-				$scope.newBill.underTotalXvat = $scope.newBill.totalXvat;
 				$scope.newBill.tva = $scope.newBill.totalXvat / 100 * 21;
+
 				$scope.newBill.totalTtc = ($scope.newBill.tva + $scope.newBill.totalXvat);
 				$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
 				//console.log($scope.newBill.underTotalXvat);
@@ -143,13 +150,13 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 	$scope.addBill = function(isValid) {
 		if (isValid) {
 			//console.log($scope.articles);
-			
+
 			$scope.newBill.articles = $scope.articles;
 			$scope.newBill.company = $scope.adminfromdb;
 			let newpdf = {
 				"file": {
-					"template" : "public/documents/templates/exemple2.hbs",
-					"folder" : "public/documents/bills/"+$scope.newBill.client._id,
+					"template": "public/documents/templates/exemple2.hbs",
+					"folder": "public/documents/bills/" + $scope.newBill.client._id,
 					"filename": $scope.newBill.numFacture
 				},
 				"data": $scope.newBill
@@ -161,10 +168,10 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 			Crm.createPdf(newpdf, function(result) {
 				//alert(result.message);
 				console.log(result);
-			// clean the temp Arrays after sending the form for the next one
+				// clean the temp Arrays after sending the form for the next one
 				voidArrays();
 			});
-			
+
 			$scope.error = false;
 		} else {
 			console.log("Invalid Submit !");
