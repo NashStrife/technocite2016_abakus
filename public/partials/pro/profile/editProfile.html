@@ -17,11 +17,12 @@
 
 		<div class="coordonneeCont">
 
+			<!-- LOGO -->
 			<img src="images/admin/profile/{{details._id}}.jpg" alt="Logo Entreprise" width="92" height="92" >			
-
+			
 			<div class="info">
-				<h3>{{details.name}}</h3>
 					<p>
+						Dénomination Sociale : {{details.name}} <br>
 						Adresse : {{details.contact.street}} n° {{details.contact.number}}<span ng-if="details.contact.box">, boite {{details.contact.box}}</span><br>
 						Code postal : {{details.contact.zip}}<br>
 						Localité : {{details.contact.town}}<br>
