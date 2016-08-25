@@ -96,7 +96,6 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 		console.log("function calcAmount");
 		var quantity = $scope.newBill.article.quantity;
 		var unitPrice = $scope.newBill.article.unitPrice;
-		
 		//when item is selected in the dropdown
 		$scope.newBill.article.amount = quantity * unitPrice;
 		
@@ -210,7 +209,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 				//alert(result.message);
 				console.log(result);
 				// clean the temp Arrays after sending the form for the next one
-				voidArrays();
+				//voidArrays();
 			});
 
 			$scope.error = false;
