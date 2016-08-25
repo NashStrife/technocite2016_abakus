@@ -1,9 +1,9 @@
-var abakusControllers = angular.module('addBillsControllers', []);
+var abakusControllers = angular.module('addEstimateControllers', []);
 
 
 
 // add the "Rest" service inside the diferent Ctrl
-abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param', 'Crm', function($scope, Client, Admin, Param, Crm) {
+abakusControllers.controller('AddEstimateCtrl', ['$scope', 'Client', 'Admin', 'Param', 'Crm', function($scope, Client, Admin, Param, Crm) {
 
 	// function to clean all informations when needed
 	function voidArrays() {
@@ -111,6 +111,8 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 		// console.log(quantity);
 		// console.log($scope.newBill.article.amount);
 	};
+
+	
 	// add articles to the temp list inside the form
 	$scope.addElement = function(elem) {
 		// for the list of articles
