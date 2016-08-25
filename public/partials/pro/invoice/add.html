@@ -60,7 +60,7 @@
 						<input type="" name="quantity" class="quart" id="quart1" value="{{item.quantity}}" disabled> 
 						<input type="" name="unitPrice" class="quart" id="quart2" value="{{item.unitPrice}}" disabled>
 						<input type="" name="amount" class="full" value="{{item.amount}}" id="amount" disabled><!--
-						--><span id="less" ng-click="removeElement('article', $index)"> - </span>
+					 --><span id="less" ng-click="removeElement('article', $index, item.amount)"> - </span>
 					</li>
 				</ul>
 				</div>
@@ -96,8 +96,8 @@
 				</div>
 				<div class="rebate">
 					<label for="rebate">Ristourne</label>
-					<input name="Ristourne" id="rebate" ng-model="newBill.refund" ng-change="calcAmount()">
-					<select name="percent" id="rebate" ng-model="newBill.refundCur" ng-options="refund for refund in paramFromDb.refunds" ng-change="calcAmount()">
+					<input name="Ristourne" id="rebate" ng-model="newBill.refund" ng-change="calculateAll()" ng-value="newBill.refund">
+					<select name="percent" id="rebate" ng-model="newBill.refundCur" ng-options="refund for refund in paramFromDb.refunds" ng-change="calculateAll()">
 			</select>
 				</div>
 				<div class="subtotal">
@@ -117,7 +117,7 @@
 				</div>
 				<div class="deposit">
 					<label for="deposit">Accompte</label>
-					<input name="Acompte" id="deposit" ng-model="newBill.deposit" ng-value="newBill.deposit" ng-change="calcAmount()">
+					<input name="Acompte" id="deposit" ng-model="newBill.deposit" ng-value="newBill.deposit" ng-change="calculateAll()">
 				</div>
 
 

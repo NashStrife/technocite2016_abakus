@@ -76,6 +76,8 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams', 'Admin
 		$scope.details = result[0];
 		console.log($scope.details);
 
+		$scope.articles = $scope.details.articles;
+
 		$scope.colorBill = result[0].templates.bill;
 		$scope.colorEstimate = result[0].templates.quotation;
 		$scope.listAccounts = [];
@@ -87,4 +89,57 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams', 'Admin
 			$scope.listAccounts.push(bank);
 		});
 	});
+
+		// when articles are added to the temp list inside the form
+	$scope.addElement = function(elem) {
+		console.log("function addElement");
+		// for the list of articles
+		if (elem === 'article') {
+			if ($scope.newBill.article.quantity) {
+				$scope.articles.push({
+					'name': $scope.newBill.article.name,
+					'description': $scope.newBill.article.description,
+					'quantity': $scope.newBill.article.quantity,
+					'unitPrice': $scope.newBill.article.unitPrice,
+					'amount': $scope.newBill.article.amount
+				});
+				// clean the inputs when we add a new article on the temporary array
+				$scope.newBill.article.quantity = "";
+				$scope.newBill.article.amount = "";
+			} else {
+				alert("Article incomplet");
+			}
+
+		}
+	};
+
+	$scope.removeElement = function(elem, index) {
+		console.log("function removeElement");
+		if (elem === 'article') {
+			$scope.articles.splice(index, 1);
+		}
+	};
+
+		// when we send the form
+	$scope.editProfile = function(isValid) {
+		if (isValid) {
+			//console.log($scope.articles);
+
+			$scope.details.articles = $scope.articles;
+			
+			console.log($scope.details);
+			// Crm.createPdf(newpdf, function(result) {
+			// 	//alert(result.message);
+			// 	console.log(result);
+			// 	// clean the temp Arrays after sending the form for the next one
+			// 	voidArrays();
+			// });
+
+			$scope.error = false;
+		} else {
+			console.log("Invalid Submit !");
+			alert("Please complete all required champs");
+			$scope.error = true;
+		}
+	};
 }]);
