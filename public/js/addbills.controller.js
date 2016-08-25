@@ -3,7 +3,7 @@ var abakusControllers = angular.module('addBillsControllers', []);
 
 
 // add the "Rest" service inside the diferent Ctrl
-abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param', function($scope, Client, Admin, Param) {
+abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param', 'Crm', function($scope, Client, Admin, Param, Crm) {
 
 	// function to clean all informations when needed
 	function voidArrays() {
@@ -33,7 +33,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 				item.bills.map(function(bill) {
 					// console.log(bill);
 					// add customer name to result to avoid some tricky manipulations inside html
-					bill.clientName = item.name
+					bill.clientName = item.name;
 					bill.clientId = item._id;
 					$scope.listBills.push(bill);
 				});
@@ -45,34 +45,39 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 					$scope.listEstimates.push(estimate);
 				});
 			});
-			Param.getList(function(result){
-				console.log(result[0]);
-				$scope.paramFromDb = result[0];
-			});
+
 			console.log("Clients :");
 			console.log($scope.listClients);
 			console.log("Factures :");
 			console.log($scope.listBills);
 			console.log("Devis :");
 			console.log($scope.listEstimates);
+
+		});
+		Param.getList(function(result) {
+			//console.log(result[0]);
+			$scope.paramFromDb = result[0];
+			console.log("parameters");
+			console.log($scope.paramFromDb);
 		});
 		Admin.getAdmin(function(result) {
 			$scope.adminfromdb = result[0];
+			console.log("Admin");
 			console.log($scope.adminfromdb);
 			$scope.listAccounts = [];
-			 //console.log(result[0].paymentInfo);
-				// console.log(item.bills);
-				// store list of bills for easy use inside html
-				result[0].paymentInfo.bank.map(function(bank) {
-					$scope.listAccounts.push(bank);
-					console.log($scope.listAccounts);
-				});
-				result[0].paymentInfo.paypal.map(function(bank) {
-					
-					$scope.listAccounts.push(bank);
-				});
-			
-			
+			//console.log(result[0].paymentInfo);
+			// console.log(item.bills);
+			// store list of bills for easy use inside html
+			result[0].paymentInfo.bank.map(function(bank) {
+				$scope.listAccounts.push(bank);
+				//console.log($scope.listAccounts);
+			});
+			result[0].paymentInfo.paypal.map(function(bank) {
+
+				$scope.listAccounts.push(bank);
+			});
+
+
 		});
 	}
 
@@ -114,10 +119,10 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 				});
 				$scope.newBill.totalXvat += $scope.newBill.article.amount;
 				$scope.newBill.underTotalXvat = $scope.newBill.totalXvat;
-				$scope.newBill.tva = $scope.newBill.totalXvat/100 * 21;
+				$scope.newBill.tva = $scope.newBill.totalXvat / 100 * 21;
 				$scope.newBill.totalTtc = ($scope.newBill.tva + $scope.newBill.totalXvat);
 				$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
-				console.log($scope.newBill.underTotalXvat);
+				//console.log($scope.newBill.underTotalXvat);
 				//console.log($scope.newBill.totalXvat);
 				//console.log($scope.articles);
 				// clean the inputs when we add a new pic on the temporary array
@@ -129,26 +134,40 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 			}
 
 		}
-	}
+	};
 
 	$scope.removeElement = function(elem, index) {
 		if (elem === 'article') {
 			$scope.articles.splice(index, 1);
 		}
-	}
+	};
 	$scope.addBill = function(isValid) {
 		if (isValid) {
-			Rest.addResto($scope.newResto, $scope.types, $scope.pics, function(result) {
-				alert(result.message);
+			//console.log($scope.articles);
+			
+			$scope.newBill.articles = $scope.articles;
+			$scope.newBill.company = $scope.adminfromdb;
+			let newpdf = {
+				"file": {
+					"template" : "public/documents/templates/exemple2.hbs",
+					"folder" : "public/documents/estimates/"+$scope.newBill.client._id,
+					"filename": $scope.newBill.numFacture
+				},
+				"data": $scope.newBill
+			};
+			console.log(newpdf);
+			Crm.createPdf(newpdf, function(result) {
+				//alert(result.message);
 				console.log(result);
-				// clean the temp Arrays after sending the form for the next one
+			// clean the temp Arrays after sending the form for the next one
 				voidArrays();
 			});
+			
 			$scope.error = false;
 		} else {
 			console.log("Invalid Submit !");
 			alert("Please complete all required champs");
 			$scope.error = true;
 		}
-	}
+	};
 }]);

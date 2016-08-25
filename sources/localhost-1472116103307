@@ -1,0 +1,13 @@
+Object {isLogged: false}
+Clients :
+[Resource, Resource, $promise: Promise, $resolved: true]
+Factures :
+[Object, Object, Object]
+Devis :
+[Object, Object, Object, Object]
+parameters
+Resource {_id: "57bea5fe846421ad7903ad63", __v: 0, vatPrefix: Array[27], vatRate: Array[3], countries: Array[5]…}
+Admin
+Resource {_id: "57bdaa671a4baba8264473bc", name: "ma société", logo: "logo", createdAt: "2016-08-25T08:02:05.722Z", __v: 0…}
+Object {file: Object, data: Object}data: Objectarticle: Objectarticles: Array[2]0: Objectamount: 120description: "lunettes de soleil"name: "lunettes solaire"quantity: 1unitPrice: 120__proto__: Object1: Objectlength: 2__proto__: Array[0]client: Resourcecompany: Resource__v: 0_id: "57bdaa671a4baba8264473bc"articles: Array[3]0: Object$$hashKey: "object:27"_id: "57bea5fe846421ad7903ad58"amount: ""description: "lunettes de soleil"name: "lunettes solaire"quantity: ""unitPrice: 120__proto__: Object1: Object2: Objectlength: 3__proto__: Array[0]contact: Objectbox: ""country: "belgique"fax: "071 25 96 78"mail: "mon.mail@gmail.com"number: 1phoneMain: "+32 45 256 365"phoneSec: "+32 24 569 874"street: "ma rue"town: "ma ville"web: "http://www.monsite.be"zip: "1000"__proto__: ObjectcontactPerson: Objectcivility: "Monsieur"firstname: "john"lastname: "doe"mail: "john.doe@gmail.com"phoneMain: "+32 493 452 365"phoneSec: ""post: "gérant"pwd: "$2a$10$JtW9KifU3S9emYZpTAR3weHwb7Up1ylhZoBRQAjRZ8SbNNJp4ckxK"__proto__: ObjectcreatedAt: "2016-08-25T08:02:05.722Z"logo: "logo"name: "ma société"paymentInfo: Objecttemplates: ObjectupdatedAt: "2016-08-25T08:02:06.007Z"vat: Object__proto__: ObjectdateFacture: Thu Aug 25 2016 00:00:00 GMT+0200 (CEST)deposit: "100"estimate: ObjectnumFacture: "2016-08-25-543"primAccount: Objectrefund: "20"refundCur: "€"rules: "Facture payable au grand comptant"secAccount: Objectsum: 75.44999999999999totalTtc: 175.45totalXvat: 145tva: 30.45underTotalXvat: 145__proto__: Objectfile: Object__proto__: Object
+Object {article: Object, totalXvat: 145, underTotalXvat: 145, tva: 30.45, totalTtc: 175.45…}article: Objectarticles: Array[2]client: Resourcecompany: ResourcedateFacture: Thu Aug 25 2016 00:00:00 GMT+0200 (CEST)deposit: "100"estimate: ObjectnumFacture: "2016-08-25-543"primAccount: Objectrefund: "20"refundCur: "€"rules: "Facture payable au grand comptant"secAccount: Objectsum: 75.44999999999999totalTtc: 175.45totalXvat: 145tva: 30.45underTotalXvat: 145__proto__: Object
