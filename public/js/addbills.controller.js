@@ -3,7 +3,7 @@ var abakusControllers = angular.module('addBillsControllers', []);
 
 
 // add the "Rest" service inside the diferent Ctrl
-abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param', function($scope, Client, Admin, Param) {
+abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param', 'Crm', function($scope, Client, Admin, Param, Crm) {
 
 	// function to clean all informations when needed
 	function voidArrays() {
@@ -144,9 +144,10 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 	$scope.addBill = function(isValid) {
 		if (isValid) {
 			//console.log($scope.articles);
+			
 			$scope.newBill.articles = $scope.articles;
 			$scope.newBill.company = $scope.adminfromdb;
-			let infopdf = {
+			let newpdf = {
 				"file": {
 					"template" : "public/documents/templates/exemple2.hbs",
 					"folder" : "public/documents/estimates/"+$scope.newBill.client._id,
@@ -154,14 +155,14 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 				},
 				"data": $scope.newBill
 			};
-			console.log(infopdf);
-			//Rest.addResto($scope.newResto, $scope.types, $scope.pics, function(result) {
-			//	alert(result.message);
-			//	console.log(result);
+			console.log(newpdf);
+			Crm.createPdf(newpdf, function(result) {
+				//alert(result.message);
+				console.log(result);
 			// clean the temp Arrays after sending the form for the next one
-			//	voidArrays();
-			//	});
-			console.log($scope.newBill);
+				voidArrays();
+			});
+			
 			$scope.error = false;
 		} else {
 			console.log("Invalid Submit !");

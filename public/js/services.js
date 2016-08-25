@@ -29,12 +29,13 @@ services.factory('Crm',['$resource', function($resource) {
 		},
         createPdf : function(newPdf, callback) {
             let pdfResource = $resource("/api/crm/createPdf");
+            let createPdf = new resource();
             // informations about file and folder
-            pdfResource.file = newPdf.file;
+            createPdf.file = newPdf.file;
             // data to put inside the pdf
-            pdfResource.data = newPdf.data;
+            createPdf.data = newPdf.data;
             
-            pdfResource.$save(callback);
+            createPdf.$save(callback);
 		}
 	}
 
