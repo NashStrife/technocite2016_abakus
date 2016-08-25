@@ -5,25 +5,36 @@
 
 
 	<h1 style="background-color:#d6eaf8;">Création de nouvelle facture</h1>
-	<form action="" class="addInvoice">
+	<form class="addInvoice" name="formAddInvoice" ng-submit="addBill(formAddInvoice.$valid)">
+		<fieldset class="ref_fact">
+			<legend>Références facture</legend>
+			<label for="numFacture">Numéro de facture</label>
+			<input type="text" ng-model="newBill.numFacture">
+			<label for="dateFacture">Date de la facture</label>
+			<input type="date" ng-model="newBill.dateFacture | date:'dd-MM-yyyy'">
+		</fieldset>
 		<fieldset class="ref_client">
+			
+			
+			
 			<legend>Références client</legend>
-			<label for="client">Client</label><br/>
-			<input name="Client" id="client" placeholder="" class="cent"><br/>
 			<div class="half">
-				<label for="po">PO</label><br/>
-				<select name="PO" id="po" ng-model="newBill.client" ng-options="listClients.indexOf(client) as client.name for client in listClients">
-					
-			</select>
+				<label for="po">Client</label><br/>
+				<select name="PO" id="po" ng-model="newBill.client" ng-options="client as client.name for client in listClients"></select>
+				
 				<!--<p>{{newBill.client}}</p>-->
 			</div>
 			<div class="half last">
 				<label for="estimate">Devis n°</label><br/>
-				<select name="Devis" id="estimate" ng-model="newBill.estimate" ng-options="estimate.link for estimate in listClients[newBill.client].quotations">
+				<select name="Devis" id="estimate" ng-model="newBill.estimate" ng-options="estimate.link for estimate in newBill.client.quotations">
 			
 			</select>
 				<!--<p>{{listClients[newBill.client]}}</p>-->
 			</div>
+			<label for="client">PO</label><br/>
+
+			<input name="Client" id="client" class="cent" ng-model="newBill.po" ng-value="newBill.client._id"><br/>
+			
 			<button type="next" class="next">Suivant</button>
 
 		</fieldset>
@@ -75,7 +86,7 @@
 						<input name="P/U" id="p-u" placeholder="" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice" disabled>
 					</div>
 					<div class="bill">
-						<label for="amount">Montant</label>
+						<label for="amount">Montant (€)</label>
 						<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount" disabled>
 					</div>
 				</div>
@@ -89,11 +100,8 @@
 				</div>
 				<div class="rebate">
 					<label for="rebate">Ristourne</label>
-					<input name="Ristourne" id="rebate" placeholder="">
-					<select name="percent" id="rebate">
-				<option value="option 1">%</option>
-				<option value="option 2">%</option>
-				<option value="option 3">%</option>
+					<input name="Ristourne" id="rebate" ng-model="newBill.refund">
+					<select name="percent" id="rebate" ng-model="newBill.refundCur" ng-options="refund for refund in paramFromDb.refunds">
 			</select>
 				</div>
 				<div class="subtotal">
