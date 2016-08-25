@@ -108,22 +108,36 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 	// when an amount change in sub totals
 	$scope.calculateAll = function (){
 		console.log("function calculateAll");
-		// when refund is edited
+
+		
+		// calculate underTotalXvat
 		let totalXvat = $scope.newBill.totalXvat;
 		let refund = $scope.newBill.refund;
-
 		if ($scope.newBill.refundCur === "%") {
-			$scope.newBill.underTotalXvat -= (totalXvat / 100) * refund;
+			if($scope.newBill.refund != 0){
+				$scope.newBill.underTotalXvat = totalXvat - (totalXvat / 100) * refund;
+			} else {
+				$scope.newBill.underTotalXvat = totalXvat;
+			}
 		} else {
-			$scope.newBill.underTotalXvat -= refund;
+			$scope.newBill.underTotalXvat = totalXvat - refund;
 		}
+		// $scope.newBill.underTotalXvat = $scope.newBill.totalXvat - $scope.newBill.refund;
 
-		//when total xvat less refund is edited
+		// calculate tva and totalTtc
 		$scope.newBill.tva = ($scope.newBill.underTotalXvat / 100) * 21;
 		$scope.newBill.totalTtc = ($scope.newBill.tva + $scope.newBill.underTotalXvat);
 
-		//when the deposit is edited
+		// sum less deposit
 		$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
+
+		// console.log("totalXvat :" + $scope.newBill.totalXvat);
+		// console.log("refund :" + $scope.newBill.refund);
+		// console.log("underTotalXvat :" + $scope.newBill.underTotalXvat);
+		// console.log("tva :" + $scope.newBill.tva);
+		// console.log("totalTtc :" + $scope.newBill.totalTtc);
+		// console.log("deposit :" + $scope.newBill.deposit);
+		// console.log("sum :" + $scope.newBill.sum);
 	}
 
 	// when articles are added to the temp list inside the form
