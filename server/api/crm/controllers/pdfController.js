@@ -17,12 +17,12 @@ exports.createPdf = function(req, res, next) {
     let template = Handlebars.compile(source);  
     // get data to show inside the pdf
     let data = req.body.data;
-    logger.log(data);
+    // logger.log(data);
 
     // insert data inside handlebars template
     var html_with_data = template(data);    
     
-    logger.log(html_with_data);
+    // logger.log(html_with_data);
 
     // values for pdf creation
     var options = config = {
@@ -58,15 +58,15 @@ exports.createPdf = function(req, res, next) {
             logger.log('Folder has been created or already exists');
             
             // concatenation of folder, filename and extention
-            destination_path += "/" + file.fileName + ".pdf";
+            destination_path += "/" + file.filename + ".pdf";
 
             pdf.create(html_with_data, options).toFile(destination_path, function(err) {   //pdf.create(html_with_data, options).toFile('public/tmp/pdf_from_hbs.pdf', function(err) {
                 if(err){
-                        res.json([{error_code:1,err_desc:err}]);
+                        res.json({error_code:1,err_desc:err});
                         logger.log(err);    
                         return;
                 }
-                    res.json([{error_code:0,data:destination_path}]);
+                    res.json({error_code:0,data:destination_path});
                     logger.log('PDF Created !');
                     logger.log(destination_path);
             });
