@@ -94,13 +94,13 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 
 		var quantity = $scope.newBill.article.quantity;
 		var unitPrice = $scope.newBill.article.unitPrice;
-		let totalXvat = $scope.newBill.totalXvat;
-		let refound = $scope.newbill.refound;
-		if ($scope.newBill.refundCur === "%") {
-			$scope.newBill.underTotalXvat -= (totalXvat / 100) * refound;
-		} else {
-			$scope.newBill.underTotalXvat -= refound;
-		}
+		//let totalXvat = $scope.newBill.totalXvat;
+		//let refound = $scope.newbill.refound;
+		//if ($scope.newBill.refundCur === "%") {
+		//	$scope.newBill.underTotalXvat -= (totalXvat / 100) * refound;
+		//} else {
+		//	$scope.newBill.underTotalXvat -= refound;
+		//}
 		//when item is selected in the dropdown
 		$scope.newBill.article.amount = quantity * unitPrice;
 
