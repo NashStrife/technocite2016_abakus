@@ -6,22 +6,22 @@
 
 <div class="warpper">
 
-	<section>
+	<!-- <section>
 		<a href="#/pro/profile/edit-profile">
 			<div class="coordonnee">
-				<img src="images/edit.svg">
+				<img src="images/edit.svg" width="32" height="32">
 				Editer		
 			</div>
 		</a>
-	</section>
+	</section> -->
 		
 	<div class="contener">
 
 
 
-		<div class="coordonnee">
+		<!-- <div class="coordonnee">
 			<h2>Coordonée</h2>			
-		</div>
+		</div> -->
 
 
 		<div class="coordonneeCont">
@@ -91,13 +91,13 @@
 
 
 
-		<div class="payment">
+		<div class="paymentInfos">
 			<h2>Informations de paiement</h2>			
 		</div>
 
 		<div class="paymentCont">
 			<ul>
-				<li ng-repeat="account in listAccounts">
+				<li class="paymentListInfos" ng-repeat="account in listAccounts">
 					<ul>
 						<li>Nom : {{account.name}}</li>
 						<li ng-if="account.iban">IBAN/RIB : {{account.iban}}</li>
@@ -226,8 +226,7 @@
 			</div> -->
 
 
-	</div>	
-
+	</div>
 
 	</div>
 
