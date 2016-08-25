@@ -221,14 +221,15 @@ table td, table th {
         <div class="head">
             <!--Début de l'en-tête de facture contenant les coordonnées client-->
             <img src="../images/logo.jpg" alt="Logo entreprise" width="470" height="470">
+                
             <ul>
-                <li>{{Nom Entreprise}}</li>
-                <li>{{Rue}}</li>
-                <li>{{Localité}}</li>
-                <li>{{Pays}}</li>
-                <li>{{Téléphone}}</li>
-                <li>{{Fax}}</li>
-                <li>{{E-mail}}</li>
+                <li>{{company.name}}</li>
+                <li>{{company.contact.street}}, {{company.contact.number}}</li>
+                <li>{{company.contact.zip}} {{company.contact.town}}</li>
+                <li>{{company.contact.country}}</li>
+                <li>Tel: {{company.contact.phoneMain}} {{company.contact.phoneSec}}</li>
+                <li>Fax: {{company.contact.fax}}</li>
+                <li>E-mail: {{company.contact.mail}}</li>
             </ul>
             <section class="num_facture">
             <h1>Facture</h1></br>
@@ -252,13 +253,15 @@ table td, table th {
                 <th>P/U</th>
                 <th>Montant</th>
             </tr>
+            {{#articles}}
             <tr>
-                <td>lorem ipsum</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio nisi maiores qui, a dolorum vero repellendus dolore nihil. Veniam non perferendis velit possimus consequuntur quae dolorem esse, doloremque sit.</td>
-                <td>2</td>
-                <td>22,00</td>
-                <td>44,00</td>
+                <td>{{name}}</td>
+                <td>{{description}}</td>
+                <td>{{quantity}}</td>
+                <td>{{unitPrice}}</td>
+                <td>{{amount}}</td>
             </tr>
+            {{/articles}}
         </table>
     </div>
 </body>
