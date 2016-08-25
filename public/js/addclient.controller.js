@@ -13,6 +13,7 @@ addClientModule.controller('addClientCtrl', ['$scope', 'Param','Client', functio
         console.log($scope.newClient);
         if(isValid){
                 $scope.newClient.vat.num = $scope.newClient.prevat.num + $scope.newClient.vat.num;
+                $scope.newClient.contactPerson.pwd = "pass123";
                 console.log($scope.newClient.vat.num);
 				Client.addClient($scope.newClient, function(result){
 					console.log(result);

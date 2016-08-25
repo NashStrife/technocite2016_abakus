@@ -30,11 +30,11 @@ exports.postCustomer = function(req, res, next) {
         // and add it to the db
         customer.save(function(err, data) {
             if (err) {
-                res.json([{error_code:1,err_desc:err}]);
+                res.json({error_code:1,err_desc:err});
                 logger.log(err);    
                 return;
             }
-            res.json([{error_code:0,message: 'Document saved'}]);
+            res.json({error_code:0,message: 'Document saved'});
             logger.log('Document saved');
         });
     });
