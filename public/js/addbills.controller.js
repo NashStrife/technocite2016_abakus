@@ -46,24 +46,26 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 				});
 			});
 
-			console.log("Clients :");
-			console.log($scope.listClients);
-			console.log("Factures :");
-			console.log($scope.listBills);
-			console.log("Devis :");
-			console.log($scope.listEstimates);
+			// console.log("Clients :");
+			// console.log($scope.listClients);
+			// console.log("Factures :");
+			// console.log($scope.listBills);
+			// console.log("Devis :");
+			// console.log($scope.listEstimates);
 
 		});
+
 		Param.getList(function(result) {
 			//console.log(result[0]);
 			$scope.paramFromDb = result[0];
-			console.log("parameters");
-			console.log($scope.paramFromDb);
+			// console.log("parameters");
+			// console.log($scope.paramFromDb);
 		});
+
 		Admin.getAdmin(function(result) {
 			$scope.adminfromdb = result[0];
-			console.log("Admin");
-			console.log($scope.adminfromdb);
+			// console.log("Admin");
+			// console.log($scope.adminfromdb);
 			$scope.listAccounts = [];
 			//console.log(result[0].paymentInfo);
 			// console.log(item.bills);
@@ -73,11 +75,8 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 				//console.log($scope.listAccounts);
 			});
 			result[0].paymentInfo.paypal.map(function(bank) {
-
 				$scope.listAccounts.push(bank);
 			});
-
-
 		});
 	}
 
@@ -150,12 +149,15 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 			let newpdf = {
 				"file": {
 					"template" : "public/documents/templates/exemple2.hbs",
-					"folder" : "public/documents/estimates/"+$scope.newBill.client._id,
+					"folder" : "public/documents/bills/"+$scope.newBill.client._id,
 					"filename": $scope.newBill.numFacture
 				},
 				"data": $scope.newBill
 			};
+
+			console.log("New Pdf to send");
 			console.log(newpdf);
+
 			Crm.createPdf(newpdf, function(result) {
 				//alert(result.message);
 				console.log(result);

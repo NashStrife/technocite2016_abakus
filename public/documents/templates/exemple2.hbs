@@ -220,7 +220,7 @@ table td, table th {
     <div class="container">
         <div class="head">
             <!--Début de l'en-tête de facture contenant les coordonnées client-->
-            <img src="../images/logo.jpg" alt="Logo entreprise" width="470" height="470">
+            <img src="{{contact.logo}}" alt="{{contact.name}}" width="470" height="470">
                 
             <ul>
                 <li>{{company.name}}</li>
@@ -242,7 +242,7 @@ table td, table th {
                     <li>{{client.contactPerson.civility}} {{client.contactPerson.firstname}} {{client.contactPerson.lastname}}</li>
                     <li>{{client.billingInfo.street}}, {{client.billingInfo.number}}</li>
                     <li>{{client.billingInfo.town}}</li>
-                    <li>{{{client.billingInfo.country}}</li>
+                    <li>{{client.billingInfo.country}}</li>
                 </ul>
         </div>
         <table>
