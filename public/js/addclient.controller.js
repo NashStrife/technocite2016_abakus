@@ -1,4 +1,5 @@
 var addClientModule = angular.module('addClientModule', []);
+var app = angular.module('fileUpload', ['ngFileUpload']);
 
 
 addClientModule.controller('addClientCtrl', ['$scope', '$location', 'Param','Client', 'Crm', function($scope, $location, Param, Client, Crm) {
@@ -12,39 +13,48 @@ addClientModule.controller('addClientCtrl', ['$scope', '$location', 'Param','Cli
     $scope.moreClient = function(isValid) {
         console.log($scope.newClient);
 
+
+
+
         if(isValid){
-            if($scope.newClient.isCompany == false) {
-                $scope.newClient.name = $scope.newClient.contactPerson.lastname + $scope.newClient.contactPerson.firstname;
-            }     
-            
+            $scope.newClient.contactPerson.pwd = "pass123";
+            if($scope.newClient.isCompany){
+                $scope.newClient.vat.num = $scope.newClient.prevat.num + $scope.newClient.vat.num;
+            }
             Client.addClient($scope.newClient, function(result){
                 console.log(result);
-                $scope.newClient.contactPerson.pwd = "pass123";
+               
 
-                // let profileImage = {
-                //     "folder": "public/images/clients/profile",
-                //     "filename": "test",
-                //     "file": $scope.newClient.picture
-                // };
-                // Crm.upload(profileImage, function(result){
-                //     console.log(result);
-                // });
+        //         // let profileImage = {
+        //         //     "folder": "public/images/clients/profile",
+        //         //     "filename": "test",
+        //         //     "file": $scope.newClient.picture
+        //         // };
+        //         // Crm.upload(profileImage, function(result){
+        //         //     console.log(result);
+        //         // });
                 
                 // clean the temp Arrays after sending the form for the next one
+
+
+                // app.controller('MyCtrl', ['$scope', 'Upload', function ($scope, Upload) {
+                //     $scope.uploadPic = function(file) {
+                //     file.upload = Upload.upload({
+                //     url: "public/images/clients/profile",
+                //     data: {file: file},
+                //     });
+
                 $scope.newClient = {};
                 $scope.splash(false);
                 $location.path('/pro/clients/list');
             });
             $scope.error = false;
+
 		} else {
             console.log("Invalid Submit !");
             alert("Please complete all required champs");
             $scope.error = true;
 		}
-        
-            // if($scope.newClient.isCompany){
-            //     $scope.newClient.vat.num = $scope.newClient.prevat.num + $scope.newClient.vat.num;
-            // }
     
 
     };

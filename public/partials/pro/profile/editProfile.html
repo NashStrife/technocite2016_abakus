@@ -15,7 +15,7 @@
 				<div class="coordonnee">
 					<h2>Coordonées</h2>			
 				</div>
-					<p>test</p>
+				
 
 				<div class="coordonneeCont">
 
@@ -141,26 +141,66 @@
 
 				<div class="paymentCont">
 					<ul>
-						<li ng-repeat="account in listAccounts">
+						<li ng-repeat="bank in listBank">
 							<ul>
 								<li>
-									<label for="accountName">Nom du compte :</label>
-									<input type="text" ng-model="account.name" ng-value="account.name" required>
+									<label for="bankName">Nom du compte :</label>
+									<input type="text" ng-model="bank.name" ng-value="bank.name" required>
 								</li>
 
 								<li>
-									<label for="accountIban">IBAN/RIB :</label>
-									<input type="text" ng-model="account.iban" ng-value="account.iban" placeholder="Facultatif">
+									<label for="bankIban">IBAN/RIB :</label>
+									<input type="text" ng-model="bank.iban" ng-value="bank.iban" placeholder="Facultatif">
 								</li>
 
 								<li>
-									<label for="accountBic">BIC :</label>
-									<input type="text" ng-model="account.bic" ng-value="account.bic" placeholder="Facultatif">
+									<label for="bankBic">BIC :</label>
+									<input type="text" ng-model="bank.bic" ng-value="bank.bic" placeholder="Facultatif">
+								</li>		
+
+							</ul>	
+						</li>
+					</ul>
+
+
+				<div class="facture">
+					<div class="full">
+						<label for="name">Nom du compte</label>
+						<input type="text" name="name" ng-model="bank.name"></input>
+					</div>
+					<div class="full">
+						<label for="iban">IBAN/RIB</label>
+						<input type="text" name="iban" ng-model="bank.iban">
+					</div>
+					<div class="full">
+						<label for="bic">BIC</label>
+						<input type="text" name="bic" ng-model="bank.bic" placeholder="Facultatif">
+					</div>
+				</div>
+					<button type="button" class="more_line" ng-click="addElement('bank')">+ Ajouter</button>
+
+
+
+
+
+
+					<hr>
+
+
+
+
+
+					<ul>
+						<li ng-repeat="paypal in listPaypal">
+							<ul>
+								<li>
+									<label for="paypalName">Nom du compte :</label>
+									<input type="text" ng-model="paypal.name" ng-value="paypal.name" required>
 								</li>
 
 								<li>
-									<label for="accountEmail">Email :</label>
-									<input type="text" ng-model="account.mail" ng-value="account.mail" placeholder="Facultatif">
+									<label for="paypalEmail">Email :</label>
+									<input type="text" ng-model="paypal.mail" ng-value="paypal.mail" placeholder="Facultatif">
 								</li>			
 
 							</ul>	
@@ -170,25 +210,19 @@
 
 
 
+
+
 				<div class="facture">
 					<div class="full">
 						<label for="name">Nom du compte</label>
-						<input type="text" name="name" ng-model="account.name"></input>
-					</div>
-					<div class="full">
-						<label for="iban">IBAN/RIB</label>
-						<input type="text" name="iban" ng-model="account.iban">
-					</div>
-					<div class="full">
-						<label for="bic">BIC</label>
-						<input type="text" name="bic" ng-model="account.bic" placeholder="Facultatif">
+						<input type="text" name="name" ng-model="paypal.name"></input>
 					</div>
 					<div class="full">
 						<label for="email">E-mail</label>
-						<input type="text" name="email" ng-model="account.mail" placeholder="Facultatif">
+						<input type="text" name="email" ng-model="paypal.mail" placeholder="Facultatif">
 					</div>
 				</div>
-					<button type="button" class="more_line" ng-click="addElement('account')">+ Ajouter</button>
+					<button type="button" class="more_line" ng-click="addElement('paypal')">+ Ajouter</button>
 
 
 
