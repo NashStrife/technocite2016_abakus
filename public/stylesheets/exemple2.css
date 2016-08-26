@@ -117,7 +117,7 @@ body {
 }
 
 /* line 83, ../sass/exemple2.scss */
-table {
+table.achats {
   margin-top: 15px;
   border: 2px solid #2a4158;
   width: 100%;
@@ -127,7 +127,7 @@ table {
   text-align: center;
 }
 /* line 88, ../sass/exemple2.scss */
-table .thead {
+table.achats .thead {
   background: #2a4158;
   color: #fff;
   font-size: 12px;
@@ -135,7 +135,7 @@ table .thead {
   height: 20px;
 }
 /* line 95, ../sass/exemple2.scss */
-table .fact_article {
+table.achats .fact_article {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -144,7 +144,7 @@ table .fact_article {
   border-right: 1px solid #2a4158;
 }
 /* line 99, ../sass/exemple2.scss */
-table .fact_description {
+table.achats .fact_description {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -153,7 +153,7 @@ table .fact_description {
   border-right: 1px solid #2a4158;
 }
 /* line 103, ../sass/exemple2.scss */
-table .fact_qte {
+table.achats .fact_qte {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -162,7 +162,7 @@ table .fact_qte {
   border-right: 1px solid #2a4158;
 }
 /* line 107, ../sass/exemple2.scss */
-table .fact_pu {
+table.achats .fact_pu {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -171,7 +171,7 @@ table .fact_pu {
   border-right: 1px solid #2a4158;
 }
 /* line 111, ../sass/exemple2.scss */
-table .fact_amount {
+table.achats .fact_amount {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -191,7 +191,7 @@ table .fact_amount {
 }
 
 /* line 125, ../sass/exemple2.scss */
-.calcul {
+ul.calcul {
   margin-left: 59.32203%;
   width: 40.67797%;
   float: left;
@@ -202,20 +202,20 @@ table .fact_amount {
   margin-top: 20px;
 }
 /* line 131, ../sass/exemple2.scss */
-.calcul li {
+ul.calcul li {
   height: 15px;
   line-height: 15px;
   text-align: right;
 }
 /* line 135, ../sass/exemple2.scss */
-.calcul li label {
+ul.calcul li label {
   width: 100px;
   display: inline-block;
   text-align: right;
   margin-right: 5px;
 }
 /* line 142, ../sass/exemple2.scss */
-.calcul :nth-child(7) {
+ul.calcul :nth-child(7) {
   max-width: 60%;
   height: 10px;
   margin-left: 40%;
@@ -225,4 +225,36 @@ table .fact_amount {
   color: white;
   margin-bottom: 5px;
   padding-right: 3px;
+}
+
+/* line 155, ../sass/exemple2.scss */
+table.calcul {
+  margin-left: 59.32203%;
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+  font-size: 10px;
+  margin-top: 20px;
+}
+/* line 162, ../sass/exemple2.scss */
+table.calcul tr:nth-child(7) {
+  color: #fff;
+}
+/* line 164, ../sass/exemple2.scss */
+table.calcul tr:nth-child(7) td:first-child span {
+  background: #2a4158;
+  display: inline-block;
+  padding-left: 5px;
+}
+/* line 169, ../sass/exemple2.scss */
+table.calcul tr:nth-child(7) td:last-child {
+  background: #2a4158;
+}
+/* line 173, ../sass/exemple2.scss */
+table.calcul tr td {
+  height: 15px;
+  line-height: 15px;
+  text-align: right;
 }

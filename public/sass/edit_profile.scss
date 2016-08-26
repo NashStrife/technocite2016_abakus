@@ -2,3 +2,97 @@
 @import "grids";
 @import "variables";
 
+
+.editProfilPro {
+
+
+
+
+	input, select {
+
+		background-color: $navColor;
+		border: none;
+		color: $primaryColor;
+		padding-left: 5px;
+		margin-bottom: 7px;
+		margin-left: 5px;
+	}
+
+
+	.info {
+
+		width: 330px;
+	}
+
+	.tva {
+
+		margin-top: 10px;
+	}
+
+	.contactCont {
+
+		p {
+
+			margin-top: 14px;
+			padding-bottom: 0px;
+		}
+
+		img {
+
+			background-color: none;
+		}
+	}
+
+
+	.paymentCont {
+
+
+	}
+
+	.templateCont {
+
+		padding-top: 0px;
+	}
+
+	.designfacture, .designdevis {
+
+
+		width: 361px;
+
+		
+	}
+
+	.paymentCont {
+
+		li {
+
+			display: block;
+			width: 300px;
+		}
+
+		ul {
+
+			margin-left: 11px;
+		}
+
+		label {
+
+			font-weight: normal;
+		}
+
+		span {
+
+			font-weight: bold;
+		}
+
+
+	}
+
+	
+	
+
+
+
+}
+
+

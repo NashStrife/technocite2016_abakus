@@ -101,7 +101,17 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 				});
 			
 			// alert("Article incomplet");
-
+		}
+		if ( elem === 'account') {
+			($scope.account)
+				$scope.listAccounts.push({
+					'name' : $scope.account.name,
+					'iban' : $scope.account.iban,
+					'bic' : $scope.account.bic,
+					'mail' : $scope.account.mail
+				});
+				console.log('/////////////////////////');
+				console.log($scope.listAccounts);
 		}
 	};
 
@@ -120,11 +130,25 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 			$scope.details.articles = $scope.articles;
 			$scope.details.templates.bill = $scope.colorBill;
 			$scope.details.templates.quotation = $scope.colorEstimate;
+			// add payment info bank
+			$scope.details.paymentInfo.bank = $scope.listAccounts;
+			
+			// add payment info paypal
+			// $scope.details.paymentInfo.paypal = $scope.listAccounts;
+			
+			// $scope.details.paymentInfo =  $scope.listAccounts;
+
+			console.log('*******************************');
+			console.log($scope.details.listAccounts);
+			console.log($scope.listAccounts);
+			console.log('-------------------------------');
 			console.log($scope.details);
 			console.log($scope.details.articles);
 			console.log('-------------------------------');
 			console.log($scope.details.templates.bill);
 			console.log($scope.details.templates.quotation);
+			console.log('-------------------------------');
+			console.log($scope.listAccounts);
 			
 			Admin.updateAdmin($scope.details, function(result){
 				console.log(result);
@@ -133,7 +157,7 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 				}
 				else {
 
-					alert("Les modifications ont bien enregistrées");
+					alert("Les modifications sont bien enregistrées");
 					$location.path('/pro/profile/infos');
 				}
 			});
