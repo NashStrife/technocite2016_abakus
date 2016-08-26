@@ -184,7 +184,7 @@
 				</div>
 
 				<div class="articleCont">
-
+					
 					<div class="articletitle">			
 						<ul>
 							<li>Article</li>
@@ -198,7 +198,6 @@
 							<!-- <li>{{article.name}}</li>
 							<li>{{article.description}}</li>
 							<li>{{article.unitPrice}} €</li> -->
-
 							<input type="text" name="name" ng-model="article.name" ng-value="article.name">
 							<input type="text" name="description" ng-model="article.description" ng-value="article.description">
 							<input type="text" name="unitPrice" ng-model="article.unitPrice" ng-value="article.unitPrice"><!--
@@ -206,6 +205,23 @@
 						</ul>				
 					</div>
 
+
+	
+				<div class="facture" id="facture">
+					<div class="article">
+						<label for="article">Article</label>
+						<input type="" name="Article" id="article" ng-model="article.name"></input>
+					</div>
+					<div class="description">
+						<label for="description">Description</label>
+						<input name="Description" id="description" ng-model="article.description">
+					</div>
+					<div class="small">
+						<label for="p-u">P/U</label>
+						<input name="P/U" id="p-u" ng-model="article.unitPrice">
+					</div>
+				</div>
+					<button type="button" class="more_line" ng-click="addElement('article')">+ Ajouter</button>
 
 			<!--<div class="article2">
 				<ul>
