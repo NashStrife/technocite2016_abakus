@@ -1,7 +1,7 @@
 var addClientModule = angular.module('addClientModule', []);
 
 
-addClientModule.controller('addClientCtrl', ['$scope', 'Param','Client', function($scope, Param, Client) {
+addClientModule.controller('addClientCtrl', ['$scope', '$location', 'Param','Client', 'Crm', function($scope, $location, Param, Client, Crm) {
     $scope.showForm = false;
 	$scope.splash = function(status) {
        $scope.showForm = status;
@@ -12,14 +12,27 @@ addClientModule.controller('addClientCtrl', ['$scope', 'Param','Client', functio
     $scope.moreClient = function(isValid) {
         console.log($scope.newClient);
         if(isValid){
-                $scope.newClient.vat.num = $scope.newClient.prevat.num + $scope.newClient.vat.num;
-                $scope.newClient.contactPerson.pwd = "pass123";
-                console.log($scope.newClient.vat.num);
-				Client.addClient($scope.newClient, function(result){
-					console.log(result);
-					// clean the temp Arrays after sending the form for the next one
-					$scope.newClient = {};
-				});
+            // if($scope.newClient.isCompany){
+            //     $scope.newClient.vat.num = $scope.newClient.prevat.num + $scope.newClient.vat.num;
+            // }
+            let profileImage = {
+                        "folder": "public/images/clients/profile",
+                        "filename": $scope.newClient.name,
+                        "file": $scope.newClient.picture
+                    };
+                    Crm.upload(profileImage, function(result){
+                        console.log(result);
+                    });
+                // $scope.newClient.contactPerson.pwd = "pass123";
+                // Client.addClient($scope.newClient, function(result){
+				// 	console.log(result);
+                    
+
+				// 	// clean the temp Arrays after sending the form for the next one
+				// 	$scope.newClient = {};
+                //     $scope.splash(false);
+                //     $location.path('/pro/clients/list');
+				// });
 				$scope.error = false;
 			} else {
 				console.log("Invalid Submit !");

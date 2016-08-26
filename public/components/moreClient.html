@@ -5,16 +5,18 @@
 	<form name="addClient" ng-submit="moreClient(addClient.$valid)" class="newClient">		
 		<legend>Introduction d'un nouveau client</legend>
 		<label for="particulier" class="intro">Particulier</label>
-		<input type="radio" value="false" id="particulier" name="client" ng-model="newClient.isCompany">
+		<input type="radio" value="false" id="particulier" name="client" ng-model="newClient.isCompany" required>
 		<label for="society"  class="intro">Société</label>
-		<input type="radio" value="true" id="society" name="client" ng-model="newClient.isCompany">
+		<input type="radio" value="true" id="society" name="client" ng-model="newClient.isCompany" required>
 
+		<input type="radio" name="progress" value="step0" id="step0">
+		<label for="step0" class="progress" id="lien0">Step 0</label>
 		
 		<fieldset>
 			<legend>Société</legend>
 			<div class="line">
-				<label for="ref">Dénomination sociale<br>
-					<input type="text" id="ref" ng-model="newClient.name">
+				<label for="ref" class="required">Dénomination sociale<br>
+					<input type="text" id="ref" ng-model="newClient.name" required>
 				</label>
 				<label for="logo">Logo<br>
 					<span>Parcourir</span>
@@ -44,26 +46,26 @@
 		<fieldset>
 			<legend>Coordonnées de contact</legend>
 			<div class="line">
-				<label for="civil">Civilité<br/>
-				<select id="civil" ng-model="newClient.contactPerson.civility">
+				<label for="civil" class="required">Civilité<br/>
+				<select id="civil" ng-model="newClient.contactPerson.civility" required>
 					<option value="Monsieur">Monsieur</option>
 					<option value="Madame">Madame</option>
 					<option value="Mademoiselle">Mademoiselle</option>
 				</select></label>
-				<label for="name">Nom<br/>
-				<input type="text" id="name" ng-model="newClient.contactPerson.lastname"></label>
-				<label for="firstName">Prénom<br/>
-				<input type="text" id="firstName" ng-model="newClient.contactPerson.firstname"></label>
+				<label for="name" class="required">Nom<br/>
+				<input type="text" id="name" ng-model="newClient.contactPerson.lastname" required></label>
+				<label for="firstName" class="required">Prénom<br/>
+				<input type="text" id="firstName" ng-model="newClient.contactPerson.firstname" required></label>
 			</div>
 			<div class="line">
-				<label for="phone1">Téléphone principal<br/>
-				<input type="tel" id="phone1" ng-model="newClient.contactPerson.phoneMain"></label>
+				<label for="phone1" class="required">Téléphone principal<br/>
+				<input type="tel" id="phone1" ng-model="newClient.contactPerson.phoneMain" required></label>
 				<label for="phone2">Téléphone secondaire<br/>
 				<input type="tel" id="phone2" ng-model="newClient.contactPerson.phoneSec"></label>
 			</div>
 			<div class="line">	
-				<label for="email">Email<br/>
-				<input type="email" id="email" ng-model="newClient.contactPerson.mail"></label>
+				<label for="email" class="required">Email<br/>
+				<input type="email" id="email" ng-model="newClient.contactPerson.mail" required></label>
 				<label for="fonction">Fonction<br/>
 				<input type="text" id="fonction" ng-model="newClient.contactPerson.post"></label>
 			</div>
@@ -87,31 +89,31 @@
 				<input type="text" id="firstNameFact"  ng-model="newClient.billingInfo.firstname"></label>
 			</div>
 			<div class="line">
-			<label for="streetFact">Rue<br/>
-			<input type="text" id="streetFact"  ng-model="newClient.billingInfo.street"></label>
-			<label for="numFact">N°<br>
-			<input type="text" id="numFact"  ng-model="newClient.billingInfo.number"></label>
+			<label for="streetFact" class="required">Rue<br/>
+			<input type="text" id="streetFact"  ng-model="newClient.billingInfo.street" required></label>
+			<label for="numFact" class="required">N°<br>
+			<input type="text" id="numFact"  ng-model="newClient.billingInfo.number" required></label>
 			<label for="boxFact">Bte<br>
 			<input type="text" id="boxFact"  ng-model="newClient.billingInfo.box"></label>
-			<label for="zipFact">Code Postal<br>
-			<input type="text" id="zipFact"  ng-model="newClient.billingInfo.zip"></label>
+			<label for="zipFact" class="required">Code Postal<br>
+			<input type="text" id="zipFact"  ng-model="newClient.billingInfo.zip" required></label>
 			</div>
 			<div class="line">
-			<label for="cityFact">Localité<br>
-			<input type="text" id="cityFact"   ng-model="newClient.billingInfo.town"></label>
-			<label for="countryFact">Pays<br/>
-			<select id="countryFact" ng-model="newClient.billingInfo.country" ng-options="country for country in param[0].countries">
+			<label for="cityFact" class="required">Localité<br>
+			<input type="text" id="cityFact"   ng-model="newClient.billingInfo.town" required></label>
+			<label for="countryFact" class="required">Pays<br/>
+			<select id="countryFact" ng-model="newClient.billingInfo.country" ng-options="country for country in param[0].countries" required>
 			</select></label>
 			</div>
 			<div class="line">
-			<label for="phone1Fact">Téléphone principal<br/>
-			<input type="tel" id="phone1Fact"  ng-model="newClient.billingInfo.phoneMain"></label>
+			<label for="phone1Fact" class="required">Téléphone principal<br/>
+			<input type="tel" id="phone1Fact"  ng-model="newClient.billingInfo.phoneMain" required></label>
 			<label for="phone2Fact">Téléphone secondaire<br/>
 			<input type="tel" id="phone2Fact"   ng-model="newClient.billingInfo.phoneSec"></label>
 			</div>
 			<div class="line">
-				<label for="emailFact">Email<br/>
-				<input type="email" id="emailFact"  ng-model="newClient.billingInfo.mail"></label>
+				<label for="emailFact" class="required">Email<br/>
+				<input type="email" id="emailFact"  ng-model="newClient.billingInfo.mail" required></label>
 				<label for="faxFact">Fax<br>
 				<input type="tel" id="faxFact"   ng-model="newClient.billingInfo.fax"></label>
 			</div>
@@ -147,20 +149,20 @@
 				<input type="text" id="societyDeliver" ng-model="newClient.deliveryInfo.company"></label>
 			</div>
 			<div class="line">
-				<label for="streetDeliver">Rue<br/>
-				<input type="text" id="streetDeliver" ng-model="newClient.deliveryInfo.street"></label>
-				<label for="numDeliver">N°<br>
-				<input type="text" id="numDeliver" ng-model="newClient.deliveryInfo.number"></label>
+				<label for="streetDeliver" class="required">Rue<br/>
+				<input type="text" id="streetDeliver" ng-model="newClient.deliveryInfo.street" required></label>
+				<label for="numDeliver" class="required">N°<br>
+				<input type="text" id="numDeliver" ng-model="newClient.deliveryInfo.number" required></label>
 				<label for="boxDeliver">Bte<br>
 				<input type="text" id="boxDeliver" ng-model="newClient.deliveryInfo.box"></label>
-				<label for="zipDeliver">Code Postal<br>
-				<input type="text" id="zipDeliver" ng-model="newClient.deliveryInfo.zip"></label>
+				<label for="zipDeliver" class="required">Code Postal<br>
+				<input type="text" id="zipDeliver" ng-model="newClient.deliveryInfo.zip" required></label>
 			</div>
 			<div class="line">
-				<label for="cityDeliver">Localité<br>
-				<input type="text" id="cityDeliver" ng-model="newClient.deliveryInfo.town"></label>
-				<label for="countryDeliver">Pays<br/>
-				<select id="countryDeliver" ng-model="newClient.deliveryInfo.country" ng-options="country for country in param[0].countries">
+				<label for="cityDeliver" class="required">Localité<br>
+				<input type="text" id="cityDeliver" ng-model="newClient.deliveryInfo.town" required></label>
+				<label for="countryDeliver" class="required">Pays<br/>
+				<select id="countryDeliver" ng-model="newClient.deliveryInfo.country" ng-options="country for country in param[0].countries" required>
 				</select></label>
 			</div>
 		</fieldset>
