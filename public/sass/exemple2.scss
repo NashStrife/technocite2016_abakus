@@ -42,45 +42,45 @@ body {
             }
         }
     }
-    
 }
+
 .num_facture {
-        @include span(3 of 12);
-        @include last;
-        text-align: right;
-        h1 {
-            width: 60%;
-            height: 40px;
-            line-height: 40px;
-            font-size: 18px;
-            color: #fff;
-            text-transform: uppercase;
-            background: #2a4158;
-            text-align: center;
-            margin-left: 40%;
-        }
-        p{
-            font-size: 5px;
-        }
+    @include span(3 of 12);
+    @include last;
+    text-align: right;
+    h1 {
+        width: 60%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        color: #fff;
+        text-transform: uppercase;
+        background: #2a4158;
+        text-align: center;
+        margin-left: 40%;
     }
+    p {
+        font-size: 5px;
+    }
+}
 
 .info_client {
     @include span(4 of 12);
-    ul{
+    ul {
         margin-top: 15px;
         margin-bottom: 10px;
-            :first-child{
-                margin-bottom: 8px;
-                font-size: 11px;
-            }
-        li{
-         margin-bottom: 5px;
-         font-size: 10px;
+        :first-child {
+            margin-bottom: 8px;
+            font-size: 11px;
+        }
+        li {
+            margin-bottom: 5px;
+            font-size: 10px;
         }
     }
 }
 
-table {
+table.achats {
     margin-top: 15px;
     border: 2px solid #2a4158;
     @include span(full no-gutters);
@@ -115,24 +115,24 @@ table {
 
 .article_lines {
     border-bottom: 1px solid #2a4158;
-    td{
+    td {
         font-size: 10px;
         height: 15px;
         line-height: 15px;
     }
 }
 
-.calcul {
+ul.calcul {
     @include pre(7);
     @include span(5);
     @include last;
     font-size: 10px;
     margin-top: 20px;
-    li{
+    li {
         height: 15px;
         line-height: 15px;
         text-align: right;
-        label{
+        label {
             width: 100px;
             display: inline-block;
             text-align: right;
@@ -142,13 +142,39 @@ table {
     :nth-child(7) {
         max-width: 60%;
         height: 10px;
-       margin-left: 40%;
-       font-size: 12px;
+        margin-left: 40%;
+        font-size: 12px;
         line-height: 10px;
         background: #2a4158;
         color: white;
         margin-bottom: 5px;
         padding-right: 3px;
     }
+}
 
+table.calcul {
+    @include pre(7);
+    @include span(5);
+    @include last;
+    font-size: 10px;
+    margin-top: 20px;
+    tr {
+                    &:nth-child(7){
+                        color: #fff;
+                        td:first-child span{
+                background: #2a4158;
+                 display: inline-block;
+                 padding-left: 5px;           
+                        }
+                        td:last-child{
+                background: #2a4158;
+                        }
+            }
+        td {
+            height: 15px;
+            line-height: 15px;
+            text-align: right;
+
+        }
+    }
 }
