@@ -209,7 +209,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 							alert("La facure a bien été enregistrée");
 
 							// when all is done, clear the form
-							voidArrays();
+							//voidArrays();
 						}
 					});
 				}

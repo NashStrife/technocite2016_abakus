@@ -2,7 +2,7 @@
 	<span class="overlay" id="splash" ng-if="showForm">
         
 
-	<form name="addClient" ng-submit="moreClient(addClient.$valid)" class="newClient">		
+	<form name="addClient" ng-submit="moreClient(addClient.$valid)" class="newClient" enctype="multipart/form-data">		
 		<legend>Introduction d'un nouveau client</legend>
 		<label for="particulier" class="intro">Particulier</label>
 		<input type="radio" value="false" id="particulier" name="client" ng-model="newClient.isCompany" required>
@@ -20,7 +20,7 @@
 				</label>
 				<label for="logo">Logo<br>
 					<span>Parcourir</span>
-					<input type="file" id="logo" ng-model="newClient.picture">
+					<input type="file" id="logo" file-model="newClient.picture">
 				</label>
 			</div>
 			<div class="line">

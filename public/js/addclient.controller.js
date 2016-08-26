@@ -11,39 +11,42 @@ addClientModule.controller('addClientCtrl', ['$scope', '$location', 'Param','Cli
     
     $scope.moreClient = function(isValid) {
         console.log($scope.newClient);
-        if($scope.newClient.isCompany == false) {
-                $scope.newClient.name = $scope.newClient.contactPerson.lastname + $scope.newClient.contactPerson.firstname;
-                if(isValid){     
-                    Client.addClient($scope.newClient, function(result){
-					console.log(result);
-                    $scope.newClient.contactPerson.pwd = "pass123";
 
-					// clean the temp Arrays after sending the form for the next one
-					$scope.newClient = {};
-                    $scope.splash(false);
-                    $location.path('/pro/clients/list');
-				});
-				$scope.error = false;
-			} else {
-				console.log("Invalid Submit !");
-				alert("Please complete all required champs");
-				$scope.error = true;
-			}
-        }
-        
+        if(isValid){
+            if($scope.newClient.isCompany == false) {
+                $scope.newClient.name = $scope.newClient.contactPerson.lastname + $scope.newClient.contactPerson.firstname;
+            }     
             
+            Client.addClient($scope.newClient, function(result){
+                console.log(result);
+                $scope.newClient.contactPerson.pwd = "pass123";
+
+                // let profileImage = {
+                //     "folder": "public/images/clients/profile",
+                //     "filename": "test",
+                //     "file": $scope.newClient.picture
+                // };
+                // Crm.upload(profileImage, function(result){
+                //     console.log(result);
+                // });
+                
+                // clean the temp Arrays after sending the form for the next one
+                $scope.newClient = {};
+                $scope.splash(false);
+                $location.path('/pro/clients/list');
+            });
+            $scope.error = false;
+		} else {
+            console.log("Invalid Submit !");
+            alert("Please complete all required champs");
+            $scope.error = true;
+		}
+        
             // if($scope.newClient.isCompany){
             //     $scope.newClient.vat.num = $scope.newClient.prevat.num + $scope.newClient.vat.num;
             // }
-            // let profileImage = {
-            //             "folder": "public/images/clients/profile",
-            //             "filename": $scope.newClient.name,
-            //             "file": $scope.newClient.picture
-            //         };
-            //         Crm.upload(profileImage, function(result){
-            //             console.log(result);
-            //         });
-           
+    
+
     };
     Param.getList(function(result){
 	    $scope.param = result;
