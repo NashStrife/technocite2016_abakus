@@ -165,7 +165,32 @@
 
 							</ul>	
 						</li>
-					</ul>	
+					</ul>
+
+
+
+
+				<div class="facture">
+					<div class="full">
+						<label for="name">Nom du compte</label>
+						<input type="text" name="name" ng-model="account.name"></input>
+					</div>
+					<div class="full">
+						<label for="iban">IBAN/RIB</label>
+						<input type="text" name="iban" ng-model="account.iban">
+					</div>
+					<div class="full">
+						<label for="bic">BIC</label>
+						<input type="text" name="bic" ng-model="account.bic" placeholder="Facultatif">
+					</div>
+					<div class="full">
+						<label for="email">E-mail</label>
+						<input type="text" name="email" ng-model="account.mail" placeholder="Facultatif">
+					</div>
+				</div>
+					<button type="button" class="more_line" ng-click="addElement('account')">+ Ajouter</button>
+
+
 
 
 
@@ -201,13 +226,13 @@
 							<input type="text" name="name" ng-model="article.name" ng-value="article.name">
 							<input type="text" name="description" ng-model="article.description" ng-value="article.description">
 							<input type="text" name="unitPrice" ng-model="article.unitPrice" ng-value="article.unitPrice"><!--
-							 --><span id="less" ng-click="removeElement('article', $index, item.amount)"> - </span>
+							 --><span id="less" ng-click="removeElement('article', $index)"> - </span>
 						</ul>				
 					</div>
 
 
 	
-				<div class="facture" id="facture">
+				<div class="facture">
 					<div class="article">
 						<label for="article">Article</label>
 						<input type="" name="Article" id="article" ng-model="article.name"></input>
