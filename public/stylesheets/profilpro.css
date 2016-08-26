@@ -4,7 +4,7 @@
 }
 
 /* line 8, ../sass/profilpro.scss */
-.coordonnee, .contact, .paymentInfos, .articleInfos, .template {
+.coordonnee, .contact, .paymentInfos, .article, .template {
   background-color: #e5af28;
   padding: 15px 0px;
   width: 100%;
@@ -13,7 +13,7 @@
   margin-right: 0;
 }
 /* line 12, ../sass/profilpro.scss */
-.coordonnee h2, .contact h2, .paymentInfos h2, .articleInfos h2, .template h2 {
+.coordonnee h2, .contact h2, .paymentInfos h2, .article h2, .template h2 {
   color: #2a4158;
   font-weight: bold;
 }
@@ -120,7 +120,7 @@
     padding-bottom: 100px;
   }
   /* line 125, ../sass/profilpro.scss */
-  .profilePro .coordonnee, .profilePro .contact, .profilePro .paymentInfos, .profilePro .articleInfos, .profilePro .template {
+  .profilePro .coordonnee, .profilePro .contact, .profilePro .paymentInfos, .profilePro .article, .profilePro .template {
     height: 46px;
     width: 230px;
     background-color: #e5af28;
@@ -129,7 +129,7 @@
     padding: 0;
   }
   /* line 133, ../sass/profilpro.scss */
-  .profilePro .coordonnee img, .profilePro .contact img, .profilePro .paymentInfos img, .profilePro .articleInfos img, .profilePro .template img {
+  .profilePro .coordonnee img, .profilePro .contact img, .profilePro .paymentInfos img, .profilePro .article img, .profilePro .template img {
     width: 28px;
     height: 28px;
     float: left;
@@ -137,7 +137,7 @@
     margin-left: 7px;
   }
   /* line 142, ../sass/profilpro.scss */
-  .profilePro .coordonnee h2, .profilePro .contact h2, .profilePro .paymentInfos h2, .profilePro .articleInfos h2, .profilePro .template h2 {
+  .profilePro .coordonnee h2, .profilePro .contact h2, .profilePro .paymentInfos h2, .profilePro .article h2, .profilePro .template h2 {
     font-weight: bold;
     font-size: 14px;
     margin-top: 17px;
@@ -147,7 +147,6 @@
   }
   /* line 154, ../sass/profilpro.scss */
   .profilePro .coordonnee {
-    display: block;
     margin-top: 0px;
   }
   /* line 159, ../sass/profilpro.scss */
