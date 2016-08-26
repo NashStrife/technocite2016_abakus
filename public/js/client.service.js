@@ -54,7 +54,7 @@ clientService.factory('Client',['$resource', function($resource) {
 			if(edClient.memo)
 				client.memo = edClient.memo;
             client.createdAt = edClient.createdAt;
-            client.editeddAt = Date.now();
+            client.updatedAt = Date.now();
 
 			console.log("Edit client");
 			// console.log(client);

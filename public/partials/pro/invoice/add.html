@@ -37,14 +37,14 @@
 		<fieldset>
 			<legend>Objet</legend>
 			<label for="project-name">Nom du projet</label><br/>
-			<input name="Nom du projet" id="project-name" placeholder="" class="cent" ><br/>
+			<input name="Nom du projet" id="project-name" placeholder="" class="cent" ng-model="newBill.project.name"><br/>
 			<div class="half">
 				<label for="starting-date ">Date de début</label><br/>
-				<input type="date" name="Date de début" id="starting-date "  ><br/>
+				<input type="date" name="Date de début" id="starting-date " ng-model="newBill.project.startAt" ><br/>
 			</div>
 			<div class="half last">
 				<label for="ending-date">Date de fin</label><br/>
-				<input type="date" name="Date de fin" id="ending-date" ><br/>
+				<input type="date" name="Date de fin" id="ending-date" ng-model="newBill.project.endAt"><br/>
 			</div>
 			<button type="" class="next">Suivant</button>
 		</fieldset>

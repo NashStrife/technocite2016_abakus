@@ -1,7 +1,5 @@
 var abakusControllers = angular.module('proControllers', []);
 
-
-
 // add the "Rest" service inside the diferent Ctrl
 abakusControllers.controller('ProListCtrl', ['$scope', 'Client', function($scope, Client){
 
@@ -70,7 +68,7 @@ abakusControllers.controller('ProDetailCtrl', ['$scope', '$routeParams', 'Client
 	});
 }]);
 
-abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams', 'Admin', function($scope, $routeParams, Admin){
+abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$location', 'Admin', function($scope, $routeParams, $location, Admin){
 	Admin.getAdmin(function(result){
 		// get first tab of the array because we have only one admin
 		$scope.details = result[0];
@@ -95,20 +93,14 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams', 'Admin
 		console.log("function addElement");
 		// for the list of articles
 		if (elem === 'article') {
-			if ($scope.newBill.article.quantity) {
+			($scope.article) 
 				$scope.articles.push({
-					'name': $scope.newBill.article.name,
-					'description': $scope.newBill.article.description,
-					'quantity': $scope.newBill.article.quantity,
-					'unitPrice': $scope.newBill.article.unitPrice,
-					'amount': $scope.newBill.article.amount
+					'name': $scope.article.name,
+					'description': $scope.article.description,
+					'unitPrice': $scope.article.unitPrice
 				});
-				// clean the inputs when we add a new article on the temporary array
-				$scope.newBill.article.quantity = "";
-				$scope.newBill.article.amount = "";
-			} else {
-				alert("Article incomplet");
-			}
+			
+			// alert("Article incomplet");
 
 		}
 	};
@@ -126,14 +118,25 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams', 'Admin
 			//console.log($scope.articles);
 
 			$scope.details.articles = $scope.articles;
-			
+			$scope.details.templates.bill = $scope.colorBill;
+			$scope.details.templates.quotation = $scope.colorEstimate;
 			console.log($scope.details);
-			// Crm.createPdf(newpdf, function(result) {
-			// 	//alert(result.message);
-			// 	console.log(result);
-			// 	// clean the temp Arrays after sending the form for the next one
-			// 	voidArrays();
-			// });
+			console.log($scope.details.articles);
+			console.log('-------------------------------');
+			console.log($scope.details.templates.bill);
+			console.log($scope.details.templates.quotation);
+			
+			Admin.updateAdmin($scope.details, function(result){
+				console.log(result);
+				if(result.error_code){
+					alert("Erreur lors de la modification des coordonnées, veuillez vérifier les informations entrées.");
+				}
+				else {
+
+					alert("Les modifications ont bien enregistrées");
+					$location.path('/pro/profile/infos');
+				}
+			});
 
 			$scope.error = false;
 		} else {
