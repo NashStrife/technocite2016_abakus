@@ -4,6 +4,8 @@
 <!-- <search-bar></search-bar> -->
 
 <div class="profilePro">
+	
+	<div class="editProfilPro"> 
 
 <div class="warpper">
 
@@ -20,10 +22,17 @@
 		<div class="coordonneeCont">
 
 			<!-- LOGO -->
-			<img src="images/admin/profile/{{details._id}}.jpg" alt="Logo Entreprise" width="92" height="92" >			
+
+			<img src="images/admin/profile/{{details._id}}.jpg" alt="Logo Entreprise" width="92" height="92">
+
+
+				
 			
 			<div class="info">
 					<p>
+						<label for="logo">Logo :</label>
+						<input type="file" />
+
 						<label for="civility">Dénomination Sociale :</label>
 						<input type="text" ng-model="details.name" ng-value="details.name" required><br>
 
@@ -144,7 +153,7 @@
 				<li ng-repeat="account in listAccounts">
 					<ul>
 						<li>
-							<label for="accountName">Nom du compte :</label>
+							<label for="accountName"><span>Nom du compte :</span></label>
 							<input type="text" ng-model="account.name" ng-value="account.name" required>
 						</li>
 
@@ -200,26 +209,13 @@
 					<li>{{article.unitPrice}} €</li>
 				</ul>				
 			</div>
-
-			<!--<div class="article2">
-				<ul>
-					<li>Chaise en plastic</li>
-					<li>Bies chaise en plastoc</li>
-					<li>7€</li>
-				</ul>				
-			</div>-->
-
+		
 
 
 			
 
-			<!-- <div class="ajouter">				
-				<p>+</p><p>Ajouter</p>
-			</div> -->
+			
 
-			<!-- <div class="savecoordonnee4">
-				<p>sauvegarder</p>
-			</div> -->
 				
 		</div>
 
@@ -240,19 +236,19 @@
 			</div>
 
 			<div class="designfacture">
-				<div class="f0{{colorEstimate}}"></div>
-				<!--
+				<div class="f0{{colorEstimate}}"></div>			
 				<div class="f01"></div> 
 				<div class="f02"></div> 
 				<div class="f03"></div>
+				<div class="f04"></div>
 				<div class="f05"></div>
 				<div class="f06"></div>
-				<div class="f04"></div>
 				<div class="f07"></div>
 				<div class="f08"></div>
 				<div class="f09"></div>
-				<div class="f10"></div>	 			-->
-			</div>		
+				<div class="f10"></div>				 			
+			</div>
+			
 			
 
 
@@ -262,7 +258,7 @@
 
 			<div class="designdevis">
 				<div class="f0{{colorBill}}"></div> 
-				<!--
+				
 				<div class="f01"></div> 
 				<div class="f02"></div>
 				<div class="f03"></div>
@@ -272,7 +268,7 @@
 				<div class="f07"></div>
 				<div class="f08"></div>
 				<div class="f09"></div>
-				<div class="f10"></div>	 			-->
+				<div class="f10"></div>	 			
 			</div>				
 
 			<!-- <div class="savecoordonnee5">
@@ -290,6 +286,6 @@
 
 </div>
 
-
+</div>
 
 </div>
