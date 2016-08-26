@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple facture</title>
+    <link rel="stylesheet" href="../stylesheets/reset.css">
+
+<style>
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* line 4, ../sass/exemple2.scss */
+/* line 4, ../sass/exemple2.scss */
+/* line 4, ../sass/exemple2.scss */
+/* line 4, ../sass/exemple2.scss */
+/* line 4, ../sass/exemple2.scss */
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 8, ../sass/exemple2.scss */
+body {
+  font-family: "century gothic", arial, sans-serif;
+}
+
+/* line 12, ../sass/exemple2.scss */
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 17, ../sass/exemple2.scss */
+.head {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2b4158;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.head:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 24, ../sass/exemple2.scss */
+.logo_container {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  height: auto;
+}
+/* line 27, ../sass/exemple2.scss */
+.logo_container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 34, ../sass/exemple2.scss */
+.entreprise ul {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 36, ../sass/exemple2.scss */
+.entreprise ul li {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+/* line 39, ../sass/exemple2.scss */
+.entreprise ul li:first-child {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* line 47, ../sass/exemple2.scss */
+.num_facture {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+  text-align: right;
+}
+/* line 51, ../sass/exemple2.scss */
+.num_facture h1 {
+  width: 70%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #2b4158;
+  text-align: center;
+  margin-left: 30%;
+}
+/* line 62, ../sass/exemple2.scss */
+.num_facture p {
+  font-size: 10px;
+}
+
+/* line 67, ../sass/exemple2.scss */
+.info_client {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 69, ../sass/exemple2.scss */
+.info_client ul {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+/* line 72, ../sass/exemple2.scss */
+.info_client ul :first-child {
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+/* line 76, ../sass/exemple2.scss */
+.info_client ul li {
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+/* line 83, ../sass/exemple2.scss */
+table.achats {
+  margin-top: 15px;
+  border: 2px solid #2b4158;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+/* line 88, ../sass/exemple2.scss */
+table.achats .thead {
+  background: #2b4158;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  height: 20px;
+}
+/* line 95, ../sass/exemple2.scss */
+table.achats .fact_article {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  border-right: 1px solid #2b4158;
+}
+/* line 99, ../sass/exemple2.scss */
+table.achats .fact_description {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 41.66667%;
+  float: left;
+  border-right: 1px solid #2b4158;
+}
+/* line 103, ../sass/exemple2.scss */
+table.achats .fact_qte {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 8.33333%;
+  float: left;
+  border-right: 1px solid #2b4158;
+}
+/* line 107, ../sass/exemple2.scss */
+table.achats .fact_pu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 8.33333%;
+  float: left;
+  border-right: 1px solid #2b4158;
+}
+/* line 111, ../sass/exemple2.scss */
+table.achats .fact_amount {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16.66667%;
+  float: left;
+}
+
+/* line 116, ../sass/exemple2.scss */
+.article_lines {
+  border-bottom: 1px solid #2b4158;
+}
+/* line 118, ../sass/exemple2.scss */
+.article_lines td {
+  font-size: 10px;
+  height: 15px;
+  line-height: 15px;
+}
+
+/* line 125, ../sass/exemple2.scss */
+.calcul {
+  margin-left: 59.32203%;
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+  font-size: 10px;
+  margin-top: 20px;
+}
+/* line 131, ../sass/exemple2.scss */
+.calcul li {
+  height: 15px;
+  line-height: 15px;
+  text-align: right;
+}
+/* line 135, ../sass/exemple2.scss */
+.calcul li label {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 5px;
+}
+/* line 142, ../sass/exemple2.scss */
+.calcul :nth-child(7) {
+  max-width: 80%;
+  height: 15px;
+  margin-left: 20%;
+  font-size: 12px;
+  line-height: 15px;
+  background: #2b4158;
+  color: white;
+  margin-bottom: 5px;
+  padding-right: 3px;
+}
+
+/* line 155, ../sass/exemple2.scss */
+table.calcul {
+  margin-left: 59.32203%;
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+  font-size: 10px;
+  margin-top: 20px;
+}
+/* line 162, ../sass/exemple2.scss */
+table.calcul tr:nth-child(7) {
+  color: #fff;
+}
+/* line 164, ../sass/exemple2.scss */
+table.calcul tr:nth-child(7) td:first-child span {
+  background: #2b4158;
+  display: inline-block;
+  padding-left: 5px;
+}
+/* line 169, ../sass/exemple2.scss */
+table.calcul tr:nth-child(7) td:last-child {
+  background: #2b4158;
+}
+/* line 173, ../sass/exemple2.scss */
+table.calcul tr td {
+  height: 15px;
+  line-height: 15px;
+  text-align: right;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="head">
+            <!--Début de l'en-tête de facture contenant les coordonnées client-->
+            <div class="logo_container">
+            <img src="{{contact.logo}}" alt="{{contact.name}}" width="120" height="120">
+            </div>
+          <div class="entreprise">   
+            <ul>
+                <li>{{company.name}}</li>
+                <li>{{company.contact.street}}, {{company.contact.number}}</li>
+                <li>{{company.contact.zip}} {{company.contact.town}}</li>
+                <li>{{company.contact.country}}</li>
+                <li>Tel: {{company.contact.phoneMain}} {{company.contact.phoneSec}}</li>
+                <li>Fax: {{company.contact.fax}}</li>
+                <li>E-mail: {{company.contact.mail}}</li>
+            </ul>
+            </div>
+            <section class="num_facture">
+            <h1>Devis</h1></br>
+            <p>Numéro de devis:</br> {{numFacture}}</p></br>
+            <p>Date:</br> {{dateFacture}}</p></br>
+            </section>
+        </div>
+        <div class="info_client">
+                <ul>
+                    <li>{{client.contactPerson.civility}} {{client.contactPerson.firstname}} {{client.contactPerson.lastname}}</li>
+                    <li>{{client.billingInfo.street}}, {{client.billingInfo.number}}</li>
+                    <li>{{client.billinginfo.zip}} {{client.billingInfo.town}}</li>
+                    <li>{{client.billingInfo.country}}</li>
+                    <li>Nom du projet: {{project.name}}</li>
+                    <li>Date de début: {{project.startAt}}</li>
+                    <li>Date de fin: {{project.endAt}}</li>
+                </ul>
+        </div>
+        <table class="achats">
+            <tr class="thead">
+                <th class="fact_article">Article</th>
+                <th class="fact_description">Description</th>
+                <th class="fact_qte">Qte</th>
+                <th class="fact_pu">P/U</th>
+                <th class="fact_amount">Montant</th>
+            </tr>
+            {{#articles}}
+            <tr class="article_lines">
+                <td class="fact_article">{{name}}</td>
+                <td class="fact_description">{{description}}</td>
+                <td class="fact_qte">{{quantity}}</td>
+                <td class="fact_pu">{{unitPrice}}</td>
+                <td class="fact_amount">{{amount}}</td>
+            </tr>
+            {{/articles}}
+        </table>
+        <!--<ul class="calcul">
+          <li>Total hTVA: <label>{{totalXvat}}€</label></li>
+          <li><label>Remise: </label>{{refund}} {{refundCur}}</li>
+          <li><label>Sous-total hTVA: </label>{{underTotalXvat}}€</li>
+          <li><label>TVA: </label>{{tva}}€</li>
+          <li><label>Total Ttc: </label>{{totalTtc}}€</li>
+          <li><label>Accompte: </label>{{deposit}}€</li>
+          <li><label>À payer: </label>{{sum}}€</li>
+          <li><label>Date d'écheance: </label>{{deadline}}</li>
+        </ul>-->
+        <table class="calcul">
+          <tr>
+            <td>Total hTVA: </td>
+            <td>{{totalXvat}}€</td>
+          </tr>
+          <tr>
+            <td>Remise: </td>
+            <td>{{refund}} {{refundCur}}</td>
+          </tr>
+          <tr>
+            <td>Sous-total hTVA: </td>
+            <td>{{underTotalXvat}}€</td>
+          </tr>
+          <tr>
+            <td>TVA: </td>
+            <td>{{tva}}€</td>
+          </tr>
+          <tr>
+            <td>Total Ttc: </td>
+            <td>{{totalTtc}}€</td>
+          </tr>
+          <tr>
+            <td>Accompte: </td>
+            <td>{{deposit}}€</td>
+          </tr>
+          <tr>
+            <td><span>À payer: </span></td>
+            <td>{{sum}}€</td>
+          </tr>
+          <tr>
+            <td>Date d'écheance: </td>
+            <td>{{deadline}}</td>
+          </tr>
+        </table>
+    </div>
+</body>
+
+</html>
