@@ -1,7 +1,5 @@
 var abakusControllers = angular.module('proControllers', []);
 
-
-
 // add the "Rest" service inside the diferent Ctrl
 abakusControllers.controller('ProListCtrl', ['$scope', 'Client', function($scope, Client){
 
@@ -70,7 +68,7 @@ abakusControllers.controller('ProDetailCtrl', ['$scope', '$routeParams', 'Client
 	});
 }]);
 
-abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams', 'Admin', function($scope, $routeParams, Admin){
+abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$location', 'Admin', function($scope, $routeParams, $location, Admin){
 	Admin.getAdmin(function(result){
 		// get first tab of the array because we have only one admin
 		$scope.details = result[0];
@@ -127,13 +125,24 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams', 'Admin
 
 			$scope.details.articles = $scope.articles;
 			
-			console.log($scope.details);
-			// Crm.createPdf(newpdf, function(result) {
-			// 	//alert(result.message);
-			// 	console.log(result);
-			// 	// clean the temp Arrays after sending the form for the next one
-			// 	voidArrays();
-			// });
+			
+			$location.path('/pro/profile/infos');
+			Admin.updateAdmin($scope.details, function(result){
+				console.log(result);
+				if(result.error_code){
+					alert("Erreur lors de la modification des coordonnées, veuillez vérifier les informations entrées.");
+				}
+				else {
+					alert("Les modifications ont bien enregistrées");
+					console.log($scope.details);
+				}
+			});
+			Crm.createPdf(newpdf, function(result) {
+				//alert(result.message);
+				console.log(result);
+				// clean the temp Arrays after sending the form for the next one
+				voidArrays();
+			});
 
 			$scope.error = false;
 		} else {
