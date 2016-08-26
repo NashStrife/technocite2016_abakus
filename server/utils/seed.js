@@ -62,8 +62,8 @@ let companies = [{
             ]
         },
         "templates" : {
-            "bill" : 1,
-            "quotation" : 1
+            "bill" : 2,
+            "quotation" : 4
         },
         "createdAt" : Date.now(),
         "articles" : [{

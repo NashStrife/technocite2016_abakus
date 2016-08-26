@@ -209,31 +209,31 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 			console.log("New Pdf to send");
 			console.log(newpdf);
 			
-			// // STORE FILE AND INFORMATIONS
-			// // ===========================
-			// // Try to store the file first
-			// Crm.createPdf(newpdf, function(result) {
-			// 	console.log(result);
-			// 	if(result.error_code){
-			// 		alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
-			// 	}
-			// 	// if the file is stored
-			// 	else {
-			// 		// store informations about this bill in the DB
-			// 		Client.updateClient($scope.newBill.client, function(result){
-			// 			console.log(result);
-			// 			if(result.error_code){
-			// 				alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
-			// 			}
-			// 			else {
-			// 				alert("La facure a bien été enregistrée");
+			// STORE FILE AND INFORMATIONS
+			// ===========================
+			// Try to store the file first
+			Crm.createPdf(newpdf, function(result) {
+				console.log(result);
+				if(result.error_code){
+					alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
+				}
+				// if the file is stored
+				else {
+					// store informations about this bill in the DB
+					Client.updateClient($scope.newBill.client, function(result){
+						console.log(result);
+						if(result.error_code){
+							alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
+						}
+						else {
+							alert("La facure a bien été enregistrée");
 
-			// 				// when all is done, clear the form
-			// 				//voidArrays();
-			// 			}
-			// 		});
-			// 	}
-			// });
+							// when all is done, clear the form
+							voidArrays();
+						}
+					});
+				}
+			});
 
 			// to manage error messages in form
 			$scope.error = false;
