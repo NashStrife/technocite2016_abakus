@@ -130,8 +130,13 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 			$scope.details.articles = $scope.articles;
 			$scope.details.templates.bill = $scope.colorBill;
 			$scope.details.templates.quotation = $scope.colorEstimate;
-
-			$scope.details.paymentInfo =  $scope.listAccounts;
+			// add payment info bank
+			$scope.details.paymentInfo.bank = $scope.listAccounts;
+			
+			// add payment info paypal
+			// $scope.details.paymentInfo.paypal = $scope.listAccounts;
+			
+			// $scope.details.paymentInfo =  $scope.listAccounts;
 
 			console.log('*******************************');
 			console.log($scope.details.listAccounts);
