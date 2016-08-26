@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <title>Exemple facture</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
-    <link rel="stylesheet" href="../stylesheets/exemple.css">
 
 <style>
- /* http://meyerweb.com/eric/tools/css/reset/ 
+  /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -55,165 +54,238 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}   
-    /* line 4, ../sass/exemple.scss */
+}
+/* line 4, ../sass/exemple2.scss */
+/* line 4, ../sass/exemple2.scss */
+/* line 4, ../sass/exemple2.scss */
+/* line 4, ../sass/exemple2.scss */
+/* line 4, ../sass/exemple2.scss */
 html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 8, ../sass/exemple.scss */
-*,
-*:before,
-*:after {
-  -moz-box-sizing: inherit;
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-/* line 13, ../sass/exemple.scss */
+/* line 8, ../sass/exemple2.scss */
 body {
   font-family: "century gothic", arial, sans-serif;
 }
 
-/* line 16, ../sass/exemple.scss */
+/* line 12, ../sass/exemple2.scss */
 .container {
-  max-width: 2260px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
 }
-/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
   clear: both;
 }
 
-/* line 20, ../sass/exemple.scss */
+/* line 17, ../sass/exemple2.scss */
 .head {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 2px solid #2a4158;
+  *zoom: 1;
 }
-/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .head:after {
-  content: " ";
-  display: block;
+  content: "";
+  display: table;
   clear: both;
 }
-/* line 24, ../sass/exemple.scss */
-.head img {
+
+/* line 24, ../sass/exemple2.scss */
+.logo_container {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
   height: auto;
 }
-/* line 28, ../sass/exemple.scss */
-.head .entreprise {
+/* line 27, ../sass/exemple2.scss */
+.logo_container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 34, ../sass/exemple2.scss */
+.entreprise ul {
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
-  text-align: left;
 }
-/* line 31, ../sass/exemple.scss */
-.head .entreprise label {
-  display: inline-block;
-  width: 150px;
+/* line 36, ../sass/exemple2.scss */
+.entreprise ul li {
+  font-size: 10px;
+  margin-bottom: 5px;
 }
-/* line 35, ../sass/exemple.scss */
-.head .entreprise input {
-  background: pink;
-  width: 250px;
-  height: 20px;
-  margin-bottom: 15px;
-  border: none;
-  outline: none;
+/* line 39, ../sass/exemple2.scss */
+.entreprise ul li:first-child {
+  font-size: 18px;
+  margin-bottom: 5px;
 }
-/* line 43, ../sass/exemple.scss */
-.head .entreprise:first-child {
-  text-transform: uppercase;
-}
-/* line 47, ../sass/exemple.scss */
-.head .num_facture {
+
+/* line 47, ../sass/exemple2.scss */
+.num_facture {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
   float: right;
   margin-right: 0;
-  float: right;
+  text-align: right;
 }
-/* line 51, ../sass/exemple.scss */
-.head .num_facture h1 {
-  background: #2a4158;
-  color: #fff;
-  text-align: center;
-  padding-top: 20px;
-  font-size: 24px;
-  height: 115px;
-}
-
-/* line 61, ../sass/exemple.scss */
-.info_client {
-  width: 100%;
-  display: block;
-}
-/* line 64, ../sass/exemple.scss */
-.info_client label {
-  display: inline-block;
-  width: 150px;
-}
-/* line 68, ../sass/exemple.scss */
-.info_client input {
-  width: 350px;
-  height: 20px;
-  margin-bottom: 15px;
-  border: none;
-  outline: none;
-}
-/* line 76, ../sass/exemple.scss */
-.info_client form:first-child {
-  margin-bottom: 30px;
-}
-
-/* line 81, ../sass/exemple.scss */
-table {
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-  text-align: center;
-}
-/* line 12, ../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
-table:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-/* line 85, ../sass/exemple.scss */
-table th {
-  background: #2a4158;
-  height: 30px;
+/* line 51, ../sass/exemple2.scss */
+.num_facture h1 {
+  width: 60%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
   color: #fff;
   text-transform: uppercase;
-  font-size: 20px;
+  background: #2a4158;
+  text-align: center;
+  margin-left: 40%;
 }
-/* line 92, ../sass/exemple.scss */
-table tr :first-child {
-  width: 20%;
-  font-size: 16px;
+/* line 62, ../sass/exemple2.scss */
+.num_facture p {
+  font-size: 10px;
 }
-/* line 96, ../sass/exemple.scss */
-table tr :nth-child(2) {
-  width: 30%;
-   font-size: 16px;
+
+/* line 67, ../sass/exemple2.scss */
+.info_client {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
 }
-/* line 101, ../sass/exemple.scss */
-table td, table th {
-  border: 1px solid #2a4158;
-  width: 10%;
+/* line 69, ../sass/exemple2.scss */
+.info_client ul {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+/* line 72, ../sass/exemple2.scss */
+.info_client ul :first-child {
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+/* line 76, ../sass/exemple2.scss */
+.info_client ul li {
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+/* line 83, ../sass/exemple2.scss */
+table {
+  margin-top: 15px;
+  border: 2px solid #2a4158;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+/* line 88, ../sass/exemple2.scss */
+table .thead {
+  background: #2a4158;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  height: 20px;
+}
+/* line 95, ../sass/exemple2.scss */
+table .fact_article {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  border-right: 1px solid #2a4158;
+}
+/* line 99, ../sass/exemple2.scss */
+table .fact_description {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 41.66667%;
+  float: left;
+  border-right: 1px solid #2a4158;
+}
+/* line 103, ../sass/exemple2.scss */
+table .fact_qte {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 8.33333%;
+  float: left;
+  border-right: 1px solid #2a4158;
+}
+/* line 107, ../sass/exemple2.scss */
+table .fact_pu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 8.33333%;
+  float: left;
+  border-right: 1px solid #2a4158;
+}
+/* line 111, ../sass/exemple2.scss */
+table .fact_amount {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16.66667%;
+  float: left;
+}
+
+/* line 116, ../sass/exemple2.scss */
+.article_lines {
+  border-bottom: 1px solid #2a4158;
+}
+/* line 118, ../sass/exemple2.scss */
+.article_lines td {
+  font-size: 10px;
+  height: 15px;
+  line-height: 15px;
+}
+
+/* line 125, ../sass/exemple2.scss */
+.calcul {
+  margin-left: 59.32203%;
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+  font-size: 10px;
+  margin-top: 20px;
+}
+/* line 131, ../sass/exemple2.scss */
+.calcul li {
+  height: 15px;
+  line-height: 15px;
+  text-align: right;
+}
+/* line 135, ../sass/exemple2.scss */
+.calcul li label {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 5px;
+}
+/* line 142, ../sass/exemple2.scss */
+.calcul :nth-child(7) {
+  max-width: 80%;
+  height: 10px;
+  margin-left: 20%;
+  font-size: 12px;
+  line-height: 10px;
+  background: #2a4158;
+  color: white;
+  margin-bottom: 5px;
+  padding-right: 3px;
 }
 
 </style>
@@ -221,10 +293,13 @@ table td, table th {
 
 <body>
     <div class="container">
+
         <div class="head">
             <!--Début de l'en-tête de facture contenant les coordonnées client-->
-            <img src="{{contact.logo}}" alt="{{contact.name}}" width="470" height="470">
-           <div class="entreprise">   
+            <div class="logo_container">
+            <img src="{{contact.logo}}" alt="{{contact.name}}" width="120" height="120">
+            </div>
+          <div class="entreprise">   
             <ul>
                 <li>{{company.name}}</li>
                 <li>{{company.contact.street}}, {{company.contact.number}}</li>
@@ -237,44 +312,48 @@ table td, table th {
             </div>
             <section class="num_facture">
             <h1>Facture</h1></br>
-            <p>Numéro de facture: {{numFacture}}</p></br>
-            <p>Date: {{dateFacture}}</p></br>
+            <p>Numéro de facture:</br> {{numFacture}}</p></br>
+            <p>Date:</br> {{dateFacture}}</p></br>
             </section>
         </div>
         <div class="info_client">
                 <ul>
                     <li>{{client.contactPerson.civility}} {{client.contactPerson.firstname}} {{client.contactPerson.lastname}}</li>
                     <li>{{client.billingInfo.street}}, {{client.billingInfo.number}}</li>
-                    <li>{{client.billingInfo.town}}</li>
+                    <li>{{client.billinginfo.zip}} {{client.billingInfo.town}}</li>
                     <li>{{client.billingInfo.country}}</li>
+                    <li>Nom du projet: {{project.name}}</li>
+                    <li>Date de début: {{project.startAt}}</li>
+                    <li>Date de fin: {{project.endAt}}</li>
                 </ul>
         </div>
         <table>
-            <tr>
-                <th>Article</th>
-                <th>Description</th>
-                <th>Qte</th>
-                <th>P/U</th>
-                <th>Montant</th>
+            <tr class="thead">
+                <th class="fact_article">Article</th>
+                <th class="fact_description">Description</th>
+                <th class="fact_qte">Qte</th>
+                <th class="fact_pu">P/U</th>
+                <th class="fact_amount">Montant</th>
             </tr>
             {{#articles}}
-            <tr>
-                <td>{{name}}</td>
-                <td>{{description}}</td>
-                <td>{{quantity}}</td>
-                <td>{{unitPrice}}</td>
-                <td>{{amount}}</td>
+            <tr class="article_lines">
+                <td class="fact_article">{{name}}</td>
+                <td class="fact_description">{{description}}</td>
+                <td class="fact_qte">{{quantity}}</td>
+                <td class="fact_pu">{{unitPrice}}</td>
+                <td class="fact_amount">{{amount}}</td>
             </tr>
             {{/articles}}
         </table>
-        <ul>
-          <li>{{totalXvat}}</li>
-          <li>{{refund}} {{refundCur}}</li>
-          <li>{{underTotalXvat}}</li>
-          <li>{{tva}}</li>
-          <li>{{totalTtc}}</li>
-          <li>{{deposit}}</li>
-          <li>{{sum}}</li>
+        <ul class="calcul">
+          <li><label>Total hTVA: </label>{{totalXvat}}</li>
+          <li><label>Remise: </label>{{refund}} {{refundCur}}</li>
+          <li><label>Sous-total hTVA: </label>{{underTotalXvat}}</li>
+          <li><label>TVA: </label>{{tva}}</li>
+          <li><label>Total Ttc: </label>{{totalTtc}}</li>
+          <li><label>Accompte: </label>{{deposit}}</li>
+          <li><label>À payer: </label>{{sum}}</li>
+          <li><label>Date d'écheance: </label>{{deadline}}</li>
         </ul>
     </div>
 </body>

@@ -49,15 +49,20 @@ exports.uploadImage = function(req, res, next) {
     
     logger.log("--- FORM CONTROLLER : Upload Image");
 
-    upload(req, res, function(err){
-        // req.file is the file named `file` [corresponding to the .single() method]
-        if(err){
-                res.json([{error_code:1,err_desc:err}]);
-                logger.warn(err);
-                return;
-        }
+    if(req.file){
+        upload(req, res, function(err){
+            // req.file is the file named `file` [corresponding to the .single() method]
+            if(err){
+                    res.json({error_code:1,err_desc:err});
+                    logger.warn(err);
+                    return;
+            }
 
-        res.json([{error_code:0,message:'Image uploaded !'}]);
-        logger.log('Image uploaded !');
-    });
+            res.json({error_code:0,message:'Image uploaded !'});
+            logger.log('Image uploaded !');
+        });
+    } else {
+        res.json({error_code:1,err_desc:"file is undefined"});
+        logger.warn(err);
+    }
 };
