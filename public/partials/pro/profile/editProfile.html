@@ -199,9 +199,9 @@
 							<li>{{article.description}}</li>
 							<li>{{article.unitPrice}} €</li> -->
 
-							<input type="text" name="name" ng-value="article.name">
-							<input type="text" name="description" ng-value="article.description">
-							<input type="text" name="unitPrice" ng-value="article.unitPrice"><!--
+							<input type="text" name="name" ng-model="article.name" ng-value="article.name">
+							<input type="text" name="description" ng-model="article.description" ng-value="article.description">
+							<input type="text" name="unitPrice" ng-model="article.unitPrice" ng-value="article.unitPrice"><!--
 							 --><span id="less" ng-click="removeElement('article', $index, item.amount)"> - </span>
 						</ul>				
 					</div>
@@ -246,18 +246,18 @@
 			</div>
 
 			<div class="designfacture">
-				<div class="f0{{colorEstimate}}"></div>
-				<!--
-				<div class="f01"></div> 
-				<div class="f02"></div> 
-				<div class="f03"></div>
-				<div class="f05"></div>
-				<div class="f06"></div>
-				<div class="f04"></div>
-				<div class="f07"></div>
-				<div class="f08"></div>
-				<div class="f09"></div>
-				<div class="f10"></div>	 			-->
+				<!-- <div class="f0{{colorEstimate}}"></div> -->
+				
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="1" value="1"> <div class="f01"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="2" value="2"> <div class="f02"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="3" value="3"> <div class="f03"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="4" value="4"> <div class="f04"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="5" value="5"> <div class="f05"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="6" value="6"> <div class="f06"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="7" value="7"> <div class="f07"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="8" value="8"> <div class="f08"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="9" value="9"> <div class="f09"></div>
+				<!-- <input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="10" value="10"> <div class="f10"></div>	  -->			
 			</div>		
 			
 
@@ -267,18 +267,29 @@
 			</div>
 
 			<div class="designdevis">
-				<div class="f0{{colorBill}}"></div> 
-				<!--
-				<div class="f01"></div> 
-				<div class="f02"></div>
-				<div class="f03"></div>
-				<div class="f04"></div>
-				<div class="f05"></div>
-				<div class="f06"></div>
-				<div class="f07"></div>
-				<div class="f08"></div>
-				<div class="f09"></div>
-				<div class="f10"></div>	 			-->
+				<!-- <div class="f0{{colorBill}}"></div> -->
+
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="1" value="1"> <div class="f01"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="2" value="2"> <div class="f02"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="3" value="3"> <div class="f03"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="4" value="4"> <div class="f04"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="5" value="5"> <div class="f05"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="6" value="6"> <div class="f06"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="7" value="7"> <div class="f07"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="8" value="8"> <div class="f08"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="9" value="9"> <div class="f09"></div>
+				<!-- <input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="10" value="10"> <div class="f10"></div> -->
+
+				<!-- <div ng-model="colorBill" ng-click="" class="f01"></div> 
+				<div ng-model="colorBill" class="f02"></div>
+				<div ng-model="colorBill" class="f03"></div>
+				<div ng-model="colorBill" class="f04"></div>
+				<div ng-model="colorBill" class="f05"></div>
+				<div ng-model="colorBill" class="f06"></div>
+				<div ng-model="colorBill" class="f07"></div>
+				<div ng-model="colorBill" class="f08"></div>
+				<div ng-model="colorBill" class="f09"></div>
+				<div ng-model="colorBill" class="f10"></div>	 --> 			
 			</div>				
 
 			<!-- <div class="savecoordonnee5">

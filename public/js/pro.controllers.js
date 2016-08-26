@@ -124,24 +124,24 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 			//console.log($scope.articles);
 
 			$scope.details.articles = $scope.articles;
+			$scope.details.templates.bill = $scope.colorBill;
+			$scope.details.templates.quotation = $scope.colorEstimate;
+			console.log($scope.details);
+			console.log($scope.details.articles);
+			console.log('-------------------------------');
+			console.log($scope.details.templates.bill);
+			console.log($scope.details.templates.quotation);
 			
-			
-			$location.path('/pro/profile/infos');
 			Admin.updateAdmin($scope.details, function(result){
 				console.log(result);
 				if(result.error_code){
 					alert("Erreur lors de la modification des coordonnées, veuillez vérifier les informations entrées.");
 				}
 				else {
+
 					alert("Les modifications ont bien enregistrées");
-					console.log($scope.details);
+					$location.path('/pro/profile/infos');
 				}
-			});
-			Crm.createPdf(newpdf, function(result) {
-				//alert(result.message);
-				console.log(result);
-				// clean the temp Arrays after sending the form for the next one
-				voidArrays();
 			});
 
 			$scope.error = false;
