@@ -131,7 +131,8 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 			$scope.details.templates.bill = $scope.colorBill;
 			$scope.details.templates.quotation = $scope.colorEstimate;
 
-			$scope.details.listAccounts = $scope.listAccounts;
+			$scope.details.paymentInfo =  $scope.listAccounts;
+
 			console.log('*******************************');
 			console.log($scope.details.listAccounts);
 			console.log($scope.listAccounts);
@@ -144,7 +145,7 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 			console.log('-------------------------------');
 			console.log($scope.listAccounts);
 			
-			Admin.updateAdmin($scope.details,  function(result){
+			Admin.updateAdmin($scope.details, function(result){
 				console.log(result);
 				if(result.error_code){
 					alert("Erreur lors de la modification des coordonnées, veuillez vérifier les informations entrées.");
