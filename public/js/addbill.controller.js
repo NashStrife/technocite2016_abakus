@@ -30,21 +30,21 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 		Client.getList(function(result) {
 			// prepare some var
 			$scope.listClients = result;
-			// console.log("Clients :");
-			// console.log($scope.listClients);
+			console.log("Clients :");
+			console.log($scope.listClients);
 		});
 
 		Param.getList(function(result) {
 			//console.log(result[0]);
 			$scope.paramFromDb = result[0];
-			// console.log("parameters");
-			// console.log($scope.paramFromDb);
+			console.log("parameters");
+			console.log($scope.paramFromDb);
 		});
 
 		Admin.getAdmin(function(result) {
 			$scope.adminfromdb = result[0];
-			// console.log("Admin");
-			// console.log($scope.adminfromdb);
+			console.log("Admin");
+			console.log($scope.adminfromdb);
 			$scope.listAccounts = [];
 			//console.log(result[0].paymentInfo);
 			// console.log(item.bills);
@@ -158,62 +158,82 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 	};
 
 	// when we send the form
-	$scope.addBill = function(isValid) {
+	$scope.addBill = function(isValid, type) {
 		if (isValid) {
+			let template = "public/documents/templates/";
+			let folder = "public/documents/";
+
+			if(type === 'bill'){
+				template += "bills/template" + $scope.adminfromdb.templates.bill + ".hbs";
+				folder += "bills/";
+
+				// PREPARE REQUEST TO THE DB
+				// =========================
+				// add the new bill to the bills array of the client
+				$scope.newBill.client.bills.push({
+					'link': $scope.newBill.numFacture,
+					'state': false,
+					'quotation_id': $scope.newBill.estimate._id,
+					'createdAt': $scope.newBill.dateFacture
+				});
+			} else {
+				template += "estimates/template" + $scope.adminfromdb.templates.quotation + ".hbs";
+				folder += "estimates/";
+
+				// PREPARE REQUEST TO THE DB
+				// =========================
+				$scope.newBill.client.quotations.push({
+					'link': $scope.newBill.numFacture,
+					'state': false,
+					'createdAt': $scope.newBill.dateFacture
+				});
+			}
+
+			// console.log("New client to update");
+			// console.log($scope.newBill.client);
+
 			// PREPARE PDF
 			// ===========
 			$scope.newBill.articles = $scope.articles;
 			$scope.newBill.company = $scope.adminfromdb;
+
 			let newpdf = {
 				"file": {
-					"template": "public/documents/templates/exemple2.hbs",
-					"folder": "public/documents/bills/" + $scope.newBill.client._id,
+					"template": template,
+					"folder": folder + $scope.newBill.client._id,
 					"filename": $scope.newBill.numFacture
 				},
 				"data": $scope.newBill
 			};
 
-			// console.log("New Pdf to send");
-			// console.log(newpdf);
+			console.log("New Pdf to send");
+			console.log(newpdf);
 			
-			// PREPARE REQUEST TO THE DB
-			// =========================
-			// add the new bill to the bills array of the client
-			$scope.newBill.client.bills.push({
-				'link': $scope.newBill.numFacture,
-				'state': false,
-				'quotation_id': $scope.newBill.estimate._id,
-				'createdAt': $scope.newBill.dateFacture
-			});
+			// // STORE FILE AND INFORMATIONS
+			// // ===========================
+			// // Try to store the file first
+			// Crm.createPdf(newpdf, function(result) {
+			// 	console.log(result);
+			// 	if(result.error_code){
+			// 		alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
+			// 	}
+			// 	// if the file is stored
+			// 	else {
+			// 		// store informations about this bill in the DB
+			// 		Client.updateClient($scope.newBill.client, function(result){
+			// 			console.log(result);
+			// 			if(result.error_code){
+			// 				alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
+			// 			}
+			// 			else {
+			// 				alert("La facure a bien été enregistrée");
 
-			// console.log("New client to update");
-			// console.log($scope.newBill.client);
-
-			// STORE FILE AND INFORMATIONS
-			// ===========================
-			// Try to store the file first
-			Crm.createPdf(newpdf, function(result) {
-				console.log(result);
-				if(result.error_code){
-					alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
-				}
-				// if the file is stored
-				else {
-					// store informations about this bill in the DB
-					Client.updateClient($scope.newBill.client, function(result){
-						console.log(result);
-						if(result.error_code){
-							alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
-						}
-						else {
-							alert("La facure a bien été enregistrée");
-
-							// when all is done, clear the form
-							//voidArrays();
-						}
-					});
-				}
-			});
+			// 				// when all is done, clear the form
+			// 				//voidArrays();
+			// 			}
+			// 		});
+			// 	}
+			// });
 
 			// to manage error messages in form
 			$scope.error = false;
