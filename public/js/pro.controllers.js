@@ -79,6 +79,8 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 		$scope.colorBill = result[0].templates.bill;
 		$scope.colorEstimate = result[0].templates.quotation;
 		$scope.listAccounts = [];
+		$scope.listBank = result[0].paymentInfo.bank;
+		$scope.listPaypal = result[0].paymentInfo.paypal;
 		result[0].paymentInfo.bank.map(function(bank) {			
 			$scope.listAccounts.push(bank);
 			console.log($scope.listAccounts);
@@ -102,16 +104,20 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 			
 			// alert("Article incomplet");
 		}
-		if ( elem === 'account') {
-			($scope.account)
-				$scope.listAccounts.push({
-					'name' : $scope.account.name,
-					'iban' : $scope.account.iban,
-					'bic' : $scope.account.bic,
-					'mail' : $scope.account.mail
+		if ( elem === 'bank') {
+			($scope.bank)
+				$scope.listBank.push({
+					'name' : $scope.bank.name,
+					'iban' : $scope.bank.iban,
+					'bic' : $scope.bank.bic
 				});
-				console.log('/////////////////////////');
-				console.log($scope.listAccounts);
+		}
+		if ( elem === 'paypal') {
+			($scope.paypal)
+				$scope.listPaypal.push({
+					'name' : $scope.paypal.name,
+					'mail' : $scope.paypal.mail
+				});
 		}
 	};
 
@@ -131,11 +137,11 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 			$scope.details.templates.bill = $scope.colorBill;
 			$scope.details.templates.quotation = $scope.colorEstimate;
 			// add payment info bank
-			$scope.details.paymentInfo.bank = $scope.listAccounts;
+			$scope.details.paymentInfo.bank = $scope.listBank;
 			
 			// add payment info paypal
-			// $scope.details.paymentInfo.paypal = $scope.listAccounts;
-			
+			$scope.details.paymentInfo.paypal = $scope.listPaypal;
+
 			// $scope.details.paymentInfo =  $scope.listAccounts;
 
 			console.log('*******************************');
