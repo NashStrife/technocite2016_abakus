@@ -12,9 +12,10 @@ body {
 
 /* line 12, ../sass/exemple2.scss */
 .container {
-  max-width: 2260px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
 }
 /* line 12, ../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .container:after {
@@ -23,43 +24,205 @@ body {
   clear: both;
 }
 
-/* line 16, ../sass/exemple2.scss */
+/* line 17, ../sass/exemple2.scss */
 .head {
+  padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 2px solid #2a4158;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.head:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* line 22, ../sass/exemple2.scss */
-.enterprise img {
+/* line 24, ../sass/exemple2.scss */
+.logo_container {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
   height: auto;
 }
-/* line 26, ../sass/exemple2.scss */
-.enterprise ul {
+/* line 27, ../sass/exemple2.scss */
+.logo_container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 34, ../sass/exemple2.scss */
+.entreprise ul {
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
 }
-/* line 28, ../sass/exemple2.scss */
-.enterprise ul li {
-  font-size: 12px;
+/* line 36, ../sass/exemple2.scss */
+.entreprise ul li {
+  font-size: 10px;
+  margin-bottom: 5px;
 }
-/* line 30, ../sass/exemple2.scss */
-.enterprise ul li:first-child {
-  font-size: 16px;
+/* line 39, ../sass/exemple2.scss */
+.entreprise ul li:first-child {
+  font-size: 18px;
+  margin-bottom: 5px;
 }
-/* line 35, ../sass/exemple2.scss */
-.enterprise .num_facture {
+
+/* line 47, ../sass/exemple2.scss */
+.num_facture {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+  text-align: right;
+}
+/* line 51, ../sass/exemple2.scss */
+.num_facture h1 {
+  width: 60%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #2a4158;
+  text-align: center;
+  margin-left: 40%;
+}
+/* line 62, ../sass/exemple2.scss */
+.num_facture p {
+  font-size: 5px;
 }
 
-/* line 40, ../sass/exemple2.scss */
+/* line 67, ../sass/exemple2.scss */
 .info_client {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
+}
+/* line 69, ../sass/exemple2.scss */
+.info_client ul {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+/* line 72, ../sass/exemple2.scss */
+.info_client ul :first-child {
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+/* line 76, ../sass/exemple2.scss */
+.info_client ul li {
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+/* line 83, ../sass/exemple2.scss */
+table {
+  margin-top: 15px;
+  border: 2px solid #2a4158;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+/* line 88, ../sass/exemple2.scss */
+table .thead {
+  background: #2a4158;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  height: 20px;
+}
+/* line 95, ../sass/exemple2.scss */
+table .fact_article {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  border-right: 1px solid #2a4158;
+}
+/* line 99, ../sass/exemple2.scss */
+table .fact_description {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 41.66667%;
+  float: left;
+  border-right: 1px solid #2a4158;
+}
+/* line 103, ../sass/exemple2.scss */
+table .fact_qte {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 8.33333%;
+  float: left;
+  border-right: 1px solid #2a4158;
+}
+/* line 107, ../sass/exemple2.scss */
+table .fact_pu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 8.33333%;
+  float: left;
+  border-right: 1px solid #2a4158;
+}
+/* line 111, ../sass/exemple2.scss */
+table .fact_amount {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16.66667%;
+  float: left;
+}
+
+/* line 116, ../sass/exemple2.scss */
+.article_lines {
+  border-bottom: 1px solid #2a4158;
+}
+/* line 118, ../sass/exemple2.scss */
+.article_lines td {
+  font-size: 10px;
+  height: 15px;
+  line-height: 15px;
+}
+
+/* line 125, ../sass/exemple2.scss */
+.calcul {
+  margin-left: 59.32203%;
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right;
+  margin-right: 0;
+  font-size: 10px;
+  margin-top: 20px;
+}
+/* line 131, ../sass/exemple2.scss */
+.calcul li {
+  height: 15px;
+  line-height: 15px;
+  text-align: right;
+}
+/* line 135, ../sass/exemple2.scss */
+.calcul li label {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 5px;
+}
+/* line 142, ../sass/exemple2.scss */
+.calcul :nth-child(7) {
+  max-width: 60%;
+  height: 10px;
+  margin-left: 40%;
+  font-size: 12px;
+  line-height: 10px;
+  background: #2a4158;
+  color: white;
+  margin-bottom: 5px;
+  padding-right: 3px;
 }
