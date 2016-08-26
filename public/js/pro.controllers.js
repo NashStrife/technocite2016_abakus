@@ -93,20 +93,14 @@ abakusControllers.controller('ProAccountCtrl', ['$scope', '$routeParams','$locat
 		console.log("function addElement");
 		// for the list of articles
 		if (elem === 'article') {
-			if ($scope.newBill.article.quantity) {
+			($scope.article) 
 				$scope.articles.push({
-					'name': $scope.newBill.article.name,
-					'description': $scope.newBill.article.description,
-					'quantity': $scope.newBill.article.quantity,
-					'unitPrice': $scope.newBill.article.unitPrice,
-					'amount': $scope.newBill.article.amount
+					'name': $scope.article.name,
+					'description': $scope.article.description,
+					'unitPrice': $scope.article.unitPrice
 				});
-				// clean the inputs when we add a new article on the temporary array
-				$scope.newBill.article.quantity = "";
-				$scope.newBill.article.amount = "";
-			} else {
-				alert("Article incomplet");
-			}
+			
+			// alert("Article incomplet");
 
 		}
 	};
