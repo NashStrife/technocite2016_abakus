@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple facture</title>
+    <link rel="stylesheet" href="../../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../../stylesheets/exemple2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <!--Début de l'en-tête de facture contenant les coordonnées client-->
+           <div class="logo_container">
+            <img src="{{contact.logo}}" alt="{{contact.name}}" width="120" height="120">
+             </div>
+           <div class="entreprise">   
+            <ul>
+                <li>Ma société</li>
+                <li>Rue de ma société, 35</li>
+                <li>7080 Frameries</li>
+                <li>Belgique</li>
+                <li>Tel: 065/65 65 65    065/65 65 65</li>
+                <li>Fax: 065/65 65 65</li>
+                <li>E-mail: ma.société@gmail.com</li>
+            </ul>
+            </div>
+            <div class="num_facture">
+            <h1>Facture</h1></br>
+            <p>Numéro de facture: 2016-08-26-356</p></br>
+            <p>Date: 26:08:2016</p></br>
+            </div>
+        </div>
+        <div class="info_client">
+                <ul>
+                    <li>Monsieur Sébastien Jacques</li>
+                    <li>Rue de sa société, 37</li>
+                    <li>7000 Mons</li>
+                    <li>Belgique</li>
+                    <li>Nom du projet: Projet test</li>
+                    <li>Date de début: 01/08/2016</li>
+                    <li>Date de fin: 31/08/2016</li>
+                </ul>
+        </div>
+        <table>
+            <tr class="thead">
+                <th class="fact_article">Article</th>
+                <th class="fact_description">Description</th>
+                <th class="fact_qte">Qte</th>
+                <th class="fact_pu">P/U</th>
+                <th class="fact_amount">Montant</th>
+            </tr>
+            {{#articles}}
+            <tr class="article_lines">
+                <td class="fact_article">Lentilles</td>
+                <td class="fact_description">Lentilles de contact pour myope</td>
+                <td class="fact_qte">3</td>
+                <td class="fact_pu">25</td>
+                <td class="fact_amount">75</td>
+            </tr>
+            <tr class="article_lines">
+                <td class="fact_article">Lentilles</td>
+                <td class="fact_description">Lentilles de contact pour myope</td>
+                <td class="fact_qte">3</td>
+                <td class="fact_pu">25</td>
+                <td class="fact_amount">75</td>
+            </tr>
+            {{/articles}}
+        </table>
+        <ul class="calcul">
+          <li><label>Total hTVA: </label>75€</li>
+          <li><label>Remise: </label>12 €</li>
+          <li><label>Sous-total hTVA: </label>63€</li>
+          <li><label>TVA: </label>15€</li>
+          <li><label>Total Ttc: </label>78€</li>
+          <li><label>Accompte: </label>10€</li>
+          <li><label>À payer: </label>68€</li>
+          <li>Date d'échéance: 26/08/2016</li>
+        </ul>
+    </div>
+</body>
+
+</html>

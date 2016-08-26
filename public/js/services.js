@@ -19,13 +19,15 @@ services.factory('Crm',['$resource', function($resource) {
             logResource.query(callback);
 		},
         upload : function(newUpload, callback) {
+            console.log(newUpload);
 			let uploadResource = $resource("/api/crm/upload");
-            uploadResource.folder = newUpload.folder;
-            uploadResource.filename = newUpload.filename;
+            let upload = new uploadResource();
+            upload.folder = newUpload.folder;
+            upload.filename = newUpload.filename;
             // file is the image and must be the last one
-            uploadResource.file = newUpload.file;
+            upload.file = newUpload.file;
 
-            uploadResource.$save(callback);
+            upload.$save(callback);
 		},
         createPdf : function(newPdf, callback) {
             let resourcePdf = $resource("/api/crm/createPdf");

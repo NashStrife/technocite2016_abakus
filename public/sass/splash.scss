@@ -70,10 +70,10 @@
 			background-color: $mainBackgroundColor;
 			text-align: center;
 			font-weight: bold;
-			margin: auto;
+			margin: 0 auto 3%;
 			width: 100%;
 			display: block;
-			padding: 3%;
+			padding-top: 8%;
 		}
 		label {
 			display: inline-block;
@@ -84,7 +84,7 @@
 			height: 21px;
 		}
 		.note {
-				height: 68%;
+				height: 62%;
 		}
 		.line {
 			// @include container(75%);
@@ -202,13 +202,14 @@
 		}
 		input[name="client"]:checked ~ input[name="progress"] {
 			display: inline-block;
-			top: -10%;
+			top: -5%;
 			position: absolute;
 		}
-		input[name="client"]:checked ~ #step1{left: 45.5%;}
-		input[name="client"]:checked ~ #step2{left: 48.5%;}
-		input[name="client"]:checked ~ #step3{left: 51.5%;}
-		input[name="client"]:checked ~ #step4{left: 54.5%;}
+		input[name="client"]:checked ~ #step0{left: 46%}
+		input[name="client"]:checked ~ #step1{left: 48%;}
+		input[name="client"]:checked ~ #step2{left: 50%;}
+		input[name="client"]:checked ~ #step3{left: 52%;}
+		input[name="client"]:checked ~ #step4{left: 54%;}
 		
 		#particulier:checked ~ #lien2 {
 			display: inline-block;
@@ -241,6 +242,9 @@
 		#particulier:checked ~ fieldset:nth-of-type(2) {
 		 	display: inline-block;
 		}
+		#particulier:checked ~ #step0 {
+			display: none;
+		}
 		#society:checked ~ fieldset:nth-of-type(1) {
 		 	display: inline-block;
 		}
@@ -258,5 +262,11 @@
 		}
 		#step4:checked ~ fieldset:nth-of-type(5) {
 			display: inline-block;
+		}
+		// .progress:after {
+		// 	content: "";
+		// }
+		.required:before {
+			content: "*";
 		}
 	}

@@ -1,0 +1,154 @@
+@import "compass";
+@import "grids";
+@import "variables";
+html {
+    @include box-sizing(border-box);
+}
+
+body {
+    font-family: "century gothic", arial, sans-serif;
+}
+
+.container {
+    @include container(100%);
+    padding: 10px;
+}
+
+.head {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2a4158;
+    @include pie-clearfix;
+}
+
+.logo_container {
+    @include span(3 of 12);
+    height: auto;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.entreprise {
+    ul {
+        @include span(6 of 12);
+        li {
+            font-size: 10px;
+            margin-bottom: 5px;
+            &:first-child {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    
+}
+.num_facture {
+        @include span(3 of 12);
+        @include last;
+        text-align: right;
+        h1 {
+            width: 60%;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            color: #fff;
+            text-transform: uppercase;
+            background: #2a4158;
+            text-align: center;
+            margin-left: 40%;
+        }
+        p{
+            font-size: 5px;
+        }
+    }
+
+.info_client {
+    @include span(4 of 12);
+    ul{
+        margin-top: 15px;
+        margin-bottom: 10px;
+            :first-child{
+                margin-bottom: 8px;
+                font-size: 11px;
+            }
+        li{
+         margin-bottom: 5px;
+         font-size: 10px;
+        }
+    }
+}
+
+table {
+    margin-top: 15px;
+    border: 2px solid #2a4158;
+    @include span(full no-gutters);
+    text-align: center;
+    .thead {
+        background: #2a4158;
+        color: #fff;
+        font-size: 12px;
+        line-height: 20px;
+        height: 20px;
+    }
+    .fact_article {
+        @include span(3 inside no-gutters);
+        border-right: 1px solid #2a4158;
+    }
+    .fact_description {
+        @include span(5 inside no-gutters);
+        border-right: 1px solid #2a4158;
+    }
+    .fact_qte {
+        @include span(1 inside no-gutters);
+        border-right: 1px solid #2a4158;
+    }
+    .fact_pu {
+        @include span(1 inside no-gutters);
+        border-right: 1px solid #2a4158;
+    }
+    .fact_amount {
+        @include span(2 inside no-gutters);
+    }
+}
+
+.article_lines {
+    border-bottom: 1px solid #2a4158;
+    td{
+        font-size: 10px;
+        height: 15px;
+        line-height: 15px;
+    }
+}
+
+.calcul {
+    @include pre(7);
+    @include span(5);
+    @include last;
+    font-size: 10px;
+    margin-top: 20px;
+    li{
+        height: 15px;
+        line-height: 15px;
+        text-align: right;
+        label{
+            width: 100px;
+            display: inline-block;
+            text-align: right;
+            margin-right: 5px;
+        }
+    }
+    :nth-child(7) {
+        max-width: 60%;
+        height: 10px;
+       margin-left: 40%;
+       font-size: 12px;
+        line-height: 10px;
+        background: #2a4158;
+        color: white;
+        margin-bottom: 5px;
+        padding-right: 3px;
+    }
+
+}

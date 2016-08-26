@@ -7,20 +7,21 @@
 	
 	<div class="editProfilPro"> 
 
-<div class="warpper">
+	<div class="warpper">
 
 
-	<div class="contener">
+		<div class="contener">
 
-		<form name="formEditProfile" ng-submit="addBill(formAddInvoice.$valid)">
+			<form name="formEditProfile" ng-submit="editProfile(formEditProfile.$valid)">
 
-		<div class="coordonnee">
-			<h2>Coordonée</h2>			
-		</div>
+				<div class="coordonnee">
+					<h2>Coordonées</h2>			
+				</div>
 
 
-		<div class="coordonneeCont">
+				<div class="coordonneeCont">
 
+<<<<<<< HEAD
 			<!-- LOGO -->
 
 			<img src="images/admin/profile/{{details._id}}.jpg" alt="Logo Entreprise" width="92" height="92">
@@ -35,119 +36,115 @@
 
 						<label for="civility">Dénomination Sociale :</label>
 						<input type="text" ng-model="details.name" ng-value="details.name" required><br>
+=======
+					<!-- LOGO -->
+					<img src="images/admin/profile/{{details._id}}.jpg" alt="Logo Entreprise" width="92" height="92" >			
+>>>>>>> 9ffd4ec92241567a6e3374875938018fcd62dc1b
 
-						<label for="street">Rue :</label>
-						<input type="text" ng-model="details.contact.street" ng-value="details.contact.street" required><br>
+					<div class="info">
+						<p>
+							<label for="civility">Dénomination Sociale :</label>
+							<input type="text" ng-model="details.name" ng-value="details.name" required><br>
 
-						<label for="number">N° :</label>
-						<input type="text" ng-model="details.contact.number" ng-value="details.contact.number" required><br>
+							<label for="street">Rue :</label>
+							<input type="text" ng-model="details.contact.street" ng-value="details.contact.street" required><br>
 
-						<label for="box">Boite :</label>
-						<input type="text" ng-model="details.contact.box" ng-value="details.contact.box" placeholder="Facultatif"><br>
+							<label for="number">N° :</label>
+							<input type="text" ng-model="details.contact.number" ng-value="details.contact.number" required><br>
 
-						<label for="zip">Code Postal:</label>
-						<input type="text" ng-model="details.contact.zip" ng-value="details.contact.zip" required><br>
+							<label for="box">Boite :</label>
+							<input type="text" ng-model="details.contact.box" ng-value="details.contact.box" placeholder="Facultatif"><br>
 
-						<label for="town">Localité</label>
-						<input type="text" ng-model="details.contact.town" ng-value="details.contact.town" required><br>
+							<label for="zip">Code Postal:</label>
+							<input type="text" ng-model="details.contact.zip" ng-value="details.contact.zip" required><br>
 
-						<label for="country">Pays :</label>
-						<input type="text" ng-model="details.contact.country" ng-value="details.contact.country" required><br>
+							<label for="town">Localité</label>
+							<input type="text" ng-model="details.contact.town" ng-value="details.contact.town" required><br>
 
-						<label for="phoneMain">Telephone Principal</label>
-						<input type="text" ng-model="details.contact.phoneMain" ng-value="details.contact.phoneMain" required><br>
+							<label for="country">Pays :</label>
+							<input type="text" ng-model="details.contact.country" ng-value="details.contact.country" required><br>
 
-						<label for="phoneSec">Telephone Secondaire</label>
-						<input type="text" ng-model="details.contact.phoneSec" ng-value="details.contact.phoneSec" placeholder="Facultatif"><br>
+							<label for="phoneMain">Telephone Principal</label>
+							<input type="text" ng-model="details.contact.phoneMain" ng-value="details.contact.phoneMain" required><br>
 
-						<label for="fax">Fax :</label>
-						<input type="text" ng-model="details.contact.fax" ng-value="details.contact.fax" placeholder="Facultatif"><br>
+							<label for="phoneSec">Telephone Secondaire</label>
+							<input type="text" ng-model="details.contact.phoneSec" ng-value="details.contact.phoneSec" placeholder="Facultatif"><br>
 
-						<label for="email">Email :</label>
-						<input type="text" ng-model="details.contact.mail" ng-value="details.contact.mail" required><br>
+							<label for="fax">Fax :</label>
+							<input type="text" ng-model="details.contact.fax" ng-value="details.contact.fax" placeholder="Facultatif"><br>
 
-						<label for="webSite">Site Web :</label>
-						<input type="text" ng-model="details.contact.web" ng-value="details.contact.web" placeholder="Facultatif">				
-			
-					</p>				
-			</div>
+							<label for="email">Email :</label>
+							<input type="text" ng-model="details.contact.mail" ng-value="details.contact.mail" required><br>
 
-			<div class="tva">
-				
-				<p>
+							<label for="webSite">Site Web :</label>
+							<input type="text" ng-model="details.contact.web" ng-value="details.contact.web" placeholder="Facultatif">				
 
-					<label for="tva">N° TVA :</label>
-					<input type="text" ng-model="details.vat.num" ng-value="details.vat.num" required><br>
+						</p>				
+					</div>
 
-					<label for="siren">N° SIREN :</label>
-					<input type="text" ng-model="details.vat.siren" ng-value="details.vat.siren" placeholder="Facultatif"><br>
+					<div class="tva">
 
-					<label for="rcs">N° RCS :</label>
-					<input type="text" ng-model="details.vat.rcs" ng-value="details.vat.rcs" placeholder="Facultatif"><br>				
-					
-				</p>
+						<p>
 
-			</div>		
+							<label for="tva">N° TVA :</label>
+							<input type="text" ng-model="details.vat.num" ng-value="details.vat.num" required><br>
 
+							<label for="siren">N° SIREN :</label>
+							<input type="text" ng-model="details.vat.siren" ng-value="details.vat.siren" placeholder="Facultatif"><br>
 
-		</div>
+							<label for="rcs">N° RCS :</label>
+							<input type="text" ng-model="details.vat.rcs" ng-value="details.vat.rcs" placeholder="Facultatif"><br>				
 
+						</p>
 
-
-
+					</div>		
 
 
-
-		<div class="contact">
-			<h2>Personne de contact</h2>			
-		</div>
-
-		<div class="contactCont">
-
-			<p>
-			
-				<label for="civilityContact">Civilité :</label>
-				<select name="civility" id="" required>
-					<option>Monsieur</option>
-					<option>Madame</option>
-					<option>Mademoiselle</option>
-				</select><br>
-
-				<label for="firstNameContact">Prénom :</label>
-				<input type="text" ng-model="details.contactPerson.firstname" ng-value="details.contactPerson.firstname" required><br>
-
-				<label for="lastNameContact">Nom :</label>
-				<input type="text" ng-model="details.contactPerson.lastname" ng-value="details.contactPerson.lastname" required><br>				
-
-				<label for="mailContact">Mail :</label>
-				<input type="text" ng-model="details.contactPerson.mail" ng-value="details.contactPerson.mail" required><br>
-
-				<label for="phoneMainContact">Telephone Principal :</label>
-				<input type="text" ng-model="details.contactPerson.phoneMain" ng-value="details.contactPerson.phoneMain" required><br>
-
-				<label for="phoneSecContact">Telephone Secondaire :</label>
-				<input type="text" ng-model="details.contactPerson.phoneSec" ng-value="details.contactPerson.phoneSec" placeholder="Facultatif"><br>
-				
-				<label for="postContact">Fonction :</label>
-				<input type="text" ng-model="details.contactPerson.post" ng-value="details.contactPerson.post" required>	
-					
-					
-			</p>			
-
-			
-			
-
-		</div>
+				</div>
 
 
 
 
 
 
-		<div class="paymentInfos">
-			<h2>Informations de paiement</h2>			
-		</div>
 
+				<div class="contact">
+					<h2>Personne de contact</h2>			
+				</div>
+
+				<div class="contactCont">
+
+					<p>
+
+						<label for="civilityContact">Civilité :</label>
+						<select name="civility" id="" required>
+							<option>Monsieur</option>
+							<option>Madame</option>
+							<option>Mademoiselle</option>
+						</select><br>
+
+						<label for="firstNameContact">Prénom :</label>
+						<input type="text" ng-model="details.contactPerson.firstname" ng-value="details.contactPerson.firstname" required><br>
+
+						<label for="lastNameContact">Nom :</label>
+						<input type="text" ng-model="details.contactPerson.lastname" ng-value="details.contactPerson.lastname" required><br>				
+
+						<label for="mailContact">Mail :</label>
+						<input type="text" ng-model="details.contactPerson.mail" ng-value="details.contactPerson.mail" required><br>
+
+						<label for="phoneMainContact">Telephone Principal :</label>
+						<input type="text" ng-model="details.contactPerson.phoneMain" ng-value="details.contactPerson.phoneMain" required><br>
+
+						<label for="phoneSecContact">Telephone Secondaire :</label>
+						<input type="text" ng-model="details.contactPerson.phoneSec" ng-value="details.contactPerson.phoneSec" placeholder="Facultatif"><br>
+
+						<label for="postContact">Fonction :</label>
+						<input type="text" ng-model="details.contactPerson.post" ng-value="details.contactPerson.post" required>	
+
+
+					</p>			
+
+<<<<<<< HEAD
 		<div class="paymentCont">
 			<ul>
 				<li ng-repeat="account in listAccounts">
@@ -156,52 +153,60 @@
 							<label for="accountName"><span>Nom du compte :</span></label>
 							<input type="text" ng-model="account.name" ng-value="account.name" required>
 						</li>
+=======
+>>>>>>> 9ffd4ec92241567a6e3374875938018fcd62dc1b
 
-						<li>
-							<label for="accountIban">IBAN/RIB :</label>
-							<input type="text" ng-model="account.iban" ng-value="account.iban" placeholder="Facultatif">
+
+
+				</div>
+
+
+
+
+
+
+				<div class="paymentInfos">
+					<h2>Informations de paiement</h2>			
+				</div>
+
+				<div class="paymentCont">
+					<ul>
+						<li ng-repeat="account in listAccounts">
+							<ul>
+								<li>
+									<label for="accountName">Nom du compte :</label>
+									<input type="text" ng-model="account.name" ng-value="account.name" required>
+								</li>
+
+								<li>
+									<label for="accountIban">IBAN/RIB :</label>
+									<input type="text" ng-model="account.iban" ng-value="account.iban" placeholder="Facultatif">
+								</li>
+
+								<li>
+									<label for="accountBic">BIC :</label>
+									<input type="text" ng-model="account.bic" ng-value="account.bic" placeholder="Facultatif">
+								</li>
+
+								<li>
+									<label for="accountEmail">Email :</label>
+									<input type="text" ng-model="account.mail" ng-value="account.mail" placeholder="Facultatif">
+								</li>			
+
+							</ul>	
 						</li>
-
-						<li>
-							<label for="accountBic">BIC :</label>
-							<input type="text" ng-model="account.bic" ng-value="account.bic" placeholder="Facultatif">
-						</li>
-
-						<li>
-							<label for="accountEmail">Email :</label>
-							<input type="text" ng-model="account.mail" ng-value="account.mail" placeholder="Facultatif">
-						</li>			
-						
 					</ul>	
-				</li>
-			</ul>	
 
-			
 
-		</div>
+
+				</div>
 
 
 
 
 
 
-
-
-
-		<div class="articleInfos">
-			<h2>Article</h2>			
-		</div>
-
-		<div class="articleCont">
-
-			<div class="articletitle">			
-				<ul>
-					<li>Article</li>
-					<li>Description</li>
-					<li>Montant P/U</li>
-				</ul>
-			</div>
-
+<<<<<<< HEAD
 			<div class="article1" ng-repeat="article in details.articles">
 				<ul>
 					<li>{{article.name}}</li>
@@ -210,13 +215,77 @@
 				</ul>				
 			</div>
 		
+=======
+
+
+
+				<div class="articleInfos">
+					<h2>Article</h2>			
+				</div>
+
+				<div class="articleCont">
+					
+					<div class="articletitle">			
+						<ul>
+							<li>Article</li>
+							<li>Description</li>
+							<li>Montant P/U</li>
+						</ul>
+					</div>
+
+					<div class="article1" ng-repeat="article in details.articles">
+						<ul>
+							<!-- <li>{{article.name}}</li>
+							<li>{{article.description}}</li>
+							<li>{{article.unitPrice}} €</li> -->
+							<input type="text" name="name" ng-model="article.name" ng-value="article.name">
+							<input type="text" name="description" ng-model="article.description" ng-value="article.description">
+							<input type="text" name="unitPrice" ng-model="article.unitPrice" ng-value="article.unitPrice"><!--
+							 --><span id="less" ng-click="removeElement('article', $index, item.amount)"> - </span>
+						</ul>				
+					</div>
+
+
+	
+				<div class="facture" id="facture">
+					<div class="article">
+						<label for="article">Article</label>
+						<input type="" name="Article" id="article" ng-model="article.name"></input>
+					</div>
+					<div class="description">
+						<label for="description">Description</label>
+						<input name="Description" id="description" ng-model="article.description">
+					</div>
+					<div class="small">
+						<label for="p-u">P/U</label>
+						<input name="P/U" id="p-u" ng-model="article.unitPrice">
+					</div>
+				</div>
+					<button type="button" class="more_line" ng-click="addElement('article')">+ Ajouter</button>
+
+			<!--<div class="article2">
+				<ul>
+					<li>Chaise en plastic</li>
+					<li>Bies chaise en plastoc</li>
+					<li>7€</li>
+				</ul>				
+			</div>-->
+
+>>>>>>> 9ffd4ec92241567a6e3374875938018fcd62dc1b
 
 
 			
 
 			
 
+<<<<<<< HEAD
 				
+=======
+			<!-- <div class="savecoordonnee4">
+				<p>sauvegarder</p>
+			</div> -->
+
+>>>>>>> 9ffd4ec92241567a6e3374875938018fcd62dc1b
 		</div>
 
 
@@ -224,11 +293,11 @@
 
 
 
-	<div class="template">
-		<h2>Design</h2>			
-	</div>
+		<div class="template">
+			<h2>Design</h2>			
+		</div>
 
-	<div class="templateCont">
+		<div class="templateCont">
 
 
 			<div class="fact">			
@@ -236,6 +305,7 @@
 			</div>
 
 			<div class="designfacture">
+<<<<<<< HEAD
 				<div class="f0{{colorEstimate}}"></div>			
 				<div class="f01"></div> 
 				<div class="f02"></div> 
@@ -249,6 +319,21 @@
 				<div class="f10"></div>				 			
 			</div>
 			
+=======
+				<!-- <div class="f0{{colorEstimate}}"></div> -->
+				
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="1" value="1"> <div class="f01"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="2" value="2"> <div class="f02"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="3" value="3"> <div class="f03"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="4" value="4"> <div class="f04"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="5" value="5"> <div class="f05"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="6" value="6"> <div class="f06"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="7" value="7"> <div class="f07"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="8" value="8"> <div class="f08"></div>
+				<input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="9" value="9"> <div class="f09"></div>
+				<!-- <input type="radio" name="templateColorBill" ng-model="colorBill" ng-value="10" value="10"> <div class="f10"></div>	  -->			
+			</div>		
+>>>>>>> 9ffd4ec92241567a6e3374875938018fcd62dc1b
 			
 
 
@@ -257,6 +342,7 @@
 			</div>
 
 			<div class="designdevis">
+<<<<<<< HEAD
 				<div class="f0{{colorBill}}"></div> 
 				
 				<div class="f01"></div> 
@@ -269,20 +355,45 @@
 				<div class="f08"></div>
 				<div class="f09"></div>
 				<div class="f10"></div>	 			
+=======
+				<!-- <div class="f0{{colorBill}}"></div> -->
+
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="1" value="1"> <div class="f01"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="2" value="2"> <div class="f02"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="3" value="3"> <div class="f03"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="4" value="4"> <div class="f04"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="5" value="5"> <div class="f05"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="6" value="6"> <div class="f06"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="7" value="7"> <div class="f07"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="8" value="8"> <div class="f08"></div>
+				<input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="9" value="9"> <div class="f09"></div>
+				<!-- <input type="radio" name="templateColorEstimate" ng-model="colorEstimate" ng-value="10" value="10"> <div class="f10"></div> -->
+
+				<!-- <div ng-model="colorBill" ng-click="" class="f01"></div> 
+				<div ng-model="colorBill" class="f02"></div>
+				<div ng-model="colorBill" class="f03"></div>
+				<div ng-model="colorBill" class="f04"></div>
+				<div ng-model="colorBill" class="f05"></div>
+				<div ng-model="colorBill" class="f06"></div>
+				<div ng-model="colorBill" class="f07"></div>
+				<div ng-model="colorBill" class="f08"></div>
+				<div ng-model="colorBill" class="f09"></div>
+				<div ng-model="colorBill" class="f10"></div>	 --> 			
+>>>>>>> 9ffd4ec92241567a6e3374875938018fcd62dc1b
 			</div>				
 
 			<!-- <div class="savecoordonnee5">
 				<p>sauvegarder</p>
 			</div> -->
+			<input type="submit" value="Valider"></input>
 
+		</div>	
 
-	</div>	
-
-
+		
 	</form>
 
 
-	</div>
+</div>
 
 </div>
 

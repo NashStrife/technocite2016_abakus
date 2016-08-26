@@ -1,64 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Exemple facture</title>
-    <link rel="stylesheet" href="../stylesheets/reset.css">
-
-<style>
-  /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* line 4, ../sass/exemple2.scss */
-/* line 4, ../sass/exemple2.scss */
-/* line 4, ../sass/exemple2.scss */
-/* line 4, ../sass/exemple2.scss */
 /* line 4, ../sass/exemple2.scss */
 html {
   -moz-box-sizing: border-box;
@@ -152,7 +91,7 @@ body {
 }
 /* line 62, ../sass/exemple2.scss */
 .num_facture p {
-  font-size: 10px;
+  font-size: 5px;
 }
 
 /* line 67, ../sass/exemple2.scss */
@@ -277,9 +216,9 @@ table .fact_amount {
 }
 /* line 142, ../sass/exemple2.scss */
 .calcul :nth-child(7) {
-  max-width: 80%;
+  max-width: 60%;
   height: 10px;
-  margin-left: 20%;
+  margin-left: 40%;
   font-size: 12px;
   line-height: 10px;
   background: #2a4158;
@@ -287,75 +226,3 @@ table .fact_amount {
   margin-bottom: 5px;
   padding-right: 3px;
 }
-
-</style>
-</head>
-
-<body>
-    <div class="container">
-
-        <div class="head">
-            <!--Début de l'en-tête de facture contenant les coordonnées client-->
-            <div class="logo_container">
-            <img src="{{contact.logo}}" alt="{{contact.name}}" width="120" height="120">
-            </div>
-          <div class="entreprise">   
-            <ul>
-                <li>{{company.name}}</li>
-                <li>{{company.contact.street}}, {{company.contact.number}}</li>
-                <li>{{company.contact.zip}} {{company.contact.town}}</li>
-                <li>{{company.contact.country}}</li>
-                <li>Tel: {{company.contact.phoneMain}} {{company.contact.phoneSec}}</li>
-                <li>Fax: {{company.contact.fax}}</li>
-                <li>E-mail: {{company.contact.mail}}</li>
-            </ul>
-            </div>
-            <section class="num_facture">
-            <h1>Facture</h1></br>
-            <p>Numéro de facture:</br> {{numFacture}}</p></br>
-            <p>Date:</br> {{dateFacture}}</p></br>
-            </section>
-        </div>
-        <div class="info_client">
-                <ul>
-                    <li>{{client.contactPerson.civility}} {{client.contactPerson.firstname}} {{client.contactPerson.lastname}}</li>
-                    <li>{{client.billingInfo.street}}, {{client.billingInfo.number}}</li>
-                    <li>{{client.billinginfo.zip}} {{client.billingInfo.town}}</li>
-                    <li>{{client.billingInfo.country}}</li>
-                    <li>Nom du projet: {{project.name}}</li>
-                    <li>Date de début: {{project.startAt}}</li>
-                    <li>Date de fin: {{project.endAt}}</li>
-                </ul>
-        </div>
-        <table>
-            <tr class="thead">
-                <th class="fact_article">Article</th>
-                <th class="fact_description">Description</th>
-                <th class="fact_qte">Qte</th>
-                <th class="fact_pu">P/U</th>
-                <th class="fact_amount">Montant</th>
-            </tr>
-            {{#articles}}
-            <tr class="article_lines">
-                <td class="fact_article">{{name}}</td>
-                <td class="fact_description">{{description}}</td>
-                <td class="fact_qte">{{quantity}}</td>
-                <td class="fact_pu">{{unitPrice}}</td>
-                <td class="fact_amount">{{amount}}</td>
-            </tr>
-            {{/articles}}
-        </table>
-        <ul class="calcul">
-          <li><label>Total hTVA: </label>{{totalXvat}}</li>
-          <li><label>Remise: </label>{{refund}} {{refundCur}}</li>
-          <li><label>Sous-total hTVA: </label>{{underTotalXvat}}</li>
-          <li><label>TVA: </label>{{tva}}</li>
-          <li><label>Total Ttc: </label>{{totalTtc}}</li>
-          <li><label>Accompte: </label>{{deposit}}</li>
-          <li><label>À payer: </label>{{sum}}</li>
-          <li><label>Date d'écheance: </label>{{deadline}}</li>
-        </ul>
-    </div>
-</body>
-
-</html>
