@@ -1,0 +1,42 @@
+@import "compass";
+@import "grids";
+@import "variables";
+html {
+    @include box-sizing(border-box);
+}
+
+body {
+    font-family: "century gothic", arial, sans-serif;
+}
+
+.container {
+    @include container(2260px);
+}
+
+.head {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2a4158;
+}
+
+.enterprise {
+    img {
+        @include span(3 of 12);
+        height: auto;
+    }
+    ul {
+        @include span(6 of 12);
+        li {
+            font-size: 12px;
+            &:first-child {
+                font-size: 16px;
+            }
+        }
+    }
+    .num_facture{
+        @include span(3 of 12);
+    }
+}
+
+.info_client {
+    @include span(4 of 12);
+}

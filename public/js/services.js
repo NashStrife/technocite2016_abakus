@@ -38,8 +38,8 @@ services.factory('Crm',['$resource', function($resource) {
             pdfToSend.data = newPdf.data;
 
             console.log("Create PDF");
-
-            console.log(pdfToSend);
+            // console.log(pdfToSend);
+            
             pdfToSend.$save(callback);
 		}
 	}

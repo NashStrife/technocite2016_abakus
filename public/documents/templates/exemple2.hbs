@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Exemple facture</title>
     <link rel="stylesheet" href="../stylesheets/reset.css">
+    <link rel="stylesheet" href="../stylesheets/exemple.css">
 
 <style>
  /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -179,7 +180,7 @@ body {
 
 /* line 81, ../sass/exemple.scss */
 table {
-  max-width: 100%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
@@ -202,10 +203,12 @@ table th {
 /* line 92, ../sass/exemple.scss */
 table tr :first-child {
   width: 20%;
+  font-size: 16px;
 }
 /* line 96, ../sass/exemple.scss */
 table tr :nth-child(2) {
   width: 30%;
+   font-size: 16px;
 }
 /* line 101, ../sass/exemple.scss */
 table td, table th {
@@ -221,7 +224,7 @@ table td, table th {
         <div class="head">
             <!--Début de l'en-tête de facture contenant les coordonnées client-->
             <img src="{{contact.logo}}" alt="{{contact.name}}" width="470" height="470">
-                
+           <div class="entreprise">   
             <ul>
                 <li>{{company.name}}</li>
                 <li>{{company.contact.street}}, {{company.contact.number}}</li>
@@ -231,10 +234,11 @@ table td, table th {
                 <li>Fax: {{company.contact.fax}}</li>
                 <li>E-mail: {{company.contact.mail}}</li>
             </ul>
+            </div>
             <section class="num_facture">
             <h1>Facture</h1></br>
-            <p>{{numFacture}}</p></br>
-            <p>{{dateFacture}}</p></br>
+            <p>Numéro de facture: {{numFacture}}</p></br>
+            <p>Date: {{dateFacture}}</p></br>
             </section>
         </div>
         <div class="info_client">
@@ -263,6 +267,15 @@ table td, table th {
             </tr>
             {{/articles}}
         </table>
+        <ul>
+          <li>{{totalXvat}}</li>
+          <li>{{refund}} {{refundCur}}</li>
+          <li>{{underTotalXvat}}</li>
+          <li>{{tva}}</li>
+          <li>{{totalTtc}}</li>
+          <li>{{deposit}}</li>
+          <li>{{sum}}</li>
+        </ul>
     </div>
 </body>
 
