@@ -16,11 +16,12 @@
 			<legend>Société</legend>
 			<div class="line">
 				<label for="ref" class="required">Dénomination sociale<br>
-					<input type="text" id="ref" ng-model="newClient.name" required>
+					<input type="text" id="ref" ng-model="newClient.name">
 				</label>
 				<label for="logo">Logo<br>
 					<span>Parcourir</span>
-					<input type="file" id="logo" file-model="newClient.picture">
+					<input type="file" id="logo" ngf-select ng-model="picFile" name="file"    
+             accept="image/*" ngf-max-size="2MB" ngf-model-invalid="errorFile">
 				</label>
 			</div>
 			<div class="line">
@@ -37,14 +38,14 @@
 			<div class="line"><label for="siren" class="france">N° SIREN<br>
 			<input type="text" id="siren" class="france" ng-model="newClient.vat.siren"></label></div>
 			<div class="line"><label for="rcs" class="france">N° RCS<br>
-			<input type="text" id="rcs" class="france" ng-model="newClient.vat.rcs"></label></div>
+			<input type="text" id="rcs" ng-model="newClient.vat.rcs"></label></div>
 		</fieldset>
 
 		<input type="radio" name="progress" value="step1" id="step1">
 		<label for="step1" class="progress" id="lien1">SUIVANT</label>
 		
 		<fieldset>
-			<legend>Coordonnées de contact</legend>
+			<legend><span>Coordonnées</span><span>Personne</span> de contact</legend>
 			<div class="line">
 				<label for="civil" class="required">Civilité<br/>
 				<select id="civil" ng-model="newClient.contactPerson.civility" required>
@@ -68,6 +69,8 @@
 				<input type="email" id="email" ng-model="newClient.contactPerson.mail" required></label>
 				<label for="fonction">Fonction<br/>
 				<input type="text" id="fonction" ng-model="newClient.contactPerson.post"></label>
+				<label for="ref2" class="required">Nom de référence<br>
+				<input type="text" id="ref2" ng-model="newClient.name"></label>
 			</div>
 		</fieldset>
 

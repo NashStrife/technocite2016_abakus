@@ -135,12 +135,12 @@
 			label[for="zipFact"], label[for="zipDeliver"] {
 				@include span(2.50 of 10 last);
 			}
-			label[for="phone2"], label[for="countryFact"], label[for="phone2Fact"], label[for="faxFact"], label[for="countryDeliver"] {
+			label[for="phone2"], label[for="countryFact"], label[for="phone2Fact"], label[for="faxFact"], label[for="countryDeliver"], label[for="ref2"], label[for="fonction"] {
 				@include span(5 of 10 last);
 			}
-			label[for="fonction"] {
-				display: none;
-			}
+			// label[for="fonction"] {
+			// 	display: none;
+			// }
 			#prefixeTva {
 				width: 12%;
 			}
@@ -245,8 +245,20 @@
 		#particulier:checked ~ #step0 {
 			display: none;
 		}
+		#particulier:checked ~ fieldset>div>label[for="fonction"] {
+			display: none;
+		}
+		#particulier:checked ~ fieldset>legend>span:nth-of-type(2) {
+			display: none;
+		}
 		#society:checked ~ fieldset:nth-of-type(1) {
 		 	display: inline-block;
+		}
+		#society:checked ~ fieldset>div>label[for="ref2"] {
+			display: none;
+		}
+		#society:checked ~ fieldset>legend>span:nth-of-type(1) {
+			display: none
 		}
 		#step1:checked ~ fieldset:nth-of-type(2) {
 			display: inline-block;
