@@ -9,9 +9,11 @@
 		<fieldset class="ref_fact">
 			<legend>Références facture</legend>
 			<label for="numFacture">Numéro de facture</label>
-			<input type="text" ng-model="newBill.numFacture" >
+			<input type="text" ng-model="newBill.numFacture" required><br>
 			<label for="dateFacture">Date de la facture</label>
-			<input type="date" ng-model="newBill.dateFacture" >
+			<input type="date" ng-model="newBill.dateFacture" required><br>
+			<label for="dateFacture">Date d'échéance</label>
+			<input type="date" ng-model="newBill.deadline" required>
 		</fieldset>
 		<fieldset class="ref_client">
 			<legend>Références client</legend>
@@ -23,7 +25,7 @@
 			</div>
 			<div class="half">
 				<label for="client">Client</label><br/>
-				<select name="client" id="client" ng-model="newBill.client" ng-options="client as client.name for client in listClients" ></select>
+				<select name="client" id="client" ng-model="newBill.client" ng-options="client as client.name for client in listClients" required></select>
 				<!--<p>{{newBill.client}}</p>-->
 			</div>
 			
@@ -37,14 +39,14 @@
 		<fieldset>
 			<legend>Objet</legend>
 			<label for="project-name">Nom du projet</label><br/>
-			<input name="Nom du projet" id="project-name" placeholder="" class="cent" ng-model="newBill.project.name"><br/>
+			<input name="Nom du projet" id="project-name" placeholder="" class="cent" ng-model="newBill.project.name" required><br/>
 			<div class="half">
 				<label for="starting-date ">Date de début</label><br/>
-				<input type="date" name="Date de début" id="starting-date " ng-model="newBill.project.startAt" ><br/>
+				<input type="date" name="Date de début" id="starting-date " ng-model="newBill.project.startAt" required><br/>
 			</div>
 			<div class="half last">
 				<label for="ending-date">Date de fin</label><br/>
-				<input type="date" name="Date de fin" id="ending-date" ng-model="newBill.project.endAt"><br/>
+				<input type="date" name="Date de fin" id="ending-date" ng-model="newBill.project.endAt" required><br/>
 			</div>
 			<button type="" class="next">Suivant</button>
 		</fieldset>
@@ -132,13 +134,13 @@
 			<legend>Informations et règles de paiement</legend>
 			<div class="commitment">
 				<label for="financial commitment">Echéance</label><br/>
-				<select name="Echéance" id="financial commitment" ng-model="newBill.rules" ng-options="rule for rule in paramFromDb.rules" >
+				<select name="Echéance" id="financial commitment" ng-model="newBill.rules" ng-options="rule for rule in paramFromDb.rules" required>
 	
 			</select>
 			</div>
 			<div class="payment half">
 				<label for="primary-payment-method">Mode de paiement principal</label><br/>
-				<select name="Mode de paiement principal" id="primary-payment-method" ng-model="newBill.primAccount" ng-options="account as account.name for account in listAccounts" >
+				<select name="Mode de paiement principal" id="primary-payment-method" ng-model="newBill.primAccount" ng-options="account as account.name for account in listAccounts" required>
 			</select>
 			<ul>
 				<li ng-if="newBill.primAccount.bic">{{newBill.primAccount.bic}}</li> 

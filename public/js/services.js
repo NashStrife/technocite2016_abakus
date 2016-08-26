@@ -19,6 +19,7 @@ services.factory('Crm',['$resource', function($resource) {
             logResource.query(callback);
 		},
         upload : function(newUpload, callback) {
+            console.log(newUpload);
 			let uploadResource = $resource("/api/crm/upload");
             let upload = new uploadResource();
             upload.folder = newUpload.folder;
