@@ -17,9 +17,19 @@ adminService.factory('Admin',['$resource', function($resource) {
 			});
 
 			let admin = new resourceAdmin();
+
 			admin.name = edAdmin.name;
+			if(edAdmin.logo)
+				admin.logo = edAdmin.logo;
+			admin.vat = edAdmin.vat;
+			admin.contact = edAdmin.contact;
+			admin.contactPerson = edAdmin.contactPerson;
+			admin.paymentInfo = edAdmin.paymentInfo;
+			admin.articles = edAdmin.articles;
+			admin.templates = edAdmin.templates;
 			
-            admin.editeddAt = Date.now();
+			admin.createdAt = edAdmin.createdAt
+            admin.updatedAt = Date.now();
 
 			console.log("Edit admin");
 			// console.log(admin);
