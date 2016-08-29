@@ -239,7 +239,7 @@ nav ul li a#setting {
 
   /* line 246, ../sass/style_factures_list.scss */
   section {
-    z-index: 10000;
+    z-index: 999;
     width: 940px;
     position: fixed;
     font-size: 12px;
