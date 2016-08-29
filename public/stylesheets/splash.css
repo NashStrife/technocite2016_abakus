@@ -248,111 +248,159 @@
 /* line 203, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ input[name="progress"] {
   display: inline-block;
-  top: -5%;
+  top: 10px;
   position: absolute;
 }
 /* line 208, ../sass/splash.scss */
-.newClient input[name="client"]:checked ~ #step0 {
-  left: 46%;
+.newClient #society:checked ~ #step0 {
+  left: 41.5%;
 }
 /* line 209, ../sass/splash.scss */
-.newClient input[name="client"]:checked ~ #step1 {
-  left: 48%;
+.newClient #society:checked ~ #step1 {
+  left: 45%;
 }
 /* line 210, ../sass/splash.scss */
-.newClient input[name="client"]:checked ~ #step2 {
-  left: 50%;
+.newClient #society:checked ~ #step2 {
+  left: 48.5%;
 }
 /* line 211, ../sass/splash.scss */
-.newClient input[name="client"]:checked ~ #step3 {
+.newClient #society:checked ~ #step3 {
   left: 52%;
 }
 /* line 212, ../sass/splash.scss */
-.newClient input[name="client"]:checked ~ #step4 {
-  left: 54%;
+.newClient #society:checked ~ #step4 {
+  left: 55.5%;
 }
 /* line 214, ../sass/splash.scss */
+.newClient #particulier:checked ~ #step1 {
+  left: 43%;
+}
+/* line 215, ../sass/splash.scss */
+.newClient #particulier:checked ~ #step2 {
+  left: 46.5%;
+}
+/* line 216, ../sass/splash.scss */
+.newClient #particulier:checked ~ #step3 {
+  left: 50%;
+}
+/* line 217, ../sass/splash.scss */
+.newClient #particulier:checked ~ #step4 {
+  left: 53.5%;
+}
+/* line 219, ../sass/splash.scss */
 .newClient #particulier:checked ~ #lien2 {
   display: inline-block;
   right: 10%;
 }
-/* line 218, ../sass/splash.scss */
+/* line 223, ../sass/splash.scss */
 .newClient #society:checked ~ #lien1 {
   display: inline-block;
   right: 10%;
 }
-/* line 222, ../sass/splash.scss */
+/* line 227, ../sass/splash.scss */
 .newClient #step1:checked + #lien1 {
   left: 25%;
 }
-/* line 227, ../sass/splash.scss */
+/* line 232, ../sass/splash.scss */
 .newClient #step1:checked ~ #lien2 {
   display: inline-block;
   right: 10%;
 }
-/* line 231, ../sass/splash.scss */
+/* line 236, ../sass/splash.scss */
 .newClient #step2:checked ~ #lien3 {
   display: inline-block;
   right: 10%;
 }
-/* line 235, ../sass/splash.scss */
+/* line 240, ../sass/splash.scss */
 .newClient #step3:checked ~ #lien4 {
   display: inline-block;
   right: 10%;
 }
-/* line 239, ../sass/splash.scss */
+/* line 244, ../sass/splash.scss */
 .newClient #step4:checked ~ #submit {
   display: inline-block;
 }
-/* line 242, ../sass/splash.scss */
+/* line 247, ../sass/splash.scss */
 .newClient #particulier:checked ~ fieldset:nth-of-type(2) {
   display: inline-block;
 }
-/* line 245, ../sass/splash.scss */
+/* line 250, ../sass/splash.scss */
 .newClient #particulier:checked ~ #step0 {
   display: none;
 }
-/* line 248, ../sass/splash.scss */
+/* line 253, ../sass/splash.scss */
 .newClient #particulier:checked ~ fieldset > div > label[for="fonction"] {
   display: none;
 }
-/* line 251, ../sass/splash.scss */
+/* line 256, ../sass/splash.scss */
 .newClient #particulier:checked ~ fieldset > legend > span:nth-of-type(2) {
   display: none;
 }
-/* line 254, ../sass/splash.scss */
+/* line 259, ../sass/splash.scss */
 .newClient #society:checked ~ fieldset:nth-of-type(1) {
   display: inline-block;
 }
-/* line 257, ../sass/splash.scss */
+/* line 262, ../sass/splash.scss */
 .newClient #society:checked ~ fieldset > div > label[for="ref2"] {
   display: none;
 }
-/* line 260, ../sass/splash.scss */
+/* line 265, ../sass/splash.scss */
 .newClient #society:checked ~ fieldset > legend > span:nth-of-type(1) {
   display: none;
 }
-/* line 263, ../sass/splash.scss */
+/* line 268, ../sass/splash.scss */
 .newClient #step1:checked ~ fieldset:nth-of-type(2) {
   display: inline-block;
 }
-/* line 266, ../sass/splash.scss */
-.newClient #step1:not(checked) + fieldset:nth-of-type(2) {
-  display: none;
-}
-/* line 269, ../sass/splash.scss */
+/* line 274, ../sass/splash.scss */
 .newClient #step2:checked ~ fieldset:nth-of-type(3) {
   display: inline-block;
 }
-/* line 272, ../sass/splash.scss */
+/* line 277, ../sass/splash.scss */
 .newClient #step3:checked ~ fieldset:nth-of-type(4) {
   display: inline-block;
 }
-/* line 275, ../sass/splash.scss */
+/* line 280, ../sass/splash.scss */
 .newClient #step4:checked ~ fieldset:nth-of-type(5) {
   display: inline-block;
 }
-/* line 281, ../sass/splash.scss */
+/* line 286, ../sass/splash.scss */
 .newClient .required:before {
   content: "*";
+}
+/* line 289, ../sass/splash.scss */
+.newClient input[name="progress"]:checked:before,
+.newClient input[name="progress"]:not(checked):before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  /* dim. de la case */
+  background-color: #7c8894;
+  border-radius: 7px;
+  top: 2px;
+  left: -2px;
+  z-index: 1;
+  padding: 2px;
+}
+/* line 302, ../sass/splash.scss */
+.newClient input[name="progress"]:checked:after,
+.newClient input[name="progress"]:not(:checked):after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  top: 2px;
+  left: -2px;
+  background-color: #e5af28;
+  z-index: 1;
+}
+/* line 313, ../sass/splash.scss */
+.newClient input[name="progress"]:not(:checked):after {
+  opacity: 0;
+}
+/* line 316, ../sass/splash.scss */
+.newClient input[name="progress"]:checked:before {
+  opacity: 1;
 }

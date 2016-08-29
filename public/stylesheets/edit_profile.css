@@ -1,5 +1,5 @@
 /* line 11, ../sass/edit_profile.scss */
-.editProfilPro input, .editProfilPro select {
+.profilePro input, .profilePro select {
   background-color: #cad0d6;
   border: none;
   color: #2a4158;
@@ -8,44 +8,124 @@
   margin-left: 5px;
 }
 /* line 22, ../sass/edit_profile.scss */
-.editProfilPro .info {
+.profilePro .info {
   width: 330px;
 }
 /* line 27, ../sass/edit_profile.scss */
-.editProfilPro .tva {
+.profilePro .tva {
   margin-top: 10px;
 }
 /* line 34, ../sass/edit_profile.scss */
-.editProfilPro .contactCont p {
+.profilePro .contactCont p {
   margin-top: 14px;
   padding-bottom: 0px;
 }
 /* line 40, ../sass/edit_profile.scss */
-.editProfilPro .contactCont img {
+.profilePro .contactCont img {
   background-color: none;
 }
 /* line 52, ../sass/edit_profile.scss */
-.editProfilPro .templateCont {
+.profilePro .templateCont {
   padding-top: 0px;
 }
 /* line 57, ../sass/edit_profile.scss */
-.editProfilPro .designfacture, .editProfilPro .designdevis {
-  width: 361px;
+.profilePro .designfacture, .profilePro .designdevis {
+  width: 500px;
 }
 /* line 67, ../sass/edit_profile.scss */
-.editProfilPro .paymentCont li {
+.profilePro .paymentCont li {
   display: block;
   width: 300px;
 }
 /* line 73, ../sass/edit_profile.scss */
-.editProfilPro .paymentCont ul {
-  margin-left: 11px;
+.profilePro .paymentCont ul {
+  margin-left: 10px;
 }
 /* line 78, ../sass/edit_profile.scss */
-.editProfilPro .paymentCont label {
+.profilePro .paymentCont label {
   font-weight: normal;
 }
 /* line 83, ../sass/edit_profile.scss */
-.editProfilPro .paymentCont span {
+.profilePro .paymentCont span {
   font-weight: bold;
+}
+/* line 93, ../sass/edit_profile.scss */
+.profilePro .full {
+  width: 158px;
+  margin-left: 14px;
+}
+/* line 98, ../sass/edit_profile.scss */
+.profilePro .full label {
+  margin-left: 5px;
+}
+/* line 103, ../sass/edit_profile.scss */
+.profilePro .full input {
+  margin-top: 5px;
+}
+/* line 109, ../sass/edit_profile.scss */
+.profilePro label {
+  font-size: 13px;
+  margin-top: 10px;
+}
+/* line 115, ../sass/edit_profile.scss */
+.profilePro .facture {
+  margin-top: 20px;
+}
+/* line 122, ../sass/edit_profile.scss */
+.profilePro .articleCont label {
+  font-weight: bold;
+}
+/* line 127, ../sass/edit_profile.scss */
+.profilePro .articleCont input {
+  margin-left: 20px;
+  width: 275px;
+}
+/* line 134, ../sass/edit_profile.scss */
+.profilePro .articleCont input:first-child {
+  margin-left: 0px;
+}
+/* line 139, ../sass/edit_profile.scss */
+.profilePro .articleCont input:nth-child(3) {
+  width: 50px;
+  margin-left: 64px;
+}
+/* line 145, ../sass/edit_profile.scss */
+.profilePro .articleCont button {
+  margin-left: 20px;
+}
+/* line 152, ../sass/edit_profile.scss */
+.profilePro .small {
+  margin-left: 73px;
+}
+/* line 156, ../sass/edit_profile.scss */
+.profilePro .small input {
+  width: 78px;
+}
+/* line 163, ../sass/edit_profile.scss */
+.profilePro .description {
+  margin-left: 111px;
+}
+/* line 170, ../sass/edit_profile.scss */
+.profilePro .article label, .profilePro .description label, .profilePro .small label {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+/* line 178, ../sass/edit_profile.scss */
+.profilePro .more_line {
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+/* line 184, ../sass/edit_profile.scss */
+.profilePro .submit {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 657px;
+}
+/* line 192, ../sass/edit_profile.scss */
+.profilePro .paypal {
+  margin-top: 100px;
+}
+/* line 196, ../sass/edit_profile.scss */
+.profilePro .paypal ul {
+  margin-top: 125px;
 }
