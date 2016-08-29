@@ -239,18 +239,19 @@ nav ul li a#setting {
 
   /* line 246, ../sass/style_factures_list.scss */
   section {
+    z-index: 10000;
     width: 940px;
     position: fixed;
     font-size: 12px;
     top: 100px;
     text-align: right;
   }
-  /* line 258, ../sass/style_factures_list.scss */
+  /* line 259, ../sass/style_factures_list.scss */
   section ul {
     padding-top: 170px;
   }
 
-  /* line 263, ../sass/style_factures_list.scss */
+  /* line 264, ../sass/style_factures_list.scss */
   .blue2 {
     background: #2a4158;
     width: 100%;
@@ -258,46 +259,46 @@ nav ul li a#setting {
     margin-left: 198px;
   }
 
-  /* line 269, ../sass/style_factures_list.scss */
+  /* line 270, ../sass/style_factures_list.scss */
   .search {
     padding: 10px;
     background: #95a0ac;
     margin-left: 198px;
     text-align: left;
   }
-  /* line 274, ../sass/style_factures_list.scss */
+  /* line 275, ../sass/style_factures_list.scss */
   .search * {
     display: inline-block;
     vertical-align: middle;
   }
-  /* line 279, ../sass/style_factures_list.scss */
+  /* line 280, ../sass/style_factures_list.scss */
   .search button {
     border: none;
     background-color: #e5af28;
     padding: 2px;
   }
-  /* line 283, ../sass/style_factures_list.scss */
+  /* line 284, ../sass/style_factures_list.scss */
   .search button:hover {
     background-color: aliceblue;
   }
-  /* line 287, ../sass/style_factures_list.scss */
+  /* line 288, ../sass/style_factures_list.scss */
   .search p {
     display: inline-block;
     margin-top: 0px;
     margin-right: 15px;
     text-transform: uppercase;
   }
-  /* line 293, ../sass/style_factures_list.scss */
+  /* line 294, ../sass/style_factures_list.scss */
   .search input {
     border: none;
     width: 50%;
     padding: 5px;
   }
-  /* line 298, ../sass/style_factures_list.scss */
+  /* line 299, ../sass/style_factures_list.scss */
   .search .labelArrow {
     position: relative;
   }
-  /* line 299, ../sass/style_factures_list.scss */
+  /* line 300, ../sass/style_factures_list.scss */
   .search .labelArrow:after {
     content: '';
     font: 11px "Consolas", monospace;
@@ -311,11 +312,11 @@ nav ul li a#setting {
     position: absolute;
     pointer-events: none;
   }
-  /* line 317, ../sass/style_factures_list.scss */
+  /* line 318, ../sass/style_factures_list.scss */
   .search .labelArrow:after:hover {
     background-color: aliceblue;
   }
-  /* line 324, ../sass/style_factures_list.scss */
+  /* line 325, ../sass/style_factures_list.scss */
   .search select {
     position: relative;
     border: none;
@@ -327,16 +328,16 @@ nav ul li a#setting {
     -moz-appearance: none;
     /*Removes default style Firefox*/
   }
-  /* line 333, ../sass/style_factures_list.scss */
+  /* line 334, ../sass/style_factures_list.scss */
   .search select option {
     display: block;
   }
-  /* line 337, ../sass/style_factures_list.scss */
+  /* line 338, ../sass/style_factures_list.scss */
   .search #croissant, .search #decroissant {
     margin-bottom: 5px;
   }
 
-  /* line 341, ../sass/style_factures_list.scss */
+  /* line 342, ../sass/style_factures_list.scss */
   .searchArea {
     width: 300px;
     margin-right: 20px;

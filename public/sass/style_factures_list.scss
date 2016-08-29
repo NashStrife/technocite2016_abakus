@@ -245,6 +245,7 @@ nav {
     }
     section{
         // @include span(13.5 of 24 narrow);
+        z-index: 10000;
         width: 940px;
         // background-color: red;
         position: fixed;
