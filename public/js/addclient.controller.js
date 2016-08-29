@@ -7,6 +7,13 @@ addClientModule.controller('addClientCtrl', ['$scope', '$location', 'Param','Cli
 	$scope.splash = function(status) {
        $scope.showForm = status;
       };
+    
+    function refresh() {
+		// use the Rest service created in services.js
+		Client.getList(function(result){
+			$scope.listClients = result;
+		});
+	}
     $scope.newClient = {};
     $scope.newClient.deliveryInfo = {};
     
@@ -18,9 +25,14 @@ addClientModule.controller('addClientCtrl', ['$scope', '$location', 'Param','Cli
 
         if(isValid){
             $scope.newClient.contactPerson.pwd = "pass123";
-            if($scope.newClient.isCompany){
+            // radio button set value in a string and not in a boolean
+            if($scope.newClient.isCompany === "true"){
+                $scope.newClient.isCompany = true;
                 $scope.newClient.vat.num = $scope.newClient.prevat.num + $scope.newClient.vat.num;
+            } else {
+                $scope.newClient.isCompany = false;
             }
+                
             Client.addClient($scope.newClient, function(result){
                 console.log(result);
                
@@ -47,6 +59,7 @@ addClientModule.controller('addClientCtrl', ['$scope', '$location', 'Param','Cli
                 $scope.newClient = {};
                 $scope.splash(false);
                 $location.path('/pro/clients/list');
+                refresh();
             });
             $scope.error = false;
 

@@ -196,6 +196,11 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 			// ===========
 			$scope.newBill.articles = $scope.articles;
 			$scope.newBill.company = $scope.adminfromdb;
+			$scope.newBill.dateFacture = new Date($scope.newBill.dateFacture);
+			$scope.newBill.deadline = new Date($scope.newBill.deadline);
+			$scope.newBill.project.startAt = new Date($scope.newBill.project.startAt);
+			$scope.newBill.project.endAt = new Date($scope.newBill.project.endAt);
+			
 
 			let newpdf = {
 				"file": {
