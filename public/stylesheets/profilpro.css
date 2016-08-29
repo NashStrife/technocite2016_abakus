@@ -59,10 +59,8 @@
   float: left;
   margin-left: 0;
   margin-right: 0;
-  padding: 30px 0;
   font-size: 16px;
   line-height: 25px;
-  padding-bottom: 50px;
 }
 /* line 60, ../sass/profilpro.scss */
 .warpper .articleCont .articletitle {
@@ -106,7 +104,7 @@
   /* line 107, ../sass/profilpro.scss */
   .profilePro .warpper {
     color: #2a4158;
-    width: 940px;
+    width: 883px;
     height: auto;
     margin: 0 auto;
   }
@@ -117,7 +115,7 @@
     z-index: 1;
     float: right;
     margin-top: 117px;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
   }
   /* line 125, ../sass/profilpro.scss */
   .profilePro .coordonnee, .profilePro .contact, .profilePro .paymentInfos, .profilePro .articleInfos, .profilePro .template {
@@ -183,7 +181,7 @@
   /* line 196, ../sass/profilpro.scss */
   .profilePro .info p {
     font-size: 13px;
-    margin-top: 10px;
+    margin-top: 14px;
     color: #2a4158;
     text-align: justify;
     line-height: 20px;
@@ -258,8 +256,9 @@
   /* line 335, ../sass/profilpro.scss */
   .profilePro .articleCont ul {
     margin-left: 20px;
+    margin-bottom: 10px;
   }
-  /* line 341, ../sass/profilpro.scss */
+  /* line 342, ../sass/profilpro.scss */
   .profilePro .articleCont li {
     display: inline-block;
     margin-right: 20px;
@@ -269,33 +268,33 @@
     margin-top: 14px;
     font-size: 13px;
   }
-  /* line 354, ../sass/profilpro.scss */
+  /* line 355, ../sass/profilpro.scss */
   .profilePro .articleCont li:last-child {
     width: 100px;
     height: auto;
     margin-right: 0px;
     text-align: right;
   }
-  /* line 364, ../sass/profilpro.scss */
+  /* line 365, ../sass/profilpro.scss */
   .profilePro .fact, .profilePro .dev {
     width: 200px;
     position: relative;
   }
-  /* line 372, ../sass/profilpro.scss */
+  /* line 373, ../sass/profilpro.scss */
   .profilePro .fact h3, .profilePro .dev h3 {
     margin-left: 20px;
     margin-top: 14px;
     font-weight: bold;
     font-size: 15px;
   }
-  /* line 382, ../sass/profilpro.scss */
+  /* line 383, ../sass/profilpro.scss */
   .profilePro .designfacture {
     width: 300px;
     height: 25px;
     margin-top: 12px;
     margin-left: 17px;
   }
-  /* line 393, ../sass/profilpro.scss */
+  /* line 394, ../sass/profilpro.scss */
   .profilePro .designdevis {
     width: 300px;
     height: 25px;
@@ -304,7 +303,7 @@
     text-align: left;
     display: inline-block;
   }
-  /* line 405, ../sass/profilpro.scss */
+  /* line 406, ../sass/profilpro.scss */
   .profilePro .f01, .profilePro .f02, .profilePro .f03, .profilePro .f04, .profilePro .f05, .profilePro .f06, .profilePro .f07, .profilePro .f08, .profilePro .f09, .profilePro .f10 {
     width: 20px;
     height: 20px;
@@ -312,43 +311,43 @@
     display: inline-block;
     border: 2px solid #cad0d6;
   }
-  /* line 414, ../sass/profilpro.scss */
+  /* line 415, ../sass/profilpro.scss */
   .profilePro .f01 {
     background-color: #000000;
   }
-  /* line 418, ../sass/profilpro.scss */
+  /* line 419, ../sass/profilpro.scss */
   .profilePro .f02 {
     background-color: #696969;
   }
-  /* line 421, ../sass/profilpro.scss */
+  /* line 422, ../sass/profilpro.scss */
   .profilePro .f03 {
     background-color: #046381;
   }
-  /* line 424, ../sass/profilpro.scss */
+  /* line 425, ../sass/profilpro.scss */
   .profilePro .f04 {
     background-color: #2b4158;
   }
-  /* line 427, ../sass/profilpro.scss */
+  /* line 428, ../sass/profilpro.scss */
   .profilePro .f05 {
     background-color: #97ca2d;
   }
-  /* line 430, ../sass/profilpro.scss */
+  /* line 431, ../sass/profilpro.scss */
   .profilePro .f06 {
     background-color: #006401;
   }
-  /* line 433, ../sass/profilpro.scss */
+  /* line 434, ../sass/profilpro.scss */
   .profilePro .f07 {
     background-color: #550288;
   }
-  /* line 436, ../sass/profilpro.scss */
+  /* line 437, ../sass/profilpro.scss */
   .profilePro .f08 {
     background-color: #b9121a;
   }
-  /* line 439, ../sass/profilpro.scss */
+  /* line 440, ../sass/profilpro.scss */
   .profilePro .f09 {
     background-color: #f89d19;
   }
-  /* line 442, ../sass/profilpro.scss */
+  /* line 443, ../sass/profilpro.scss */
   .profilePro .f10 {
     background-color: #e5b028;
   }
