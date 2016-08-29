@@ -228,7 +228,7 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 							alert("Erreur lors de la création de la facture, veuillez vérifier les informations entrées.");
 						}
 						else {
-							alert("La facure a bien été enregistrée");
+							alert("Le document a bien été enregistré");
 
 							// when all is done, clear the form
 							voidArrays();
