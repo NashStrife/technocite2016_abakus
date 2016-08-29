@@ -34,6 +34,13 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies','$r
 	};
 
 	var abakusCookies = $cookies.getObject('Abakus');
+	if(typeof abakusCookies === undefined){
+		abakusCookies = {
+			'isLogged' : false,
+			'isPro' : undefined
+		};
+		$cookies.putObject('Abakus', abakusCookies);
+	}
 	console.log(abakusCookies);
 	// console.log(abakusCookies.isLogged);
 	console.log("john.doe@gmail.com, pass123");
