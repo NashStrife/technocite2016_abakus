@@ -42,18 +42,22 @@
   line-height: 25px;
 }
 /* line 37, ../sass/profilpro.scss */
+.warpper .tav {
+  font-weight: bold;
+}
+/* line 41, ../sass/profilpro.scss */
 .warpper .contactCont h3 {
   margin-top: 70px;
   font-size: 24px;
   text-transform: capitalize;
 }
-/* line 42, ../sass/profilpro.scss */
+/* line 46, ../sass/profilpro.scss */
 .warpper .contactCont p {
   font-size: 16px;
   line-height: 25px;
   padding-bottom: 50px;
 }
-/* line 50, ../sass/profilpro.scss */
+/* line 54, ../sass/profilpro.scss */
 .warpper .paymentCont .paymentListInfos ul {
   width: 100%;
   float: left;
@@ -64,30 +68,30 @@
   line-height: 25px;
   padding-bottom: 50px;
 }
-/* line 60, ../sass/profilpro.scss */
+/* line 64, ../sass/profilpro.scss */
 .warpper .articleCont .articletitle {
   display: none;
 }
-/* line 63, ../sass/profilpro.scss */
+/* line 67, ../sass/profilpro.scss */
 .warpper .articleCont .articletitle ul li {
   background-color: none;
 }
-/* line 70, ../sass/profilpro.scss */
+/* line 74, ../sass/profilpro.scss */
 .warpper .articleCont .article1 ul {
   margin-bottom: 30px;
 }
-/* line 72, ../sass/profilpro.scss */
+/* line 76, ../sass/profilpro.scss */
 .warpper .articleCont .article1 ul li {
   font-size: 16px;
   line-height: 25px;
 }
-/* line 80, ../sass/profilpro.scss */
+/* line 84, ../sass/profilpro.scss */
 .warpper .templateCont {
   clear: both;
   padding-bottom: 150px;
   padding-top: 30px;
 }
-/* line 84, ../sass/profilpro.scss */
+/* line 88, ../sass/profilpro.scss */
 .warpper .templateCont h3 {
   margin-top: 30px;
   font-size: 24px;
@@ -95,22 +99,22 @@
 }
 
 @media screen and (min-width: 480px) {
-  /* line 97, ../sass/profilpro.scss */
+  /* line 101, ../sass/profilpro.scss */
   .profilePro {
     text-align: left;
   }
-  /* line 101, ../sass/profilpro.scss */
+  /* line 105, ../sass/profilpro.scss */
   .profilePro p, .profilePro h2, .profilePro h3, .profilePro span {
     text-align: left;
   }
-  /* line 107, ../sass/profilpro.scss */
+  /* line 111, ../sass/profilpro.scss */
   .profilePro .warpper {
     color: #2a4158;
     width: 940px;
     height: auto;
     margin: 0 auto;
   }
-  /* line 115, ../sass/profilpro.scss */
+  /* line 119, ../sass/profilpro.scss */
   .profilePro .contener {
     width: 742px;
     height: auto;
@@ -119,7 +123,7 @@
     margin-top: 117px;
     padding-bottom: 100px;
   }
-  /* line 125, ../sass/profilpro.scss */
+  /* line 129, ../sass/profilpro.scss */
   .profilePro .coordonnee, .profilePro .contact, .profilePro .paymentInfos, .profilePro .articleInfos, .profilePro .template {
     height: 46px;
     width: 230px;
@@ -128,7 +132,7 @@
     margin-top: 15px;
     padding: 0;
   }
-  /* line 133, ../sass/profilpro.scss */
+  /* line 137, ../sass/profilpro.scss */
   .profilePro .coordonnee img, .profilePro .contact img, .profilePro .paymentInfos img, .profilePro .articleInfos img, .profilePro .template img {
     width: 28px;
     height: 28px;
@@ -136,7 +140,7 @@
     margin-top: 9px;
     margin-left: 7px;
   }
-  /* line 142, ../sass/profilpro.scss */
+  /* line 146, ../sass/profilpro.scss */
   .profilePro .coordonnee h2, .profilePro .contact h2, .profilePro .paymentInfos h2, .profilePro .articleInfos h2, .profilePro .template h2 {
     font-weight: bold;
     font-size: 14px;
@@ -145,11 +149,11 @@
     float: left;
     margin-left: 7px;
   }
-  /* line 154, ../sass/profilpro.scss */
+  /* line 158, ../sass/profilpro.scss */
   .profilePro .coordonnee {
     margin-top: 0px;
   }
-  /* line 159, ../sass/profilpro.scss */
+  /* line 163, ../sass/profilpro.scss */
   .profilePro .coordonneeCont, .profilePro .contactCont, .profilePro .paymentCont, .profilePro .articleCont, .profilePro .templateCont {
     background-color: #95a0ac;
     width: 100%;
@@ -158,7 +162,7 @@
     display: block;
     padding-bottom: 15px;
   }
-  /* line 168, ../sass/profilpro.scss */
+  /* line 172, ../sass/profilpro.scss */
   .profilePro .coordonneeCont img, .profilePro .contactCont img, .profilePro .paymentCont img, .profilePro .articleCont img, .profilePro .templateCont img {
     width: 92px;
     height: 92px;
@@ -167,20 +171,20 @@
     margin-left: 20px;
     background-color: #e5af28;
   }
-  /* line 179, ../sass/profilpro.scss */
+  /* line 183, ../sass/profilpro.scss */
   .profilePro .info {
     display: block;
     width: 315px;
     float: left;
   }
-  /* line 185, ../sass/profilpro.scss */
+  /* line 189, ../sass/profilpro.scss */
   .profilePro .info h3 {
     margin-left: 17px;
     margin-top: 14px;
     font-weight: bold;
     font-size: 15px;
   }
-  /* line 196, ../sass/profilpro.scss */
+  /* line 200, ../sass/profilpro.scss */
   .profilePro .info p {
     font-size: 13px;
     margin-top: 10px;
@@ -189,25 +193,23 @@
     line-height: 20px;
     margin-left: 17px;
   }
-  /* line 211, ../sass/profilpro.scss */
+  /* line 215, ../sass/profilpro.scss */
   .profilePro .tva {
-    display: inline-block;
-    width: 275px;
     height: auto;
-    margin-left: 20px;
     margin-top: 14px;
   }
-  /* line 220, ../sass/profilpro.scss */
+  /* line 221, ../sass/profilpro.scss */
   .profilePro .tva p {
+    font-weight: bold;
     font-size: 13px;
     color: #2a4158;
     line-height: 20px;
   }
-  /* line 230, ../sass/profilpro.scss */
+  /* line 231, ../sass/profilpro.scss */
   .profilePro .contactCont {
     height: auto;
   }
-  /* line 235, ../sass/profilpro.scss */
+  /* line 236, ../sass/profilpro.scss */
   .profilePro .contactCont p, .profilePro .contactCont h3 {
     width: 702px;
     height: auto;
@@ -215,18 +217,18 @@
     line-height: 20px;
     font-size: 13px;
   }
-  /* line 246, ../sass/profilpro.scss */
+  /* line 247, ../sass/profilpro.scss */
   .profilePro .contactCont h3 {
     margin-top: 14px;
     font-weight: bold;
     font-size: 15px;
   }
-  /* line 289, ../sass/profilpro.scss */
+  /* line 290, ../sass/profilpro.scss */
   .profilePro .paymentCont ul {
     margin-left: 20px;
     margin-top: 14px;
   }
-  /* line 295, ../sass/profilpro.scss */
+  /* line 296, ../sass/profilpro.scss */
   .profilePro .paymentCont li {
     display: inline-block;
     margin-right: 20px;
@@ -235,31 +237,31 @@
     text-align: top;
     font-size: 13px;
   }
-  /* line 306, ../sass/profilpro.scss */
+  /* line 307, ../sass/profilpro.scss */
   .profilePro .paymentCont li:last-child {
     margin-right: 0px;
   }
-  /* line 311, ../sass/profilpro.scss */
+  /* line 312, ../sass/profilpro.scss */
   .profilePro .paymentCont li:first-child {
     font-weight: bold;
   }
-  /* line 318, ../sass/profilpro.scss */
+  /* line 319, ../sass/profilpro.scss */
   .profilePro .payment1 {
     margin-top: 10px;
   }
-  /* line 327, ../sass/profilpro.scss */
+  /* line 328, ../sass/profilpro.scss */
   .profilePro .articleCont .articletitle {
     display: block;
   }
-  /* line 329, ../sass/profilpro.scss */
+  /* line 330, ../sass/profilpro.scss */
   .profilePro .articleCont .articletitle li {
     font-weight: bold;
   }
-  /* line 335, ../sass/profilpro.scss */
+  /* line 336, ../sass/profilpro.scss */
   .profilePro .articleCont ul {
     margin-left: 20px;
   }
-  /* line 341, ../sass/profilpro.scss */
+  /* line 342, ../sass/profilpro.scss */
   .profilePro .articleCont li {
     display: inline-block;
     margin-right: 20px;
@@ -269,33 +271,33 @@
     margin-top: 14px;
     font-size: 13px;
   }
-  /* line 354, ../sass/profilpro.scss */
+  /* line 355, ../sass/profilpro.scss */
   .profilePro .articleCont li:last-child {
     width: 100px;
     height: auto;
     margin-right: 0px;
     text-align: right;
   }
-  /* line 364, ../sass/profilpro.scss */
+  /* line 365, ../sass/profilpro.scss */
   .profilePro .fact, .profilePro .dev {
     width: 200px;
     position: relative;
   }
-  /* line 372, ../sass/profilpro.scss */
+  /* line 373, ../sass/profilpro.scss */
   .profilePro .fact h3, .profilePro .dev h3 {
     margin-left: 20px;
     margin-top: 14px;
     font-weight: bold;
     font-size: 15px;
   }
-  /* line 382, ../sass/profilpro.scss */
+  /* line 383, ../sass/profilpro.scss */
   .profilePro .designfacture {
     width: 300px;
     height: 25px;
     margin-top: 12px;
     margin-left: 17px;
   }
-  /* line 393, ../sass/profilpro.scss */
+  /* line 394, ../sass/profilpro.scss */
   .profilePro .designdevis {
     width: 300px;
     height: 25px;
@@ -304,7 +306,7 @@
     text-align: left;
     display: inline-block;
   }
-  /* line 405, ../sass/profilpro.scss */
+  /* line 406, ../sass/profilpro.scss */
   .profilePro .f01, .profilePro .f02, .profilePro .f03, .profilePro .f04, .profilePro .f05, .profilePro .f06, .profilePro .f07, .profilePro .f08, .profilePro .f09, .profilePro .f10 {
     width: 20px;
     height: 20px;
@@ -312,43 +314,43 @@
     display: inline-block;
     border: 2px solid #cad0d6;
   }
-  /* line 414, ../sass/profilpro.scss */
+  /* line 415, ../sass/profilpro.scss */
   .profilePro .f01 {
     background-color: #000000;
   }
-  /* line 418, ../sass/profilpro.scss */
+  /* line 419, ../sass/profilpro.scss */
   .profilePro .f02 {
     background-color: #696969;
   }
-  /* line 421, ../sass/profilpro.scss */
+  /* line 422, ../sass/profilpro.scss */
   .profilePro .f03 {
     background-color: #046381;
   }
-  /* line 424, ../sass/profilpro.scss */
+  /* line 425, ../sass/profilpro.scss */
   .profilePro .f04 {
     background-color: #2b4158;
   }
-  /* line 427, ../sass/profilpro.scss */
+  /* line 428, ../sass/profilpro.scss */
   .profilePro .f05 {
     background-color: #97ca2d;
   }
-  /* line 430, ../sass/profilpro.scss */
+  /* line 431, ../sass/profilpro.scss */
   .profilePro .f06 {
     background-color: #006401;
   }
-  /* line 433, ../sass/profilpro.scss */
+  /* line 434, ../sass/profilpro.scss */
   .profilePro .f07 {
     background-color: #550288;
   }
-  /* line 436, ../sass/profilpro.scss */
+  /* line 437, ../sass/profilpro.scss */
   .profilePro .f08 {
     background-color: #b9121a;
   }
-  /* line 439, ../sass/profilpro.scss */
+  /* line 440, ../sass/profilpro.scss */
   .profilePro .f09 {
     background-color: #f89d19;
   }
-  /* line 442, ../sass/profilpro.scss */
+  /* line 443, ../sass/profilpro.scss */
   .profilePro .f10 {
     background-color: #e5b028;
   }
