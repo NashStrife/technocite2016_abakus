@@ -34,7 +34,7 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies','$r
 	};
 
 	var abakusCookies = $cookies.getObject('Abakus');
-	if(typeof abakusCookies === undefined){
+	if(abakusCookies === undefined){
 		abakusCookies = {
 			'isLogged' : false,
 			'isPro' : undefined
