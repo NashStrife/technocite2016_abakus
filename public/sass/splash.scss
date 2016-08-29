@@ -202,14 +202,14 @@
 		}
 		input[name="client"]:checked ~ input[name="progress"] {
 			display: inline-block;
-			top: -5%;
+			top: 10px;
 			position: absolute;
 		}
-		input[name="client"]:checked ~ #step0{left: 46%}
-		input[name="client"]:checked ~ #step1{left: 48%;}
-		input[name="client"]:checked ~ #step2{left: 50%;}
+		input[name="client"]:checked ~ #step0{left: 41.5%}
+		input[name="client"]:checked ~ #step1{left: 45%;}
+		input[name="client"]:checked ~ #step2{left: 48.5%;}
 		input[name="client"]:checked ~ #step3{left: 52%;}
-		input[name="client"]:checked ~ #step4{left: 54%;}
+		input[name="client"]:checked ~ #step4{left: 55.5%;}
 		
 		#particulier:checked ~ #lien2 {
 			display: inline-block;
@@ -280,5 +280,33 @@
 		// }
 		.required:before {
 			content: "*";
+		}
+		input[name="progress"]:checked:before,
+		input[name="progress"]:not(checked):before {
+			content: '';
+  			position: absolute;
+  			width: 14px; height: 14px; /* dim. de la case */
+  			// border: 2px solid $primaryColor;
+			background-color: $descriptionColor;
+  			border-radius: 7px;
+			top: 2px;
+			z-index: 1;
+			padding: 2px;
+		}
+		input[name="progress"]:checked:after,
+		input[name="progress"]:not(:checked):after {
+			content: '';
+  			position: absolute;
+			width: 14px; height: 14px;
+			border-radius: 7px;
+			top: 2px;
+  			background-color: $focusColor;
+			z-index: 1;
+		}
+		input[name="progress"]:not(:checked):after {
+			opacity: 0;
+		}
+		input[name="progress"]:checked:before {
+			opacity: 1;
 		}
 	}

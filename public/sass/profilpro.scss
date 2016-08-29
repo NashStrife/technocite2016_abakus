@@ -33,6 +33,10 @@
 			line-height: 25px;
 		}
 	}
+
+	.tav {
+		font-weight: bold;
+	}
 	.contactCont {
 		h3 {
 			margin-top:70px;
@@ -209,16 +213,13 @@
 		
 
 		.tva, {
-
-			display: inline-block;		
+	
 			
-			width: 275px;
 			height: auto;
-			margin-left: 20px;
-			margin-top: 14px;		
+			margin-top: 14px;	
 
 			p {
-			
+				font-weight: bold;
 				font-size: 13px;		
 				color: $primaryColor;
 				line-height: 20px;		 

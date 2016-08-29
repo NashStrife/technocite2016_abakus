@@ -4,7 +4,7 @@
 
 <div class="profilePro">
 
-<button><a href="#/pro/profile/edit-profile" class="addElemBtn">Edit</a></button>
+
 
 <div class="warpper">
 
@@ -30,6 +30,8 @@
 
 		<div class="coordonneeCont">
 
+			<a href="#/pro/profile/edit-profile" class="editProfileBtn">Editer mon compte</a>
+
 			<img src="images/admin/profile/{{details._id}}.jpg" alt="Logo Entreprise" width="92" height="92" >			
 
 			<div class="info">
@@ -44,18 +46,17 @@
 						<span ng-if="details.contact.fax">Fax : {{details.contact.fax}}<br></span>
 						Email : {{details.contact.mail}}<br>
 						Site web : {{details.contact.web}}<br>						
-					</p>				
+					</p>	
+					<div class="tva">
+						<p>
+							n° TVA : {{details.vat.num}}<br>
+							<span ng-if="details.vat.siren">n° SIREN : {{details.vat.siren}}</span><br>
+							<span ng-if="details.vat.rcs">n° RCS : {{details.vat.rcs}}</span><br>
+						</p>
+					</div>			
 			</div>
 
-			<div class="tva">
-				
-				<p>
-					n° TVA : {{details.vat.num}}<br>
-					<span ng-if="details.vat.siren">n° SIREN : {{details.vat.siren}}</span><br>
-					<span ng-if="details.vat.rcs">n° RCS : {{details.vat.rcs}}</span><br>
-				</p>
-
-			</div>
+			
 
 			
 
