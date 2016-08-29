@@ -36,9 +36,10 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies','$r
 	var abakusCookies = $cookies.getObject('Abakus');
 	console.log(abakusCookies);
 	// console.log(abakusCookies.isLogged);
-	// if(!abakusCookies.isLogged){
-	// 	$location.path('/');
-	// }
+	console.log("john.doe@gmail.com, pass123");
+	if(!abakusCookies.isLogged){
+		$location.path('/');
+	}
 		
 	// for form validation
 	$scope.error = false;
@@ -50,12 +51,14 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies','$r
 
 			// verify if the user exist or not
 			Client.getOne("contactPerson.mail", $scope.logClient.email, function(result){
-				var loginMsg = 'Incorrect email or/and password';
+				var loginMsg = 'Email ou mot de passe incorrect';
 				// 1 = error, 0 = ok
 				var error_code = result[0].error_code; 
 
-				if (error_code)
+				if (error_code){
 					console.log(loginMsg);
+					alert(loginMsg);
+				}
 				// if client exist
 				else {
 					var dataFromDb = result[0].data[0];
@@ -81,13 +84,14 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies','$r
 							$cookies.putObject('Abakus', abakusCookies);
 						}
 						console.log(loginMsg);
+						alert(loginMsg);
 						console.log($cookies.get('Abakus'));
 					});
 				}
 			});
 		} else {
 			console.log("Invalid Submit !");
-			alert("Please complete all required champs");
+			alert("Merci de compléter tous les champs");
 			$scope.error = true;
 		}
 	};
@@ -99,13 +103,15 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies','$r
 			// verify if the user exist or not
 			Admin.getAdmin(function(result){
 				console.log(result);
-				var loginMsg = 'Incorrect email or/and password';
+				var loginMsg = 'Email ou mot de passe incorrect';
 				// 1 = error, 0 = ok
 				var mailFromDb = result[0].contactPerson.mail; 
 				var mailFromForm = $scope.logPro.email;
 
-				if (mailFromDb !== mailFromForm)
+				if (mailFromDb !== mailFromForm){
 					console.log(loginMsg);
+					alert(loginMsg);
+				}
 				// if client exist
 				else {
 					// console.log(dataFromDb.contactPerson.pwd);
@@ -130,13 +136,14 @@ abakusControllers.controller('loginCtrl', ['$scope', '$location', '$cookies','$r
 							$cookies.putObject('Abakus', abakusCookies);
 						}
 						console.log(loginMsg);
+						alert(loginMsg);
 						console.log($cookies.get('Abakus'));
 					});
 				}
 			});
 		} else {
 			console.log("Invalid Submit !");
-			alert("Please complete all required champs");
+			alert("Merci de compléter tous les champs");
 			$scope.error = true;
 		}
 	};
