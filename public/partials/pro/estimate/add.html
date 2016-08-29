@@ -5,23 +5,23 @@
 
 
 	<h1 style="background-color:#d6eaf8;">Création d'un nouveau devis</h1>
-	<form action="" class="addInvoice" name="formAddEstimate" ng-submit="addBill(formAddEstimate.$valid)">
+	<form class="addInvoice" name="formAddEstimate" ng-submit="addBill(formAddEstimate.$valid, 'estimate')">
 		<fieldset class="ref_invoice">
 			<legend>Références devis</legend>
 			<label for="numInvoice">Numéro de devis</label>
-			<input type="text" ng-model="newEstimate.numInvoice" required>
+			<input type="text" ng-model="newBill.numFacture" required>
 			<label for="dateFacture">Date de la facture</label>
-			<input type="date" ng-model="newEstimate.dateInvoice" required>
+			<input type="date" ng-model="newBill.dateFacture" required>
 		</fieldset>
 		<fieldset class="ref_client">
 			<legend>Références client</legend>
 			<div class="half estimate" id="halfEstimate">
 				<label for="client">Client</label><br/>
-				<select name="client" id="client" ng-model="newEstimate.client" ng-options="client as client.name for client in listClients" required></select>
+				<select name="client" id="client" ng-model="newBill.client" ng-options="client as client.name for client in listClients" required></select>
 			</div>
 			<div class="cent">
 				<label for="client">PO</label><br/>
-				<input name="Client" id="client" class="cent" ng-model="newEstimate.po" ng-value="newEstimate.client._id" disabled required><br/>
+				<input name="Client" id="client" class="cent" ng-model="newBill.po" ng-value="newBill.client._id" disabled><br/>
 				</select>
 			</div>
 			
@@ -32,14 +32,14 @@
 		<fieldset>
 			<legend>Objet</legend>
 			<label for="project-name">Nom du projet</label><br/>
-			<input name="Nom du projet" id="project-name" placeholder="" class="cent"><br/>
+			<input name="Nom du projet" id="project-name" class="cent" required><br/>
 			<div class="half">
 				<label for="starting-date ">Date de début</label><br/>
-				<input type="date" name="Date de début" id="starting-date " placeholder=""><br/>
+				<input type="date" name="Date de début" id="starting-date " required><br/>
 			</div>
 			<div class="half last">
 				<label for="ending-date">Date de fin</label><br/>
-				<input type="date" name="Date de fin" id="ending-date" placeholder=""><br/>
+				<input type="date" name="Date de fin" id="ending-date" required><br/>
 			</div>
 			<button type="" class="next">Suivant</button>
 		</fieldset>
@@ -48,38 +48,37 @@
 			<div id="facture_list">
 				<!-- list the articles added in the temp array -->
 				<div class="listing_achat">
-					<ul class="elements-types">
-						<li ng-repeat="item in articles track by $index">
-							<input type="" name="name" class="full" value="{{item.name}}" disabled>
-							<input type="" name="description" class="full" value="{{item.description}}" disabled>
-							<input type="" name="quantity" class="quart" id="quart1" value="{{item.quantity}}" disabled>
-							<input type="" name="unitPrice" class="quart" id="quart2" value="{{item.unitPrice}}" disabled>
-							<input type="" name="amount" class="full" value="{{item.amount}}" id="amount" disabled>
-							<!--
-						--><span id="less" ng-click="removeElement('article', $index)"> - </span>
-						</li>
-					</ul>
+				<ul class="elements-types">
+					<li ng-repeat="item in articles track by $index">
+						<input type="" name="name" class="full" value="{{item.name}}" disabled> 
+						<input type="" name="description" class="full" value="{{item.description}}" disabled> 
+						<input type="" name="quantity" class="quart" id="quart1" value="{{item.quantity}}" disabled> 
+						<input type="" name="unitPrice" class="quart" id="quart2" value="{{item.unitPrice}}" disabled>
+						<input type="" name="amount" class="full" value="{{item.amount}}" id="amount" disabled><!--
+					 --><span id="less" ng-click="removeElement('article', $index, item.amount)"> - </span>
+					</li>
+				</ul>
 				</div>
 				<div class="facture" id="facture">
 					<div class="article">
 						<label for="article">Article</label>
-						<select name="Article" id="article" ng-model="newEstimate.article" ng-options="article as article.name for article in adminfromdb.articles"></select>
+						<select name="Article" id="article" ng-model="newBill.article" ng-options="article as article.name for article in adminfromdb.articles" ></select>
 					</div>
 					<div class="description">
 						<label for="description">Description</label>
-						<input name="Description" id="description" placeholder="" ng-model="newEstimate.description" ng-value="newEstimate.article.description" disabled>
+						<input name="Description" id="description" ng-model="newBill.description" ng-value="newBill.article.description" disabled>
 					</div>
 					<div class="small">
 						<label for="quantity">Qté</label>
-						<input type="number" name="Quantité" id="quantity" ng-model="newEstimate.article.quantity" ng-change="calcAmount()" ng-value="newEstimate.article.quantity">
+						<input type="number" name="Quantité" id="quantity" ng-model="newBill.article.quantity" ng-change="calcAmount()" ng-value="newBill.article.quantity" >
 					</div>
 					<div class="small">
 						<label for="p-u">P/U</label>
-						<input name="P/U" id="p-u" placeholder="" ng-model="newEstimate.article.unitPrice" ng-value="newEstimate.article.unitPrice" disabled>
+						<input name="P/U" id="p-u" ng-model="newBill.article.unitPrice" ng-value="newBill.article.unitPrice"  disabled>
 					</div>
 					<div class="bill">
-						<label for="amount">Montant</label>
-						<input name="Montant" id="amount" ng-model="newEstimate.article.amount" ng-value="newEstimate.article.amount" disabled>
+						<label for="amount">Montant (€)</label>
+						<input name="Montant" id="amount" ng-model="newBill.article.amount" ng-value="newBill.article.amount"  disabled>
 					</div>
 				</div>
 			</div>
@@ -88,41 +87,38 @@
 
 				<div class="htva">
 					<label for="total xvat">Total hors taxes</label>
-					<input name="Total hors Taxes" id="total xvat" placeholder="" ng-model="newEstimate.totalXvat" ng-value="newEstimate.totalXvat" disabled>
+					<input name="Total hors Taxes" id="total xvat"  ng-model="newBill.totalXvat" ng-value="newBill.totalXvat"  disabled>
 				</div>
 				<div class="rebate">
 					<label for="rebate">Ristourne</label>
-					<input name="Ristourne" id="rebate" placeholder="">
-					<select name="percent" id="rebate">
-				<option value="option 1">%</option>
-				<option value="option 2">%</option>
-				<option value="option 3">%</option>
+					<input name="Ristourne" id="rebate" ng-model="newBill.refund" ng-change="calculateAll()" ng-value="newBill.refund">
+					<select name="percent" id="rebate" ng-model="newBill.refundCur" ng-options="refund for refund in paramFromDb.refunds" ng-change="calculateAll()">
 			</select>
 				</div>
 				<div class="subtotal">
 					<label for="sous-total">Sous-total hors taxes</label>
-					<input name="Sous-Total hors taxes" id="sous-total" ng-model="newEstimate.underTotalXvat" ng-value="newEstimate.underTotalXvat" disabled>
+					<input name="Sous-Total hors taxes" id="sous-total" ng-model="newBill.underTotalXvat" ng-value="newBill.underTotalXvat"  disabled >
 
 				</div>
 				<div class="tva">
 					<label for="tva-21">TVA 21%</label>
-					<input name="TVA 21%" id="tva-21" ng-model="newEstimate.tva" ng-value="newEstimate.tva" disabled>
+					<input name="TVA 21%" id="tva-21" ng-model="newBill.tva" ng-value="newBill.tva"  disabled>
 				</div>
 
 				<div class="ttc">
 
 					<label for="total-ttc">Total TTC</label>
-					<input name="Total TTC" id="total-ttc" ng-model="newEstimate.totalTtc" ng-value="newEstimate.totalTtc" disabled>
+					<input name="Total TTC" id="total-ttc" ng-model="newBill.totalTtc" ng-value="newBill.totalTtc"  disabled>
 				</div>
 				<div class="deposit">
 					<label for="deposit">Accompte</label>
-					<input name="Acompte" id="deposit" ng-model="newEstimate.deposit" ng-value="newEstimate.deposit" ng-change="calcAmount()">
+					<input name="Acompte" id="deposit" ng-model="newBill.deposit" ng-value="newBill.deposit" ng-change="calculateAll()">
 				</div>
 
 
 				<div class="sum">
 					<label for="sum">A payer</label>
-					<input name="A payer" id="sum" ng-model="newEstimate.sum" ng-value="newEstimate.sum" disabled>
+					<input name="A payer" id="sum" ng-model="newBill.sum" ng-value="newBill.sum"  disabled>
 				</div>
 
 				<button type="" class="next">Suivant</button>

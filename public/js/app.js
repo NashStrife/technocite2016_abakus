@@ -6,7 +6,6 @@ var app = angular.module('abakusApp', [
 	'proControllers',
 	'addClientModule',
 	'addBillControllers',
-	'addEstimateControllers',
 	'servicesAbakus',
 	'clientService',
 	'adminService',
@@ -157,7 +156,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	when('/pro/estimate/add', {
 		title:"devis",
 		templateUrl : 'partials/pro/estimate/add.html',
-		controller : 'AddEstimateCtrl'
+		controller : 'AddBillCtrl'
 	}).
 	when('/pro/estimate/detail', {
 		title:"devis",

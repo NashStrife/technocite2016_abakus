@@ -171,14 +171,10 @@
   margin-right: 0;
 }
 /* line 138, ../sass/splash.scss */
-.newClient .line label[for="phone2"], .newClient .line label[for="countryFact"], .newClient .line label[for="phone2Fact"], .newClient .line label[for="faxFact"], .newClient .line label[for="countryDeliver"] {
+.newClient .line label[for="phone2"], .newClient .line label[for="countryFact"], .newClient .line label[for="phone2Fact"], .newClient .line label[for="faxFact"], .newClient .line label[for="countryDeliver"], .newClient .line label[for="ref2"], .newClient .line label[for="fonction"] {
   width: 48.97959%;
   float: right;
   margin-right: 0;
-}
-/* line 141, ../sass/splash.scss */
-.newClient .line label[for="fonction"] {
-  display: none;
 }
 /* line 144, ../sass/splash.scss */
 .newClient .line #prefixeTva {
@@ -317,30 +313,46 @@
   display: none;
 }
 /* line 248, ../sass/splash.scss */
+.newClient #particulier:checked ~ fieldset > div > label[for="fonction"] {
+  display: none;
+}
+/* line 251, ../sass/splash.scss */
+.newClient #particulier:checked ~ fieldset > legend > span:nth-of-type(2) {
+  display: none;
+}
+/* line 254, ../sass/splash.scss */
 .newClient #society:checked ~ fieldset:nth-of-type(1) {
   display: inline-block;
 }
-/* line 251, ../sass/splash.scss */
+/* line 257, ../sass/splash.scss */
+.newClient #society:checked ~ fieldset > div > label[for="ref2"] {
+  display: none;
+}
+/* line 260, ../sass/splash.scss */
+.newClient #society:checked ~ fieldset > legend > span:nth-of-type(1) {
+  display: none;
+}
+/* line 263, ../sass/splash.scss */
 .newClient #step1:checked ~ fieldset:nth-of-type(2) {
   display: inline-block;
 }
-/* line 254, ../sass/splash.scss */
+/* line 266, ../sass/splash.scss */
 .newClient #step1:not(checked) + fieldset:nth-of-type(2) {
   display: none;
 }
-/* line 257, ../sass/splash.scss */
+/* line 269, ../sass/splash.scss */
 .newClient #step2:checked ~ fieldset:nth-of-type(3) {
   display: inline-block;
 }
-/* line 260, ../sass/splash.scss */
+/* line 272, ../sass/splash.scss */
 .newClient #step3:checked ~ fieldset:nth-of-type(4) {
   display: inline-block;
 }
-/* line 263, ../sass/splash.scss */
+/* line 275, ../sass/splash.scss */
 .newClient #step4:checked ~ fieldset:nth-of-type(5) {
   display: inline-block;
 }
-/* line 269, ../sass/splash.scss */
+/* line 281, ../sass/splash.scss */
 .newClient .required:before {
   content: "*";
 }
