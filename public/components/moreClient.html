@@ -35,10 +35,14 @@
 				</select>
 				</label>
 			</div>
-			<div class="line"><label for="siren" class="france">N° SIREN<br>
-			<input type="text" id="siren" class="france" ng-model="newClient.vat.siren"></label></div>
-			<div class="line"><label for="rcs" class="france">N° RCS<br>
-			<input type="text" id="rcs" ng-model="newClient.vat.rcs"></label></div>
+			<div class="line">
+				<label for="siren" ng-show="newClient.prevat.num=='FR'">N° SIREN<br>
+				<input type="text" id="siren" ng-model="newClient.vat.siren"></label>
+			</div>
+			<div class="line">
+				<label for="rcs" ng-show="newClient.prevat.num=='FR'">N° RCS<br>
+				<input type="text" id="rcs" ng-model="newClient.vat.rcs"></label>
+			</div>
 		</fieldset>
 
 		<input type="radio" name="progress" value="step1" id="step1">

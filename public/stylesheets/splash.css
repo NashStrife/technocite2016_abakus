@@ -248,20 +248,20 @@
 /* line 203, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ input[name="progress"] {
   display: inline-block;
-  top: -5%;
+  top: 10px;
   position: absolute;
 }
 /* line 208, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ #step0 {
-  left: 46%;
+  left: 41.5%;
 }
 /* line 209, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ #step1 {
-  left: 48%;
+  left: 45%;
 }
 /* line 210, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ #step2 {
-  left: 50%;
+  left: 48.5%;
 }
 /* line 211, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ #step3 {
@@ -269,7 +269,7 @@
 }
 /* line 212, ../sass/splash.scss */
 .newClient input[name="client"]:checked ~ #step4 {
-  left: 54%;
+  left: 55.5%;
 }
 /* line 214, ../sass/splash.scss */
 .newClient #particulier:checked ~ #lien2 {
@@ -355,4 +355,38 @@
 /* line 281, ../sass/splash.scss */
 .newClient .required:before {
   content: "*";
+}
+/* line 284, ../sass/splash.scss */
+.newClient input[name="progress"]:checked:before,
+.newClient input[name="progress"]:not(checked):before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  /* dim. de la case */
+  background-color: #7c8894;
+  border-radius: 7px;
+  top: 2px;
+  z-index: 1;
+  padding: 2px;
+}
+/* line 296, ../sass/splash.scss */
+.newClient input[name="progress"]:checked:after,
+.newClient input[name="progress"]:not(:checked):after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  top: 2px;
+  background-color: #e5af28;
+  z-index: 1;
+}
+/* line 306, ../sass/splash.scss */
+.newClient input[name="progress"]:not(:checked):after {
+  opacity: 0;
+}
+/* line 309, ../sass/splash.scss */
+.newClient input[name="progress"]:checked:before {
+  opacity: 1;
 }
