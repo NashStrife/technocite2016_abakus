@@ -336,10 +336,6 @@
 .newClient #step1:checked ~ fieldset:nth-of-type(2) {
   display: inline-block;
 }
-/* line 266, ../sass/splash.scss */
-.newClient #step1:not(checked) + fieldset:nth-of-type(2) {
-  display: none;
-}
 /* line 269, ../sass/splash.scss */
 .newClient #step2:checked ~ fieldset:nth-of-type(3) {
   display: inline-block;

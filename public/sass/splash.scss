@@ -263,9 +263,9 @@
 		#step1:checked ~ fieldset:nth-of-type(2) {
 			display: inline-block;
 		}
-		#step1:not(checked) + fieldset:nth-of-type(2) {
-			display: none;
-		}
+		// #step1:not(checked) + fieldset:nth-of-type(2) {
+		// 	display: none;
+		// }
 		#step2:checked ~ fieldset:nth-of-type(3) {
 			display: inline-block;
 		}
