@@ -9,7 +9,7 @@
 		<label for="society"  class="intro">Société</label>
 		<input type="radio" value="true" id="society" name="client" ng-model="newClient.isCompany" required>
 
-		<input type="radio" name="progress" value="step0" id="step0">
+		<input type="radio" name="progress" value="step0" id="step0" ng-checked="newClient.isCompany=='true'">
 		<label for="step0" class="progress" id="lien0">SUIVANT</label>
 		
 		<fieldset>
@@ -35,13 +35,17 @@
 				</select>
 				</label>
 			</div>
-			<div class="line"><label for="siren" class="france">N° SIREN<br>
-			<input type="text" id="siren" class="france" ng-model="newClient.vat.siren"></label></div>
-			<div class="line"><label for="rcs" class="france">N° RCS<br>
-			<input type="text" id="rcs" ng-model="newClient.vat.rcs"></label></div>
+			<div class="line">
+				<label for="siren" ng-show="newClient.prevat.num=='FR'">N° SIREN<br>
+				<input type="text" id="siren" ng-model="newClient.vat.siren"></label>
+			</div>
+			<div class="line">
+				<label for="rcs" ng-show="newClient.prevat.num=='FR'">N° RCS<br>
+				<input type="text" id="rcs" ng-model="newClient.vat.rcs"></label>
+			</div>
 		</fieldset>
 
-		<input type="radio" name="progress" value="step1" id="step1">
+		<input type="radio" name="progress" value="step1" id="step1" ng-checked="newClient.isCompany=='false'">
 		<label for="step1" class="progress" id="lien1">SUIVANT</label>
 		
 		<fieldset>
@@ -180,7 +184,7 @@
 			</div>
 		</fieldset>
 
-		<button type="reset" id="cancel" class="progress">ANNULER</button>
+		<button type="reset" id="cancel" class="progress" ng-click="newClient={}">ANNULER</button>
 		<button type="submit" id="submit" class="progress">VALIDER</button>
         <img src="../images/close.svg" alt="close" ng-click="splash(false)">
 	</form>

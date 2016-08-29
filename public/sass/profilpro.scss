@@ -53,10 +53,10 @@
 		.paymentListInfos {
 			ul {
 				@include span(12 of 12);
-				padding: 30px 0;
+				// padding: 30px 0;
 				font-size: 16px;
 				line-height: 25px;
-				padding-bottom: 50px;
+				// padding-bottom: 50px;
 			}
 		}
 	}
@@ -110,7 +110,7 @@
 
 	.warpper {
 		color:$primaryColor;
-		width: 940px;
+		width: 883px;
 		height: auto;
 		margin: 0 auto;
 
@@ -123,7 +123,7 @@
 		z-index: 1;
 		float: right;
 		margin-top: 117px;
-		padding-bottom: 100px;	
+		padding-bottom: 120px;	
 	}
 
 	.coordonnee, .contact, .paymentInfos, .articleInfos, .template {
@@ -201,7 +201,7 @@
 
 			
 			font-size: 13px;
-			margin-top: 10px;
+			margin-top: 14px;
 			color: $primaryColor;
 			text-align: justify;
 			line-height: 20px;
@@ -336,6 +336,7 @@
 		ul {
 
 			margin-left: 20px;
+			margin-bottom: 10px;
 
 		}
 
