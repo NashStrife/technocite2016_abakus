@@ -205,11 +205,16 @@
 			top: 10px;
 			position: absolute;
 		}
-		input[name="client"]:checked ~ #step0{left: 41.5%}
-		input[name="client"]:checked ~ #step1{left: 45%;}
-		input[name="client"]:checked ~ #step2{left: 48.5%;}
-		input[name="client"]:checked ~ #step3{left: 52%;}
-		input[name="client"]:checked ~ #step4{left: 55.5%;}
+		#society:checked ~ #step0{left: 41.5%}
+		#society:checked ~ #step1{left: 45%;}
+		#society:checked ~ #step2{left: 48.5%;}
+		#society:checked ~ #step3{left: 52%;}
+		#society:checked ~ #step4{left: 55.5%;}
+
+		#particulier:checked ~ #step1{left: 43%;}
+		#particulier:checked ~ #step2{left: 46.5%;}
+		#particulier:checked ~ #step3{left: 50%;}
+		#particulier:checked ~ #step4{left: 53.5%;}
 		
 		#particulier:checked ~ #lien2 {
 			display: inline-block;
@@ -290,6 +295,7 @@
 			background-color: $descriptionColor;
   			border-radius: 7px;
 			top: 2px;
+			left: -2px;
 			z-index: 1;
 			padding: 2px;
 		}
@@ -300,6 +306,7 @@
 			width: 14px; height: 14px;
 			border-radius: 7px;
 			top: 2px;
+			left: -2px;
   			background-color: $focusColor;
 			z-index: 1;
 		}
