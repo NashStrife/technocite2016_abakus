@@ -86,20 +86,26 @@ abakusControllers.controller('AddBillCtrl', ['$scope', 'Client', 'Admin', 'Param
 		if ($scope.newBill.refundCur === "%") {
 			if($scope.newBill.refund != 0){
 				$scope.newBill.underTotalXvat = totalXvat - (totalXvat / 100) * refund;
+				$scope.newBill.underTotalXvat = Math.round($scope.newBill.underTotalXvat * 100) / 100;
 			} else {
 				$scope.newBill.underTotalXvat = totalXvat;
+				$scope.newBill.underTotalXvat = Math.round($scope.newBill.underTotalXvat * 100) / 100;
 			}
 		} else {
 			$scope.newBill.underTotalXvat = totalXvat - refund;
+			$scope.newBill.underTotalXvat = Math.round($scope.newBill.underTotalXvat * 100) / 100;
 		}
 		// $scope.newBill.underTotalXvat = $scope.newBill.totalXvat - $scope.newBill.refund;
 
 		// calculate tva and totalTtc
 		$scope.newBill.tva = ($scope.newBill.underTotalXvat / 100) * 21;
+		$scope.newBill.tva = Math.round($scope.newBill.tva * 100) / 100;
 		$scope.newBill.totalTtc = ($scope.newBill.tva + $scope.newBill.underTotalXvat);
+		$scope.newBill.totalTtc = Math.round($scope.newBill.totalTtc * 100) / 100;
 
 		// sum less deposit
 		$scope.newBill.sum = $scope.newBill.totalTtc - $scope.newBill.deposit;
+		$scope.newBill.sum = Math.round($scope.newBill.sum * 100) / 100;
 
 		// console.log("totalXvat :" + $scope.newBill.totalXvat);
 		// console.log("refund :" + $scope.newBill.refund);
